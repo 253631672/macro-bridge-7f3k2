@@ -1,0 +1,48 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="refresh" content="300">
+<title>AI量化看板</title>
+<style>
+*{box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;background:#f4f6fa;color:#1c2330;margin:0;padding:0 0 40px}
+.top{background:#101828;color:#fff;padding:18px 16px 14px;position:sticky;top:0;z-index:5}
+.top h1{font-size:18px;margin:0 0 4px}.live{display:inline-block;width:8px;height:8px;border-radius:50%;background:#22c55e;margin-right:6px;animation:bl 2s infinite}
+@keyframes bl{50%{opacity:.35}}.upd{font-size:12px;color:#b8c0cc}
+.wrap{max-width:640px;margin:0 auto;padding:12px}
+.card{background:#fff;border-radius:12px;padding:14px;margin-bottom:12px;box-shadow:0 1px 3px rgba(16,24,40,.06)}
+.card-t{font-size:13px;color:#667085;margin-bottom:10px;font-weight:600}
+.nums{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px}
+.nums div{background:#f8fafc;border-radius:8px;padding:8px 10px}.nums span{font-size:12px;color:#667085;display:block}.nums b{font-size:17px}
+.up{color:#16a34a}.dn{color:#dc2626}
+table{width:100%;border-collapse:collapse;font-size:13px}th{color:#667085;font-weight:500;text-align:left;padding:6px 4px;border-bottom:1px solid #eef1f5}
+td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-size:12px}
+.nav{text-align:center;margin:12px 0}.nav a{color:#4f8cff;font-size:13px;text-decoration:none}
+.foot{text-align:center;color:#98a2b3;font-size:12px;margin-top:16px;line-height:1.8}
+</style></head><body>
+<div class="top"><h1><span class="live"></span>AI量化看板</h1>
+<div class="upd">最后更新：2026-10-10 00:31（北京时间）· 每5分钟自动刷新</div></div>
+<div class="wrap">
+<div class="nav"><a href="index.html">← 返回 Macro 工作看板</a></div>
+
+<div class="card"><div class="card-t">🤖 AI量化看板 <span class="muted">· 每5分钟同步</span></div>
+<div class="nums">
+  <div><span>净值</span><b>48,406.62</b></div>
+  <div><span>回撤</span><b class="">3.15%</b></div>
+  <div><span>胜率</span><b>28.6%</b></div>
+  <div><span>累计盈亏</span><b class="dn">-1546.62</b></div>
+</div>
+<div class="card-t" style="margin-top:6px">净值曲线</div><svg viewBox='0 0 600 160' style='width:100%;height:auto'><line x1='0' y1='8.5' x2='600' y2='8.5' stroke='#98a2b3' stroke-dasharray='6,4' stroke-width='1'/><polyline points='0.0,10.0 27.3,10.8 54.5,12.0 81.8,12.0 109.1,38.5 136.4,38.5 163.6,38.5 190.9,38.5 218.2,64.6 245.5,150.0 272.7,150.0 300.0,150.0 327.3,148.4 354.5,148.4 381.8,148.4 409.1,148.4 436.4,148.4 463.6,148.4 490.9,149.1 518.2,149.1 545.5,149.1 572.7,149.4 600.0,149.4' fill='none' stroke='#16a34a' stroke-width='2'/></svg></div>
+
+<div class="card"><div class="card-t">💼 当前持仓 <span class="muted">· 0 只</span></div>
+<table><tr><th>币种</th><th>数量</th><th>均价</th><th>策略</th><th>止损</th></tr>
+<tr><td colspan=5 class=muted>当前空仓</td></tr></table>
+<div class="muted">可用现金 48,406.62 · 虚拟资金，仅供策略验证</div></div>
+
+<div class="card"><div class="card-t">📝 最近交易 <span class="muted">· 共7笔</span></div>
+<table><tr><th>时间</th><th>币种</th><th>方向</th><th>价格</th><th>盈亏</th><th>策略</th></tr>
+<tr><td>10-10 00:22:12</td><td>ZECUSDT</td><td class='dn'>SELL</td><td>1218.4905</td><td class='up'>+28.75</td><td>momrot</td></tr><tr><td>10-10 00:22:12</td><td>ENAUSDT</td><td class='dn'>SELL</td><td>0.2156</td><td class='up'>+41.11</td><td>momrot</td></tr><tr><td>10-09 22:30:00</td><td>ZECUSDT</td><td class='up'>BUY</td><td>1187.6135</td><td class='up'>-</td><td>momrot</td></tr><tr><td>10-09 22:30:00</td><td>NEARUSDT</td><td class='dn'>SELL_STOP</td><td>4.4640</td><td class='dn'>-494.85</td><td>dual_ma</td></tr><tr><td>10-09 22:30:00</td><td>SUIUSDT</td><td class='dn'>SELL_STOP</td><td>1.0357</td><td class='dn'>-262.74</td><td>dual_ma</td></tr><tr><td>10-09 22:30:00</td><td>ENAUSDT</td><td class='up'>BUY</td><td>0.2067</td><td class='up'>-</td><td>momrot</td></tr><tr><td>10-09 22:30:00</td><td>WLDUSDT</td><td class='dn'>SELL_STOP</td><td>0.4797</td><td class='dn'>-329.05</td><td>dual_ma</td></tr><tr><td>10-09 22:30:00</td><td>AAVEUSDT</td><td class='dn'>SELL_STOP</td><td>162.5143</td><td class='dn'>-259.78</td><td>dual_ma</td></tr><tr><td>10-09 22:15:00</td><td>AVAXUSDT</td><td class='dn'>SELL_STOP</td><td>10.1830</td><td class='dn'>-270.07</td><td>dual_ma</td></tr><tr><td>10-09 22:15:00</td><td>AAVEUSDT</td><td class='up'>BUY</td><td>167.3336</td><td class='up'>-</td><td>dual_ma</td></tr><tr><td>10-09 21:14:59</td><td>SUIUSDT</td><td class='up'>BUY</td><td>1.0633</td><td class='up'>-</td><td>dual_ma</td></tr><tr><td>10-09 20:44:59</td><td>WLDUSDT</td><td class='up'>BUY</td><td>0.4971</td><td class='up'>-</td><td>dual_ma</td></tr><tr><td>10-09 20:30:01</td><td>NEARUSDT</td><td class='up'>BUY</td><td>4.8804</td><td class='up'>-</td><td>dual_ma</td></tr><tr><td>10-09 20:14:38</td><td>AVAXUSDT</td><td class='up'>BUY</td><td>10.4222</td><td class='up'>-</td><td>dual_ma</td></tr></table></div>
+
+<div class="card"><div class="card-t">🏆 小组竞赛 <span class="muted">· 每组50000 CNY</span></div>
+<table><tr><th>#</th><th>小组</th><th>净值</th><th>盈利率</th><th>交易</th></tr>
+<tr><td>🥇</td><td>趋势跟踪组</td><td>50,000</td><td class='up'>+0.00%</td><td>0</td></tr><tr><td>🥈</td><td>动量轮动组</td><td>50,000</td><td class='up'>+0.00%</td><td>0</td></tr><tr><td>🥉</td><td>波动率组</td><td>50,000</td><td class='up'>+0.00%</td><td>0</td></tr><tr><td>4</td><td>均值回归组</td><td>50,000</td><td class='up'>+0.00%</td><td>0</td></tr><tr><td>5</td><td>突破组</td><td>50,000</td><td class='up'>+0.00%</td><td>0</td></tr><tr><td>6</td><td>海龟组</td><td>50,000</td><td class='up'>+0.00%</td><td>0</td></tr><tr><td>7</td><td>MACD组</td><td>50,000</td><td class='up'>+0.00%</td><td>0</td></tr><tr><td>8</td><td>布林反转组</td><td>50,000</td><td class='up'>+0.00%</td><td>0</td></tr><tr><td>9</td><td>Keltner组</td><td>50,000</td><td class='up'>+0.00%</td><td>0</td></tr><tr><td>10</td><td>双均线组</td><td>50,000</td><td class='up'>+0.00%</td><td>0</td></tr><tr><td>11</td><td>网格组</td><td>50,000</td><td class='up'>+0.00%</td><td>0</td></tr><tr><td>12</td><td>吊灯组</td><td>50,000</td><td class='up'>+0.00%</td><td>0</td></tr><tr><td>13</td><td>三重滤网组</td><td>50,000</td><td class='up'>+0.00%</td><td>0</td></tr><tr><td>14</td><td>ATR通道组</td><td>50,000</td><td class='up'>+0.00%</td><td>0</td></tr><tr><td>15</td><td>摆动反转组</td><td>50,000</td><td class='up'>+0.00%</td><td>0</td></tr><tr><td>16</td><td>资金费率组</td><td>50,000</td><td class='up'>+0.00%</td><td>0</td></tr><tr><td>17</td><td>恐慌贪婪组</td><td>50,000</td><td class='up'>+0.00%</td><td>0</td></tr></table></div>
+<div class="foot">虚拟盘数据，仅供策略验证，不构成投资建议<br>Macro AI 量化系统</div>
+</div></body></html>
