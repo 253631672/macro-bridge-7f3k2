@@ -26,11 +26,10 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-11 07:44（北京时间）· 每5分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-11 07:49（北京时间）· 每5分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
-        <div class="cur-task">review-check 运行中</div>
-        <div class="muted">开始于 10-11 07:44</div></div>
+        <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
 <div class="card"><div class="card-t">🤖 AI量化看板 <span class="muted">· 每5分钟同步</span></div>
         <div class="nums">
           <div><span>净值</span><b>46,329.09</b></div>
@@ -48,7 +47,13 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="card attn"><div class="card-t">需要你介入 <span class="badge">1</span></div><ul class="needs"><li><span class='dot warn'></span>给 23:00 日报等定时任务开启常开审批（App → 头像 → Upcoming → 任务详情 → 权限设为允许）<span class='muted'> · 10-09 23:28</span></li></ul>
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
-<div class="card"><div class="ev"><span class="ev-tag" style="background:#f5a623">交易</span>
+<div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>完成：review-check 运行中</b><span class="muted">10-11 07:45</span></div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>review-check 07:45</b><span class="muted">10-11 07:45</span></div><div class='ev-d'>震荡市+atr_channel/dual_ma连亏、RLC 24h-7.44%持仓，均属实盘冻结令①③范围，仅监测记录，不打扰用户</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>风控升级：加10%中层熔断</b><span class="muted">10-11 07:45</span></div><div class='ev-d'>借鉴FutureX/ApexAlgo三级熔断：8%减半仓→10%停新开仓（退出照常）→12%停一切；补上回撤扩大期的失血窗口。通用风控层，未碰冻结三项，语法+分支逻辑验证通过。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#f5a623">交易</span>
         <div class="ev-body"><div class="ev-h"><b>虚拟盘触发止损平仓（StoplossGuard 暂停新开仓）</b><span class="muted">10-11 07:44</span></div><div class='ev-d'>07:42 交易循环：市场状态 trend（ADX=33.8 趋势市）。近20根K线内触发3次止损：TIAUSDT（atr_channel，-217.08 CNY，04:12）、HBARUSDT（dual_ma，-95.09 CNY，03:07）、BTCUSDT（meanrevert 止损卖出，+27.43 CNY，04:07）。StoplossGuard 生效，暂停新开仓（momrot 候选 ZEC/SUI/NEARUSDT 未开仓）。当前净值 46329.09 CNY，现金 30392.98，持仓 6 个（RLC/ONDO/PUMPUSDT dual_mom、DOTUSDT/AEROUSDT atr_channel、CRCLBUSDT dualma_j）。净值距峰值 49983.07 回撤 7.3%，未达 8% 汇报线。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>完成：看板5分钟刷新：构建数据中</b><span class="muted">10-11 07:31</span></div></div></div>
@@ -281,12 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>完成：看板5分钟刷新：浏览器发布中（index/quant逐字粘贴→main）</b><span class="muted">10-10 08:37</span></div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>AI量化工作合并到单一旁聊</b><span class="muted">10-10 08:37</span></div><div class='ev-d'>用户决定不拆多个旁聊：全部AI量化工作任务和讨论合并到「AI量化交易看板」旁聊；7个定时任务汇报目标已全部指向该旁聊；旧旁聊已归档；主聊不再承担量化汇报。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>完成：虚拟盘交易循环运行中 · 止损保护暂停新开仓</b><span class="muted">10-10 08:30</span></div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>AI量化工作迁移到旁聊</b><span class="muted">10-10 08:30</span></div><div class='ev-d'>7个quant-*定时任务投递目标已从主聊改为旁聊「AI量化交易看板」；项目上下文沉淀进旁聊记忆；本聊改名完成。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#9aa0aa">系统</span>
-        <div class="ev-body"><div class="ev-h"><b>08:04 看板刷新：API 推送失败，已转浏览器链路</b><span class="muted">10-10 08:20</span></div><div class='ev-d'>publish.sh 远端校验不一致（push_files 未落地，远端 SHA 仍为旧值），已启动浏览器任务逐字粘贴 index.html 与 quant.html 并提交到 main 分支；等待确认后做远端 diff 校验。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>AI量化工作合并到单一旁聊</b><span class="muted">10-10 08:37</span></div><div class='ev-d'>用户决定不拆多个旁聊：全部AI量化工作任务和讨论合并到「AI量化交易看板」旁聊；7个定时任务汇报目标已全部指向该旁聊；旧旁聊已归档；主聊不再承担量化汇报。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
