@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-11 04:29（北京时间）· 每5分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-11 04:34（北京时间）· 每5分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -47,7 +47,9 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="card attn"><div class="card-t">需要你介入 <span class="badge">1</span></div><ul class="needs"><li><span class='dot warn'></span>给 23:00 日报等定时任务开启常开审批（App → 头像 → Upcoming → 任务详情 → 权限设为允许）<span class='muted'> · 10-09 23:28</span></li></ul>
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
-<div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+<div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>复盘检查：环境震荡，持仓正常（冻结项范围内，仅监测）</b><span class="muted">10-11 04:30</span></div><div class='ev-d'>四层分析：环境震荡；持仓6只，RLCUSDT 24h -11.51%属冻结③；最新复盘TIAUSDT/atr_channel亏损-11.2%、HBARUSDT/dual_ma -0.6%属冻结①。无新调整建议，实盘照常。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>hourly-learn：新增策略消融分析模块</b><span class="muted">10-11 04:18</span></div><div class='ev-d'>新增只读离线分析 src/analysis/ablation.py：已平仓口径统计各策略表现+leave-one-out边际贡献，n≥5才给keep/drop参考结论；组合已平仓-3607.87，dual_ma/atr_channel为主要拖累（仅报告，冻令三项未触）。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>review-check 15分钟检查：发现属冻结项问题，仅监测记录</b><span class="muted">10-11 04:15</span></div><div class='ev-d'>震荡市 atr_channel 多笔亏损、keltner KAIAUSDT穿仓、RLCUSDT持仓-11.5%，均属2026-10-10冻结令范围；逻辑不动，实盘照常跑。</div></div></div>
@@ -284,8 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>量化小时学习：StoplossGuard 增加解锁冷却</b><span class="muted">10-10 03:45</span></div><div class='ev-d'>03:30 guard 解锁后 03:43 各策略同周期开仓潮、8 笔新成交即止损（新增亏损约 1706）。新增 unlock_cooldown_bars=4，解锁后距上一笔止损不足 4 根 15m bar 仍暂停新开仓，已验证语法。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#f5a623">交易</span>
-        <div class="ev-body"><div class="ev-h"><b>虚拟盘成交 SELL_STOP ATOMUSDT</b><span class="muted">10-10 03:43</span></div><div class='ev-d'>策略 atr_channel 价格 1.7620 数量 1702.7456 盈亏 -409.96</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#f5a623">交易</span>
-        <div class="ev-body"><div class="ev-h"><b>虚拟盘成交 SELL_STOP CRCLBUSDT</b><span class="muted">10-10 03:43</span></div><div class='ev-d'>策略 atr_channel 价格 81.1100 数量 70.3877 盈亏 -392.37</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>虚拟盘成交 SELL_STOP ATOMUSDT</b><span class="muted">10-10 03:43</span></div><div class='ev-d'>策略 atr_channel 价格 1.7620 数量 1702.7456 盈亏 -409.96</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
