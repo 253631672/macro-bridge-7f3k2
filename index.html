@@ -134,7 +134,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>hourly-learn：软层降半仓真正落地</b><span class="muted">10-10 09:46</span></div><div class='ev-d'>回撤≥8%时新开仓风险预算×0.5（此前只打印不执行）；借鉴ApexAlgo两级kill-switch软层思想；py_compile通过。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>09:00 整点同步：+1R 保本落地 + 10 策略重新回测</b><span class="muted">10-10 09:24</span></div><div class='ev-d'>交易循环加速到5分钟</div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>09:00 整点同步：+1R 保本落地 + 10 策略重新回测</b><span class="muted">10-10 09:24</span></div><div class='ev-d'>trader.py 新增 +1R 保本移动止损；run_all 跑完 train/test 全量回测，dual_ma 测试段 -75.5% 与实盘最差表现一致</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>复盘检查：发现3连亏+超风控线亏损</b><span class="muted">10-10 09:15</span></div><div class='ev-d'>最近3笔复盘（id13-15）全亏：KAIAUSDT keltner -509.69（-29.4%，超12%熔断线），CRCLBUSDT atr_channel -392.37（-6.3%），ATOMUSDT atr_channel -409.96（-11.9%），复盘均标记&#x27;需检查买入逻辑是否失效&#x27;。环境震荡（44涨/16跌），持仓4只，RLCUSDT 24h +20.33% 异动。建议：暂停atr_channel新开仓复核买入逻辑；核查keltner止损为何放穿到-29.4%；RLCUSDT考虑止盈/收紧止损。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
@@ -166,7 +166,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#9aa0aa">系统</span>
         <div class="ev-body"><div class="ev-h"><b>08:04 看板刷新：API 推送失败，已转浏览器链路</b><span class="muted">10-10 08:20</span></div><div class='ev-d'>publish.sh 远端校验不一致（push_files 未落地，远端 SHA 仍为旧值），已启动浏览器任务逐字粘贴 index.html 与 quant.html 并提交到 main 分支；等待确认后做远端 diff 校验。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#f5a623">交易</span>
-        <div class="ev-body"><div class="ev-h"><b>StoplossGuard 触发：近20根内止损5次，暂停新开仓</b><span class="muted">10-10 07:49</span></div><div class='ev-d'>交易循环正常运行；市场状态 trend（ADX=36.8)；equity=46673.16 CNY，持仓=0，距初始回撤约 -6.65%</div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>StoplossGuard 触发：近20根内止损5次，暂停新开仓</b><span class="muted">10-10 07:49</span></div><div class='ev-d'>交易循环正常运行；市场状态 trend(ADX=36.8)；equity=46673.16 CNY，持仓=0，距初始回撤约 -6.65%</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#9aa0aa">系统</span>
         <div class="ev-body"><div class="ev-h"><b>15分钟复盘检查：发现4连亏+KAIA止损异常</b><span class="muted">10-10 07:47</span></div><div class='ev-d'>市场震荡，持仓0；最近15笔复盘11笔亏损，最近4笔连亏(atr_channel*2/keltner/dual_mom)；KAIAUSDT keltner单笔-29.4%远超ATR止损应容许幅度；复盘建议的暂停该币种该策略未被代码执行，仅有币种级短冷却。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#f5a623">交易</span>
@@ -202,6 +202,8 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#f5a623">交易</span>
         <div class="ev-body"><div class="ev-h"><b>虚拟盘成交 SELL UNIUSDT</b><span class="muted">10-10 03:43</span></div><div class='ev-d'>策略 meanrevert 价格 7.1164 数量 483.5137 盈亏 -124.92</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#f5a623">交易</span>
+<div class="ev"><span class="ev-tag" style="background:#f5a623">交易</span>
+        <div class="ev-body"><div class="ev-h"><b>虚拟盘成交 SELL_STOP STRKUSDT</b><span class="muted">10-10 03:43</span></div><div class='ev-d'>策略 dual_mom 价格 0.0522 数量 23560.4488 盈亏 -80.64</div></div></div>
         <div class="ev-body"><div class="ev-h"><b>虚拟盘成交 SELL_STOP ETHUSDT</b><span class="muted">10-10 03:43</span></div><div class='ev-d'>策略 meanrevert 价格 2410.2900 数量 3.0738 盈亏 -253.27</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#f5a623">交易</span>
         <div class="ev-body"><div class="ev-h"><b>虚拟盘成交 BUY UNIUSDT</b><span class="muted">10-10 03:43</span></div><div class='ev-d'>策略 meanrevert 价格 7.3677 数量 483.5137</div></div></div>
@@ -224,7 +226,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>每小时学习：Chandelier 移动止损上线</b><span class="muted">10-10 01:49</span></div><div class='ev-d'>复盘发现 dual_ma 5 笔全止损出场（-1616.48）；在 trader.py 单点新增 Chandelier 移动止损（止损只上移不下移，最大亏损上限不变），语法已校验，待观察。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>完成：虚拟盘交易循环运行正常</b><span class="muted">10-10 01:41</span></div><div class='ev-d'>复盘发现 dual_ma 5 笔全止损出场（−1616.48）；在 trader.py 单点新增 Chandelier 移动止损（止损只上移不下移，最大亏损上限不变），语法已校验，待观察。</div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>完成：虚拟盘交易循环运行正常</b><span class="muted">10-10 01:41</span></div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>虚拟盘 StoplossGuard 触发，暂停新开仓</b><span class="muted">10-10 01:39</span></div><div class='ev-d'>市场状态 trend（ADX=36.8），近20根K线止损5次触发保护，暂停新开仓；净值 48406.62，距峰值回撤 3.15%，远离 12% 熔断线；持仓 0</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
