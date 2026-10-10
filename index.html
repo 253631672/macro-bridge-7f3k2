@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-11 07:14（北京时间）· 每5分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-11 07:20（北京时间）· 每5分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -48,6 +48,8 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
 <div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>review-check 15分钟复盘检查：震荡市，无连续亏损</b><span class="muted">10-11 07:16</span></div><div class='ev-d'>环境：震荡（BTC 24h +1.08%，44涨/16跌）。持仓6只，RLCUSDT 24h -7.44%（冻结事项③，只监测）。复盘：TIAUSDT atr_channel -11.2%、HBARUSDT dual_ma -0.6%买入逻辑待查（冻结事项①，只监测）。无实质调整动作。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>15分钟复盘检查完成</b><span class="muted">10-11 07:00</span></div><div class='ev-d'>市场震荡，持仓6只；近20笔复盘15亏集中在趋势策略（冻结事项①②③范围内），仅监测记录、无调整建议</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>复盘检查：震荡市，持仓6只</b><span class="muted">10-11 06:45</span></div><div class='ev-d'>四层分析：BTC 24h +1.08%，44涨/16跌，市场环境震荡。持仓6只（RLCUSDT -11.43%量比0.26、ONDOUSDT +3.73%、PUMPUSDT +1.29%、DOTUSDT +2.95%、CRCLBUSDT +1.5%）。最新复盘：TIAUSDT atr_channel -217.08（-11.2%）、HBARUSDT dual_ma -95.09（-0.6%）、BTCUSDT meanrevert +27.43正常。亏损项全部落入实盘冻结令①②③三类事项范围（震荡市趋势策略atr_channel/dual_ma、keltner穿仓、RLC止盈），仅监测记录，无实质调整建议，不打扰用户。</div></div></div>
@@ -284,8 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#9aa0aa">系统</span>
         <div class="ev-body"><div class="ev-h"><b>15分钟复盘检查：发现4连亏+KAIA止损异常</b><span class="muted">10-10 07:47</span></div><div class='ev-d'>市场震荡，持仓0；最近15笔复盘11笔亏损，最近4笔连亏(atr_channel*2/keltner/dual_mom)；KAIAUSDT keltner单笔-29.4%远超ATR止损应容许幅度；复盘建议的暂停该币种该策略未被代码执行，仅有币种级短冷却。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#f5a623">交易</span>
-        <div class="ev-body"><div class="ev-h"><b>StoplossGuard 触发：近20根内止损5次，暂停新开仓</b><span class="muted">10-10 07:18</span></div><div class='ev-d'>交易循环正常运行；市场状态 trend(ADX=36.8)；equity=46673.16 CNY，持仓=0，距初始回撤约 -6.65%</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>每小时学习优化：复盘台账新增 MAE/MFE 持仓路径字段</b><span class="muted">10-10 07:16</span></div><div class='ev-d'>学习主题轮换到风控方法（MAE/MFE 止损诊断，ultratrader 实务方法）。复盘：无新增成交，dual_ma 仍最差（-1616/5笔），guard 锁定保护中。优化：trade_reviews 新增 mae_pct/mfe_pct，卖出复盘自动回算持仓最大不利/有利偏移，补上止损宽紧诊断缺口；纯可观测性增强，不改交易逻辑，已验证通过。详情见 docs/learnings.md 与 CHANGELOG.md。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>StoplossGuard 触发：近20根内止损5次，暂停新开仓</b><span class="muted">10-10 07:18</span></div><div class='ev-d'>交易循环正常运行；市场状态 trend(ADX=36.8)；equity=46673.16 CNY，持仓=0，距初始回撤约 -6.65%</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
