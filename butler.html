@@ -64,10 +64,12 @@ pre.code{background:#1f2329;color:#e6edf3;border-radius:8px;padding:12px;font-si
 </div>
 
 <h2 class=sec>🧭 运行模式</h2>
-<p class=meta>当前：<b id=modeNow>normal</b>（点卡片切换，金色边框为生效）</p>
-<div class=grid><div class=card style="cursor:pointer" id="mode_normal" onclick="setMode('normal')"><div class=name>📅 常规模式</div><div class=meta>每日早计划、盘中巡检、收盘日报，按市场节奏打理组合</div></div><div class=card style="cursor:pointer" id="mode_smart" onclick="setMode('smart')"><div class=name>🧠 超智能实验</div><div class=meta>更高频次复核，关键位置加减仓更果断</div></div><div class=card style="cursor:pointer" id="mode_overnight" onclick="setMode('overnight')"><div class=name>🌙 一夜持股</div><div class=meta>只做隔夜单，日内不操作，严守 T+1</div></div><div class=card style="cursor:pointer" id="mode_strategy" onclick="setMode('strategy')"><div class=name>📐 策略模式</div><div class=meta>把策略实验室验证过的策略装进管家执行</div></div><div class=card style="cursor:pointer" id="mode_single" onclick="setMode('single')"><div class=name>👁️ 单票盯盘</div><div class=meta>只盯一只票，高抛低吸做 T</div></div></div>
+<p class=meta>五种模式互斥，点卡片展开对应设置；橙色边框 = 当前生效的模式。</p>
+<p class=meta>当前：<b id=modeNow>normal</b></p>
+<div class=grid><div class=card style="cursor:pointer" id="mode_normal" onclick="setMode('normal')"><div class=name>📅 常规模式</div><div class=meta>每日早计划、盘中巡检、收盘日报，按市场节奏打理组合</div><div class=meta id="mode_detail_normal" style="display:none;margin-top:8px;padding-top:8px;border-top:1px dashed #e5e7eb">📖 常规模式就是本页默认的一切：下方的定制指示、盘中巡检、定制时刻都属于它。</div></div><div class=card style="cursor:pointer" id="mode_smart" onclick="setMode('smart')"><div class=name>🧠 超智能实验</div><div class=meta>更高频次复核，关键位置加减仓更果断</div><div class=meta id="mode_detail_smart" style="display:none;margin-top:8px;padding-top:8px;border-top:1px dashed #e5e7eb">📖 超智能的唯一指示就是下方的「定制指示」框——风格/频率/风控都写在那里（可空=全权放手），如“稳健为主，回撤别超10%，一天最多看3次盘”。日程它自己排：每轮结束定下次看盘时刻，想控制频率写进定制指示即可。</div></div><div class=card style="cursor:pointer" id="mode_overnight" onclick="setMode('overnight')"><div class=name>🌙 一夜持股</div><div class=meta>纪律战法：尾盘买入，次日早盘清仓</div><div class=meta id="mode_detail_overnight" style="display:none;margin-top:8px;padding-top:8px;border-top:1px dashed #e5e7eb">📖 尾盘 14:45 前看盘并完成买入决策；次日 09:35 前无条件清仓。只做隔夜单，严守 T+1。</div></div><div class=card style="cursor:pointer" id="mode_strategy" onclick="setMode('strategy')"><div class=name>📐 策略模式</div><div class=meta>执行实验室验证过的策略，不再问大模型</div><div class=meta id="mode_detail_strategy" style="display:none;margin-top:8px;padding-top:8px;border-top:1px dashed #e5e7eb">📖 选择你在策略实验室验证过的策略，每天开盘前按策略算出目标组合下单，不再问大模型；计划与成交推送照发。</div></div><div class=card style="cursor:pointer" id="mode_single" onclick="setMode('single')"><div class=name>👁️ 单票盯盘</div><div class=meta>指定一只票，只盯它做波动</div><div class=meta id="mode_detail_single" style="display:none;margin-top:8px;padding-top:8px;border-top:1px dashed #e5e7eb">📖 你指定一只 A 股（6 位代码），管家不选股只盯这一只：盘中建仓、吃日内与隔日波动。锚点时刻 09:35 / 10:30 / 13:05 / 14:30 / 14:50 或价格异动时判断，止损线默认 10%。</div></div></div>
 
 <h2 class=sec>🎭 管家名字与人设</h2>
+<p class=meta>人设只影响日报的语气——持仓、调仓、决策逻辑完全一致，换人设不换大脑。</p>
 <div class=calc><div><label>管家名字（选填）</label>
 <input id=bName placeholder="如：胆子肥嘟嘟"></div></div>
 <p style="margin-top:8px"><label style="margin-right:10px;font-size:14px"><input type=radio name=persona value="🤖默认"> 🤖默认</label><label style="margin-right:10px;font-size:14px"><input type=radio name=persona value="🤵稳重管家"> 🤵稳重管家</label><label style="margin-right:10px;font-size:14px"><input type=radio name=persona value="🐱猫系管家"> 🐱猫系管家</label><label style="margin-right:10px;font-size:14px"><input type=radio name=persona value="🌸元气搭档"> 🌸元气搭档</label><label style="margin-right:10px;font-size:14px"><input type=radio name=persona value="🕶️毒舌操盘手"> 🕶️毒舌操盘手</label><label style="margin-right:10px;font-size:14px"><input type=radio name=persona value="☯️佛系道长"> ☯️佛系道长</label><label style="margin-right:10px;font-size:14px"><input type=radio name=persona value="🐺华尔街之狼"> 🐺华尔街之狼</label></p>
@@ -91,16 +93,20 @@ pre.code{background:#1f2329;color:#e6edf3;border-radius:8px;padding:12px;font-si
 <p class=meta>盘中每笔买卖、止损预警、每日日报都会推送。在聊天里说"加上钉钉"即可开通新渠道。</p>
 
 <h2 class=sec>📝 定制指示能写什么</h2>
-<div class=grid><div class=card><div class=meta>🎯 风格与禁区：只做主线、回避垃圾股</div></div><div class=card><div class=meta>🎯 盘中要求：止损线、加仓条件写清楚</div></div><div class=card><div class=meta>🎯 关注标的：点名几只票重点盯</div></div><div class=card><div class=meta>🎯 量化规则：仓位上限、单日最大亏损</div></div></div>
+<p class=meta>用大白话写就行，管家读懂后变成每天的实际动作。四类写法示例（按你的需求改写，别原样复制）。写得越具体，管家越懂你；随时可改，次日早盘生效。</p>
+<div class=grid><div class=card><div class=name>🎯 风格与禁区</div><div class=meta>“稳健第一，最多七成仓”“不碰科创板”——禁区由系统强制拦截，模型想买也买不进</div></div><div class=card><div class=name>⏰ 盘中要求</div><div class=meta>“每天14:30再帮我看一次”“有波动就做T，操作即时发我”——定制时刻落在 9:40-14:45</div></div><div class=card><div class=name>👀 关注标的</div><div class=meta>“帮我留意 600519”——点名股进每日视野，盘中出现信号会推送提示</div></div><div class=card><div class=name>🧮 量化规则</div><div class=meta>“只要PE低于25、ROE高于12%”——由引擎精确执行，分数是算出来的不是模型估的</div></div></div>
 
 <h2 class=sec>👀 管家每天看什么数据</h2>
-<div class=grid><div class=card><div class=name>🌍 全球市场动向</div><div class=meta>隔夜美股、汇率、大宗商品</div></div><div class=card><div class=name>📊 大盘与情绪资金</div><div class=meta>沪深300、涨跌家数、成交额</div></div><div class=card><div class=name>📋 精选候选池</div><div class=meta>8 只候选股实时行情</div></div><div class=card><div class=name>👤 专属上下文</div><div class=meta>你的定制指示与历史偏好</div></div><div class=card><div class=name>⏱️ 盘中巡检</div><div class=meta>持仓盈亏、止损线、异动提醒</div></div></div>
+<p class=meta>每个交易日开盘前，你的管家通读以下数据后做当日决策——与擂台选手同源同级：</p>
+<div class=grid><div class=card><div class=name>🌍 全球市场动向</div><div class=meta>隔夜美股、日韩早盘、黄金原油、离岸人民币、A50期指</div></div><div class=card><div class=name>📊 大盘与情绪资金</div><div class=meta>指数技术面、上涨家数占比、两融杠杆、恐贪指数、宏观月度数据</div></div><div class=card><div class=name>📋 精选候选池</div><div class=meta>8 只候选股，每只附估值、盈利、资金动向、技术指标（均线/MACD/KDJ等）</div></div><div class=card><div class=name>👤 你的专属上下文</div><div class=meta>定制指示、当前持仓与成本、点名关注股、管家昨日观点与每周悟道</div></div><div class=card><div class=name>⏱️ 盘中巡检</div><div class=meta>持仓与大盘的实时变化——出现明显异动才动手，平时保持安静不折腾；止损线逐分钟盯守</div></div></div>
 
 <h2 class=sec>📊 运行状态</h2><p class=meta>今日 09:31 首次运行</p>
 <script>
 function setMode(k){
-  document.querySelectorAll('[id^=mode_]').forEach(c=>c.style.border='1px solid #eef0f3');
+  document.querySelectorAll('[id^=mode_]').forEach(c=>{c.style.border='1px solid #eef0f3';});
+  document.querySelectorAll('[id^=mode_detail_]').forEach(c=>{c.style.display='none';});
   document.getElementById('mode_'+k).style.border='2px solid #f0762b';
+  document.getElementById('mode_detail_'+k).style.display='block';
   localStorage.setItem('butler_mode', k);
   document.getElementById('modeNow').textContent = k;
 }

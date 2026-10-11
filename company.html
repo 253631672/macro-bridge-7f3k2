@@ -69,7 +69,7 @@ pre.code{background:#1f2329;color:#e6edf3;border-radius:8px;padding:12px;font-si
  placeholder="如：只做沪深300成分股，回避亏损股"></textarea></p>
 
 <h2 class=sec>🧩 制度模板</h2>
-<label style="display:block;margin:6px 0;font-size:14px"><input type=radio name=ctpl value="🏛️ 研究院金字塔"> <b>🏛️ 研究院金字塔</b><span class=meta> 分析师→部长→董事长，层层提炼</span></label><label style="display:block;margin:6px 0;font-size:14px"><input type=radio name=ctpl value="💼 基金经理制"> <b>💼 基金经理制</b><span class=meta> 一位基金经理全权负责</span></label><label style="display:block;margin:6px 0;font-size:14px"><input type=radio name=ctpl value="🏢 事业部制分仓"> <b>🏢 事业部制分仓</b><span class=meta> 多事业部分仓独立核算</span></label><label style="display:block;margin:6px 0;font-size:14px"><input type=radio name=ctpl value="🗳️ 投资委员会"> <b>🗳️ 投资委员会</b><span class=meta> 委员会投票决策</span></label><label style="display:block;margin:6px 0;font-size:14px"><input type=radio name=ctpl value="⚔️ 红蓝军对抗"> <b>⚔️ 红蓝军对抗</b><span class=meta> 红蓝两军对抗，优胜者加仓</span></label><label style="display:block;margin:6px 0;font-size:14px"><input type=radio name=ctpl value="📡 值班盯盘制"> <b>📡 值班盯盘制</b><span class=meta> 轮流值班盯盘</span></label><label style="display:block;margin:6px 0;font-size:14px"><input type=radio name=ctpl value="⚡ 高频盯盘3分钟"> <b>⚡ 高频盯盘3分钟</b><span class=meta> 每3分钟扫描一次盘面</span></label>
+<label style="display:block;margin:6px 0;font-size:14px"><input type=radio name=ctpl value="🏛️ 研究院金字塔（默认）"> <b>🏛️ 研究院金字塔（默认）</b><span class=meta> CEO + 两个研究部各带2名研究员：员工荐票→部长提炼汇报→CEO拍板。最经典的汇报线。</span></label><label style="display:block;margin:6px 0;font-size:14px"><input type=radio name=ctpl value="💼 基金经理制"> <b>💼 基金经理制</b><span class=meta> 基金经理直管3名研究员，另设风控总监对目标组合做否决审查（可剔标的/压仓位）。</span></label><label style="display:block;margin:6px 0;font-size:14px"><input type=radio name=ctpl value="🏢 事业部制（分仓）"> <b>🏢 事业部制（分仓）</b><span class=meta> CEO把资金按份额分给科技/消费/周期三个事业部，各部长在自己额度内独立拍板本部组合，合并成公司组合；CEO只调份额。</span></label><label style="display:block;margin:6px 0;font-size:14px"><input type=radio name=ctpl value="🗳️ 投资委员会"> <b>🗳️ 投资委员会</b><span class=meta> 4位合伙人各自独立提交组合，过半数提名的标的入选、权重取平均；主席只定总仓位，不能增删标的。</span></label><label style="display:block;margin:6px 0;font-size:14px"><input type=radio name=ctpl value="⚔️ 红蓝军对抗"> <b>⚔️ 红蓝军对抗</b><span class=meta> 红军只找做多理由，蓝军专挑风险与反方证据；CEO听两军辩论后拍板，风控有最终否决权。</span></label><label style="display:block;margin:6px 0;font-size:14px"><input type=radio name=ctpl value="📡 值班盯盘制"> <b>📡 值班盯盘制</b><span class=meta> 早盘照常研究+拍板；盘中盯盘员分别盯持仓/候选池/大盘情绪，发现信号叫醒CEO盘中决断。</span></label><label style="display:block;margin:6px 0;font-size:14px"><input type=radio name=ctpl value="⚡ 高频盯盘（3分钟）"> <b>⚡ 高频盯盘（3分钟）</b><span class=meta> 盯盘员每3分钟巡一次持仓与候选池，CEO最快5分钟介入一次且可开新仓。最积极，适合日内风格。</span></label>
 <h2 class=sec>⚖️ 治理制度</h2>
 <table>
 <tr><th>事项</th><th>选项</th></tr>
@@ -81,6 +81,7 @@ pre.code{background:#1f2329;color:#e6edf3;border-radius:8px;padding:12px;font-si
 <tr><td>盘中允许开新仓</td><td><input type=checkbox checked></td></tr>
 <tr><td>盘中邮件</td><td><select><option>有成交才发</option><option>每轮快报</option><option>只收盘汇总</option></select></td></tr>
 </table>
+<p class=meta>岗位类型在组织树里给成员选：👤研究岗（早盘荐票）/ 📡盯盘岗（盘中按间隔值班）/ 🚦风控岗（CEO拍板后否决审查）。没有盯盘岗=没有盘中动作。</p>
 <div class=filters><button class=on onclick="saveCompany()">💾 保存</button>
 <button>🚀 入股开跑</button></div>
 </div>
