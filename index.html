@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-11 23:59（北京时间）· 每5分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-12 00:04（北京时间）· 每5分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -35,7 +35,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
           <div><span>净值</span><b>46,595.02</b></div>
           <div><span>胜率</span><b>26.1%</b></div>
           <div><span>累计盈亏</span><b class="dn">-3713.39</b></div>
-          <div><span>今日交易</span><b>12 笔</b></div>
+          <div><span>今日交易</span><b>0 笔</b></div>
         </div>
         <div class="card-t" style="margin-top:8px">持仓</div>
         <table><tr><th>币种</th><th>数量</th><th>均价</th><th>策略</th></tr><tr><td>RLCUSDT</td><td>729.4961</td><td>1.0351</td><td>dual_mom</td></tr><tr><td>OGNUSDT</td><td>20722.4293</td><td>0.0340</td><td>momrot</td></tr><tr><td>ONDOUSDT</td><td>2839.4935</td><td>0.4826</td><td>dual_mom</td></tr><tr><td>PUMPUSDT</td><td>148776.0119</td><td>0.0055</td><td>dual_mom</td></tr><tr><td>CRCLBUSDT</td><td>75.2340</td><td>86.0130</td><td>dualma_j</td></tr><tr><td>APTUSDT</td><td>3409.3144</td><td>0.8694</td><td>dualma_j</td></tr><tr><td>AEROUSDT</td><td>3555.1591</td><td>0.9164</td><td>atr_channel</td></tr></table>
@@ -47,7 +47,13 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="card attn"><div class="card-t">需要你介入 <span class="badge">1</span></div><ul class="needs"><li><span class='dot warn'></span>给 23:00 日报等定时任务开启常开审批（App → 头像 → Upcoming → 任务详情 → 权限设为允许）<span class='muted'> · 10-09 23:28</span></li></ul>
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
-<div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+<div class="card"><div class="ev"><span class="ev-tag" style="background:#22b573">日报</span>
+        <div class="ev-body"><div class="ev-h"><b>复盘检查：atr_channel 震荡市连续大额亏损 + RLC 止盈问题复现</b><span class="muted">10-12 00:02</span></div><div class='ev-d'>近10笔复盘8亏2盈：atr_channel 7笔中6亏（ATOMUSDT -11.9%/-410元、TIAUSDT -11.2%/-217元、FILUSDT -7.7%/-239元、CRCLBUSDT -6.3%/-392元、DOTUSDT -2.9%），市场环境为震荡（BTC 24h +0.43%），趋势策略逆市开仓且单笔亏损远超合理ATR止损幅度。RLCUSDT(dual_mom)今日22:00冲高1.19（浮盈+14.9%）无止盈回落至1.0797（+4.3%），回吐约80元。建议：震荡市降仓/暂停趋势策略新开仓并排查止损执行；dual_mom加分批止盈/移动止盈。数据通道31分钟延迟（阈值30分），交易心跳正常，暂观察。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>x402正式接入完成：双过滤器已上线P组纸账本</b><span class="muted">10-12 00:01</span></div><div class='ev-d'>采集：agentpay_ingest/hyperliquid/okx_oi 三脚本就绪；回测：双所一致+OI确认均有增量；team_p_trader已接入，cron已更新</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>x402正式接入：回测完成，双过滤器有增量</b><span class="muted">10-12 00:00</span></div><div class='ev-d'>多所一致性(OKX+HL): PF 1.77→2.28, 胜率50→64%; OI增长确认: PF→17.02(15笔,剔top2 PF=6.72)。决定接入team_p_trader</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>x402免费层评估完成</b><span class="muted">10-11 23:51</span></div><div class='ev-d'>实测AgentPay 17免费工具（keyless零成本）+x402-data-api免费preview。结论：funding_rates（3所跨所对比）、open_interest（本地无OI数据）值得正式接入；fear_greed与本地同源无增量；暂无需谈付费。评估文档已存briefs。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>完成：23:30 复盘检查：趋势策略震荡市连续亏损，已形成调整建议</b><span class="muted">10-11 23:31</span></div></div></div>
@@ -280,12 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#f5a623">交易</span>
         <div class="ev-body"><div class="ev-h"><b>虚拟盘成交 SELL_STOP STRKUSDT</b><span class="muted">10-11 00:07</span></div><div class='ev-d'>策略 atr_channel 价格 0.0814 数量 24094.5571 盈亏 +175.08</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>复盘检查 23:59</b><span class="muted">10-11 00:00</span></div><div class='ev-d'>市场震荡，持仓7只；RLCUSDT 24h -9.39%（冻结项③持续监测）；atr_channel 4连亏（冻结项①）。无实质调整建议，实盘照常跑。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>review-check: atr_channel 连续亏损监测</b><span class="muted">10-10 23:45</span></div><div class='ev-d'>四层分析：市场环境震荡（BTC 24h +1.08%，上涨44/下跌16）。最新3笔复盘均为 atr_channel 亏损：ATOMUSDT -409.96（-11.9%）、FILUSDT -239.36（-7.7%）、KAIAUSDT -5.57；近4笔累计 -1047.25。属冻结事项①（震荡市下趋势策略处理），按实盘冻结令只监测不调整，待大规模优化专项最终方案一并定夺。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>复盘检查：震荡市 atr_channel 三笔亏损在冻结范围内</b><span class="muted">10-10 23:30</span></div><div class='ev-d'>KAIAUSDT -5.57 / FILUSDT -239.36 / ATOMUSDT -409.96，属实盘冻结令①（震荡市趋势策略），仅监测不调整</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>review-check 23:14：震荡市+趋势策略连亏，均属冻结令①②③项，仅监测，无调整建议</b><span class="muted">10-10 23:15</span></div><div class='ev-d'>环境震荡（BTC 24h +1.08%）。复盘无新增：atr_channel 4连亏、keltner KAIAUSDT穿仓、dual_ma 5连亏，均在实盘冻结令覆盖范围内，只记录不调动。持仓7只，RLCUSDT 24h -9.39%（冻结项③监测中）。实盘照常跑。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>复盘检查 23:59</b><span class="muted">10-11 00:00</span></div><div class='ev-d'>市场震荡，持仓7只；RLCUSDT 24h -9.39%（冻结项③持续监测）；atr_channel 4连亏（冻结项①）。无实质调整建议，实盘照常跑。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
