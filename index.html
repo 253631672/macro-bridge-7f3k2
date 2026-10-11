@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-11 22:29（北京时间）· 每5分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-11 22:34（北京时间）· 每5分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -48,6 +48,8 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
 <div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>复盘检查：震荡市趋势策略连续止损+RLCUSDT止盈缺失</b><span class="muted">10-11 22:31</span></div><div class='ev-d'>24h已实现6笔净-215.18元（2胜4负）。TIAUSDT atr_channel -217.08（-11.2%）、DOTUSDT atr_channel -100.31、HBARUSDT dual_ma -95.09、STRKUSDT keltner -5.21；环境=震荡，趋势策略持续失血。RLCUSDT dual_mom +16.75%浮盈，代码中无止盈机制（grep全库零命中take_profit/profit_target），仅ATR止损0.7147。提出3项调整建议（震荡门禁/止损宽度核查/止盈机制），须走回测+上线门禁后才落地，未直接改动实盘。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>复盘检查：震荡市下趋势策略连续亏损需调整</b><span class="muted">10-11 22:15</span></div><div class='ev-d'>市场环境=震荡。dual_ma 6笔0胜(-1711.57), atr_channel 7笔1胜(-1189.56), keltner 2笔0胜(-514.9); momrot 2笔全胜(+69.86)。建议：震荡市下暂停/降仓趋势策略，回测过滤器+上线门禁后落地。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>量化看板 5 分钟数据同步</b><span class="muted">10-11 21:53</span></div><div class='ev-d'>上传链路发布成功，commit a8f3028，index.html/quant.html pinned blob 与基线 md5 一致（逐字节校验通过）</div></div></div>
@@ -284,8 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>复盘检查：趋势策略震荡市连续亏损（冻结中，仅监测）</b><span class="muted">10-10 22:15</span></div><div class='ev-d'>22:14 review-check：震荡环境下 dual_ma 5连亏 -1616、atr_channel 4连亏 -1047，均属冻结项①；RLCUSDT -10.23% 属冻结项③。只动数据不动逻辑，静默处理。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>复盘检查(21:44)：市场震荡,atr_channel 4连亏、dual_ma 5连亏、keltner穿仓、RLC止盈均属冻结三项,只监测不调策略</b><span class="muted">10-10 21:46</span></div><div class='ev-d'>持仓7只无异动;atr_channel最近4笔累计约-1047,dual_ma累计5笔-1616,keltner KAIAUSDT -509.69(-29.4%);冻结令长期有效,等待大规模优化专项最终方案后再定夺。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>复盘检查(21:29): 仅监测,无调整建议</b><span class="muted">10-10 21:30</span></div><div class='ev-d'>市场震荡;趋势策略近期亏损(KAIA -29.4%、dual_ma 5连亏、atr_channel 4连亏)及RLCUSDT -12.8% 均为实盘冻结令三项,只监测不调整;meanrevert 2笔小亏观察中。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>复盘检查(21:44)：市场震荡,atr_channel 4连亏、dual_ma 5连亏、keltner穿仓、RLC止盈均属冻结三项,只监测不调策略</b><span class="muted">10-10 21:46</span></div><div class='ev-d'>持仓7只无异动;atr_channel最近4笔累计约-1047,dual_ma累计5笔-1616,keltner KAIAUSDT -509.69(-29.4%);冻结令长期有效,等待大规模优化专项最终方案后再定夺。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
