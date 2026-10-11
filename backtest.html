@@ -175,11 +175,11 @@ function runBT(){
   var s={pos:0};
   for(var i=1;i<d.length;i++){
     var sig=st.f(i-1,d,s);
-    var px=d[i].c;
-    if(sig===1 && pos===0){ pos=cash/px*(1-0.0003); cash=0; buyPx=px; trades++; }
-    else if(sig===0 && pos>0){ cash=pos*px*(1-0.0003); if(px>buyPx)wins++; pos=0; }
+    var px=d[i].o;  // 次日开盘成交
+    if(sig===1 && pos===0){ pos=cash/px*(1-0.0005); cash=0; buyPx=px; trades++; }
+    else if(sig===0 && pos>0){ cash=pos*px*(1-0.0015); if(px>buyPx)wins++; pos=0; }
     s.pos = pos>0?1:0;
-    var v=cash+pos*px; nav.push(v);
+    var v=cash+pos*d[i].c; nav.push(v);  // 净值按收盘价盯市
     peak=Math.max(peak,v); mdd=Math.max(mdd,(peak-v)/peak*100);
   }
   var ret=(nav[nav.length-1]/100000-1)*100;
@@ -190,7 +190,7 @@ function runBT(){
     '<div class=stat><div class=k>最大回撤</div><div class=v>'+mdd.toFixed(2)+'%</div></div>'+
     '<div class=stat><div class=k>交易次数</div><div class=v>'+trades+'</div></div>'+
     '<div class=stat><div class=k>胜率</div><div class=v>'+wr.toFixed(0)+'%</div></div></div>'+
-    '<p class=meta>回测区间 '+d[0].d+' ~ '+d[d.length-1].d+'（'+d.length+'个交易日），手续费万3。信号用昨日及以前数据、次日执行，无未来函数。</p>';
+    '<p class=meta>回测区间 '+d[0].d+' ~ '+d[d.length-1].d+'（'+d.length+'个交易日），成本买0.05%卖0.15%。信号用昨日及以前数据、次日开盘执行，无未来函数。</p>';
   drawBT(nav, d.map(function(x){return x.c;}));
   btSave(sym, st.n, ret, mdd);
 }
