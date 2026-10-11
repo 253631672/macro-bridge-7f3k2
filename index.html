@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-12 04:44（北京时间）· 每5分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-12 04:49（北京时间）· 每5分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -42,12 +42,14 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
         <div class="card-t" style="margin-top:8px">最近交易</div>
         <table><tr><th>币种</th><th>方向</th><th>价格</th><th>盈亏</th></tr><tr><td>APTUSDT</td><td>SELL_STOP</td><td>0.8974</td><td class='up'>+89.47</td></tr><tr><td>DOTUSDT</td><td>SELL_STOP</td><td>1.2329</td><td class='dn'>-100.31</td></tr><tr><td>STRKUSDT</td><td>SELL_STOP</td><td>0.1053</td><td class='dn'>-5.21</td></tr><tr><td>STRKUSDT</td><td>BUY</td><td>0.1056</td><td class='up'>-</td></tr><tr><td>OGNUSDT</td><td>BUY</td><td>0.0340</td><td class='up'>-</td></tr></table>
         <div class="card-t" style="margin-top:8px">小组竞赛 Top5 <span class="muted">· 每组50000 CNY</span></div>
-        <table><tr><th>#</th><th>小组</th><th>盈利率</th></tr><tr><td>1</td><td>资金费率组</td><td class='up'>+0.03%</td></tr><tr><td>2</td><td>趋势跟踪组</td><td class='up'>+0.00%</td></tr><tr><td>3</td><td>动量轮动组</td><td class='up'>+0.00%</td></tr><tr><td>4</td><td>波动率组</td><td class='up'>+0.00%</td></tr><tr><td>5</td><td>均值回归组</td><td class='up'>+0.00%</td></tr></table>
+        <table><tr><th>#</th><th>小组</th><th>盈利率</th></tr><tr><td>1</td><td>资金费率组</td><td class='up'>+0.02%</td></tr><tr><td>2</td><td>趋势跟踪组</td><td class='up'>+0.00%</td></tr><tr><td>3</td><td>动量轮动组</td><td class='up'>+0.00%</td></tr><tr><td>4</td><td>波动率组</td><td class='up'>+0.00%</td></tr><tr><td>5</td><td>均值回归组</td><td class='up'>+0.00%</td></tr></table>
         <div class="muted">可用现金 32,916.48 · 虚拟资金，仅供策略验证</div></div>
 <div class="card attn"><div class="card-t">需要你介入 <span class="badge">1</span></div><ul class="needs"><li><span class='dot warn'></span>给 23:00 日报等定时任务开启常开审批（App → 头像 → Upcoming → 任务详情 → 权限设为允许）<span class='muted'> · 10-09 23:28</span></li></ul>
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
-<div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+<div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>复盘检查：震荡市趋势策略连续失血，建议加regime过滤器</b><span class="muted">10-12 04:45</span></div><div class='ev-d'>最近18笔复盘亏损13笔（-2337 CNY），亏损集中于atr_channel/keltner/dual_ma在震荡市；建议震荡时暂停/降仓趋势策略新开仓，待回测验证后落地。账户级风控未触发。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>arena 每半小时优化（04:24 轮）</b><span class="muted">10-12 04:34</span></div><div class='ev-d'>3 处小优化：① matching.py 两处 rejected 备注 60%% 笔误修正；② 回测页 hero 日期改为动态 lab_date（修过参数错位）；③ 美股 prompt 补 60% 仓位上限规则。撮合核心断言 8 项全过，export 9 页成功。arena/us/loss 已发布（commit 1fc81a24，pinned blob MD5 逐字节一致，基线已更新），发布内容仅时间戳刷新。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>复盘检查：震荡市趋势策略集体亏损，建议 regime 过滤器</b><span class="muted">10-12 04:30</span></div><div class='ev-d'>最近约40笔复盘：dual_ma -1711、atr_channel -1190、keltner -515。震荡环境下趋势策略连续性亏损，实盘参数未动，建议下轮学习推进 regime 过滤器（震荡降仓/空仓），需回测证据链+门禁后落地。</div></div></div>
@@ -284,8 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>review-check 15分钟检查：发现属冻结项问题，仅监测记录</b><span class="muted">10-11 04:15</span></div><div class='ev-d'>震荡市 atr_channel 多笔亏损、keltner KAIAUSDT穿仓、RLCUSDT持仓-11.5%，均属2026-10-10冻结令范围；逻辑不动，实盘照常跑。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#f5a623">交易</span>
-        <div class="ev-body"><div class="ev-h"><b>虚拟盘成交 SELL_STOP TIAUSDT</b><span class="muted">10-11 04:12</span></div><div class='ev-d'>策略 atr_channel 价格 0.5064 数量 3355.6562 盈亏 -217.08</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#f5a623">交易</span>
-        <div class="ev-body"><div class="ev-h"><b>虚拟盘止损平仓 BTCUSDT</b><span class="muted">10-11 04:08</span></div><div class='ev-d'>止损 BTCUSDT @83043.9243，盈亏 +27.43 CNY；新开仓 TIAUSDT 3355.66 @0.5700（止损0.5005）；总权益 46441.62，现金 28695.47，持仓 7；距峰值回撤 7.09%，接近8%预警线</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>虚拟盘成交 SELL_STOP TIAUSDT</b><span class="muted">10-11 04:12</span></div><div class='ev-d'>策略 atr_channel 价格 0.5064 数量 3355.6562 盈亏 -217.08</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
