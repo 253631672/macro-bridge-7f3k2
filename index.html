@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-12 06:59（北京时间）· 每5分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-12 07:04（北京时间）· 每5分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -47,7 +47,9 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="card attn"><div class="card-t">需要你介入 <span class="badge">1</span></div><ul class="needs"><li><span class='dot warn'></span>给 23:00 日报等定时任务开启常开审批（App → 头像 → Upcoming → 任务详情 → 权限设为允许）<span class='muted'> · 10-09 23:28</span></li></ul>
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
-<div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+<div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>复盘检查 07:00：震荡市趋势策略连续亏损，提出 regime 过滤器调整建议</b><span class="muted">10-12 07:00</span></div><div class='ev-d'>近24笔复盘17亏、累计-3623.93；dual_ma(6笔全亏-1711)/atr_channel(7笔6亏-1190)/keltner(2笔全亏-515)占总亏损94%。建议：震荡市空仓/降仓趋势策略，改动需走回测+上线门禁验证，转交学习轮执行。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>arena-hourly-opt 06:54：修复行情快照坏数据崩溃 bug + 两处原子写入</b><span class="muted">10-12 06:58</span></div><div class='ev-d'>engine/market_snapshot.py：修复 price=None 单只坏行情导致整个快照崩溃的真实 bug（现单只跳过），__main__ 改原子写入；engine/export_site.py export() 改原子写入（保障今日 15:10 首次实盘结算写 web/data.json 不留截断）。AST/合成数据/真实行情拉取/smoke 全部验证通过；web 页面无变化未触发发布。日志见 goals/ai/hidden_files/opt-log.md。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>复盘检查：atr_channel 震荡市持续失血</b><span class="muted">10-12 06:47</span></div><div class='ev-d'>atr_channel 近7笔累计-1189.6（6亏1盈）；dual_ma 6笔-1711.6。建议 regime 过滤器落地前暂停趋势策略新开仓或降仓，需走回测证据链验证后执行。</div></div></div>
@@ -284,8 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>复盘检查：震荡市趋势策略连续亏损，均在冻结范围内</b><span class="muted">10-11 06:15</span></div><div class='ev-d'>近15笔11亏，atr_channel/keltner/dual_ma 大亏；冻结令有效，仅监测不动作。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>15分钟复盘检查（05:59）：震荡市，持仓6只，冻结项监测中，无调整建议</b><span class="muted">10-11 06:01</span></div><div class='ev-d'>四层分析：震荡（BTC 24h +1.08%）。最新复盘TIAUSDT atr_channel -217.08、HBARUSDT dual_ma -95.09均属冻结令范围，仅监测不调整。RLCUSDT持仓-6.14%。静默，无用户打扰。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>虚拟盘交易循环：StoplossGuard 触发，暂停新开仓</b><span class="muted">10-11 05:48</span></div><div class='ev-d'>市场状态 trend(ADX=33.8)；近20根内止损3次触发StoplossGuard，新开仓暂停；权益46292.83，较峰值49983.07回撤7.38%（接近8%关注线，未触发12%熔断）；momrot备选NEARUSDT/SUIUSDT/ZECUSDT因守卫未建仓；持仓6个，现金30392.98。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>15分钟复盘检查（05:59）：震荡市，持仓6只，冻结项监测中，无调整建议</b><span class="muted">10-11 06:01</span></div><div class='ev-d'>四层分析：震荡（BTC 24h +1.08%）。最新复盘TIAUSDT atr_channel -217.08、HBARUSDT dual_ma -95.09均属冻结令范围，仅监测不调整。RLCUSDT持仓-6.14%。静默，无用户打扰。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
