@@ -26,14 +26,13 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-12 06:04（北京时间）· 每5分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-12 06:09（北京时间）· 每5分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
-        <div class="cur-task">quant看板数据刷新中</div>
-        <div class="muted">开始于 10-12 06:04</div></div>
+        <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
 <div class="card"><div class="card-t">🤖 AI量化看板 <span class="muted">· 每5分钟同步</span></div>
         <div class="nums">
-          <div><span>净值</span><b>46,508.77</b></div>
+          <div><span>净值</span><b>46,459.36</b></div>
           <div><span>胜率</span><b>29.2%</b></div>
           <div><span>累计盈亏</span><b class="dn">-3623.93</b></div>
           <div><span>今日交易</span><b>1 笔</b></div>
@@ -49,6 +48,8 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
 <div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>完成：quant看板数据刷新中</b><span class="muted">10-12 06:08</span></div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>arena-hourly-opt：管家/AI公司/结算三处账本写入改为原子写入</b><span class="muted">10-12 05:56</span></div><div class='ev-d'>健康：cron 全成功，美股账本 0 rejected，A股首轮 9:30（预期内）。优化3个：butler_run.py、org_run.py、arena_settle.py 的组合/指数写入改为 tmp+rename 原子写入（与 03:15 账本要求对齐，首跑前补齐）。验证：3 文件 AST 通过，save_pf 真实调用往返一致、无 tmp 残留。matching.py 未动，无页面变化不发布。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>复盘检查(05:44)：趋势策略在震荡市连续亏损，建议 regime 过滤研究</b><span class="muted">10-12 05:45</span></div><div class='ev-d'>环境震荡。近60笔结算：dual_ma 0胜6负 -1711.6，atr_channel 1胜6负 -1189.6，keltner 0胜2负 -514.9；复盘最新三笔 DOT -100.31/-2.9%(atr_channel)、STRK -5.21/-0.2%(keltner) 均提示检查买入逻辑。持仓6只无即刻异动(AEROUSDT 现价0.935在止损0.9297之上)。建议：下一轮 hourly-learn 用 walk-forward 测试震荡过滤器（BTC波动/区间阈值）作用于 dual_ma/atr_channel，过门禁才落地；实盘参数不动。</div></div></div>
@@ -285,8 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>复盘检查</b><span class="muted">10-11 05:31</span></div><div class='ev-d'>震荡市,持仓6只; atr_channel亏损簇/RLCUSDT异动属实盘冻结令,仅监测;15mK线延迟30分钟待观察</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>复盘检查(05:14)：震荡市趋势策略连亏，冻结令生效仅监测</b><span class="muted">10-11 05:15</span></div><div class='ev-d'>环境震荡。近15笔复盘中趋势策略多连亏：atr_channel 4笔合计约-1258、dual_ma 2笔约-355、keltner KAIAUSDT -509.69。持仓6只中 RLCUSDT 24h -6.14%。三项均属实盘冻结令范围（①震荡市趋势策略②keltner穿仓③RLCUSDT止盈），仅监测记录，不调整不汇报。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>hourly-learn：新增通用风控「连损减仓」</b><span class="muted">10-11 04:45</span></div><div class='ev-d'>通用风控层新增连损减仓（连续3笔已平仓净亏损→新开仓风险预算×0.5），补上StoplossGuard只管频次不管金额的缺口。当前连亏streak=1未触发，实盘行为无变化。复盘：已平仓21笔累计-3607.87，dual_ma仍最差（-1711.57，冻令观察区不动）。冻令三项未动。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>复盘检查(05:14)：震荡市趋势策略连亏，冻结令生效仅监测</b><span class="muted">10-11 05:15</span></div><div class='ev-d'>环境震荡。近15笔复盘中趋势策略多连亏：atr_channel 4笔合计约-1258、dual_ma 2笔约-355、keltner KAIAUSDT -509.69。持仓6只中 RLCUSDT 24h -6.14%。三项均属实盘冻结令范围（①震荡市趋势策略②keltner穿仓③RLCUSDT止盈），仅监测记录，不调整不汇报。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
