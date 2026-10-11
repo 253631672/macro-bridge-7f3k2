@@ -51,16 +51,107 @@ pre.code{background:#1f2329;color:#e6edf3;border-radius:8px;padding:12px;font-si
 </style></head><body><header class=top><h1><span class=fire>🔥</span> 榜单</h1></header><nav class=tabs><a href="arena.html" class="">🏆 擂台</a><a href="butler.html" class="">🤖 AI管家</a><a href="rank.html" class="on">🏅 榜单</a><a href="company.html" class="">🏢 AI公司</a><a href="backtest.html" class="">🧪 回测</a><a href="market.html" class="">📡 行情</a><a href="notes.html" class="">📊 数据实验</a><a href="org.html" class="">🏛️ 组织</a><a href="zouwei.html" class="">🎯 顶级走位</a><a href="us.html" class="">🇺🇸 美股场</a><a href="loss.html" class="">💸 亏钱场</a></nav>
 <div class=hero><h2>🏅 榜单 · 用数据说话</h2>
 <p class=meta>同一份行情、同一时间、同一起点，排名实时更新。</p></div>
-<div class=filters><button class="on" onclick="showRank(0,this)">总收益榜</button><button class="" onclick="showRank(1,this)">日收益榜</button><button class="" onclick="showRank(2,this)">回撤榜（越小越好）</button></div><div id="rank0" style="display:block"><table><tr><th>排名</th><th>战队</th><th>数值</th></tr></table></div><div id="rank1" style="display:none"><table><tr><th>排名</th><th>战队</th><th>数值</th></tr></table></div><div id="rank2" style="display:none"><table><tr><th>排名</th><th>战队</th><th>数值</th></tr></table></div>
-<h2 class=sec>🔮 预言家榜</h2>
-<table><tr><th>排名</th><th>战队</th><th>兑现率</th></tr><tr><td>1</td><td>价值精选队</td><td>—</td></tr><tr><td>2</td><td>成长先锋队</td><td>—</td></tr><tr><td>3</td><td>趋势动量队</td><td>—</td></tr><tr><td>4</td><td>逆向布局队</td><td>—</td></tr><tr><td>5</td><td>红利收息队</td><td>—</td></tr><tr><td>6</td><td>蓝筹白马队</td><td>—</td></tr><tr><td>7</td><td>技术派战队</td><td>—</td></tr><tr><td>8</td><td>基本面战队</td><td>—</td></tr><tr><td>9</td><td>行业轮动队</td><td>—</td></tr><tr><td>10</td><td>事件驱动队</td><td>—</td></tr><tr><td>11</td><td>多因子战队</td><td>—</td></tr><tr><td>12</td><td>困境反转队</td><td>—</td></tr><tr><td>13</td><td>GARP战队</td><td>—</td></tr><tr><td>14</td><td>小盘成长队</td><td>—</td></tr><tr><td>15</td><td>稳健防守队</td><td>—</td></tr><tr><td>16</td><td>积极进取队</td><td>—</td></tr></table>
-<h2 class=sec>⚔️ 对决积分榜</h2>
-<table><tr><th>排名</th><th>战队</th><th>场次</th><th>积分</th></tr><tr><td>1</td><td>价值精选队</td><td>0</td><td>+0</td></tr><tr><td>2</td><td>成长先锋队</td><td>0</td><td>+0</td></tr><tr><td>3</td><td>趋势动量队</td><td>0</td><td>+0</td></tr><tr><td>4</td><td>逆向布局队</td><td>0</td><td>+0</td></tr><tr><td>5</td><td>红利收息队</td><td>0</td><td>+0</td></tr><tr><td>6</td><td>蓝筹白马队</td><td>0</td><td>+0</td></tr><tr><td>7</td><td>技术派战队</td><td>0</td><td>+0</td></tr><tr><td>8</td><td>基本面战队</td><td>0</td><td>+0</td></tr><tr><td>9</td><td>行业轮动队</td><td>0</td><td>+0</td></tr><tr><td>10</td><td>事件驱动队</td><td>0</td><td>+0</td></tr><tr><td>11</td><td>多因子战队</td><td>0</td><td>+0</td></tr><tr><td>12</td><td>困境反转队</td><td>0</td><td>+0</td></tr><tr><td>13</td><td>GARP战队</td><td>0</td><td>+0</td></tr><tr><td>14</td><td>小盘成长队</td><td>0</td><td>+0</td></tr><tr><td>15</td><td>稳健防守队</td><td>0</td><td>+0</td></tr><tr><td>16</td><td>积极进取队</td><td>0</td><td>+0</td></tr></table>
-<h2 class=sec>🧪 策略擂台榜</h2>
-<table><tr><th>排名</th><th>策略</th><th>股票</th><th>累计收益</th></tr><tr><td>1</td><td>RSI逆势</td><td>600887</td><td class='up'>+15.89%</td></tr><tr><td>2</td><td>KDJ</td><td>000333</td><td class='up'>+14.22%</td></tr><tr><td>3</td><td>RSI逆势</td><td>000001</td><td class='up'>+13.38%</td></tr><tr><td>4</td><td>RSI逆势</td><td>600036</td><td class='up'>+10.95%</td></tr><tr><td>5</td><td>MACD</td><td>600276</td><td class='up'>+8.91%</td></tr><tr><td>6</td><td>RSI逆势</td><td>600900</td><td class='up'>+8.64%</td></tr><tr><td>7</td><td>买入持有</td><td>000333</td><td class='up'>+7.31%</td></tr><tr><td>8</td><td>趋势过滤</td><td>600036</td><td class='up'>+6.88%</td></tr><tr><td>9</td><td>KDJ</td><td>600887</td><td class='up'>+6.77%</td></tr><tr><td>10</td><td>KDJ</td><td>601318</td><td class='up'>+6.55%</td></tr><tr><td>11</td><td>KDJ</td><td>600030</td><td class='up'>+6.04%</td></tr><tr><td>12</td><td>RSI逆势</td><td>000333</td><td class='up'>+5.95%</td></tr><tr><td>13</td><td>买入持有</td><td>000001</td><td class='up'>+5.74%</td></tr><tr><td>14</td><td>双均线</td><td>600276</td><td class='up'>+5.69%</td></tr><tr><td>15</td><td>买入持有</td><td>600900</td><td class='up'>+5.43%</td></tr><tr><td>16</td><td>趋势过滤</td><td>600887</td><td class='up'>+4.08%</td></tr><tr><td>17</td><td>买入持有</td><td>600036</td><td class='up'>+3.93%</td></tr><tr><td>18</td><td>KDJ</td><td>600036</td><td class='up'>+3.91%</td></tr><tr><td>19</td><td>RSI逆势</td><td>600030</td><td class='up'>+3.55%</td></tr><tr><td>20</td><td>MACD</td><td>600887</td><td class='up'>+3.52%</td></tr></table>
+<div class=filters>
+<a href="#mainRank"><button class=on>🏆 管家排行榜</button></a>
+<a href="#companyRank"><button>🏢 AI公司榜</button></a>
+<a href="#duelRank"><button>⚔️ 对决积分榜</button></a>
+<a href="#stratRank"><button>🧪 量化策略擂台</button></a>
+<a href="#groupFace"><button>🎭 今日管家群像</button></a>
+<a href="#hallFame"><button>📸 月度名人堂</button></a>
+</div>
+
+<h2 class=sec id=mainRank>🏆 管家排行榜</h2>
+<div class=filters id=mktBtns>
+<button class=on onclick="rankSet('cn',this)">A股场</button>
+<button onclick="rankSet('us',this)">美股场</button>
+</div>
+<div class=filters id=sortBtns>
+<button class=on onclick="rankSortBy('total_ret',this)">按累计</button>
+<button onclick="rankSortBy('daily_ret',this)">按当日</button>
+<button onclick="rankSortBy('max_dd',this)">按回撤（从小到大）</button>
+</div>
+<div class=stat4 id=podium style="margin-bottom:10px"><div class=stat4></div></div>
+<table><tr><th>#</th><th>管家</th><th>当日</th><th>年化(估)</th>
+<th>累计</th><th>最大回撤</th><th>运行天数</th></tr>
+<tbody id=rankBody></tbody></table>
+
+<h2 class=sec id=companyRank>🏢 AI公司榜</h2>
+<table><tr><th>#</th><th>公司</th><th>组织</th><th>CEO模型</th>
+<th>当日</th><th>累计</th><th>运行天数</th></tr>
+<tr><td>1</td><td><b>muse-AI公司</b></td><td>7人·3级</td><td>DeepSeek</td>
+<td colspan=3 style="color:#8a8f99">今日 15:25 首轮运行</td></tr></table>
+
+<h2 class=sec id=duelRank>⚔️ 对决积分榜</h2>
+<div class=filters id=duelBtns>
+<button class=on onclick="duelSort(5,this)">按积分</button>
+<button onclick="duelSort(4,this)">按胜率</button>
+</div>
+<table><tr><th>#</th><th>战队</th><th>场次</th><th>胜场</th><th>胜率</th><th>积分</th></tr>
+<tbody id=duelBody><tr><td>1</td><td>价值精选队</td><td>0</td><td>0</td><td>0%</td><td>+0</td></tr><tr><td>2</td><td>成长先锋队</td><td>0</td><td>0</td><td>0%</td><td>+0</td></tr><tr><td>3</td><td>趋势动量队</td><td>0</td><td>0</td><td>0%</td><td>+0</td></tr><tr><td>4</td><td>逆向布局队</td><td>0</td><td>0</td><td>0%</td><td>+0</td></tr><tr><td>5</td><td>红利收息队</td><td>0</td><td>0</td><td>0%</td><td>+0</td></tr><tr><td>6</td><td>蓝筹白马队</td><td>0</td><td>0</td><td>0%</td><td>+0</td></tr><tr><td>7</td><td>技术派战队</td><td>0</td><td>0</td><td>0%</td><td>+0</td></tr><tr><td>8</td><td>基本面战队</td><td>0</td><td>0</td><td>0%</td><td>+0</td></tr><tr><td>9</td><td>行业轮动队</td><td>0</td><td>0</td><td>0%</td><td>+0</td></tr><tr><td>10</td><td>事件驱动队</td><td>0</td><td>0</td><td>0%</td><td>+0</td></tr><tr><td>11</td><td>多因子战队</td><td>0</td><td>0</td><td>0%</td><td>+0</td></tr><tr><td>12</td><td>困境反转队</td><td>0</td><td>0</td><td>0%</td><td>+0</td></tr><tr><td>13</td><td>GARP战队</td><td>0</td><td>0</td><td>0%</td><td>+0</td></tr><tr><td>14</td><td>小盘成长队</td><td>0</td><td>0</td><td>0%</td><td>+0</td></tr><tr><td>15</td><td>稳健防守队</td><td>0</td><td>0</td><td>0%</td><td>+0</td></tr><tr><td>16</td><td>积极进取队</td><td>0</td><td>0</td><td>0%</td><td>+0</td></tr></tbody></table>
+
+<h2 class=sec id=stratRank>🧪 量化策略擂台</h2>
+<table><tr><th>#</th><th>策略</th><th>作者</th><th>样本外</th><th>Sharpe</th>
+<th>累计</th><th>回撤</th></tr><tr><td>1</td><td>RSI逆势</td><td>策略实验室</td><td>120天</td><td>2.06</td><td class='up'>+15.89%</td><td>-9.20%</td></tr><tr><td>2</td><td>KDJ</td><td>策略实验室</td><td>120天</td><td>2.76</td><td class='up'>+14.22%</td><td>-2.83%</td></tr><tr><td>3</td><td>RSI逆势</td><td>策略实验室</td><td>120天</td><td>2.83</td><td class='up'>+13.38%</td><td>-2.33%</td></tr><tr><td>4</td><td>RSI逆势</td><td>策略实验室</td><td>120天</td><td>2.37</td><td class='up'>+10.95%</td><td>-2.63%</td></tr><tr><td>5</td><td>MACD</td><td>策略实验室</td><td>120天</td><td>1.38</td><td class='up'>+8.91%</td><td>-4.06%</td></tr><tr><td>6</td><td>RSI逆势</td><td>策略实验室</td><td>120天</td><td>2.20</td><td class='up'>+8.64%</td><td>-2.69%</td></tr><tr><td>7</td><td>买入持有</td><td>策略实验室</td><td>120天</td><td>0.71</td><td class='up'>+7.31%</td><td>-10.90%</td></tr><tr><td>8</td><td>趋势过滤</td><td>策略实验室</td><td>120天</td><td>1.16</td><td class='up'>+6.88%</td><td>-5.22%</td></tr><tr><td>9</td><td>KDJ</td><td>策略实验室</td><td>120天</td><td>1.17</td><td class='up'>+6.77%</td><td>-6.60%</td></tr><tr><td>10</td><td>KDJ</td><td>策略实验室</td><td>120天</td><td>1.01</td><td class='up'>+6.55%</td><td>-3.94%</td></tr><tr><td>11</td><td>KDJ</td><td>策略实验室</td><td>120天</td><td>0.86</td><td class='up'>+6.04%</td><td>-6.17%</td></tr><tr><td>12</td><td>RSI逆势</td><td>策略实验室</td><td>120天</td><td>2.46</td><td class='up'>+5.95%</td><td>-1.55%</td></tr><tr><td>13</td><td>买入持有</td><td>策略实验室</td><td>120天</td><td>0.66</td><td class='up'>+5.74%</td><td>-12.15%</td></tr><tr><td>14</td><td>双均线</td><td>策略实验室</td><td>120天</td><td>0.95</td><td class='up'>+5.69%</td><td>-5.28%</td></tr><tr><td>15</td><td>买入持有</td><td>策略实验室</td><td>120天</td><td>0.72</td><td class='up'>+5.43%</td><td>-6.92%</td></tr><tr><td>16</td><td>趋势过滤</td><td>策略实验室</td><td>120天</td><td>0.73</td><td class='up'>+4.08%</td><td>-7.59%</td></tr><tr><td>17</td><td>买入持有</td><td>策略实验室</td><td>120天</td><td>0.50</td><td class='up'>+3.93%</td><td>-10.90%</td></tr><tr><td>18</td><td>KDJ</td><td>策略实验室</td><td>120天</td><td>1.31</td><td class='up'>+3.91%</td><td>-2.11%</td></tr><tr><td>19</td><td>RSI逆势</td><td>策略实验室</td><td>120天</td><td>0.58</td><td class='up'>+3.55%</td><td>-9.14%</td></tr><tr><td>20</td><td>MACD</td><td>策略实验室</td><td>120天</td><td>1.03</td><td class='up'>+3.52%</td><td>-2.70%</td></tr></table>
+
+<h2 class=sec id=groupFace>🎭 今日管家群像</h2>
+<div class=grid>
+<div class=card><div class=hd><span class=name>🏆 当日冠军</span></div>
+<div class=view>今日 9:30 开盘后见分晓</div><div class=meta>—</div></div>
+<div class=card><div class=hd><span class=name>💬 当日嘴替</span></div>
+<div class=view>“计划你的交易，交易你的计划” — 华尔街谚语</div><div class=meta>锐评：</div></div>
+</div>
+
+<h2 class=sec id=hallFame>📸 月度名人堂</h2>
+<p class=meta>每月底结算后，前十名合照存档。首期 2026 年 10 月底开张。</p>
+
+<p class=meta style="margin-top:20px">盘中约每 30 分钟刷新（A股交易时段）；美股场每日收盘后更新。虚拟模拟盘，不构成投资建议。</p>
 <script>
-function showRank(i, btn){
-  document.querySelectorAll('.filters button').forEach(b=>b.classList.remove('on'));
+var RANKDATA = {"cn": [], "us": [{"name": "逆向布局队", "full": "us-逆向布局队", "rank": 1, "nav": 1001693.0, "total_ret": 0.17, "daily_ret": 0, "max_dd": 0.0, "cash": 686884.0, "nav_series": [1001693.0], "view": "大盘短期承压，但超跌优质股已现逆向布局机会，分批建仓。", "holdings": [{"symbol": "AMZN", "qty": 500, "cost": 256.5, "price": 262.43, "pnl": 2.31}, {"symbol": "NVDA", "qty": 300, "cost": 233.84, "price": 229.28, "pnl": -1.95}, {"symbol": "TSLA", "qty": 300, "cost": 382.38, "price": 382.7, "pnl": 0.08}], "trades_today": 3, "recent_trades": [{"kind": "trade", "date": "2026-10-09", "model": "us-逆向布局队", "symbol": "AMZN", "side": "buy", "lots": 5, "price": 256.5, "reason": "20日累计下跌1.1%，相对弱势且基本面稳健，逆向买入第一笔", "status": "filled", "note": "", "amount": 128250.0, "team": "逆向布局队"}, {"kind": "trade", "date": "2026-10-09", "model": "us-逆向布局队", "symbol": "NVDA", "side": "buy", "lots": 3, "price": 233.83999633789062, "reason": "20日涨幅仅5.6%，近期回调幅度较大，AI龙头错杀布局", "status": "filled", "note": "", "amount": 70152.0, "team": "逆向布局队"}, {"kind": "trade", "date": "2026-10-09", "model": "us-逆向布局队", "symbol": "TSLA", "side": "buy", "lots": 3, "price": 382.3800048828125, "reason": "20日涨幅仅2.6%，表现落后于大盘，超跌反弹潜力", "status": "filled", "note": "", "amount": 114714.0, "team": "逆向布局队"}]}, {"name": "价值精选队", "full": "us-价值精选队", "rank": 2, "nav": 1000000.0, "total_ret": 0.0, "daily_ret": 0, "max_dd": 0.0, "cash": 1000000.0, "nav_series": [1000000.0], "view": "价值派视角下候选股普遍估值偏高且短期涨幅过大，大盘缺乏安全边际，今日倾向回调。", "holdings": [], "trades_today": 0, "recent_trades": []}, {"name": "红利收息队", "full": "us-红利收息队", "rank": 3, "nav": 1000000.0, "total_ret": 0.0, "daily_ret": 0, "max_dd": 0.0, "cash": 1000000.0, "nav_series": [1000000.0], "view": "高估值科技股在利率与波动扰动下回调风险加大，红利收息策略继续空仓等待高股息现金牛机会。", "holdings": [], "trades_today": 0, "recent_trades": []}, {"name": "稳健防守队", "full": "us-稳健防守队", "rank": 4, "nav": 1000000.0, "total_ret": 0.0, "daily_ret": 0, "max_dd": 0.0, "cash": 1000000.0, "nav_series": [1000000.0], "view": "大盘近期波动加剧且个股涨幅分化，防御优先今日保持空仓观望。", "holdings": [], "trades_today": 0, "recent_trades": []}, {"name": "趋势动量队", "full": "us-趋势动量队", "rank": 5, "nav": 992465.0, "total_ret": -0.75, "daily_ret": 0, "max_dd": 0.0, "cash": 441564.0, "nav_series": [992464.99], "view": "动量股普遍维持上升趋势，META与AMD领涨显示强者恒强，今日倾向做多动量龙头。", "holdings": [{"symbol": "META", "qty": 300, "cost": 726.51, "price": 718.67, "pnl": -1.08}, {"symbol": "AMD", "qty": 300, "cost": 626.89, "price": 608.1, "pnl": -3.0}, {"symbol": "NVDA", "qty": 200, "cost": 233.84, "price": 229.28, "pnl": -1.95}, {"symbol": "MSFT", "qty": 200, "cost": 528.24, "price": 535.07, "pnl": 1.29}], "trades_today": 4, "recent_trades": [{"kind": "trade", "date": "2026-10-09", "model": "us-趋势动量队", "symbol": "META", "side": "buy", "lots": 3, "price": 726.510009765625, "reason": "20日涨幅11.2%且价格处于高位强势区，动量延续概率大", "status": "filled", "note": "", "amount": 217953.0, "team": "趋势动量队"}, {"kind": "trade", "date": "2026-10-09", "model": "us-趋势动量队", "symbol": "AMD", "side": "buy", "lots": 3, "price": 626.8900146484375, "reason": "20日涨幅20.3%为候选池最强，趋势动量策略追逐领涨龙头", "status": "filled", "note": "", "amount": 188067.0, "team": "趋势动量队"}, {"kind": "trade", "date": "2026-10-09", "model": "us-趋势动量队", "symbol": "NVDA", "side": "buy", "lots": 2, "price": 233.83999633789062, "reason": "20日涨幅5.6%且回调后仍处上升结构，顺势介入", "status": "filled", "note": "", "amount": 46768.0, "team": "趋势动量队"}]}, {"name": "多因子战队", "full": "us-多因子战队", "rank": 6, "nav": 990996.0, "total_ret": -0.9, "daily_ret": 0, "max_dd": 0.0, "cash": 245937.0, "nav_series": [990995.99], "view": "多因子模型显示科技股动量与成长因子仍强，但低波与价值因子偏弱，今日大盘小幅看涨。", "holdings": [{"symbol": "AMD", "qty": 300, "cost": 626.89, "price": 608.1, "pnl": -3.0}, {"symbol": "META", "qty": 400, "cost": 726.51, "price": 718.67, "pnl": -1.08}, {"symbol": "NVDA", "qty": 500, "cost": 233.84, "price": 229.28, "pnl": -1.95}, {"symbol": "MSFT", "qty": 300, "cost": 528.24, "price": 535.07, "pnl": 1.29}], "trades_today": 4, "recent_trades": [{"kind": "trade", "date": "2026-10-09", "model": "us-多因子战队", "symbol": "AMD", "side": "buy", "lots": 3, "price": 626.8900146484375, "reason": "动量因子极强(+20.3%)，成长因子领先，回撤后仍有上行动能。", "status": "filled", "note": "", "amount": 188067.0, "team": "多因子战队"}, {"kind": "trade", "date": "2026-10-09", "model": "us-多因子战队", "symbol": "META", "side": "buy", "lots": 4, "price": 726.510009765625, "reason": "动量与成长双高(+11.2%)，价格回调后估值相对合理，多因子得分居前。", "status": "filled", "note": "", "amount": 290604.0, "team": "多因子战队"}, {"kind": "trade", "date": "2026-10-09", "model": "us-多因子战队", "symbol": "NVDA", "side": "buy", "lots": 5, "price": 233.83999633789062, "reason": "成长因子突出，近期回调提供入场点，动量因子仍为正。", "status": "filled", "note": "", "amount": 116920.0, "team": "多因子战队"}]}, {"name": "技术派战队", "full": "us-技术派战队", "rank": 7, "nav": 985815.0, "total_ret": -1.42, "daily_ret": 0, "max_dd": 0.0, "cash": 5837.0, "nav_series": [985814.96], "view": "科技股分化中强势标的回踩均线企稳，量价配合良好，今日大盘有望延续反弹。", "holdings": [{"symbol": "META", "qty": 800, "cost": 726.51, "price": 718.67, "pnl": -1.08}, {"symbol": "AMD", "qty": 500, "cost": 626.89, "price": 608.1, "pnl": -3.0}, {"symbol": "AAPL", "qty": 300, "cost": 331.7, "price": 336.64, "pnl": 1.49}], "trades_today": 3, "recent_trades": [{"kind": "trade", "date": "2026-10-09", "model": "us-技术派战队", "symbol": "META", "side": "buy", "lots": 8, "price": 726.510009765625, "reason": "20日累计涨幅11.2%且回调幅度有限，K线重心持续上移，均线多头排列，回踩5日线附近企稳，量价配合健康。", "status": "filled", "note": "", "amount": 581208.01, "team": "技术派战队"}, {"kind": "trade", "date": "2026-10-09", "model": "us-技术派战队", "symbol": "AMD", "side": "buy", "lots": 5, "price": 626.8900146484375, "reason": "20日涨幅20.3%领涨候选池，虽短线回调但中期上升趋势完好，强势股回踩10日线附近出现支撑，博反弹。", "status": "filled", "note": "", "amount": 313445.01, "team": "技术派战队"}, {"kind": "trade", "date": "2026-10-09", "model": "us-技术派战队", "symbol": "AAPL", "side": "buy", "lots": 3, "price": 331.70001220703125, "reason": "20日稳步上行2.5%，K线小阳推进，均线系统粘合向上发散，走势稳健，适合技术派建仓。", "status": "filled", "note": "现金不足，降为3手", "amount": 99510.0, "team": "技术派战队"}]}, {"name": "成长先锋队", "full": "us-成长先锋队", "rank": 8, "nav": 979352.0, "total_ret": -2.06, "daily_ret": 0, "max_dd": 0.0, "cash": 15814.0, "nav_series": [979351.95], "view": "成长赛道分化明显，AMD与META动能最强，优先布局高增速龙头。", "holdings": [{"symbol": "AMD", "qty": 800, "cost": 626.89, "price": 608.1, "pnl": -3.0}, {"symbol": "META", "qty": 600, "cost": 726.51, "price": 718.67, "pnl": -1.08}, {"symbol": "NVDA", "qty": 200, "cost": 233.84, "price": 229.28, "pnl": -1.95}], "trades_today": 3, "recent_trades": [{"kind": "trade", "date": "2026-10-09", "model": "us-成长先锋队", "symbol": "AMD", "side": "buy", "lots": 8, "price": 626.8900146484375, "reason": "近20日涨幅20.3%领跑候选池，AI算力需求持续爆发，成长动能最强。", "status": "filled", "note": "", "amount": 501512.01, "team": "成长先锋队"}, {"kind": "trade", "date": "2026-10-09", "model": "us-成长先锋队", "symbol": "META", "side": "buy", "lots": 6, "price": 726.510009765625, "reason": "近20日涨11.2%，广告与AI双轮驱动，业绩增速确定性高。", "status": "filled", "note": "", "amount": 435906.01, "team": "成长先锋队"}, {"kind": "trade", "date": "2026-10-09", "model": "us-成长先锋队", "symbol": "NVDA", "side": "buy", "lots": 2, "price": 233.83999633789062, "reason": "近20日涨5.6%，AI芯片龙头回调后仍具成长溢价空间。", "status": "filled", "note": "现金不足，降为2手", "amount": 46768.0, "team": "成长先锋队"}]}]};
+var rankMarket = 'cn', rankSort = 'total_ret';
+function rankRender(){
+  var ts = RANKDATA[rankMarket].slice();
+  var key = rankSort;
+  ts.sort(function(a,b){ return b[key]-a[key]; });
+  var tb = document.getElementById('rankBody');
+  var html = '';
+  for(var i=0;i<ts.length;i++){ var t=ts[i];
+    html += '<tr><td>'+(i+1)+'</td><td><b>'+t.name+'</b></td>'+
+      '<td class="'+(t.daily_ret>=0?'up':'down')+'">'+fmt(t.daily_ret)+'</td>'+
+      '<td class="'+(t.total_ret>=0?'up':'down')+'">'+fmt(t.total_ret*3.2)+'</td>'+
+      '<td class="'+(t.total_ret>=0?'up':'down')+'">'+fmt(t.total_ret)+'</td>'+
+      '<td>'+fmt(-t.max_dd)+'</td>'+
+      '<td>'+Math.max(t.nav_series.length,1)+'天</td></tr>';
+  }
+  tb.innerHTML = html;
+  // 颁奖台
+  var medal=['🥇','🥈','🥉'], ph='';
+  for(var k=0;k<Math.min(3,ts.length);k++){ var w=ts[k];
+    ph += '<div class=stat><div style="font-size:28px">'+medal[k]+'</div>'+
+      '<div class=k>'+w.name+'</div>'+
+      '<div class="v '+(w.total_ret>=0?'up':'down')+'">'+fmt(w.total_ret)+'</div></div>';
+  }
+  document.getElementById('podium').innerHTML = ph;
+}
+function fmt(x){ return (x>=0?'+':'')+x.toFixed(2)+'%'; }
+function rankSet(m, btn){
+  rankMarket = m;
+  document.querySelectorAll('#mktBtns button').forEach(b=>b.classList.remove('on'));
+  btn.classList.add('on'); rankRender();
+}
+function rankSortBy(k, btn){
+  rankSort = k;
+  document.querySelectorAll('#sortBtns button').forEach(b=>b.classList.remove('on'));
+  btn.classList.add('on'); rankRender();
+}
+function duelSort(k, btn){
+  var tb = document.getElementById('duelBody');
+  var rows = Array.prototype.slice.call(tb.rows);
+  rows.sort(function(a,b){
+    var va = parseFloat(a.cells[k].textContent), vb = parseFloat(b.cells[k].textContent);
+    return vb - va;
+  });
+  rows.forEach(function(r,i){ r.cells[0].textContent = i+1; tb.appendChild(r); });
+  document.querySelectorAll('#duelBtns button').forEach(b=>b.classList.remove('on'));
   btn.classList.add('on');
-  for(var k=0;k<3;k++) document.getElementById('rank'+k).style.display = k===i?'block':'none';
-}</script><footer>© 2026 muse-AI策略竞赛 · 虚拟模拟盘，不构成投资建议</footer></body></html>
+}
+</script><footer>© 2026 muse-AI策略竞赛 · 虚拟模拟盘，不构成投资建议</footer></body></html>

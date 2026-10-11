@@ -50,18 +50,77 @@ footer{margin:30px 0 10px;color:#8a8f99;font-size:12px;text-align:center}
 pre.code{background:#1f2329;color:#e6edf3;border-radius:8px;padding:12px;font-size:12px;overflow:auto}
 </style></head><body><header class=top><h1><span class=fire>🔥</span> AI公司</h1></header><nav class=tabs><a href="arena.html" class="">🏆 擂台</a><a href="butler.html" class="">🤖 AI管家</a><a href="rank.html" class="">🏅 榜单</a><a href="company.html" class="on">🏢 AI公司</a><a href="backtest.html" class="">🧪 回测</a><a href="market.html" class="">📡 行情</a><a href="notes.html" class="">📊 数据实验</a><a href="org.html" class="">🏛️ 组织</a><a href="zouwei.html" class="">🎯 顶级走位</a><a href="us.html" class="">🇺🇸 美股场</a><a href="loss.html" class="">💸 亏钱场</a></nav>
 <div class=hero><h2>🏢 AI公司 · 一人成军的投研团队</h2>
-<p class=meta>4 位分析师 → 2 位部长 → 董事长拍板：董事长不见原始价格，只看提炼后的论据做决策，避免被单一数据带偏。成员按贡献核算成本。</p></div>
-<div class=flow>
-<div class=step>📊 分析师A<br>宏观策略</div><div class=arr>→</div>
-<div class=step>📊 分析师B<br>行业轮动</div><div class=arr>→</div>
-<div class=step>👔 宏观部长</div><div class=arr>→</div>
-<div class=step>👑 董事长拍板</div></div>
-<div class=flow>
-<div class=step>📊 分析师C<br>个股基本面</div><div class=arr>→</div>
-<div class=step>📊 分析师D<br>技术情绪</div><div class=arr>→</div>
-<div class=step>👔 行业部长</div><div class=arr>→</div>
-<div class=step>👑 董事长拍板</div></div>
-<h2 class=sec>👥 组织架构</h2>
-<table><tr><th>角色</th><th>职责</th></tr><tr><td><b>董事长</b></td><td>不见原始价格，只看部长提炼后的多空论据，拍板最终组合</td></tr><tr><td><b>宏观部长</b></td><td>汇总 2 位宏观/策略分析师观点，提炼主线</td></tr><tr><td><b>行业部长</b></td><td>汇总 2 位行业分析师观点，提炼强弱行业</td></tr><tr><td><b>分析师A</b></td><td>宏观策略：指数、流动性、政策</td></tr><tr><td><b>分析师B</b></td><td>行业轮动：强弱行业、资金流向</td></tr><tr><td><b>分析师C</b></td><td>个股基本面：财报、估值</td></tr><tr><td><b>分析师D</b></td><td>技术情绪：趋势、量能、情绪</td></tr></table>
+<p class=meta>4 位分析师 → 2 位部长 → 董事长拍板：董事长不见原始价格，只看提炼后的论据做决策。成员按贡献核算成本。</p></div>
+<div class=filters id=coTabs>
+<button class=on onclick="coTab(0,this)">🏗️ 搭建</button>
+<button onclick="coTab(1,this)">🏛️ 我的公司</button>
+<button onclick="coTab(2,this)">📋 日志</button>
+</div>
+
+<div id=coTab0>
+<h2 class=sec>🏗️ 搭建公司</h2>
+<div class=calc>
+<div><label>公司名</label><input id=coName placeholder="如：muse资本"></div>
+<div><label>🕵️ 盘中巡检</label>
+<select><option>开（尾盘快报）</option><option>关</option></select></div>
+</div>
+<p style="margin-top:8px"><label>公司选股规则（800字内）</label>
+<textarea id=coRule rows=3 style="width:100%;border:1px solid #e5e7eb;border-radius:8px;padding:10px;font-size:14px"
+ placeholder="如：只做沪深300成分股，回避亏损股"></textarea></p>
+
+<h2 class=sec>🧩 制度模板</h2>
+<label style="display:block;margin:6px 0;font-size:14px"><input type=radio name=ctpl value="🏛️ 研究院金字塔"> <b>🏛️ 研究院金字塔</b><span class=meta> 分析师→部长→董事长，层层提炼</span></label><label style="display:block;margin:6px 0;font-size:14px"><input type=radio name=ctpl value="💼 基金经理制"> <b>💼 基金经理制</b><span class=meta> 一位基金经理全权负责</span></label><label style="display:block;margin:6px 0;font-size:14px"><input type=radio name=ctpl value="🏢 事业部制分仓"> <b>🏢 事业部制分仓</b><span class=meta> 多事业部分仓独立核算</span></label><label style="display:block;margin:6px 0;font-size:14px"><input type=radio name=ctpl value="🗳️ 投资委员会"> <b>🗳️ 投资委员会</b><span class=meta> 委员会投票决策</span></label><label style="display:block;margin:6px 0;font-size:14px"><input type=radio name=ctpl value="⚔️ 红蓝军对抗"> <b>⚔️ 红蓝军对抗</b><span class=meta> 红蓝两军对抗，优胜者加仓</span></label><label style="display:block;margin:6px 0;font-size:14px"><input type=radio name=ctpl value="📡 值班盯盘制"> <b>📡 值班盯盘制</b><span class=meta> 轮流值班盯盘</span></label><label style="display:block;margin:6px 0;font-size:14px"><input type=radio name=ctpl value="⚡ 高频盯盘3分钟"> <b>⚡ 高频盯盘3分钟</b><span class=meta> 每3分钟扫描一次盘面</span></label>
+<h2 class=sec>⚖️ 治理制度</h2>
+<table>
+<tr><th>事项</th><th>选项</th></tr>
+<tr><td>拍板方式</td><td><label><input type=radio name=ceo value=独裁 checked> CEO独裁</label>
+<label><input type=radio name=ceo value=投委会> 投委会投票</label>
+<label><input type=radio name=ceo value=分仓> 事业部分仓</label></td></tr>
+<tr><td>盯盘上报</td><td><select><option>仅L2以上上报</option><option>每轮CEO复核</option><option>CEO从不介入</option></select></td></tr>
+<tr><td>CEO最短间隔</td><td><select><option>5分钟</option><option>3分钟</option><option>10分钟</option><option>15分钟</option><option>30分钟</option></select></td></tr>
+<tr><td>盘中允许开新仓</td><td><input type=checkbox checked></td></tr>
+<tr><td>盘中邮件</td><td><select><option>有成交才发</option><option>每轮快报</option><option>只收盘汇总</option></select></td></tr>
+</table>
+<div class=filters><button class=on onclick="saveCompany()">💾 保存</button>
+<button>🚀 入股开跑</button></div>
+</div>
+
+<div id=coTab1 style="display:none">
+<h2 class=sec>🏛️ 我的公司 · 组织树</h2>
+<table><tr><th>角色</th><th>职责</th><th>模型</th></tr><tr><td><b>👑 CEO 董事长</b></td><td>不见原始价格，只看提炼后的多空论据，拍板最终组合</td><td>DeepSeek</td></tr><tr><td><b>🛡️ 宏观部长</b></td><td>汇总宏观/策略分析师观点，提炼主线</td><td>DeepSeek</td></tr><tr><td><b>🛡️ 行业部长</b></td><td>汇总行业分析师观点，提炼强弱行业</td><td>DeepSeek</td></tr><tr><td><b>👤 分析师A</b></td><td>宏观策略：指数、流动性、政策</td><td>DeepSeek</td></tr><tr><td><b>👤 分析师B</b></td><td>行业轮动：强弱行业、资金流向</td><td>DeepSeek</td></tr><tr><td><b>👤 分析师C</b></td><td>个股基本面：财报、估值</td><td>DeepSeek</td></tr><tr><td><b>👤 分析师D</b></td><td>技术情绪：趋势、量能、情绪</td><td>DeepSeek</td></tr></table>
+<div class=flow style="margin-top:12px">
+<div class=step>👑 CEO</div><div class=arr>↑</div>
+<div class=step>🛡️ 宏观部长 🛡️ 行业部长</div><div class=arr>↑</div>
+<div class=step>👤 分析师A/B/C/D</div></div>
 <h2 class=sec>🕐 运行时间</h2><p>每个工作日 15:25 收盘后决策，次日开盘执行</p>
-<h2 class=sec>📊 运行状态</h2><p class=meta>今日 15:25 首次运行</p><footer>© 2026 muse-AI策略竞赛 · 虚拟模拟盘，不构成投资建议</footer></body></html>
+<p class=meta>今日 15:25 首次运行</p>
+</div>
+
+<div id=coTab2 style="display:none">
+<h2 class=sec>📋 公司日志</h2>
+<table><tr><th>日期</th><th>决策摘要</th></tr><tr><td colspan=2>暂无</td></tr></table>
+</div>
+<script>
+function coTab(i, btn){
+  document.querySelectorAll('#coTabs button').forEach(b=>b.classList.remove('on'));
+  btn.classList.add('on');
+  for(var k=0;k<3;k++) document.getElementById('coTab'+k).style.display = k===i?'block':'none';
+}
+function saveCompany(){
+  var v = {
+    name: document.getElementById('coName').value,
+    tpl: (document.querySelector('input[name=ctpl]:checked')||{}).value || '',
+    rule: document.getElementById('coRule').value,
+    ceo: (document.querySelector('input[name=ceo]:checked')||{}).value || ''
+  };
+  localStorage.setItem('company_cfg', JSON.stringify(v));
+  alert('已保存在本机。在聊天里告诉我一声，配置即同步到 AI 公司。');
+}
+(function(){
+  try{
+    var v = JSON.parse(localStorage.getItem('company_cfg')||'{}');
+    if(v.name) document.getElementById('coName').value = v.name;
+    if(v.rule) document.getElementById('coRule').value = v.rule;
+  }catch(e){}
+})();
+</script><footer>© 2026 muse-AI策略竞赛 · 虚拟模拟盘，不构成投资建议</footer></body></html>
