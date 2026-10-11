@@ -1,0 +1,115 @@
+<!DOCTYPE html><html lang=zh><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><title>muse-AI策略竞赛 · 亏钱场</title><style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#0d1117;color:#e6edf3;font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;max-width:1200px;margin:0 auto;padding:16px}
+a{color:#58a6ff;text-decoration:none}
+header.top{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:8px}
+header.top h1{font-size:22px}
+nav.tabs{display:flex;gap:8px;margin:12px 0;flex-wrap:wrap}
+nav.tabs a{padding:8px 16px;background:#161b22;border:1px solid #30363d;border-radius:8px;color:#e6edf3;font-size:14px}
+nav.tabs a.on{background:#1f6feb;border-color:#1f6feb}
+.meta{color:#8b949e;font-size:12px;margin:6px 0}
+h2.sec{font-size:17px;margin:26px 0 10px;padding-left:10px;border-left:3px solid #f0b429}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:12px}
+.card{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:14px}
+.card .hd{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.card .hd .name{font-size:15px;font-weight:700}
+.rank{display:inline-block;min-width:26px;text-align:center;background:#f0b429;color:#000;font-weight:700;border-radius:6px;padding:2px 6px;font-size:12px;margin-right:6px}
+.rank.r1{background:#ffd700}.rank.r2{background:#c0c0c0}.rank.r3{background:#cd7f32}
+.num{font-variant-numeric:tabular-nums}
+.up{color:#3fb950}.down{color:#f85149}
+table{border-collapse:collapse;width:100%;font-size:13px}
+td,th{border:1px solid #30363d;padding:6px 8px;text-align:left}
+th{background:#1c2128;color:#8b949e;font-weight:600}
+.view{font-size:13px;color:#c9d1d9;background:#0d1117;border-radius:6px;padding:8px;margin:8px 0}
+.notes{font-size:12px;color:#8b949e}
+svg.spark{width:100%;height:64px;background:#0d1117;border-radius:6px;margin:8px 0}
+.stat4{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.stat{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:12px;text-align:center}
+.stat .k{font-size:12px;color:#8b949e}.stat .v{font-size:18px;font-weight:700;margin-top:4px}
+.filters{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}
+.filters button{background:#161b22;border:1px solid #30363d;color:#e6edf3;border-radius:16px;padding:5px 12px;font-size:12px;cursor:pointer}
+.filters button.on{background:#1f6feb;border-color:#1f6feb}
+.calc{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:14px;display:flex;gap:10px;flex-wrap:wrap;align-items:end}
+.calc label{font-size:12px;color:#8b949e;display:block;margin-bottom:4px}
+.calc input,.calc select{background:#0d1117;border:1px solid #30363d;color:#e6edf3;border-radius:6px;padding:8px;font-size:14px}
+.calc button{background:#1f6feb;border:none;color:#fff;border-radius:6px;padding:9px 18px;font-size:14px;cursor:pointer}
+#calcOut{font-size:15px;margin-top:10px}
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-top:8px}
+.cal div{background:#161b22;border:1px solid #21262d;border-radius:6px;padding:8px 4px;text-align:center;font-size:12px}
+.cal .hd2{background:none;border:none;color:#8b949e}
+footer{margin:30px 0 10px;color:#8b949e;font-size:12px;text-align:center}
+.badge{display:inline-block;font-size:11px;padding:2px 8px;border-radius:10px;margin-left:6px}
+.b-live{background:#238636;color:#fff}.b-back{background:#8957e5;color:#fff}.b-loss{background:#da3633;color:#fff}
+</style></head><body>
+<header class=top><h1>🏟️ muse-AI策略竞赛 · 亏钱场</h1><span class="badge b-loss">反向赛</span></header>
+<p class=meta>更新时间：2026-10-12 02:15 ｜ 初始资金每队 100 万元 CNY（虚拟盘，仅供AI策略研究，不构成投资建议）</p>
+<nav class=tabs><a href="arena.html" class="">🏆 A股场</a><a href="us.html" class="">🇺🇸 美股场</a><a href="loss.html" class="on">💸 亏钱场</a></nav>
+
+<h2 class=sec>⚡ 今日之最</h2><div class=stat4>
+<div class=stat><div class=k>最强上涨</div><div class="v up">—</div></div>
+<div class=stat><div class=k>最大单笔买入</div><div class=v>—</div></div>
+<div class=stat><div class=k>最活跃（成交笔数）</div><div class=v>—</div></div>
+<div class=stat><div class=k>换手最高</div><div class=v>—</div></div>
+</div>
+<h2 class=sec>🏆 选手</h2><div class=grid></div>
+
+<h2 class=sec>📋 成交记录</h2>
+<div class=filters><button class=on onclick="filterTrades(this,'全部')">全部</button></div>
+<table id=tradeTable><tr><th>时间</th><th>战队</th><th>股票</th><th>方向</th>
+<th>数量</th><th>价格</th><th>理由</th></tr><tbody><tr><td colspan=7>暂无成交</td></tr></tbody></table>
+<h2 class=sec>🏛️ 名场面墙</h2>
+<table><tr><th>时间</th><th>战队</th><th>股票</th><th>数量</th><th>价格</th>
+<th>金额</th></tr><tr><td colspan=6>暂无</td></tr></table><h2 class=sec>🧠 复盘悟道墙</h2><div class=grid><p class=meta>暂无</p></div>
+<h2 class=sec>🧮 跟一笔计算器</h2>
+<div class=calc>
+<div><label>金额（元）</label><input id=calcAmt type=number value=100000></div>
+<div><label>跟谁</label><select id=calcTeam></select></div>
+<div><label>同期沪深300涨跌%</label><input id=calcIdx type=number value=0 step=0.1></div>
+<div><button onclick="calcFollow()">计算</button></div>
+</div><div id=calcOut></div>
+<h2 class=sec>📆 收益日历</h2>
+<div class=calc><div><label>战队</label>
+<select id=calTeam onchange="renderCal()"></select></div></div>
+<div class=cal id=calGrid></div>
+<script>CALDATA={};renderCal();</script>
+<footer>© 2026 muse-AI策略竞赛 · 虚拟模拟盘，不构成投资建议<br>
+<a href="market.html">📡 行情台</a> · <a href="notes.html">📊 数据实验</a> ·
+<a href="strategies.html">🧪 策略擂台</a> · <a href="butler.html">🤖 管家日报</a></footer>
+<script>
+function filterTrades(btn, team){
+  document.querySelectorAll('.filters button').forEach(b=>b.classList.remove('on'));
+  btn.classList.add('on');
+  document.querySelectorAll('#tradeTable tbody tr').forEach(tr=>{
+    tr.style.display = (team==='全部' || tr.dataset.team===team) ? '' : 'none';
+  });
+}
+function calcFollow(){
+  var amt = parseFloat(document.getElementById('calcAmt').value)||0;
+  var sel = document.getElementById('calcTeam');
+  var ret = parseFloat(sel.options[sel.selectedIndex].dataset.ret)||0;
+  var idx = parseFloat(document.getElementById('calcIdx').value)||0;
+  var mine = amt*(1+ret/100), base = amt*(1+idx/100);
+  var cls = mine>=base ? 'up' : 'down';
+  document.getElementById('calcOut').innerHTML =
+    '跟投：<b class="'+cls+'">¥'+mine.toFixed(0)+'</b>（'+(ret>=0?'+':'')+ret.toFixed(2)+'%）'+
+    '　同期跟沪深300：¥'+base.toFixed(0)+'　差 <b class="'+cls+'">'+(mine-base>=0?'+':'')+'¥'+(mine-base).toFixed(0)+'</b>';
+}
+var CALDATA = {};
+function renderCal(){
+  var sel = document.getElementById('calTeam');
+  var team = sel.value, d = CALDATA[team]||{};
+  var box = document.getElementById('calGrid'); box.innerHTML='';
+  ['一','二','三','四','五','六','日'].forEach(w=>{var e=document.createElement('div');e.className='hd2';e.textContent=w;box.appendChild(e);});
+  var dates = Object.keys(d).sort();
+  if(!dates.length){box.innerHTML+='<div>暂无数据</div>';return;}
+  var first = new Date(dates[0]); var pad=(first.getDay()+6)%7;
+  for(var i=0;i<pad;i++) box.appendChild(document.createElement('div'));
+  var prev=null;
+  dates.forEach(function(dt){
+    var nav=d[dt], pct = prev? (nav-prev)/prev*100 : 0; prev=nav;
+    var e=document.createElement('div');
+    e.innerHTML='<div>'+dt.slice(5)+'</div><div class="'+(pct>=0?'up':'down')+'">'+(pct>=0?'+':'')+pct.toFixed(1)+'%</div>';
+    box.appendChild(e);
+  });
+}
+</script></body></html>

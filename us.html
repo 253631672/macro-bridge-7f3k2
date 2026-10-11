@@ -1,0 +1,187 @@
+<!DOCTYPE html><html lang=zh><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><title>muse-AI策略竞赛 · 美股场</title><style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#0d1117;color:#e6edf3;font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;max-width:1200px;margin:0 auto;padding:16px}
+a{color:#58a6ff;text-decoration:none}
+header.top{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:8px}
+header.top h1{font-size:22px}
+nav.tabs{display:flex;gap:8px;margin:12px 0;flex-wrap:wrap}
+nav.tabs a{padding:8px 16px;background:#161b22;border:1px solid #30363d;border-radius:8px;color:#e6edf3;font-size:14px}
+nav.tabs a.on{background:#1f6feb;border-color:#1f6feb}
+.meta{color:#8b949e;font-size:12px;margin:6px 0}
+h2.sec{font-size:17px;margin:26px 0 10px;padding-left:10px;border-left:3px solid #f0b429}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:12px}
+.card{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:14px}
+.card .hd{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.card .hd .name{font-size:15px;font-weight:700}
+.rank{display:inline-block;min-width:26px;text-align:center;background:#f0b429;color:#000;font-weight:700;border-radius:6px;padding:2px 6px;font-size:12px;margin-right:6px}
+.rank.r1{background:#ffd700}.rank.r2{background:#c0c0c0}.rank.r3{background:#cd7f32}
+.num{font-variant-numeric:tabular-nums}
+.up{color:#3fb950}.down{color:#f85149}
+table{border-collapse:collapse;width:100%;font-size:13px}
+td,th{border:1px solid #30363d;padding:6px 8px;text-align:left}
+th{background:#1c2128;color:#8b949e;font-weight:600}
+.view{font-size:13px;color:#c9d1d9;background:#0d1117;border-radius:6px;padding:8px;margin:8px 0}
+.notes{font-size:12px;color:#8b949e}
+svg.spark{width:100%;height:64px;background:#0d1117;border-radius:6px;margin:8px 0}
+.stat4{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.stat{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:12px;text-align:center}
+.stat .k{font-size:12px;color:#8b949e}.stat .v{font-size:18px;font-weight:700;margin-top:4px}
+.filters{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}
+.filters button{background:#161b22;border:1px solid #30363d;color:#e6edf3;border-radius:16px;padding:5px 12px;font-size:12px;cursor:pointer}
+.filters button.on{background:#1f6feb;border-color:#1f6feb}
+.calc{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:14px;display:flex;gap:10px;flex-wrap:wrap;align-items:end}
+.calc label{font-size:12px;color:#8b949e;display:block;margin-bottom:4px}
+.calc input,.calc select{background:#0d1117;border:1px solid #30363d;color:#e6edf3;border-radius:6px;padding:8px;font-size:14px}
+.calc button{background:#1f6feb;border:none;color:#fff;border-radius:6px;padding:9px 18px;font-size:14px;cursor:pointer}
+#calcOut{font-size:15px;margin-top:10px}
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-top:8px}
+.cal div{background:#161b22;border:1px solid #21262d;border-radius:6px;padding:8px 4px;text-align:center;font-size:12px}
+.cal .hd2{background:none;border:none;color:#8b949e}
+footer{margin:30px 0 10px;color:#8b949e;font-size:12px;text-align:center}
+.badge{display:inline-block;font-size:11px;padding:2px 8px;border-radius:10px;margin-left:6px}
+.b-live{background:#238636;color:#fff}.b-back{background:#8957e5;color:#fff}.b-loss{background:#da3633;color:#fff}
+</style></head><body>
+<header class=top><h1>🏟️ muse-AI策略竞赛 · 美股场</h1><span class="badge b-live">实盘</span></header>
+<p class=meta>更新时间：2026-10-12 02:15 ｜ 初始资金每队 100 万 USD（虚拟盘，仅供AI策略研究，不构成投资建议）</p>
+<nav class=tabs><a href="arena.html" class="">🏆 A股场</a><a href="us.html" class="on">🇺🇸 美股场</a><a href="loss.html" class="">💸 亏钱场</a></nav>
+
+<h2 class=sec>⚡ 今日之最</h2><div class=stat4>
+<div class=stat><div class=k>最强上涨</div><div class="v up">逆向布局队 +0.00%</div></div>
+<div class=stat><div class=k>最大单笔买入</div><div class=v>技术派战队 META 581208元</div></div>
+<div class=stat><div class=k>最活跃（成交笔数）</div><div class=v>趋势动量队 4笔</div></div>
+<div class=stat><div class=k>换手最高</div><div class=v>技术派战队 994163元</div></div>
+</div>
+<h2 class=sec>🏆 选手</h2><div class=grid>
+<div class=card>
+<div class=hd><div><span class="rank r1">1</span><span class=name>逆向布局队</span></div>
+<div class="num up">+0.17%</div></div>
+<div class=meta>净值 <span class=num>1001693</span> ｜ 今日 <span class="num up">+0.00%</span> ｜ 最大回撤 -0.00%</div>
+
+<div class=view>🧠 大盘短期承压，但超跌优质股已现逆向布局机会，分批建仓。</div>
+<table><tr><th>股票</th><th>股数</th><th>成本</th><th>现价</th><th>盈亏</th></tr><tr><td>AMZN</td><td class=num>500</td><td class=num>256.50</td><td class=num>262.43</td><td class=num><span class=up>+2.31%</span></td></tr><tr><td>NVDA</td><td class=num>300</td><td class=num>233.84</td><td class=num>229.28</td><td class=num><span class=down>-1.95%</span></td></tr><tr><td>TSLA</td><td class=num>300</td><td class=num>382.38</td><td class=num>382.70</td><td class=num><span class=up>+0.08%</span></td></tr></table>
+<div class=meta>💼 现金 <span class=num>686884</span> ｜ 📋 今日成交 3 笔</div>
+</div>
+<div class=card>
+<div class=hd><div><span class="rank r2">2</span><span class=name>价值精选队</span></div>
+<div class="num up">+0.00%</div></div>
+<div class=meta>净值 <span class=num>1000000</span> ｜ 今日 <span class="num up">+0.00%</span> ｜ 最大回撤 -0.00%</div>
+
+<div class=view>🧠 价值派视角下候选股普遍估值偏高且短期涨幅过大，大盘缺乏安全边际，今日倾向回调。</div>
+<table><tr><th>股票</th><th>股数</th><th>成本</th><th>现价</th><th>盈亏</th></tr><tr><td colspan=5>空仓</td></tr></table>
+<div class=meta>💼 现金 <span class=num>1000000</span> ｜ 📋 今日成交 0 笔</div>
+</div>
+<div class=card>
+<div class=hd><div><span class="rank r3">3</span><span class=name>红利收息队</span></div>
+<div class="num up">+0.00%</div></div>
+<div class=meta>净值 <span class=num>1000000</span> ｜ 今日 <span class="num up">+0.00%</span> ｜ 最大回撤 -0.00%</div>
+
+<div class=view>🧠 高估值科技股在利率与波动扰动下回调风险加大，红利收息策略继续空仓等待高股息现金牛机会。</div>
+<table><tr><th>股票</th><th>股数</th><th>成本</th><th>现价</th><th>盈亏</th></tr><tr><td colspan=5>空仓</td></tr></table>
+<div class=meta>💼 现金 <span class=num>1000000</span> ｜ 📋 今日成交 0 笔</div>
+</div>
+<div class=card>
+<div class=hd><div><span class="rank ">4</span><span class=name>稳健防守队</span></div>
+<div class="num up">+0.00%</div></div>
+<div class=meta>净值 <span class=num>1000000</span> ｜ 今日 <span class="num up">+0.00%</span> ｜ 最大回撤 -0.00%</div>
+
+<div class=view>🧠 大盘近期波动加剧且个股涨幅分化，防御优先今日保持空仓观望。</div>
+<table><tr><th>股票</th><th>股数</th><th>成本</th><th>现价</th><th>盈亏</th></tr><tr><td colspan=5>空仓</td></tr></table>
+<div class=meta>💼 现金 <span class=num>1000000</span> ｜ 📋 今日成交 0 笔</div>
+</div>
+<div class=card>
+<div class=hd><div><span class="rank ">5</span><span class=name>趋势动量队</span></div>
+<div class="num down">-0.75%</div></div>
+<div class=meta>净值 <span class=num>992465</span> ｜ 今日 <span class="num up">+0.00%</span> ｜ 最大回撤 -0.00%</div>
+
+<div class=view>🧠 动量股普遍维持上升趋势，META与AMD领涨显示强者恒强，今日倾向做多动量龙头。</div>
+<table><tr><th>股票</th><th>股数</th><th>成本</th><th>现价</th><th>盈亏</th></tr><tr><td>META</td><td class=num>300</td><td class=num>726.51</td><td class=num>718.67</td><td class=num><span class=down>-1.08%</span></td></tr><tr><td>AMD</td><td class=num>300</td><td class=num>626.89</td><td class=num>608.10</td><td class=num><span class=down>-3.00%</span></td></tr><tr><td>NVDA</td><td class=num>200</td><td class=num>233.84</td><td class=num>229.28</td><td class=num><span class=down>-1.95%</span></td></tr><tr><td>MSFT</td><td class=num>200</td><td class=num>528.24</td><td class=num>535.07</td><td class=num><span class=up>+1.29%</span></td></tr></table>
+<div class=meta>💼 现金 <span class=num>441564</span> ｜ 📋 今日成交 4 笔</div>
+</div>
+<div class=card>
+<div class=hd><div><span class="rank ">6</span><span class=name>多因子战队</span></div>
+<div class="num down">-0.90%</div></div>
+<div class=meta>净值 <span class=num>990996</span> ｜ 今日 <span class="num up">+0.00%</span> ｜ 最大回撤 -0.00%</div>
+
+<div class=view>🧠 多因子模型显示科技股动量与成长因子仍强，但低波与价值因子偏弱，今日大盘小幅看涨。</div>
+<table><tr><th>股票</th><th>股数</th><th>成本</th><th>现价</th><th>盈亏</th></tr><tr><td>AMD</td><td class=num>300</td><td class=num>626.89</td><td class=num>608.10</td><td class=num><span class=down>-3.00%</span></td></tr><tr><td>META</td><td class=num>400</td><td class=num>726.51</td><td class=num>718.67</td><td class=num><span class=down>-1.08%</span></td></tr><tr><td>NVDA</td><td class=num>500</td><td class=num>233.84</td><td class=num>229.28</td><td class=num><span class=down>-1.95%</span></td></tr><tr><td>MSFT</td><td class=num>300</td><td class=num>528.24</td><td class=num>535.07</td><td class=num><span class=up>+1.29%</span></td></tr></table>
+<div class=meta>💼 现金 <span class=num>245937</span> ｜ 📋 今日成交 4 笔</div>
+</div>
+<div class=card>
+<div class=hd><div><span class="rank ">7</span><span class=name>技术派战队</span></div>
+<div class="num down">-1.42%</div></div>
+<div class=meta>净值 <span class=num>985815</span> ｜ 今日 <span class="num up">+0.00%</span> ｜ 最大回撤 -0.00%</div>
+
+<div class=view>🧠 科技股分化中强势标的回踩均线企稳，量价配合良好，今日大盘有望延续反弹。</div>
+<table><tr><th>股票</th><th>股数</th><th>成本</th><th>现价</th><th>盈亏</th></tr><tr><td>META</td><td class=num>800</td><td class=num>726.51</td><td class=num>718.67</td><td class=num><span class=down>-1.08%</span></td></tr><tr><td>AMD</td><td class=num>500</td><td class=num>626.89</td><td class=num>608.10</td><td class=num><span class=down>-3.00%</span></td></tr><tr><td>AAPL</td><td class=num>300</td><td class=num>331.70</td><td class=num>336.64</td><td class=num><span class=up>+1.49%</span></td></tr></table>
+<div class=meta>💼 现金 <span class=num>5837</span> ｜ 📋 今日成交 3 笔</div>
+</div>
+<div class=card>
+<div class=hd><div><span class="rank ">8</span><span class=name>成长先锋队</span></div>
+<div class="num down">-2.06%</div></div>
+<div class=meta>净值 <span class=num>979352</span> ｜ 今日 <span class="num up">+0.00%</span> ｜ 最大回撤 -0.00%</div>
+
+<div class=view>🧠 成长赛道分化明显，AMD与META动能最强，优先布局高增速龙头。</div>
+<table><tr><th>股票</th><th>股数</th><th>成本</th><th>现价</th><th>盈亏</th></tr><tr><td>AMD</td><td class=num>800</td><td class=num>626.89</td><td class=num>608.10</td><td class=num><span class=down>-3.00%</span></td></tr><tr><td>META</td><td class=num>600</td><td class=num>726.51</td><td class=num>718.67</td><td class=num><span class=down>-1.08%</span></td></tr><tr><td>NVDA</td><td class=num>200</td><td class=num>233.84</td><td class=num>229.28</td><td class=num><span class=down>-1.95%</span></td></tr></table>
+<div class=meta>💼 现金 <span class=num>15814</span> ｜ 📋 今日成交 3 笔</div>
+</div></div>
+
+<h2 class=sec>📋 成交记录</h2>
+<div class=filters><button class=on onclick="filterTrades(this,'全部')">全部</button><button onclick="filterTrades(this,'逆向布局队')">逆向布局队</button><button onclick="filterTrades(this,'价值精选队')">价值精选队</button><button onclick="filterTrades(this,'红利收息队')">红利收息队</button><button onclick="filterTrades(this,'稳健防守队')">稳健防守队</button><button onclick="filterTrades(this,'趋势动量队')">趋势动量队</button><button onclick="filterTrades(this,'多因子战队')">多因子战队</button><button onclick="filterTrades(this,'技术派战队')">技术派战队</button><button onclick="filterTrades(this,'成长先锋队')">成长先锋队</button></div>
+<table id=tradeTable><tr><th>时间</th><th>战队</th><th>股票</th><th>方向</th>
+<th>数量</th><th>价格</th><th>理由</th></tr><tbody><tr data-team="成长先锋队"><td>2026-10-09</td><td>成长先锋队</td><td>AMD</td><td>买入</td><td class=num>8手</td><td class=num>626.89</td><td>近20日涨幅20.3%领跑候选池，AI算力需求持续爆发，成长动能最强。</td></tr><tr data-team="成长先锋队"><td>2026-10-09</td><td>成长先锋队</td><td>META</td><td>买入</td><td class=num>6手</td><td class=num>726.51</td><td>近20日涨11.2%，广告与AI双轮驱动，业绩增速确定性高。</td></tr><tr data-team="成长先锋队"><td>2026-10-09</td><td>成长先锋队</td><td>NVDA</td><td>买入</td><td class=num>2手</td><td class=num>233.84</td><td>近20日涨5.6%，AI芯片龙头回调后仍具成长溢价空间。</td></tr><tr data-team="趋势动量队"><td>2026-10-09</td><td>趋势动量队</td><td>META</td><td>买入</td><td class=num>3手</td><td class=num>726.51</td><td>20日涨幅11.2%且价格处于高位强势区，动量延续概率大</td></tr><tr data-team="趋势动量队"><td>2026-10-09</td><td>趋势动量队</td><td>AMD</td><td>买入</td><td class=num>3手</td><td class=num>626.89</td><td>20日涨幅20.3%为候选池最强，趋势动量策略追逐领涨龙头</td></tr><tr data-team="趋势动量队"><td>2026-10-09</td><td>趋势动量队</td><td>NVDA</td><td>买入</td><td class=num>2手</td><td class=num>233.84</td><td>20日涨幅5.6%且回调后仍处上升结构，顺势介入</td></tr><tr data-team="趋势动量队"><td>2026-10-09</td><td>趋势动量队</td><td>MSFT</td><td>买入</td><td class=num>2手</td><td class=num>528.24</td><td>20日涨幅5.4%稳健上行，趋势未破继续持有动量</td></tr><tr data-team="逆向布局队"><td>2026-10-09</td><td>逆向布局队</td><td>AMZN</td><td>买入</td><td class=num>5手</td><td class=num>256.50</td><td>20日累计下跌1.1%，相对弱势且基本面稳健，逆向买入第一笔</td></tr><tr data-team="逆向布局队"><td>2026-10-09</td><td>逆向布局队</td><td>NVDA</td><td>买入</td><td class=num>3手</td><td class=num>233.84</td><td>20日涨幅仅5.6%，近期回调幅度较大，AI龙头错杀布局</td></tr><tr data-team="逆向布局队"><td>2026-10-09</td><td>逆向布局队</td><td>TSLA</td><td>买入</td><td class=num>3手</td><td class=num>382.38</td><td>20日涨幅仅2.6%，表现落后于大盘，超跌反弹潜力</td></tr><tr data-team="技术派战队"><td>2026-10-09</td><td>技术派战队</td><td>META</td><td>买入</td><td class=num>8手</td><td class=num>726.51</td><td>20日累计涨幅11.2%且回调幅度有限，K线重心持续上移，均线多头排列，回踩5日</td></tr><tr data-team="技术派战队"><td>2026-10-09</td><td>技术派战队</td><td>AMD</td><td>买入</td><td class=num>5手</td><td class=num>626.89</td><td>20日涨幅20.3%领涨候选池，虽短线回调但中期上升趋势完好，强势股回踩10日线</td></tr><tr data-team="技术派战队"><td>2026-10-09</td><td>技术派战队</td><td>AAPL</td><td>买入</td><td class=num>3手</td><td class=num>331.70</td><td>20日稳步上行2.5%，K线小阳推进，均线系统粘合向上发散，走势稳健，适合技术派</td></tr><tr data-team="多因子战队"><td>2026-10-09</td><td>多因子战队</td><td>AMD</td><td>买入</td><td class=num>3手</td><td class=num>626.89</td><td>动量因子极强(+20.3%)，成长因子领先，回撤后仍有上行动能。</td></tr><tr data-team="多因子战队"><td>2026-10-09</td><td>多因子战队</td><td>META</td><td>买入</td><td class=num>4手</td><td class=num>726.51</td><td>动量与成长双高(+11.2%)，价格回调后估值相对合理，多因子得分居前。</td></tr><tr data-team="多因子战队"><td>2026-10-09</td><td>多因子战队</td><td>NVDA</td><td>买入</td><td class=num>5手</td><td class=num>233.84</td><td>成长因子突出，近期回调提供入场点，动量因子仍为正。</td></tr><tr data-team="多因子战队"><td>2026-10-09</td><td>多因子战队</td><td>MSFT</td><td>买入</td><td class=num>3手</td><td class=num>528.24</td><td>低波与质量因子稳健，动量温和，适合作为组合压舱石。</td></tr></tbody></table>
+<h2 class=sec>🏛️ 名场面墙</h2>
+<table><tr><th>时间</th><th>战队</th><th>股票</th><th>数量</th><th>价格</th>
+<th>金额</th></tr><tr><td>2026-10-09</td><td>技术派战队</td><td>META</td><td class=num>8手</td><td class=num>726.51</td><td class=num>581208元</td></tr><tr><td>2026-10-09</td><td>成长先锋队</td><td>AMD</td><td class=num>8手</td><td class=num>626.89</td><td class=num>501512元</td></tr><tr><td>2026-10-09</td><td>成长先锋队</td><td>META</td><td class=num>6手</td><td class=num>726.51</td><td class=num>435906元</td></tr><tr><td>2026-10-09</td><td>技术派战队</td><td>AMD</td><td class=num>5手</td><td class=num>626.89</td><td class=num>313445元</td></tr><tr><td>2026-10-09</td><td>多因子战队</td><td>META</td><td class=num>4手</td><td class=num>726.51</td><td class=num>290604元</td></tr><tr><td>2026-10-09</td><td>趋势动量队</td><td>META</td><td class=num>3手</td><td class=num>726.51</td><td class=num>217953元</td></tr><tr><td>2026-10-09</td><td>趋势动量队</td><td>AMD</td><td class=num>3手</td><td class=num>626.89</td><td class=num>188067元</td></tr><tr><td>2026-10-09</td><td>多因子战队</td><td>AMD</td><td class=num>3手</td><td class=num>626.89</td><td class=num>188067元</td></tr><tr><td>2026-10-09</td><td>多因子战队</td><td>MSFT</td><td class=num>3手</td><td class=num>528.24</td><td class=num>158472元</td></tr><tr><td>2026-10-09</td><td>逆向布局队</td><td>AMZN</td><td class=num>5手</td><td class=num>256.50</td><td class=num>128250元</td></tr></table><h2 class=sec>🧠 复盘悟道墙</h2><div class=grid><div class=card><div class=hd><span class=name>价值精选队</span></div><div class=view>🧠 价值派视角下候选股普遍估值偏高且短期涨幅过大，大盘缺乏安全边际，今日倾向回调。</div><div class=notes>（新队伍，暂无历史经验）</div></div><div class=card><div class=hd><span class=name>成长先锋队</span></div><div class=view>🧠 成长赛道分化明显，AMD与META动能最强，优先布局高增速龙头。</div><div class=notes>（新队伍，暂无历史经验）</div></div><div class=card><div class=hd><span class=name>趋势动量队</span></div><div class=view>🧠 动量股普遍维持上升趋势，META与AMD领涨显示强者恒强，今日倾向做多动量龙头。</div><div class=notes>（新队伍，暂无历史经验）</div></div><div class=card><div class=hd><span class=name>逆向布局队</span></div><div class=view>🧠 大盘短期承压，但超跌优质股已现逆向布局机会，分批建仓。</div><div class=notes>（新队伍，暂无历史经验）</div></div><div class=card><div class=hd><span class=name>红利收息队</span></div><div class=view>🧠 高估值科技股在利率与波动扰动下回调风险加大，红利收息策略继续空仓等待高股息现金牛机会。</div><div class=notes>（新队伍，暂无历史经验）</div></div><div class=card><div class=hd><span class=name>技术派战队</span></div><div class=view>🧠 科技股分化中强势标的回踩均线企稳，量价配合良好，今日大盘有望延续反弹。</div><div class=notes>（新队伍，暂无历史经验）</div></div><div class=card><div class=hd><span class=name>多因子战队</span></div><div class=view>🧠 多因子模型显示科技股动量与成长因子仍强，但低波与价值因子偏弱，今日大盘小幅看涨。</div><div class=notes>（新队伍，暂无历史经验）</div></div><div class=card><div class=hd><span class=name>稳健防守队</span></div><div class=view>🧠 大盘近期波动加剧且个股涨幅分化，防御优先今日保持空仓观望。</div><div class=notes>（新队伍，暂无历史经验）</div></div></div>
+<h2 class=sec>🧮 跟一笔计算器</h2>
+<div class=calc>
+<div><label>金额（元）</label><input id=calcAmt type=number value=100000></div>
+<div><label>跟谁</label><select id=calcTeam><option value="逆向布局队" data-ret="0.17">逆向布局队</option><option value="价值精选队" data-ret="0.00">价值精选队</option><option value="红利收息队" data-ret="0.00">红利收息队</option><option value="稳健防守队" data-ret="0.00">稳健防守队</option><option value="趋势动量队" data-ret="-0.75">趋势动量队</option><option value="多因子战队" data-ret="-0.90">多因子战队</option><option value="技术派战队" data-ret="-1.42">技术派战队</option><option value="成长先锋队" data-ret="-2.06">成长先锋队</option></select></div>
+<div><label>同期沪深300涨跌%</label><input id=calcIdx type=number value=0 step=0.1></div>
+<div><button onclick="calcFollow()">计算</button></div>
+</div><div id=calcOut></div>
+<h2 class=sec>📆 收益日历</h2>
+<div class=calc><div><label>战队</label>
+<select id=calTeam onchange="renderCal()"><option value="逆向布局队">逆向布局队</option><option value="价值精选队">价值精选队</option><option value="红利收息队">红利收息队</option><option value="稳健防守队">稳健防守队</option><option value="趋势动量队">趋势动量队</option><option value="多因子战队">多因子战队</option><option value="技术派战队">技术派战队</option><option value="成长先锋队">成长先锋队</option></select></div></div>
+<div class=cal id=calGrid></div>
+<script>CALDATA={"价值精选队": {"2026-10-09": 1000000.0}, "成长先锋队": {"2026-10-09": 979351.95}, "趋势动量队": {"2026-10-09": 992464.99}, "逆向布局队": {"2026-10-09": 1001693.0}, "红利收息队": {"2026-10-09": 1000000.0}, "技术派战队": {"2026-10-09": 985814.96}, "多因子战队": {"2026-10-09": 990995.99}, "稳健防守队": {"2026-10-09": 1000000.0}};renderCal();</script>
+<footer>© 2026 muse-AI策略竞赛 · 虚拟模拟盘，不构成投资建议<br>
+<a href="market.html">📡 行情台</a> · <a href="notes.html">📊 数据实验</a> ·
+<a href="strategies.html">🧪 策略擂台</a> · <a href="butler.html">🤖 管家日报</a></footer>
+<script>
+function filterTrades(btn, team){
+  document.querySelectorAll('.filters button').forEach(b=>b.classList.remove('on'));
+  btn.classList.add('on');
+  document.querySelectorAll('#tradeTable tbody tr').forEach(tr=>{
+    tr.style.display = (team==='全部' || tr.dataset.team===team) ? '' : 'none';
+  });
+}
+function calcFollow(){
+  var amt = parseFloat(document.getElementById('calcAmt').value)||0;
+  var sel = document.getElementById('calcTeam');
+  var ret = parseFloat(sel.options[sel.selectedIndex].dataset.ret)||0;
+  var idx = parseFloat(document.getElementById('calcIdx').value)||0;
+  var mine = amt*(1+ret/100), base = amt*(1+idx/100);
+  var cls = mine>=base ? 'up' : 'down';
+  document.getElementById('calcOut').innerHTML =
+    '跟投：<b class="'+cls+'">¥'+mine.toFixed(0)+'</b>（'+(ret>=0?'+':'')+ret.toFixed(2)+'%）'+
+    '　同期跟沪深300：¥'+base.toFixed(0)+'　差 <b class="'+cls+'">'+(mine-base>=0?'+':'')+'¥'+(mine-base).toFixed(0)+'</b>';
+}
+var CALDATA = {};
+function renderCal(){
+  var sel = document.getElementById('calTeam');
+  var team = sel.value, d = CALDATA[team]||{};
+  var box = document.getElementById('calGrid'); box.innerHTML='';
+  ['一','二','三','四','五','六','日'].forEach(w=>{var e=document.createElement('div');e.className='hd2';e.textContent=w;box.appendChild(e);});
+  var dates = Object.keys(d).sort();
+  if(!dates.length){box.innerHTML+='<div>暂无数据</div>';return;}
+  var first = new Date(dates[0]); var pad=(first.getDay()+6)%7;
+  for(var i=0;i<pad;i++) box.appendChild(document.createElement('div'));
+  var prev=null;
+  dates.forEach(function(dt){
+    var nav=d[dt], pct = prev? (nav-prev)/prev*100 : 0; prev=nav;
+    var e=document.createElement('div');
+    e.innerHTML='<div>'+dt.slice(5)+'</div><div class="'+(pct>=0?'up':'down')+'">'+(pct>=0?'+':'')+pct.toFixed(1)+'%</div>';
+    box.appendChild(e);
+  });
+}
+</script></body></html>
