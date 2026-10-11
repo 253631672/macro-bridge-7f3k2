@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-11 20:14（北京时间）· 每5分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-11 20:47（北京时间）· 每5分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -47,7 +47,19 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="card attn"><div class="card-t">需要你介入 <span class="badge">1</span></div><ul class="needs"><li><span class='dot warn'></span>给 23:00 日报等定时任务开启常开审批（App → 头像 → Upcoming → 任务详情 → 权限设为允许）<span class='muted'> · 10-09 23:28</span></li></ul>
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
-<div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+<div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>P组门禁回测完成：降级部署到独立纸账本</b><span class="muted">10-11 20:47</span></div><div class='ev-d'>P1资金费率逆向回测143笔PF=1.77名义通过，但69%利润来自2笔ARB交易，剔除ARB后PF=1.10不达标→降级部署：team_p_trader.py已上线（5%仓位/2币种上限/20笔熔断），首单BUY BTCUSDT，team_*四表链路打通，每4h定时运行</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>看板数据刷新 20:14</b><span class="muted">10-11 20:46</span></div><div class='ev-d'>上传链路首轮卡死3次（停在Uploading无进展）；粘贴链路远端校验发现损坏（转录错误+尾部142行缺失），立即弃用；重spawn上传链路一次成功，commit 978d3b3，pinned blob与基线逐字节一致（index 2976d122，quant 64a98a67）</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>复盘检查：atr_channel 连续亏损 + RLCUSDT 异动</b><span class="muted">10-11 20:45</span></div><div class='ev-d'>2026-10-11 20:44 定时复盘：环境=震荡；atr_channel 近8笔成交仅1盈，连续止损（FIL -239、ATOM -410、CRCLB -392、TIA -217、DOT -100），keltner KAIAUSDT 单笔 -509 穿仓级；持仓RLCUSDT 24h +12.19% 量比1.67 异动待止盈检查。建议：震荡市暂停atr_channel新开仓或降仓、复查keltner止损逻辑、RLCUSDT按策略止盈；所有改动走回测证据链+上线门禁后才落地。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#9aa0aa">系统</span>
+        <div class="ev-body"><div class="ev-h"><b>定时任务正文修正：解除冻结令条款同步</b><span class="muted">10-11 20:38</span></div><div class='ev-d'>quant-review-check（15分钟复盘检查）与 quant-hourly-learn（半小时学习优化）正文中的过期&#x27;实盘冻结令（2026-10-10 09:32）长期有效&#x27;条款，已按用户 2026-10-11 12:56 新指令更新：冻结令解除，整改决策权交给我，目标=盈利越多越好、不亏损；改动仍须走回测证据链+上线门禁验证后才落地。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>复盘检查：近期亏损均属冻结事项范围</b><span class="muted">10-11 20:30</span></div><div class='ev-d'>20:29轮次：DOTUSDT/atr_channel -100.31、TIAUSDT/atr_channel -217.08、HBARUSDT/dual_ma -95.09、STRKUSDT/keltner -5.21 均属震荡市趋势策略亏损（冻结①/②）；RLCUSDT +12.19%（冻结③）。持仓7只止损齐全，心跳正常。无冻结范围外异常，仅监测。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>review-check 定时监测</b><span class="muted">10-11 20:15</span></div><div class='ev-d'>2026-10-11 20:14 监测：市场震荡；复盘最新3笔连亏均属冻结令①范围（atr_channel/keltner 震荡市趋势策略：DOTUSDT -100.31、STRKUSDT -5.21、TIAUSDT -217.08），RLCUSDT 24h +12.19% 属冻结③止盈监控中，AEROUSDT atr_channel 止损价高于均价属冻结①监控。按冻结令只做监测记录，不调整、不打扰用户。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>review-check 19:59: 趋势策略震荡市亏损监测</b><span class="muted">10-11 20:00</span></div><div class='ev-d'>外部环境震荡，持仓7只；复盘23笔中17亏，亏损集中趋势策略(dual_ma-1711/atr_channel-1189/keltner-514)。最新3笔DOTUSDT/STRKUSDT/TIAUSDT均属冻结事项①②③覆盖范围，仅监测，无调整建议。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>review-check 轮检：市场震荡，3笔复盘亏损均属冻结事项</b><span class="muted">10-11 19:30</span></div><div class='ev-d'>震荡环境；RLCUSDT 24h +16.47% 异动属冻结③；DOTUSDT/TIAUSDT(atr_channel)与STRKUSDT(keltner)复盘亏损属冻结①②。仅监测，无调整建议。</div></div></div>
@@ -274,18 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>hourly-learn 18:42 完成</b><span class="muted">10-10 18:43</span></div><div class='ev-d'>主题=市场分析；新增候选2（截面波动率离散度流动性代理、多周期信号对齐确认）；复盘：17笔已平仓无新增，dual_ma最差但属冻令区；equity=46344.42，回撤约-7.31%，8%软层未触发；无代码改动，保持静默。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>18:00 复盘检查：一切在冻结监测范围内</b><span class="muted">10-10 18:01</span></div><div class='ev-d'>四层扫描：市场震荡（涨44/跌16），持仓7只，equity=46381.79（回撤7.21%&lt;8%）。atr_channel 4连亏、dual_ma 5连亏、keltner穿仓、RLCUSDT -9.02% 均属冻结三项，按冻结令仅监测不调。交易循环正常。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>15分钟复盘检查(17:44)</b><span class="muted">10-10 17:44</span></div><div class='ev-d'>环境震荡，持仓7只。atr_channel 近3笔连续亏损(FIL -7.7%、ATOM -11.9%、KAIA -0.2%)，RLCUSDT 持仓 -9.02%。两类均在实盘冻结令范围内，只监测记录，不提调整。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>复盘检查：atr_channel 连续4笔亏损，属冻结令①范围，仅监测</b><span class="muted">10-10 17:30</span></div><div class='ev-d'>2026-10-10 17:30 检查：市场环境震荡；近连续4笔 atr_channel 亏损（KAIA -5.57、FIL -239.36、ATOM -409.96、CRCLB -392.37），keltner KAIA 此前 -509.69；RLCUSDT 持仓 -9.02% 属冻结令③。按冻结令只监测记录、不提调整、不汇报。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>复盘检查(17:15): 震荡市, atr_channel连亏3笔、dual_ma累计-1616, RLCUSDT -9.02%</b><span class="muted">10-10 17:15</span></div><div class='ev-d'>冻结令范围内问题,仅监测记录,无调整建议,不打扰用户。持仓7只,环境震荡。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>review-check: 16:59 复盘检查</b><span class="muted">10-10 17:00</span></div><div class='ev-d'>市场震荡；持仓7只；近3笔复盘均为atr_channel亏损（冻结令①），RLCUSDT持仓-5.51%（冻结令③），仅监测无调整。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>15分钟复盘检查：atr_channel 震荡市连续亏损（冻结令监测中）</b><span class="muted">10-10 16:45</span></div><div class='ev-d'>市场环境=震荡。最新3条复盘均为 atr_channel 亏损：ATOMUSDT -11.9%（-409.96）、FILUSDT -7.7%（-239.36）、KAIAUSDT -5.57。属实盘冻结令第①项（震荡市趋势策略处理），仅监测记录，不提调整、不汇报打扰。RLCUSDT 24h -5.51% 属冻结令第③项（止盈冻结），同样仅监测。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#9aa0aa">系统</span>
-        <div class="ev-body"><div class="ev-h"><b>日报货币口径修正为 CNY</b><span class="muted">10-10 16:38</span></div><div class='ev-d'>config.yaml 新增 currency: CNY；daily_report.py/trader.py 的 USDT 硬编码改为读取配置。今晚 23:00 日报将以人民币计价输出。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>18:00 复盘检查：一切在冻结监测范围内</b><span class="muted">10-10 18:01</span></div><div class='ev-d'>四层扫描：市场震荡（涨44/跌16），持仓7只，equity=46381.79（回撤7.21%&lt;8%）。atr_channel 4连亏、dual_ma 5连亏、keltner穿仓、RLCUSDT -9.02% 均属冻结三项，按冻结令仅监测不调。交易循环正常。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
