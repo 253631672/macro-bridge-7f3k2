@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-12 05:44（北京时间）· 每5分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-12 05:49（北京时间）· 每5分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -47,7 +47,9 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="card attn"><div class="card-t">需要你介入 <span class="badge">1</span></div><ul class="needs"><li><span class='dot warn'></span>给 23:00 日报等定时任务开启常开审批（App → 头像 → Upcoming → 任务详情 → 权限设为允许）<span class='muted'> · 10-09 23:28</span></li></ul>
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
-<div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+<div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>复盘检查(05:44)：趋势策略在震荡市连续亏损，建议 regime 过滤研究</b><span class="muted">10-12 05:45</span></div><div class='ev-d'>环境震荡。近60笔结算：dual_ma 0胜6负 -1711.6，atr_channel 1胜6负 -1189.6，keltner 0胜2负 -514.9；复盘最新三笔 DOT -100.31/-2.9%(atr_channel)、STRK -5.21/-0.2%(keltner) 均提示检查买入逻辑。持仓6只无即刻异动(AEROUSDT 现价0.935在止损0.9297之上)。建议：下一轮 hourly-learn 用 walk-forward 测试震荡过滤器（BTC波动/区间阈值）作用于 dual_ma/atr_channel，过门禁才落地；实盘参数不动。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>arena 每半小时优化：亏钱场账本原子写入 + smoke_test 自举</b><span class="muted">10-12 05:28</span></div><div class='ev-d'>亏钱场下午首次生产运行前补齐账本原子写入（tmp+rename），崩溃中途写坏风险消除；smoke_test.py 在项目根可直接运行；AST/冒烟/原子写入往返测试均通过，页面无变化不发布。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>AI擂台半小时优化：亏钱场+A股主擂台 prompt 补60%仓位上限规则</b><span class="muted">10-12 05:02</span></div><div class='ev-d'>loss_arena.py（上轮结转）与 arena_common.py 的决策 prompt 统一补上「单只股票市值不超过组合净值60%（超限自动降手）」，与撮合层 MAX_SINGLE_POS 一致，避免模型发超限指令被静默降手。AST+prompt渲染断言通过，9页生成正常，看板3页已发布（commit d7f2c57，pinned blob MD5逐字节一致）。</div></div></div>
@@ -284,8 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>hourly-learn：新增通用风控「连损减仓」</b><span class="muted">10-11 04:45</span></div><div class='ev-d'>通用风控层新增连损减仓（连续3笔已平仓净亏损→新开仓风险预算×0.5），补上StoplossGuard只管频次不管金额的缺口。当前连亏streak=1未触发，实盘行为无变化。复盘：已平仓21笔累计-3607.87，dual_ma仍最差（-1711.57，冻令观察区不动）。冻令三项未动。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>review-check 04:44：震荡市，atr_channel/dual_ma连亏，冻结令范围内只监测不建议</b><span class="muted">10-11 04:45</span></div><div class='ev-d'>TIAUSDT atr_channel -217.1、HBARUSDT dual_ma -95.1、FILUSDT atr_channel -239.4；RLCUSDT 持仓 -11.51%。属冻结①③范围，仅记录review-check.log，不汇报用户。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>复盘检查：环境震荡，持仓正常（冻结项范围内，仅监测）</b><span class="muted">10-11 04:30</span></div><div class='ev-d'>四层分析：环境震荡；持仓6只，RLCUSDT 24h -11.51%属冻结③；最新复盘TIAUSDT/atr_channel亏损-11.2%、HBARUSDT/dual_ma -0.6%属冻结①。无新调整建议，实盘照常。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>review-check 04:44：震荡市，atr_channel/dual_ma连亏，冻结令范围内只监测不建议</b><span class="muted">10-11 04:45</span></div><div class='ev-d'>TIAUSDT atr_channel -217.1、HBARUSDT dual_ma -95.1、FILUSDT atr_channel -239.4；RLCUSDT 持仓 -11.51%。属冻结①③范围，仅记录review-check.log，不汇报用户。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
