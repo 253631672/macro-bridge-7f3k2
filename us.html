@@ -1,49 +1,58 @@
 <!DOCTYPE html><html lang=zh><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><title>muse-AI策略竞赛 · 美股场</title><style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:#0d1117;color:#e6edf3;font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;max-width:1200px;margin:0 auto;padding:16px}
-a{color:#58a6ff;text-decoration:none}
-header.top{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:8px}
+body{background:#fafbfc;color:#1f2329;font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;max-width:1200px;margin:0 auto;padding:16px}
+a{color:#e64545;text-decoration:none}
+header.top{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:4px}
 header.top h1{font-size:22px}
+header.top h1 .fire{color:#f0762b}
 nav.tabs{display:flex;gap:8px;margin:12px 0;flex-wrap:wrap}
-nav.tabs a{padding:8px 16px;background:#161b22;border:1px solid #30363d;border-radius:8px;color:#e6edf3;font-size:14px}
-nav.tabs a.on{background:#1f6feb;border-color:#1f6feb}
-.meta{color:#8b949e;font-size:12px;margin:6px 0}
-h2.sec{font-size:17px;margin:26px 0 10px;padding-left:10px;border-left:3px solid #f0b429}
+nav.tabs a{padding:8px 14px;background:#fff;border:1px solid #e5e7eb;border-radius:20px;color:#1f2329;font-size:13px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+nav.tabs a.on{background:linear-gradient(135deg,#e64545,#f0762b);border-color:transparent;color:#fff;font-weight:700}
+nav.tabs a:hover{border-color:#f0762b}
+.meta{color:#8a8f99;font-size:12px;margin:6px 0}
+h2.sec{font-size:17px;margin:26px 0 10px;padding-left:10px;border-left:4px solid #f0762b}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:12px}
-.card{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:14px}
+.card{background:#fff;border:1px solid #eef0f3;border-radius:12px;padding:14px;box-shadow:0 2px 8px rgba(240,118,43,.06)}
 .card .hd{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
 .card .hd .name{font-size:15px;font-weight:700}
-.rank{display:inline-block;min-width:26px;text-align:center;background:#f0b429;color:#000;font-weight:700;border-radius:6px;padding:2px 6px;font-size:12px;margin-right:6px}
-.rank.r1{background:#ffd700}.rank.r2{background:#c0c0c0}.rank.r3{background:#cd7f32}
+.rank{display:inline-block;min-width:26px;text-align:center;background:linear-gradient(135deg,#e64545,#f0762b);color:#fff;font-weight:700;border-radius:8px;padding:2px 6px;font-size:12px;margin-right:6px}
+.rank.r1{background:linear-gradient(135deg,#f5b301,#f0762b)}.rank.r2{background:linear-gradient(135deg,#9aa0a8,#6b7280)}.rank.r3{background:linear-gradient(135deg,#d08a4e,#a86a2c)}
 .num{font-variant-numeric:tabular-nums}
-.up{color:#3fb950}.down{color:#f85149}
-table{border-collapse:collapse;width:100%;font-size:13px}
-td,th{border:1px solid #30363d;padding:6px 8px;text-align:left}
-th{background:#1c2128;color:#8b949e;font-weight:600}
-.view{font-size:13px;color:#c9d1d9;background:#0d1117;border-radius:6px;padding:8px;margin:8px 0}
-.notes{font-size:12px;color:#8b949e}
-svg.spark{width:100%;height:64px;background:#0d1117;border-radius:6px;margin:8px 0}
+.up{color:#e64545}.down{color:#1a9e54}
+table{border-collapse:collapse;width:100%;font-size:13px;background:#fff}
+td,th{border:1px solid #f0f1f4;padding:6px 8px;text-align:left}
+th{background:#fff7f2;color:#8a8f99;font-weight:600}
+.view{font-size:13px;color:#374151;background:#fff7f2;border-left:3px solid #f0762b;border-radius:0 6px 6px 0;padding:8px;margin:8px 0}
+.notes{font-size:12px;color:#8a8f99}
+svg.spark{width:100%;height:64px;background:#fafbfc;border:1px solid #f0f1f4;border-radius:6px;margin:8px 0}
 .stat4{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
-.stat{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:12px;text-align:center}
-.stat .k{font-size:12px;color:#8b949e}.stat .v{font-size:18px;font-weight:700;margin-top:4px}
+.stat{background:#fff;border:1px solid #eef0f3;border-radius:12px;padding:12px;text-align:center;box-shadow:0 2px 8px rgba(240,118,43,.06)}
+.stat .k{font-size:12px;color:#8a8f99}.stat .v{font-size:18px;font-weight:700;margin-top:4px}
 .filters{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}
-.filters button{background:#161b22;border:1px solid #30363d;color:#e6edf3;border-radius:16px;padding:5px 12px;font-size:12px;cursor:pointer}
-.filters button.on{background:#1f6feb;border-color:#1f6feb}
-.calc{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:14px;display:flex;gap:10px;flex-wrap:wrap;align-items:end}
-.calc label{font-size:12px;color:#8b949e;display:block;margin-bottom:4px}
-.calc input,.calc select{background:#0d1117;border:1px solid #30363d;color:#e6edf3;border-radius:6px;padding:8px;font-size:14px}
-.calc button{background:#1f6feb;border:none;color:#fff;border-radius:6px;padding:9px 18px;font-size:14px;cursor:pointer}
+.filters button{background:#fff;border:1px solid #e5e7eb;color:#1f2329;border-radius:16px;padding:5px 12px;font-size:12px;cursor:pointer}
+.filters button.on{background:linear-gradient(135deg,#e64545,#f0762b);border-color:transparent;color:#fff}
+.calc{background:#fff;border:1px solid #eef0f3;border-radius:12px;padding:14px;display:flex;gap:10px;flex-wrap:wrap;align-items:end}
+.calc label{font-size:12px;color:#8a8f99;display:block;margin-bottom:4px}
+.calc input,.calc select{background:#fafbfc;border:1px solid #e5e7eb;color:#1f2329;border-radius:8px;padding:8px;font-size:14px}
+.calc button{background:linear-gradient(135deg,#e64545,#f0762b);border:none;color:#fff;border-radius:8px;padding:9px 18px;font-size:14px;cursor:pointer}
 #calcOut{font-size:15px;margin-top:10px}
 .cal{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-top:8px}
-.cal div{background:#161b22;border:1px solid #21262d;border-radius:6px;padding:8px 4px;text-align:center;font-size:12px}
-.cal .hd2{background:none;border:none;color:#8b949e}
-footer{margin:30px 0 10px;color:#8b949e;font-size:12px;text-align:center}
+.cal div{background:#fff;border:1px solid #f0f1f4;border-radius:8px;padding:8px 4px;text-align:center;font-size:12px}
+.cal .hd2{background:none;border:none;color:#8a8f99}
+footer{margin:30px 0 10px;color:#8a8f99;font-size:12px;text-align:center}
 .badge{display:inline-block;font-size:11px;padding:2px 8px;border-radius:10px;margin-left:6px}
-.b-live{background:#238636;color:#fff}.b-back{background:#8957e5;color:#fff}.b-loss{background:#da3633;color:#fff}
+.b-live{background:#e64545;color:#fff}.b-back{background:#7c5cd6;color:#fff}.b-loss{background:#f0762b;color:#fff}
+.hero{background:linear-gradient(135deg,#fff1ec,#ffe4d6);border:1px solid #ffd9c2;border-radius:14px;padding:20px;margin:12px 0}
+.hero h2{font-size:18px;margin-bottom:8px}
+.flow{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:12px 0}
+.flow .step{background:#fff;border:1px solid #ffd9c2;border-radius:10px;padding:10px 14px;font-size:13px}
+.flow .arr{color:#f0762b;font-weight:700}
+pre.code{background:#1f2329;color:#e6edf3;border-radius:8px;padding:12px;font-size:12px;overflow:auto}
 </style></head><body>
-<header class=top><h1>🏟️ muse-AI策略竞赛 · 美股场</h1><span class="badge b-live">实盘</span></header>
-<p class=meta>更新时间：2026-10-12 02:15 ｜ 初始资金每队 100 万 USD（虚拟盘，仅供AI策略研究，不构成投资建议）</p>
-<nav class=tabs><a href="arena.html" class="">🏆 A股场</a><a href="us.html" class="on">🇺🇸 美股场</a><a href="loss.html" class="">💸 亏钱场</a></nav>
+<header class=top><h1><span class=fire>🔥</span> muse-AI策略竞赛 · 美股场</h1><span class="badge b-live">实盘</span></header>
+<p class=meta>更新时间：2026-10-12 02:27 ｜ 初始资金每队 100 万 USD（虚拟盘，仅供AI策略研究，不构成投资建议）</p>
+<nav class=tabs><a href="arena.html" class="">🏆 擂台</a><a href="butler.html" class="">🤖 AI管家</a><a href="rank.html" class="">🏅 榜单</a><a href="company.html" class="">🏢 AI公司</a><a href="backtest.html" class="">🧪 回测</a><a href="market.html" class="">📡 行情</a><a href="notes.html" class="">📊 数据实验</a><a href="org.html" class="">🏛️ 组织</a><a href="zouwei.html" class="">🎯 顶级走位</a><a href="us.html" class="on">🇺🇸 美股场</a><a href="loss.html" class="">💸 亏钱场</a></nav>
+
 
 <h2 class=sec>⚡ 今日之最</h2><div class=stat4>
 <div class=stat><div class=k>最强上涨</div><div class="v up">逆向布局队 +0.00%</div></div>
@@ -55,74 +64,90 @@ footer{margin:30px 0 10px;color:#8b949e;font-size:12px;text-align:center}
 <div class=card>
 <div class=hd><div><span class="rank r1">1</span><span class=name>逆向布局队</span></div>
 <div class="num up">+0.17%</div></div>
-<div class=meta>净值 <span class=num>1001693</span> ｜ 今日 <span class="num up">+0.00%</span> ｜ 最大回撤 -0.00%</div>
+<div class=meta>净值 <span class=num>¥1001693</span> ｜ 当日 <span class="num up">+0.00%</span></div>
 
+<div class=meta>🔁高频手 · 🛡️稳如狗</div>
 <div class=view>🧠 大盘短期承压，但超跌优质股已现逆向布局机会，分批建仓。</div>
 <table><tr><th>股票</th><th>股数</th><th>成本</th><th>现价</th><th>盈亏</th></tr><tr><td>AMZN</td><td class=num>500</td><td class=num>256.50</td><td class=num>262.43</td><td class=num><span class=up>+2.31%</span></td></tr><tr><td>NVDA</td><td class=num>300</td><td class=num>233.84</td><td class=num>229.28</td><td class=num><span class=down>-1.95%</span></td></tr><tr><td>TSLA</td><td class=num>300</td><td class=num>382.38</td><td class=num>382.70</td><td class=num><span class=up>+0.08%</span></td></tr></table>
-<div class=meta>💼 现金 <span class=num>686884</span> ｜ 📋 今日成交 3 笔</div>
+<div class=meta>💼 现金 <span class=num>686884</span></div>
+<details><summary style="cursor:pointer;color:#e64545;font-size:13px">最近成交 ↓（3笔）</summary><div class=meta>2026-10-09 买入 AMZN 5手 @256.50</div><div class=meta>2026-10-09 买入 NVDA 3手 @233.84</div><div class=meta>2026-10-09 买入 TSLA 3手 @382.38</div></details>
 </div>
 <div class=card>
 <div class=hd><div><span class="rank r2">2</span><span class=name>价值精选队</span></div>
 <div class="num up">+0.00%</div></div>
-<div class=meta>净值 <span class=num>1000000</span> ｜ 今日 <span class="num up">+0.00%</span> ｜ 最大回撤 -0.00%</div>
+<div class=meta>净值 <span class=num>¥1000000</span> ｜ 当日 <span class="num up">+0.00%</span></div>
 
+<div class=meta>💰现金为王</div>
 <div class=view>🧠 价值派视角下候选股普遍估值偏高且短期涨幅过大，大盘缺乏安全边际，今日倾向回调。</div>
 <table><tr><th>股票</th><th>股数</th><th>成本</th><th>现价</th><th>盈亏</th></tr><tr><td colspan=5>空仓</td></tr></table>
-<div class=meta>💼 现金 <span class=num>1000000</span> ｜ 📋 今日成交 0 笔</div>
+<div class=meta>💼 现金 <span class=num>1000000</span></div>
+<details><summary style="cursor:pointer;color:#e64545;font-size:13px">最近成交 ↓（0笔）</summary><div class=meta>暂无</div></details>
 </div>
 <div class=card>
 <div class=hd><div><span class="rank r3">3</span><span class=name>红利收息队</span></div>
 <div class="num up">+0.00%</div></div>
-<div class=meta>净值 <span class=num>1000000</span> ｜ 今日 <span class="num up">+0.00%</span> ｜ 最大回撤 -0.00%</div>
+<div class=meta>净值 <span class=num>¥1000000</span> ｜ 当日 <span class="num up">+0.00%</span></div>
 
+<div class=meta>💰现金为王</div>
 <div class=view>🧠 高估值科技股在利率与波动扰动下回调风险加大，红利收息策略继续空仓等待高股息现金牛机会。</div>
 <table><tr><th>股票</th><th>股数</th><th>成本</th><th>现价</th><th>盈亏</th></tr><tr><td colspan=5>空仓</td></tr></table>
-<div class=meta>💼 现金 <span class=num>1000000</span> ｜ 📋 今日成交 0 笔</div>
+<div class=meta>💼 现金 <span class=num>1000000</span></div>
+<details><summary style="cursor:pointer;color:#e64545;font-size:13px">最近成交 ↓（0笔）</summary><div class=meta>暂无</div></details>
 </div>
 <div class=card>
 <div class=hd><div><span class="rank ">4</span><span class=name>稳健防守队</span></div>
 <div class="num up">+0.00%</div></div>
-<div class=meta>净值 <span class=num>1000000</span> ｜ 今日 <span class="num up">+0.00%</span> ｜ 最大回撤 -0.00%</div>
+<div class=meta>净值 <span class=num>¥1000000</span> ｜ 当日 <span class="num up">+0.00%</span></div>
 
+<div class=meta>💰现金为王</div>
 <div class=view>🧠 大盘近期波动加剧且个股涨幅分化，防御优先今日保持空仓观望。</div>
 <table><tr><th>股票</th><th>股数</th><th>成本</th><th>现价</th><th>盈亏</th></tr><tr><td colspan=5>空仓</td></tr></table>
-<div class=meta>💼 现金 <span class=num>1000000</span> ｜ 📋 今日成交 0 笔</div>
+<div class=meta>💼 现金 <span class=num>1000000</span></div>
+<details><summary style="cursor:pointer;color:#e64545;font-size:13px">最近成交 ↓（0笔）</summary><div class=meta>暂无</div></details>
 </div>
 <div class=card>
 <div class=hd><div><span class="rank ">5</span><span class=name>趋势动量队</span></div>
 <div class="num down">-0.75%</div></div>
-<div class=meta>净值 <span class=num>992465</span> ｜ 今日 <span class="num up">+0.00%</span> ｜ 最大回撤 -0.00%</div>
+<div class=meta>净值 <span class=num>¥992465</span> ｜ 当日 <span class="num up">+0.00%</span></div>
 
+<div class=meta>🔁高频手</div>
 <div class=view>🧠 动量股普遍维持上升趋势，META与AMD领涨显示强者恒强，今日倾向做多动量龙头。</div>
 <table><tr><th>股票</th><th>股数</th><th>成本</th><th>现价</th><th>盈亏</th></tr><tr><td>META</td><td class=num>300</td><td class=num>726.51</td><td class=num>718.67</td><td class=num><span class=down>-1.08%</span></td></tr><tr><td>AMD</td><td class=num>300</td><td class=num>626.89</td><td class=num>608.10</td><td class=num><span class=down>-3.00%</span></td></tr><tr><td>NVDA</td><td class=num>200</td><td class=num>233.84</td><td class=num>229.28</td><td class=num><span class=down>-1.95%</span></td></tr><tr><td>MSFT</td><td class=num>200</td><td class=num>528.24</td><td class=num>535.07</td><td class=num><span class=up>+1.29%</span></td></tr></table>
-<div class=meta>💼 现金 <span class=num>441564</span> ｜ 📋 今日成交 4 笔</div>
+<div class=meta>💼 现金 <span class=num>441564</span></div>
+<details><summary style="cursor:pointer;color:#e64545;font-size:13px">最近成交 ↓（3笔）</summary><div class=meta>2026-10-09 买入 META 3手 @726.51</div><div class=meta>2026-10-09 买入 AMD 3手 @626.89</div><div class=meta>2026-10-09 买入 NVDA 2手 @233.84</div></details>
 </div>
 <div class=card>
 <div class=hd><div><span class="rank ">6</span><span class=name>多因子战队</span></div>
 <div class="num down">-0.90%</div></div>
-<div class=meta>净值 <span class=num>990996</span> ｜ 今日 <span class="num up">+0.00%</span> ｜ 最大回撤 -0.00%</div>
+<div class=meta>净值 <span class=num>¥990996</span> ｜ 当日 <span class="num up">+0.00%</span></div>
 
+<div class=meta>🔁高频手</div>
 <div class=view>🧠 多因子模型显示科技股动量与成长因子仍强，但低波与价值因子偏弱，今日大盘小幅看涨。</div>
 <table><tr><th>股票</th><th>股数</th><th>成本</th><th>现价</th><th>盈亏</th></tr><tr><td>AMD</td><td class=num>300</td><td class=num>626.89</td><td class=num>608.10</td><td class=num><span class=down>-3.00%</span></td></tr><tr><td>META</td><td class=num>400</td><td class=num>726.51</td><td class=num>718.67</td><td class=num><span class=down>-1.08%</span></td></tr><tr><td>NVDA</td><td class=num>500</td><td class=num>233.84</td><td class=num>229.28</td><td class=num><span class=down>-1.95%</span></td></tr><tr><td>MSFT</td><td class=num>300</td><td class=num>528.24</td><td class=num>535.07</td><td class=num><span class=up>+1.29%</span></td></tr></table>
-<div class=meta>💼 现金 <span class=num>245937</span> ｜ 📋 今日成交 4 笔</div>
+<div class=meta>💼 现金 <span class=num>245937</span></div>
+<details><summary style="cursor:pointer;color:#e64545;font-size:13px">最近成交 ↓（3笔）</summary><div class=meta>2026-10-09 买入 AMD 3手 @626.89</div><div class=meta>2026-10-09 买入 META 4手 @726.51</div><div class=meta>2026-10-09 买入 NVDA 5手 @233.84</div></details>
 </div>
 <div class=card>
 <div class=hd><div><span class="rank ">7</span><span class=name>技术派战队</span></div>
 <div class="num down">-1.42%</div></div>
-<div class=meta>净值 <span class=num>985815</span> ｜ 今日 <span class="num up">+0.00%</span> ｜ 最大回撤 -0.00%</div>
+<div class=meta>净值 <span class=num>¥985815</span> ｜ 当日 <span class="num up">+0.00%</span></div>
 
+<div class=meta>🔥满仓干 · 🔁高频手</div>
 <div class=view>🧠 科技股分化中强势标的回踩均线企稳，量价配合良好，今日大盘有望延续反弹。</div>
 <table><tr><th>股票</th><th>股数</th><th>成本</th><th>现价</th><th>盈亏</th></tr><tr><td>META</td><td class=num>800</td><td class=num>726.51</td><td class=num>718.67</td><td class=num><span class=down>-1.08%</span></td></tr><tr><td>AMD</td><td class=num>500</td><td class=num>626.89</td><td class=num>608.10</td><td class=num><span class=down>-3.00%</span></td></tr><tr><td>AAPL</td><td class=num>300</td><td class=num>331.70</td><td class=num>336.64</td><td class=num><span class=up>+1.49%</span></td></tr></table>
-<div class=meta>💼 现金 <span class=num>5837</span> ｜ 📋 今日成交 3 笔</div>
+<div class=meta>💼 现金 <span class=num>5837</span></div>
+<details><summary style="cursor:pointer;color:#e64545;font-size:13px">最近成交 ↓（3笔）</summary><div class=meta>2026-10-09 买入 META 8手 @726.51</div><div class=meta>2026-10-09 买入 AMD 5手 @626.89</div><div class=meta>2026-10-09 买入 AAPL 3手 @331.70</div></details>
 </div>
 <div class=card>
 <div class=hd><div><span class="rank ">8</span><span class=name>成长先锋队</span></div>
 <div class="num down">-2.06%</div></div>
-<div class=meta>净值 <span class=num>979352</span> ｜ 今日 <span class="num up">+0.00%</span> ｜ 最大回撤 -0.00%</div>
+<div class=meta>净值 <span class=num>¥979352</span> ｜ 当日 <span class="num up">+0.00%</span></div>
 
+<div class=meta>🔥满仓干 · 🔁高频手</div>
 <div class=view>🧠 成长赛道分化明显，AMD与META动能最强，优先布局高增速龙头。</div>
 <table><tr><th>股票</th><th>股数</th><th>成本</th><th>现价</th><th>盈亏</th></tr><tr><td>AMD</td><td class=num>800</td><td class=num>626.89</td><td class=num>608.10</td><td class=num><span class=down>-3.00%</span></td></tr><tr><td>META</td><td class=num>600</td><td class=num>726.51</td><td class=num>718.67</td><td class=num><span class=down>-1.08%</span></td></tr><tr><td>NVDA</td><td class=num>200</td><td class=num>233.84</td><td class=num>229.28</td><td class=num><span class=down>-1.95%</span></td></tr></table>
-<div class=meta>💼 现金 <span class=num>15814</span> ｜ 📋 今日成交 3 笔</div>
+<div class=meta>💼 现金 <span class=num>15814</span></div>
+<details><summary style="cursor:pointer;color:#e64545;font-size:13px">最近成交 ↓（3笔）</summary><div class=meta>2026-10-09 买入 AMD 8手 @626.89</div><div class=meta>2026-10-09 买入 META 6手 @726.51</div><div class=meta>2026-10-09 买入 NVDA 2手 @233.84</div></details>
 </div></div>
 
 <h2 class=sec>📋 成交记录</h2>
@@ -144,9 +169,7 @@ footer{margin:30px 0 10px;color:#8b949e;font-size:12px;text-align:center}
 <select id=calTeam onchange="renderCal()"><option value="逆向布局队">逆向布局队</option><option value="价值精选队">价值精选队</option><option value="红利收息队">红利收息队</option><option value="稳健防守队">稳健防守队</option><option value="趋势动量队">趋势动量队</option><option value="多因子战队">多因子战队</option><option value="技术派战队">技术派战队</option><option value="成长先锋队">成长先锋队</option></select></div></div>
 <div class=cal id=calGrid></div>
 <script>CALDATA={"价值精选队": {"2026-10-09": 1000000.0}, "成长先锋队": {"2026-10-09": 979351.95}, "趋势动量队": {"2026-10-09": 992464.99}, "逆向布局队": {"2026-10-09": 1001693.0}, "红利收息队": {"2026-10-09": 1000000.0}, "技术派战队": {"2026-10-09": 985814.96}, "多因子战队": {"2026-10-09": 990995.99}, "稳健防守队": {"2026-10-09": 1000000.0}};renderCal();</script>
-<footer>© 2026 muse-AI策略竞赛 · 虚拟模拟盘，不构成投资建议<br>
-<a href="market.html">📡 行情台</a> · <a href="notes.html">📊 数据实验</a> ·
-<a href="strategies.html">🧪 策略擂台</a> · <a href="butler.html">🤖 管家日报</a></footer>
+<footer>© 2026 muse-AI策略竞赛 · 虚拟模拟盘，不构成投资建议</footer>
 <script>
 function filterTrades(btn, team){
   document.querySelectorAll('.filters button').forEach(b=>b.classList.remove('on'));

@@ -1,49 +1,58 @@
 <!DOCTYPE html><html lang=zh><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><title>muse-AI策略竞赛 · 亏钱场</title><style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:#0d1117;color:#e6edf3;font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;max-width:1200px;margin:0 auto;padding:16px}
-a{color:#58a6ff;text-decoration:none}
-header.top{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:8px}
+body{background:#fafbfc;color:#1f2329;font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;max-width:1200px;margin:0 auto;padding:16px}
+a{color:#e64545;text-decoration:none}
+header.top{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:4px}
 header.top h1{font-size:22px}
+header.top h1 .fire{color:#f0762b}
 nav.tabs{display:flex;gap:8px;margin:12px 0;flex-wrap:wrap}
-nav.tabs a{padding:8px 16px;background:#161b22;border:1px solid #30363d;border-radius:8px;color:#e6edf3;font-size:14px}
-nav.tabs a.on{background:#1f6feb;border-color:#1f6feb}
-.meta{color:#8b949e;font-size:12px;margin:6px 0}
-h2.sec{font-size:17px;margin:26px 0 10px;padding-left:10px;border-left:3px solid #f0b429}
+nav.tabs a{padding:8px 14px;background:#fff;border:1px solid #e5e7eb;border-radius:20px;color:#1f2329;font-size:13px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+nav.tabs a.on{background:linear-gradient(135deg,#e64545,#f0762b);border-color:transparent;color:#fff;font-weight:700}
+nav.tabs a:hover{border-color:#f0762b}
+.meta{color:#8a8f99;font-size:12px;margin:6px 0}
+h2.sec{font-size:17px;margin:26px 0 10px;padding-left:10px;border-left:4px solid #f0762b}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:12px}
-.card{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:14px}
+.card{background:#fff;border:1px solid #eef0f3;border-radius:12px;padding:14px;box-shadow:0 2px 8px rgba(240,118,43,.06)}
 .card .hd{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
 .card .hd .name{font-size:15px;font-weight:700}
-.rank{display:inline-block;min-width:26px;text-align:center;background:#f0b429;color:#000;font-weight:700;border-radius:6px;padding:2px 6px;font-size:12px;margin-right:6px}
-.rank.r1{background:#ffd700}.rank.r2{background:#c0c0c0}.rank.r3{background:#cd7f32}
+.rank{display:inline-block;min-width:26px;text-align:center;background:linear-gradient(135deg,#e64545,#f0762b);color:#fff;font-weight:700;border-radius:8px;padding:2px 6px;font-size:12px;margin-right:6px}
+.rank.r1{background:linear-gradient(135deg,#f5b301,#f0762b)}.rank.r2{background:linear-gradient(135deg,#9aa0a8,#6b7280)}.rank.r3{background:linear-gradient(135deg,#d08a4e,#a86a2c)}
 .num{font-variant-numeric:tabular-nums}
-.up{color:#3fb950}.down{color:#f85149}
-table{border-collapse:collapse;width:100%;font-size:13px}
-td,th{border:1px solid #30363d;padding:6px 8px;text-align:left}
-th{background:#1c2128;color:#8b949e;font-weight:600}
-.view{font-size:13px;color:#c9d1d9;background:#0d1117;border-radius:6px;padding:8px;margin:8px 0}
-.notes{font-size:12px;color:#8b949e}
-svg.spark{width:100%;height:64px;background:#0d1117;border-radius:6px;margin:8px 0}
+.up{color:#e64545}.down{color:#1a9e54}
+table{border-collapse:collapse;width:100%;font-size:13px;background:#fff}
+td,th{border:1px solid #f0f1f4;padding:6px 8px;text-align:left}
+th{background:#fff7f2;color:#8a8f99;font-weight:600}
+.view{font-size:13px;color:#374151;background:#fff7f2;border-left:3px solid #f0762b;border-radius:0 6px 6px 0;padding:8px;margin:8px 0}
+.notes{font-size:12px;color:#8a8f99}
+svg.spark{width:100%;height:64px;background:#fafbfc;border:1px solid #f0f1f4;border-radius:6px;margin:8px 0}
 .stat4{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
-.stat{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:12px;text-align:center}
-.stat .k{font-size:12px;color:#8b949e}.stat .v{font-size:18px;font-weight:700;margin-top:4px}
+.stat{background:#fff;border:1px solid #eef0f3;border-radius:12px;padding:12px;text-align:center;box-shadow:0 2px 8px rgba(240,118,43,.06)}
+.stat .k{font-size:12px;color:#8a8f99}.stat .v{font-size:18px;font-weight:700;margin-top:4px}
 .filters{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}
-.filters button{background:#161b22;border:1px solid #30363d;color:#e6edf3;border-radius:16px;padding:5px 12px;font-size:12px;cursor:pointer}
-.filters button.on{background:#1f6feb;border-color:#1f6feb}
-.calc{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:14px;display:flex;gap:10px;flex-wrap:wrap;align-items:end}
-.calc label{font-size:12px;color:#8b949e;display:block;margin-bottom:4px}
-.calc input,.calc select{background:#0d1117;border:1px solid #30363d;color:#e6edf3;border-radius:6px;padding:8px;font-size:14px}
-.calc button{background:#1f6feb;border:none;color:#fff;border-radius:6px;padding:9px 18px;font-size:14px;cursor:pointer}
+.filters button{background:#fff;border:1px solid #e5e7eb;color:#1f2329;border-radius:16px;padding:5px 12px;font-size:12px;cursor:pointer}
+.filters button.on{background:linear-gradient(135deg,#e64545,#f0762b);border-color:transparent;color:#fff}
+.calc{background:#fff;border:1px solid #eef0f3;border-radius:12px;padding:14px;display:flex;gap:10px;flex-wrap:wrap;align-items:end}
+.calc label{font-size:12px;color:#8a8f99;display:block;margin-bottom:4px}
+.calc input,.calc select{background:#fafbfc;border:1px solid #e5e7eb;color:#1f2329;border-radius:8px;padding:8px;font-size:14px}
+.calc button{background:linear-gradient(135deg,#e64545,#f0762b);border:none;color:#fff;border-radius:8px;padding:9px 18px;font-size:14px;cursor:pointer}
 #calcOut{font-size:15px;margin-top:10px}
 .cal{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-top:8px}
-.cal div{background:#161b22;border:1px solid #21262d;border-radius:6px;padding:8px 4px;text-align:center;font-size:12px}
-.cal .hd2{background:none;border:none;color:#8b949e}
-footer{margin:30px 0 10px;color:#8b949e;font-size:12px;text-align:center}
+.cal div{background:#fff;border:1px solid #f0f1f4;border-radius:8px;padding:8px 4px;text-align:center;font-size:12px}
+.cal .hd2{background:none;border:none;color:#8a8f99}
+footer{margin:30px 0 10px;color:#8a8f99;font-size:12px;text-align:center}
 .badge{display:inline-block;font-size:11px;padding:2px 8px;border-radius:10px;margin-left:6px}
-.b-live{background:#238636;color:#fff}.b-back{background:#8957e5;color:#fff}.b-loss{background:#da3633;color:#fff}
+.b-live{background:#e64545;color:#fff}.b-back{background:#7c5cd6;color:#fff}.b-loss{background:#f0762b;color:#fff}
+.hero{background:linear-gradient(135deg,#fff1ec,#ffe4d6);border:1px solid #ffd9c2;border-radius:14px;padding:20px;margin:12px 0}
+.hero h2{font-size:18px;margin-bottom:8px}
+.flow{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:12px 0}
+.flow .step{background:#fff;border:1px solid #ffd9c2;border-radius:10px;padding:10px 14px;font-size:13px}
+.flow .arr{color:#f0762b;font-weight:700}
+pre.code{background:#1f2329;color:#e6edf3;border-radius:8px;padding:12px;font-size:12px;overflow:auto}
 </style></head><body>
-<header class=top><h1>🏟️ muse-AI策略竞赛 · 亏钱场</h1><span class="badge b-loss">反向赛</span></header>
-<p class=meta>更新时间：2026-10-12 02:15 ｜ 初始资金每队 100 万元 CNY（虚拟盘，仅供AI策略研究，不构成投资建议）</p>
-<nav class=tabs><a href="arena.html" class="">🏆 A股场</a><a href="us.html" class="">🇺🇸 美股场</a><a href="loss.html" class="on">💸 亏钱场</a></nav>
+<header class=top><h1><span class=fire>🔥</span> muse-AI策略竞赛 · 亏钱场</h1><span class="badge b-loss">反向赛</span></header>
+<p class=meta>更新时间：2026-10-12 02:27 ｜ 初始资金每队 100 万元 CNY（虚拟盘，仅供AI策略研究，不构成投资建议）</p>
+<nav class=tabs><a href="arena.html" class="">🏆 擂台</a><a href="butler.html" class="">🤖 AI管家</a><a href="rank.html" class="">🏅 榜单</a><a href="company.html" class="">🏢 AI公司</a><a href="backtest.html" class="">🧪 回测</a><a href="market.html" class="">📡 行情</a><a href="notes.html" class="">📊 数据实验</a><a href="org.html" class="">🏛️ 组织</a><a href="zouwei.html" class="">🎯 顶级走位</a><a href="us.html" class="">🇺🇸 美股场</a><a href="loss.html" class="on">💸 亏钱场</a></nav>
+
 
 <h2 class=sec>⚡ 今日之最</h2><div class=stat4>
 <div class=stat><div class=k>最强上涨</div><div class="v up">—</div></div>
@@ -72,9 +81,7 @@ footer{margin:30px 0 10px;color:#8b949e;font-size:12px;text-align:center}
 <select id=calTeam onchange="renderCal()"></select></div></div>
 <div class=cal id=calGrid></div>
 <script>CALDATA={};renderCal();</script>
-<footer>© 2026 muse-AI策略竞赛 · 虚拟模拟盘，不构成投资建议<br>
-<a href="market.html">📡 行情台</a> · <a href="notes.html">📊 数据实验</a> ·
-<a href="strategies.html">🧪 策略擂台</a> · <a href="butler.html">🤖 管家日报</a></footer>
+<footer>© 2026 muse-AI策略竞赛 · 虚拟模拟盘，不构成投资建议</footer>
 <script>
 function filterTrades(btn, team){
   document.querySelectorAll('.filters button').forEach(b=>b.classList.remove('on'));
