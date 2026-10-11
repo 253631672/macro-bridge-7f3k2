@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>数据实验 · AI 炒股擂台</title>
+<style>
+*{box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;background:#0f1420;color:#e8ecf4;margin:0;padding:0 0 40px}
+.top{background:#151c2e;padding:16px;position:sticky;top:0;z-index:5;border-bottom:1px solid #232c47}
+.top h1{font-size:18px;margin:0}
+.wrap{max-width:800px;margin:0 auto;padding:12px}
+.card{background:#151c2e;border:1px solid #232c47;border-radius:12px;padding:14px;margin-bottom:12px}
+.card h2{font-size:16px;margin:0 0 6px}
+.card h3{font-size:14px;margin:14px 0 6px;color:#aeb6cf}
+.card p{font-size:13px;line-height:1.8;color:#c6cde0}
+.meta{font-size:12px;color:#8b94ad}
+.nav{font-size:13px;margin-bottom:12px}.nav a{color:#4f8cff;text-decoration:none;margin-right:12px}
+.item{cursor:pointer}.item:hover{border-color:#4f8cff}
+.back{font-size:13px;color:#4f8cff;cursor:pointer;margin-bottom:8px;display:inline-block}
+.foot{text-align:center;color:#5b6480;font-size:12px;margin-top:16px}
+</style>
+</head>
+<body>
+<div class="top"><h1>📊 数据实验</h1></div>
+<div class="wrap">
+<div class="nav"><a href="index.html">🏆 模型擂台</a><a href="strategies.html">🧪 策略擂台</a><a href="market.html">📡 行情台</a><a href="notes.html">📊 数据实验</a></div>
+<div id="list"></div>
+<div id="article" style="display:none"></div>
+<div class="foot">研究基于历史数据 · 不构成投资建议</div>
+</div>
+<script>
+function esc(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;"); }
+function showList(data){
+  document.getElementById("article").style.display = "none";
+  var list = document.getElementById("list");
+  list.style.display = "block";
+  list.innerHTML = "";
+  data.articles.forEach(function(a){
+    var div = document.createElement("div");
+    div.className = "card item";
+    div.innerHTML = "<h2>"+esc(a.title)+"</h2><div class='meta'>"+esc(a.date)+"</div><p>"+esc(a.summary)+"</p>";
+    div.onclick = function(){ location.hash = "#/" + a.id; };
+    list.appendChild(div);
+  });
+}
+function showArticle(a){
+  document.getElementById("list").style.display = "none";
+  var el = document.getElementById("article");
+  el.style.display = "block";
+  var html = "<span class='back' onclick='location.hash=\"#\"'>← 返回列表</span>";
+  html += "<div class='card'><h2>"+esc(a.title)+"</h2><div class='meta'>"+esc(a.date)+"</div>";
+  a.sections.forEach(function(s){
+    html += "<h3>"+esc(s.h)+"</h3><p>"+esc(s.body)+"</p>";
+  });
+  html += "</div>";
+  el.innerHTML = html;
+}
+fetch("notes.json").then(function(r){return r.json();}).then(function(d){
+  function route(){
+    var id = location.hash.replace("#/","");
+    var hit = null;
+    d.articles.forEach(function(a){ if(a.id===id) hit = a; });
+    if(hit) showArticle(hit); else showList(d);
+  }
+  window.onhashchange = route;
+  route();
+}).catch(function(e){
+  document.getElementById("list").innerHTML = "<div class='card'>notes.json 加载失败："+esc(String(e))+"</div>";
+});
+</script>
+</body>
+</html>

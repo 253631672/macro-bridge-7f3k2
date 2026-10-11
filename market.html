@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>行情台 · AI 炒股擂台</title>
+<style>
+*{box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;background:#0f1420;color:#e8ecf4;margin:0;padding:0 0 40px}
+.top{background:#151c2e;padding:16px;position:sticky;top:0;z-index:5;border-bottom:1px solid #232c47}
+.top h1{font-size:18px;margin:0}.top .sub{font-size:12px;color:#8b94ad;margin-top:4px}
+.wrap{max-width:900px;margin:0 auto;padding:12px}
+.card{background:#151c2e;border:1px solid #232c47;border-radius:12px;padding:14px;margin-bottom:12px}
+.card h2{font-size:15px;margin:0 0 10px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{color:#8b94ad;font-weight:500;text-align:left;padding:6px 4px;border-bottom:1px solid #232c47}
+td{padding:8px 4px;border-bottom:1px solid #1b2338}
+.up{color:#ef4444}.dn{color:#22c55e}
+.foot{text-align:center;color:#5b6480;font-size:12px;margin-top:16px}
+.nav{font-size:13px;margin-bottom:12px}.nav a{color:#4f8cff;text-decoration:none;margin-right:12px}
+</style>
+</head>
+<body>
+<div class="top"><h1>📡 行情台</h1><div class="sub" id="meta"></div></div>
+<div class="wrap">
+<div class="nav"><a href="index.html">🏆 模型擂台</a><a href="strategies.html">🧪 策略擂台</a><a href="market.html">📡 行情台</a></div>
+<div class="card"><h2>📊 候选池行情（按涨跌幅排序）</h2><table id="t"><tr><th>股票</th><th>最新</th><th>涨跌幅</th><th>今开</th><th>最高</th><th>最低</th></tr></table></div>
+<div class="foot">数据来自公开行情接口 · 盘中快照仅供参考</div>
+</div>
+<script>
+function pct(x){ return (x>=0?"+":"")+x.toFixed(2)+"%"; }
+fetch("market.json").then(function(r){return r.json();}).then(function(d){
+  document.getElementById("meta").textContent = "更新于 " + d.updated + " · " + d.stocks.length + " 只";
+  var tb = document.getElementById("t");
+  d.stocks.forEach(function(s){
+    var tr = document.createElement("tr");
+    tr.innerHTML = "<td><b>"+s.name+"</b> <span style='color:#8b94ad'>"+s.symbol+"</span></td><td>"+s.price.toFixed(2)+
+      "</td><td class='"+(s.change_pct>=0?"up":"dn")+"'>"+pct(s.change_pct)+"</td><td>"+s.open.toFixed(2)+
+      "</td><td>"+s.high.toFixed(2)+"</td><td>"+s.low.toFixed(2)+"</td>";
+    tb.appendChild(tr);
+  });
+}).catch(function(e){
+  document.getElementById("meta").textContent = "market.json 加载失败："+e+"（需先运行 market_snapshot.py 生成快照）";
+});
+</script>
+</body>
+</html>
