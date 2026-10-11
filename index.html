@@ -26,10 +26,11 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-12 03:24（北京时间）· 每5分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-12 03:29（北京时间）· 每5分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
-        <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
+        <div class="cur-task">quant-dashboard-refresh：刷新数据</div>
+        <div class="muted">开始于 10-12 03:29</div></div>
 <div class="card"><div class="card-t">🤖 AI量化看板 <span class="muted">· 每5分钟同步</span></div>
         <div class="nums">
           <div><span>净值</span><b>46,518.11</b></div>
@@ -47,7 +48,9 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="card attn"><div class="card-t">需要你介入 <span class="badge">1</span></div><ul class="needs"><li><span class='dot warn'></span>给 23:00 日报等定时任务开启常开审批（App → 头像 → Upcoming → 任务详情 → 权限设为允许）<span class='muted'> · 10-09 23:28</span></li></ul>
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
-<div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+<div class="card"><div class="ev"><span class="ev-tag" style="background:#22b573">日报</span>
+        <div class="ev-body"><div class="ev-h"><b>量化看板 5 分钟刷新完成</b><span class="muted">10-12 03:26</span></div><div class='ev-d'>commit fba3e97；index.html/quant.html 浏览器上传链路字节直传，pinned blob 全文 diff 逐字节一致，验证通过。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>策略引擎优化发布</b><span class="muted">10-12 03:15</span></div><div class='ev-d'>commit 73157f39：真实交易成本（佣金万2.5最低5元+过户费+印花税千1）、单只60%仓位上限、停牌股剔除、年化按实际天数复利、账本原子写入、ledger单次读取；4页pinned blob逐字节一致</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>新手指导补齐发布</b><span class="muted">10-12 03:07</span></div><div class='ev-d'>9页按目标站原版说明改写新手指导，commit 6bc6a6a1，pinned blob 9页全部逐字节一致；看板刷新任务已升级为9页全量自动发布</div></div></div>
@@ -284,8 +287,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>review-check 复盘检查</b><span class="muted">10-11 04:00</span></div><div class='ev-d'>2026-10-11 03:59：市场震荡，持仓7只无异动；近10笔复盘7亏3盈，连亏集中在冻结事项①②（震荡市 atr_channel / keltner 穿仓），按冻结令只监测不调整。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>hourly-learn：新增每日亏损上限风控</b><span class="muted">10-11 03:46</span></div><div class='ev-d'>通用风控层新增 daily_loss_limit_pct=2%：日内累计亏损≥2%暂停新开仓至次日，不动持仓与退出；冻令三项未触。已验证语法与基准逻辑。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>复盘检查 03:44</b><span class="muted">10-11 03:45</span></div><div class='ev-d'>市场震荡，持仓7只，最新复盘无连续亏损；发现问题均属冻结令范围（趋势策略/RLC止盈/keltner），仅监测不调整</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>hourly-learn：新增每日亏损上限风控</b><span class="muted">10-11 03:46</span></div><div class='ev-d'>通用风控层新增 daily_loss_limit_pct=2%：日内累计亏损≥2%暂停新开仓至次日，不动持仓与退出；冻令三项未触。已验证语法与基准逻辑。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
