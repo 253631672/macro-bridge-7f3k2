@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-12 17:29（北京时间）· 每5分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-12 17:34（北京时间）· 每5分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -48,6 +48,8 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
 <div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>复盘检查：发现连续亏损，建议调整趋势策略震荡市仓位</b><span class="muted">10-12 17:30</span></div><div class='ev-d'>近24小时25笔平仓17笔亏损，合计约-3583 CNY；dual_ma/atr_channel/keltner 在震荡市全线亏损，复盘17笔标记需检查买入逻辑；OGNUSDT 持仓 -14.39% 异动。建议：震荡市趋势策略停开新仓（regime 过滤器方向）、keltner/atr_channel 个案复核，均须走回测证据链+上线门禁后再落地。详见目标 hidden_files/review-check-log.md。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>完成：arena-hourly-opt 本轮完成</b><span class="muted">10-12 16:56</span></div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>擂台优化：收盘日报推送加送达收据</b><span class="muted">10-12 16:56</span></div><div class='ev-d'>arena_settle.py：收盘汇总日报的 push_long 返回值此前被丢弃，全渠道失败时在 cron 日志中无痕。现按渠道汇总成送达收据 {渠道: 成功分片/总分片} 并写入 DONE 摘要，明日起日报送达状态在日志中立即可见。验证：AST+import 通过、聚合逻辑 mock 断言通过、engine SMOKE OK。1 文件，无账本/页面改动。</div></div></div>
@@ -284,8 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>复盘检查：3笔新复盘亏损属冻结类别，监测中</b><span class="muted">10-11 18:30</span></div><div class='ev-d'>震荡市（BTC 24h +0.43%，上涨49/下跌11）。最近3笔复盘：DOTUSDT atr_channel -100.31(-2.9%)、STRKUSDT keltner -5.21、TIAUSDT atr_channel -217.08(-11.2%)，均属冻结类别①，按冻结令仅监测记录，不做调整、不打扰。OGNUSDT持仓量比3.45异动监测中。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>review-check 18:15：市场震荡，持仓7只，无需调整</b><span class="muted">10-11 18:16</span></div><div class='ev-d'>四层分析：环境震荡（BTC 24h +0.43%）；持仓7只，浮盈亏-3.11%~+7.56%，APT/CRCLB逼近止损属正常风控；OGN量比3.45但方向有利（+7.03%浮盈）；16:07后无新增平仓，停血门控运行正常。无实质调整建议，静默。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#22b573">日报</span>
-        <div class="ev-body"><div class="ev-h"><b>看板数据刷新已发布</b><span class="muted">10-11 17:47</span></div><div class='ev-d'>17:44轮次：dashboard/api + build_quant + build 完成，上传链路发布 commit 56c9642，pinned blob 校验两文件与本地基线逐字节一致。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>review-check 18:15：市场震荡，持仓7只，无需调整</b><span class="muted">10-11 18:16</span></div><div class='ev-d'>四层分析：环境震荡（BTC 24h +0.43%）；持仓7只，浮盈亏-3.11%~+7.56%，APT/CRCLB逼近止损属正常风控；OGN量比3.45但方向有利（+7.03%浮盈）；16:07后无新增平仓，停血门控运行正常。无实质调整建议，静默。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
