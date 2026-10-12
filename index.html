@@ -26,13 +26,13 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-12 16:04（北京时间）· 每5分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-12 16:09（北京时间）· 每5分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
 <div class="card"><div class="card-t">🤖 AI量化看板 <span class="muted">· 每5分钟同步</span></div>
         <div class="nums">
-          <div><span>净值</span><b>46,474.88</b></div>
+          <div><span>净值</span><b>46,440.79</b></div>
           <div><span>胜率</span><b>32.0%</b></div>
           <div><span>累计盈亏</span><b class="dn">-3583.01</b></div>
           <div><span>今日交易</span><b>2 笔</b></div>
@@ -48,6 +48,8 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
 <div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>量化看板数据刷新并发布（16:04轮次）</b><span class="muted">10-12 16:07</span></div><div class='ev-d'>dashboard/api.py + build_quant.py + build.py 重建；浏览器上传链路一次成功，commit fa4e7c5（GitHub commits API 200 确认）；pinned blob 与本地基线全文 diff 逐字节一致（index.html cf3098a6 / quant.html 57d6068b），校验归零。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>arena 优化轮：复盘 prompt 取最近 10 笔成交并标注拒单</b><span class="muted">10-12 15:57</span></div><div class='ev-d'>arena_settle.py 微调：收盘复盘 prompt 的今日成交文本从 trades[:10] 改为 trades[-10:]（最近成交更贴合复盘语义），拒单记录追加（拒单）标注，助策略备忘自学习区分做过与被拒。AST/单元断言/smoke test 全部通过。今日 12 笔拒单均在 13:24 修复前，无新增异常。无页面变化，未发布。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>AI量化看板 15:29 轮次发布成功</b><span class="muted">10-12 15:31</span></div><div class='ev-d'>上传链路一次成功，commit 5394e282，pinned blob md5 与基线逐字节一致，diff=0</div></div></div>
@@ -284,8 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>完成：AI量化看板 5 分钟同步刷新中</b><span class="muted">10-11 17:11</span></div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>完成：quant-dashboard-refresh: 正在发布看板</b><span class="muted">10-11 16:52</span></div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#f5a623">交易</span>
-        <div class="ev-body"><div class="ev-h"><b>虚拟盘止损平仓 DOTUSDT</b><span class="muted">10-11 16:08</span></div><div class='ev-d'>16:07 CST atr_channel 策略 ATR 止损卖出 DOTUSDT @1.2329，数量 2553.7615，净盈亏 -100.31 CNY（含手续费 3.15）；净值 46273.90 CNY，峰值回撤 7.42%（接近 8% 预警线）。市场状态 trend(ADX=30.8)。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>完成：quant-dashboard-refresh: 正在发布看板</b><span class="muted">10-11 16:52</span></div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
