@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-12 20:24（北京时间）· 每5分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-12 20:30（北京时间）· 每5分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -48,6 +48,8 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
 <div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>arena-hourly-opt 20:24 轮次完成</b><span class="muted">10-12 20:27</span></div><div class='ev-d'>健康度全绿：账本336行盘后静默，16队决策全部OK，nav无重复，cron近30轮全成功。1文件2处微改（export_arena.py）：悟道墙笔记读取失败改为stderr告警、管家账本坏行扫描改为计数告警。验证通过（AST/导出/smoke），页面无内容变化，未发布。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>AI擂台每小时优化（19:54轮）：导出健壮性微修</b><span class="muted">10-12 19:57</span></div><div class='ev-d'>健康度正常（账本336行、16队决策全成功、拒单全为T+1/60%上限的正确拒单、今日结算16/16）。优化：export_arena.py 管家持仓块静默吞错改为stderr告警（防历史bug重演）、走位订阅死表达式清理。AST+导出+engine冒烟全过，9页内容零变化，未发布。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>复盘检查（19:44）</b><span class="muted">10-12 19:45</span></div><div class='ev-d'>市场环境震荡；近20笔复盘6胜、累计-2625 CNY，atr_channel近期亏损占主导（TIA/FIL/ATOM/CRCL合计约-1147）；异动持仓OGNUSDT（24h -8.11%、量比3.14）。建议方向：atr_channel做震荡市regime复核、RLC止盈止损复查，任何改动须走回测证据链+上线门禁。</div></div></div>
@@ -284,8 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>复盘检查：震荡市下趋势策略连续亏损，提出调整建议</b><span class="muted">10-11 21:16</span></div><div class='ev-d'>近15笔11亏4盈；dual_ma/atr_channel/keltner 近30笔累计亏损约-3416 CNY，momrot 唯一盈利。建议：震荡市暂停三趋势策略开新仓、keltner 穿仓漏洞修复前停用、RLCUSDT（浮盈+7.4%）分批止盈。落地须走回测证据链+上线门禁。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>交易循环正常（无成交）</b><span class="muted">10-11 21:08</span></div><div class='ev-d'>市场状态 trend（ADX=30.8），持仓 7，净值 46459.31 CNY，距峰值回撤 7.05%（未达 8% 警报线）；本轮无买入/卖出/止损。连损减仓机制生效中（新开仓风险预算×0.5）。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>复盘检查：72小时连续亏损 -3713 USDT，趋势策略在震荡市被反复止损</b><span class="muted">10-11 21:06</span></div><div class='ev-d'>震荡环境下趋势策略（dual_ma/atr_channel/keltner）72h 内 23 次退出 17 亏（74%），亏损 -4049.95 vs 盈利仅 +336.55，盈亏比 0.08 崩塌；账户权益 49960→46413（-7.2%）。TIAUSDT 今晨 04:07 买入后 5 分钟闪崩 -11.2%（-217），止损触发正常。建议：震荡市暂停/降仓趋势策略新开仓，收紧 ATR 止损或降低单笔风险预算——任何改动先走回测证据链+上线门禁。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>交易循环正常（无成交）</b><span class="muted">10-11 21:08</span></div><div class='ev-d'>市场状态 trend（ADX=30.8），持仓 7，净值 46459.31 CNY，距峰值回撤 7.05%（未达 8% 警报线）；本轮无买入/卖出/止损。连损减仓机制生效中（新开仓风险预算×0.5）。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
