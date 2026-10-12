@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-12 20:54（北京时间）· 每5分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-12 20:59（北京时间）· 每5分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -47,7 +47,9 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="card attn"><div class="card-t">需要你介入 <span class="badge">1</span></div><ul class="needs"><li><span class='dot warn'></span>给 23:00 日报等定时任务开启常开审批（App → 头像 → Upcoming → 任务详情 → 权限设为允许）<span class='muted'> · 10-09 23:28</span></li></ul>
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
-<div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+<div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>擂台每半小时优化轮（20:54）</b><span class="muted">10-12 20:56</span></div><div class='ev-d'>健康度正常：账本336行盘后静默，16队决策全覆盖，cron近10轮无报错。2处小优化：notify.py配置损坏静默失效改WARN告警（按mtime限频），arena_common.py告警标记损坏静默重置改WARN。AST+行为断言均通过，无页面变化未发布。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>复盘检查：震荡市 atr_channel 连续亏损</b><span class="muted">10-12 20:46</span></div><div class='ev-d'>最近10笔复盘净-329.72 CNY；atr_channel 连续亏损（FILUSDT -239、TIAUSDT -217即-11.2%、DOTUSDT -100、HBAR -95，均标记需检查买入逻辑）；持仓 RLCUSDT -5.79%、OGNUSDT -7.74%。环境=震荡，属已知问题类&#x27;震荡市趋势策略&#x27;。建议对 atr_channel 做 regime 过滤器验证（与10-11已立项方向一致）。实盘参数不动，改动须走回测+门禁。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>复盘检查：震荡市趋势策略集体走弱</b><span class="muted">10-12 20:30</span></div><div class='ev-d'>近30笔：dual_ma 6连亏(-1711.57CNY)、atr_channel 6/8亏、keltner全亏；市场环境为震荡。建议regime过滤器，须回测门禁后落地，实盘参数未动。</div></div></div>
@@ -284,8 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>量化看板 5 分钟数据同步</b><span class="muted">10-11 21:53</span></div><div class='ev-d'>上传链路发布成功，commit a8f3028，index.html/quant.html pinned blob 与基线 md5 一致（逐字节校验通过）</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#22b573">日报</span>
-        <div class="ev-body"><div class="ev-h"><b>15分钟复盘检查：震荡市下趋势策略持续失血，建议降仓整改</b><span class="muted">10-11 21:47</span></div><div class='ev-d'>four_layer：环境=震荡，持仓7只。近20笔复盘16亏4盈、净亏约3513 CNY（≈7.6%权益）：dual_ma四连亏约-1250（NEAR-495/SUI-263/WLD-329/AAVE-260）；atr_channel五笔大亏（ATOM-410/CRCLB-392/FIL-239/TIA-217/DOT-100）；keltner KAIAUSDT单笔-509.7疑似止损/穿仓失效。复盘模板化（what_wrong/what_right/next_action全为写死字符串），review.py:81的&#x27;暂停该策略&#x27;无执行链路。RLCUSDT 24h+18%动量买入但持仓仅+2.2%，止盈缺位。建议：①震荡市下dual_ma/atr_channel/keltner降仓或暂停（须回测+上线门禁后落地）；②排查keltner KAIA大亏；③RLCUSDT加移动止盈；④复盘接入真实诊断+执行挂钩。实盘照常跑，风控在。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>quant-review-check：无新问题，保持静默</b><span class="muted">10-11 21:31</span></div><div class='ev-d'>21:29 检查：震荡市，持仓7只，心跳新鲜（21:27）。最新3笔复盘连亏均属 13:05/13:30 暂停开仓前的旧单退出，无新开仓信号；震荡市趋势策略/keltner/RLCUSDT 三类问题已由今日大整改覆盖。无调整动作。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>15分钟复盘检查：震荡市下趋势策略持续失血，建议降仓整改</b><span class="muted">10-11 21:47</span></div><div class='ev-d'>four_layer：环境=震荡，持仓7只。近20笔复盘16亏4盈、净亏约3513 CNY（≈7.6%权益）：dual_ma四连亏约-1250（NEAR-495/SUI-263/WLD-329/AAVE-260）；atr_channel五笔大亏（ATOM-410/CRCLB-392/FIL-239/TIA-217/DOT-100）；keltner KAIAUSDT单笔-509.7疑似止损/穿仓失效。复盘模板化（what_wrong/what_right/next_action全为写死字符串），review.py:81的&#x27;暂停该策略&#x27;无执行链路。RLCUSDT 24h+18%动量买入但持仓仅+2.2%，止盈缺位。建议：①震荡市下dual_ma/atr_channel/keltner降仓或暂停（须回测+上线门禁后落地）；②排查keltner KAIA大亏；③RLCUSDT加移动止盈；④复盘接入真实诊断+执行挂钩。实盘照常跑，风控在。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
