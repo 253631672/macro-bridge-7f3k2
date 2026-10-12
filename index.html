@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-12 19:44（北京时间）· 每5分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-12 19:49（北京时间）· 每5分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -48,6 +48,8 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
 <div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>复盘检查（19:44）</b><span class="muted">10-12 19:45</span></div><div class='ev-d'>市场环境震荡；近20笔复盘6胜、累计-2625 CNY，atr_channel近期亏损占主导（TIA/FIL/ATOM/CRCL合计约-1147）；异动持仓OGNUSDT（24h -8.11%、量比3.14）。建议方向：atr_channel做震荡市regime复核、RLC止盈止损复查，任何改动须走回测证据链+上线门禁。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>复盘检查(19:30)：趋势策略震荡市连亏 + OGNUSDT 异动</b><span class="muted">10-12 19:30</span></div><div class='ev-d'>环境=震荡。趋势策略近期复盘：dual_ma 6笔全亏累计-1711.57 CNY；atr_channel 8笔6亏累计-1148.64（近期 FIL-239/ATOM-410/CRCLB-392/TIA-217/DOT-100）；keltner 2笔全亏-514.90。持仓：OGNUSDT -8.11%且量比3.14异动，RLCUSDT -9.69%。建议：regime 过滤器（震荡市趋势策略降仓/空仓）走回测验证后落地；OGNUSDT 异动跟踪，临近熔断则减仓。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>arena-hourly-opt 19:24：管家页持仓表新增盈亏%列+加权成本口径</b><span class="muted">10-12 19:28</span></div><div class='ev-d'>健康度正常（336行，决策109/109 OK，拒单12笔均在13:24修复前）。2文件小优化：butler持仓成本改加权平均、新增盈亏%列（涨红跌绿，600036 +2.84%、600900 +1.28%）。commit e61933f4，pinned blob逐字节校验通过。</div></div></div>
@@ -284,8 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>复盘检查：72小时连续亏损 -3713 USDT，趋势策略在震荡市被反复止损</b><span class="muted">10-11 21:06</span></div><div class='ev-d'>震荡环境下趋势策略（dual_ma/atr_channel/keltner）72h 内 23 次退出 17 亏（74%），亏损 -4049.95 vs 盈利仅 +336.55，盈亏比 0.08 崩塌；账户权益 49960→46413（-7.2%）。TIAUSDT 今晨 04:07 买入后 5 分钟闪崩 -11.2%（-217），止损触发正常。建议：震荡市暂停/降仓趋势策略新开仓，收紧 ATR 止损或降低单笔风险预算——任何改动先走回测证据链+上线门禁。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>P组门禁回测完成：降级部署到独立纸账本</b><span class="muted">10-11 20:47</span></div><div class='ev-d'>P1资金费率逆向回测143笔PF=1.77名义通过，但69%利润来自2笔ARB交易，剔除ARB后PF=1.10不达标→降级部署：team_p_trader.py已上线（5%仓位/2币种上限/20笔熔断），首单BUY BTCUSDT，team_*四表链路打通，每4h定时运行</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>看板数据刷新 20:14</b><span class="muted">10-11 20:46</span></div><div class='ev-d'>上传链路首轮卡死3次（停在Uploading无进展）；粘贴链路远端校验发现损坏（转录错误+尾部142行缺失），立即弃用；重spawn上传链路一次成功，commit 978d3b3，pinned blob与基线逐字节一致（index 2976d122，quant 64a98a67）</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>P组门禁回测完成：降级部署到独立纸账本</b><span class="muted">10-11 20:47</span></div><div class='ev-d'>P1资金费率逆向回测143笔PF=1.77名义通过，但69%利润来自2笔ARB交易，剔除ARB后PF=1.10不达标→降级部署：team_p_trader.py已上线（5%仓位/2币种上限/20笔熔断），首单BUY BTCUSDT，team_*四表链路打通，每4h定时运行</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
