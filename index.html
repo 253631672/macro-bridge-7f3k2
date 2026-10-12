@@ -26,11 +26,11 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-13 03:29（北京时间）· 每5分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-13 03:35（北京时间）· 每5分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
-        <div class="cur-task">quant-dashboard-refresh：刷新AI量化看板数据</div>
-        <div class="muted">开始于 10-13 03:29</div></div>
+        <div class="cur-task">刷新AI量化看板数据（03:34轮次）</div>
+        <div class="muted">开始于 10-13 03:35</div></div>
 <div class="card"><div class="card-t">🤖 AI量化看板 <span class="muted">· 每5分钟同步</span></div>
         <div class="nums">
           <div><span>净值</span><b>46,125.43</b></div>
@@ -49,6 +49,10 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
 <div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>完成：quant-dashboard-refresh：刷新AI量化看板数据</b><span class="muted">10-13 03:34</span></div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>复盘检查：CRCL dualma_j 连续两次亏损+OGN 异动</b><span class="muted">10-13 03:31</span></div><div class='ev-d'>CRCLBUSDT/dualma_j 10-09 -6.3%、10-12 -2.2% 连续亏损，复盘判买入逻辑可疑，建议暂停新开仓待门禁复核；OGNUSDT 24h +26.94% 量比4.92 放量暴涨（momrot 持仓，浮盈约+27%），建议部分止盈/收紧移动止损；dual_mom 震荡市持 RLCUSDT(-8.85%) PUMPUSDT(-9.82%)，记入 regime 过滤器研究。未改代码，发布由 quant-dashboard-refresh 统一处理。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>arena-hourly-opt：亏钱场结算幂等统一到 settlement_state</b><span class="muted">10-13 03:27</span></div><div class='ev-d'>loss_arena.py 的 any-team 幂等循环替换为 arena_common.settlement_state（done/partial/clean 三态）；中途崩溃残留部分记录时打 WARN + alert_once(&#x27;loss-partial-settle&#x27;) 告警并跳过，避免重复追加决策/重复成交。5 组行为断言全部通过，真实账本新旧逻辑逐日一致，engine 烟雾测试 OK。无页面变化、无发布。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>完成：quant-dashboard-refresh：发布新数据到 GitHub Pages（浏览器上传链路）</b><span class="muted">10-13 03:22</span></div></div></div>
@@ -283,10 +287,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>review-check：趋势策略震荡市连亏，regime过滤器有盲点</b><span class="muted">10-12 07:46</span></div><div class='ev-d'>atr_channel近7笔6亏(-1189)、dual_ma 6笔全亏(-1712)、keltner 2笔全亏(-515)；regime判趋势(ADX30.8)放行但盘面实为震荡。建议：增强regime多条件一致(ADX+24h涨跌比+ATR带宽)，待回测门禁后落地，实盘暂不动。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>arena 优化：修复模型笔误方向被强制改成卖出的安全漏洞</b><span class="muted">10-12 07:27</span></div><div class='ev-d'>parse_decision 非法 side 直接丢弃，撮合层加未知方向 rejected 兜底；核心断言全部通过</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>完成：复盘检查完成：震荡市趋势策略连续亏损，已沉淀调整建议</b><span class="muted">10-12 07:17</span></div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>复盘检查：震荡市趋势策略连续亏损，建议regime过滤器</b><span class="muted">10-12 07:17</span></div><div class='ev-d'>15分钟复盘检查(07:14): 市场环境=震荡; 7天24笔已平仓总-3624 CNY; 趋势类三策略连续亏损: dual_ma 6连败-1711(胜率0), atr_channel 7笔1胜-1189(胜率14.3%), keltner 2连败-515, 合计-3415占亏损94%; 动量策略(dual_mom/momrot/dualma_j)合计盈利; 复盘指出TIAUSDT atr_channel -217(-11.2%)、DOTUSDT -100(-2.9%)需检查买入逻辑; 持仓6只止损齐备(其中AEROUSDT止损0.9297已上移至入场价0.9164之上锁定利润,属Chandelier正常行为); 实盘心跳正常. 调整建议: 震荡regime下趋势策略暂停新开仓(或降仓), 须经回测证据链+上线门禁验证后落地, 未动实盘参数.</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>arena 优化：修复模型笔误方向被强制改成卖出的安全漏洞</b><span class="muted">10-12 07:27</span></div><div class='ev-d'>parse_decision 非法 side 直接丢弃，撮合层加未知方向 rejected 兜底；核心断言全部通过</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
