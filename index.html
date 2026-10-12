@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-13 07:49（北京时间）· 每5分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-13 07:54（北京时间）· 每5分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task">本轮优化完成</div>
@@ -49,6 +49,8 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
 <div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>虚拟盘回撤预警 8.3%</b><span class="muted">10-13 07:53</span></div><div class='ev-d'>峰值回撤8.3%（熔断线12%），已降半仓运行（新开仓风险预算×0.5）；市场状态 trend(ADX=27.1)；净值45848.64 现金40033.97 持仓6；本轮无成交</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>回撤突破8%软预警线</b><span class="muted">10-13 07:47</span></div><div class='ev-d'>权益45797.82 CNY（现金40033.97），较初始50000回撤8.40%，已过8%汇报线、距12%熔断线仍有空间。4/6持仓浮亏：NEARUSDT-156.4、ZECUSDT-98.8、RLCUSDT-73.3、PUMPUSDT-69.7；OGNUSDT+33.8。止损普遍偏宽（RLCUSDT-31%、NEARUSDT-20%），已知问题仍在；本轮不改代码，继续走回测证据链。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>虚拟盘回撤警告：距峰值回撤8.3%</b><span class="muted">10-13 07:47</span></div><div class='ev-d'>净值 45848.64（现金 40033.97，持仓 6），距峰值回撤 8.3%，接近 12% 熔断线；已自动降半仓运行（新开仓风险预算×0.5）。市场状态：trend（ADX=27.1 趋势市），momrot Top3: NEARUSDT/ZECUSDT/OGNUSDT。本轮无新开仓/平仓。</div></div></div>
@@ -285,8 +287,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>AI擂台优化轮：卖出汇总实现盈亏改净口径</b><span class="muted">10-12 16:27</span></div><div class='ev-d'>arena_settle.py 卖出行改用净实现盈亏（毛pnl-费用），费用口径与 engine.matching.calc_fee 一致；AST+mock+smoke 验证通过；无页面变化</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>量化看板数据刷新并发布（16:04轮次）</b><span class="muted">10-12 16:07</span></div><div class='ev-d'>dashboard/api.py + build_quant.py + build.py 重建；浏览器上传链路一次成功，commit fa4e7c5（GitHub commits API 200 确认）；pinned blob 与本地基线全文 diff 逐字节一致（index.html cf3098a6 / quant.html 57d6068b），校验归零。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>arena 优化轮：复盘 prompt 取最近 10 笔成交并标注拒单</b><span class="muted">10-12 15:57</span></div><div class='ev-d'>arena_settle.py 微调：收盘复盘 prompt 的今日成交文本从 trades[:10] 改为 trades[-10:]（最近成交更贴合复盘语义），拒单记录追加（拒单）标注，助策略备忘自学习区分做过与被拒。AST/单元断言/smoke test 全部通过。今日 12 笔拒单均在 13:24 修复前，无新增异常。无页面变化，未发布。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>量化看板数据刷新并发布（16:04轮次）</b><span class="muted">10-12 16:07</span></div><div class='ev-d'>dashboard/api.py + build_quant.py + build.py 重建；浏览器上传链路一次成功，commit fa4e7c5（GitHub commits API 200 确认）；pinned blob 与本地基线全文 diff 逐字节一致（index.html cf3098a6 / quant.html 57d6068b），校验归零。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
