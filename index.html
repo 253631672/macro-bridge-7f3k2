@@ -26,11 +26,10 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-13 03:44（北京时间）· 每5分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-13 03:49（北京时间）· 每5分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
-        <div class="cur-task">刷新AI量化看板数据</div>
-        <div class="muted">开始于 10-13 03:44</div></div>
+        <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
 <div class="card"><div class="card-t">🤖 AI量化看板 <span class="muted">· 每5分钟同步</span></div>
         <div class="nums">
           <div><span>净值</span><b>46,125.43</b></div>
@@ -49,6 +48,10 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
 <div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>完成：刷新AI量化看板数据</b><span class="muted">10-13 03:47</span></div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>quant-hourly-learn 03:42 轮次完成</b><span class="muted">10-13 03:46</span></div><div class='ev-d'>学习主题：风控方法（同步止损组合熔断，登记2个待验证候选）；复盘：26笔已平仓累计-3737.47无新增，最差dual_ma，89%亏损来自两轮同步集体止损；回撤7.72%健康；无代码改动，静默。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>quant-dashboard-refresh 03:44 开工</b><span class="muted">10-13 03:44</span></div><div class='ev-d'>5分钟定时刷新：数据采集→构建→浏览器链路发布</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>完成：刷新AI量化看板数据（03:34轮次）</b><span class="muted">10-13 03:39</span></div></div></div>
@@ -283,10 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>擂台盘中异常告警上线</b><span class="muted">10-12 08:31</span></div><div class='ev-d'>arena_intraday.py 新增整轮异常告警：行情拉取失败/16队模型全失败时推送 Bark 告警（同日去重防刷屏）；模型调用失败与解析失败各记一条 decision 账本记录，保证决策流可审计。mock 三场景验证通过，冒烟测试 OK。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>复盘检查：趋势策略在震荡市持续失血</b><span class="muted">10-12 08:31</span></div><div class='ev-d'>08:30 检查：环境震荡；atr_channel 7笔1胜累计-1189.56、keltner 2笔全亏-514.90、dual_ma 6笔0胜-1711.57；持仓异动 ONDOUSDT 量比3.58。调整建议：震荡市暂停趋势策略开新仓（走回测门禁验证后落地，由学习轮执行）</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>复盘检查：atr_channel 震荡市两笔大额亏损</b><span class="muted">10-12 08:16</span></div><div class='ev-d'>市场环境震荡；近8笔复盘胜负交替无连续亏损串，但atr_channel 的 TIAUSDT(-217) 与 DOTUSDT(-100) 为最大两笔亏损，趋势策略在震荡市失血，指向既定 regime 过滤器研究方向；ONDOUSDT 量比3.58 量能异动观察；数据通道正常（health 00:15 异常为陈旧缓存）。无即时参数改动，实盘照常。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>擂台每小时优化：修复账本读取与实验结论两处单点故障</b><span class="muted">10-12 07:57</span></div><div class='ev-d'>arena-hourly-opt 07:54 轮次：修复 engine/ledger.py read() 单行损坏拖垮整条账本读取的单点故障（坏行跳过、nav 缺字段容错）；修复 arena_lab.py lab_summary_line() 在 lab_latest.json 损坏时导致盘中 16 队整轮跳过的崩溃。两处均先复现后修复，AST/健壮性断言/smoke 全过。共改 2 文件，不改竞赛规则，无页面变化，不触发看板发布。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>复盘检查：趋势策略在震荡市持续失血</b><span class="muted">10-12 08:31</span></div><div class='ev-d'>08:30 检查：环境震荡；atr_channel 7笔1胜累计-1189.56、keltner 2笔全亏-514.90、dual_ma 6笔0胜-1711.57；持仓异动 ONDOUSDT 量比3.58。调整建议：震荡市暂停趋势策略开新仓（走回测门禁验证后落地，由学习轮执行）</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
