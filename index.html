@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-13 01:29（北京时间）· 每5分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-13 01:34（北京时间）· 每5分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -48,6 +48,10 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
 <div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>15分钟复盘检查：震荡市趋势策略失血，暂无调参</b><span class="muted">10-13 01:31</span></div><div class='ev-d'>环境震荡，6只持仓5只下跌（PUMPUSDT -10.86%、NEARUSDT -6.31%）；最近8笔复盘5笔亏损；OGNUSDT量比13.04异动。全部带止损、风控正常，本轮不调参（改动须走回测证据链），regime过滤研究继续由学习轮推进。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>arena-hourly-opt：管家/AI公司账本每日备份补齐</b><span class="muted">10-13 01:29</span></div><div class='ev-d'>butler_run.py、org_run.py 在结算落盘后接入 arena_common.backup_ledger（backups/、保留30天、异常不阻断）；回填了 2026-10-12 备份，md5 与源账本一致；四个分赛场+主赛场账本备份全覆盖。AST/import/行为断言全部通过，页面无变化。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>quant-dashboard-refresh 01:09 轮：发布成功</b><span class="muted">10-13 01:13</span></div><div class='ev-d'>上传链路发布 index.html + quant.html（commit f13be604），commits API 验 hash 真实存在，pinned blob 与基线 md5 逐字节一致（diff 归零）</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#f5a623">交易</span>
         <div class="ev-body"><div class="ev-h"><b>虚拟盘买入 ZECUSDT 1.0832 @1277.3283</b><span class="muted">10-13 01:12</span></div><div class='ev-d'>市场状态：趋势市（ADX=27.1）；momrot Top3 为 ZECUSDT/OGNUSDT/NEARUSDT；止损价 1064.1529。轮后净值 46004.76，现金 40033.97，持仓 6。</div></div></div>
@@ -282,10 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#22b573">日报</span>
         <div class="ev-body"><div class="ev-h"><b>量化看板 5 分钟刷新完成</b><span class="muted">10-12 03:26</span></div><div class='ev-d'>commit fba3e97；index.html/quant.html 浏览器上传链路字节直传，pinned blob 全文 diff 逐字节一致，验证通过。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>策略引擎优化发布</b><span class="muted">10-12 03:15</span></div><div class='ev-d'>commit 73157f39：真实交易成本（佣金万2.5最低5元+过户费+印花税千1）、单只60%仓位上限、停牌股剔除、年化按实际天数复利、账本原子写入、ledger单次读取；4页pinned blob逐字节一致</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>新手指导补齐发布</b><span class="muted">10-12 03:07</span></div><div class='ev-d'>9页按目标站原版说明改写新手指导，commit 6bc6a6a1，pinned blob 9页全部逐字节一致；看板刷新任务已升级为9页全量自动发布</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>复盘检查：大整改生效中，趋势策略失血已止</b><span class="muted">10-12 03:05</span></div><div class='ev-d'>实盘净值46535.41（-6.93%，距10%中层熔断尚有空间），持仓6只正常带止损。近20笔复盘：失血全部来自大整改（10-11）前开仓的趋势策略（atr_channel/dual_ma/keltner合计-2651，PF≈0-0.13）；整改后失血策略新开仓已全暂停（entry_enabled=false），StoplossGuard/连损减仓正常触发。发现一项待研究：regime门ADX=30.8判趋势市、24h零拦截，而趋势策略在该环境下被反复打脸——ADX单阈值信号需校准（加确认条件），已排入研究管线，改动须先走回测验证。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>策略引擎优化发布</b><span class="muted">10-12 03:15</span></div><div class='ev-d'>commit 73157f39：真实交易成本（佣金万2.5最低5元+过户费+印花税千1）、单只60%仓位上限、停牌股剔除、年化按实际天数复利、账本原子写入、ledger单次读取；4页pinned blob逐字节一致</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
