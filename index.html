@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-13 03:59（北京时间）· 每5分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-13 04:04（北京时间）· 每5分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -47,7 +47,11 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="card attn"><div class="card-t">需要你介入 <span class="badge">1</span></div><ul class="needs"><li><span class='dot warn'></span>给 23:00 日报等定时任务开启常开审批（App → 头像 → Upcoming → 任务详情 → 权限设为允许）<span class='muted'> · 10-09 23:28</span></li></ul>
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
-<div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+<div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>OGNUSDT止损核查结论：系统按设计工作，不手动干预</b><span class="muted">10-13 04:04</span></div><div class='ev-d'>针对复盘提出的OGNUSDT（momrot，浮盈约14.5%）止损过远问题已逐项验证：①Chandelier候选位=22日最高0.05345-2×ATR(0.005941)=0.04157，高于现价0.039，按_cand&lt;_close规则正确不移动（移上去会立刻止损）；②+1R保本未触发正确，当前浮盈约103CNY≈0.44R，未达1R（初始风险约232CNY）；③1d数据无滞后，最新收盘日线覆盖至10-12 08:00，采集正常。结论：不手动收紧止损，避免自由裁量破坏系统纪律。设计层观察：22天回看窗口在V型反转后利润保护跟进慢，已记入regime/追踪止损研究输入，待回测证据链+门禁。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>擂台优化：补上无行情动作的审计拒单行</b><span class="muted">10-13 04:02</span></div><div class='ev-d'>arena_intraday.py 与 loss_arena.py：动作标的无实时行情/无当日bar（停牌、无价、模型幻觉出非候选池代码）时，原先静默跳过致账本无痕；现记一条拒单审计行（price=0.0，note注明原因），与引擎拒单同口径。AST+行为断言+smoke回归全过；未动页面逻辑，未发布。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>完成：刷新AI量化看板数据</b><span class="muted">10-13 03:47</span></div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>quant-hourly-learn 03:42 轮次完成</b><span class="muted">10-13 03:46</span></div><div class='ev-d'>学习主题：风控方法（同步止损组合熔断，登记2个待验证候选）；复盘：26笔已平仓累计-3737.47无新增，最差dual_ma，89%亏损来自两轮同步集体止损；回撤7.72%健康；无代码改动，静默。</div></div></div>
@@ -282,10 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>AI量化看板5分钟刷新</b><span class="muted">10-12 09:00</span></div><div class='ev-d'>commit a758f10 已发布；浏览器上传链路字节直传（63464/9245字节与基线一致），commit-pinned blob 全文核验通过：时间戳08:54，净值46552.26、胜率29.2%、累计-3623.93，6只持仓/24笔交易/17组竞赛数据无误。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>arena-hourly-opt 08:54：美股/亏钱场整轮异常告警补齐</b><span class="muted">10-12 08:58</span></div><div class='ev-d'>3文件：arena_common 新增 alert_once 共享告警（同日同类型只推一次）；us_arena 数据拉取失败早退+告警、8队模型全失败告警；loss_arena 同上 + 损坏的 portfolios.json/bankrupt.json 兜底为默认初始化。AST/冒烟/mock 隔离验证全过。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>擂台盘中异常告警上线</b><span class="muted">10-12 08:31</span></div><div class='ev-d'>arena_intraday.py 新增整轮异常告警：行情拉取失败/16队模型全失败时推送 Bark 告警（同日去重防刷屏）；模型调用失败与解析失败各记一条 decision 账本记录，保证决策流可审计。mock 三场景验证通过，冒烟测试 OK。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>复盘检查：趋势策略在震荡市持续失血</b><span class="muted">10-12 08:31</span></div><div class='ev-d'>08:30 检查：环境震荡；atr_channel 7笔1胜累计-1189.56、keltner 2笔全亏-514.90、dual_ma 6笔0胜-1711.57；持仓异动 ONDOUSDT 量比3.58。调整建议：震荡市暂停趋势策略开新仓（走回测门禁验证后落地，由学习轮执行）</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>arena-hourly-opt 08:54：美股/亏钱场整轮异常告警补齐</b><span class="muted">10-12 08:58</span></div><div class='ev-d'>3文件：arena_common 新增 alert_once 共享告警（同日同类型只推一次）；us_arena 数据拉取失败早退+告警、8队模型全失败告警；loss_arena 同上 + 损坏的 portfolios.json/bankrupt.json 兜底为默认初始化。AST/冒烟/mock 隔离验证全过。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
