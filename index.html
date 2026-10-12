@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-13 06:49（北京时间）· 每5分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-13 06:54（北京时间）· 每5分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task">交易循环运行完毕</div>
@@ -48,7 +48,9 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="card attn"><div class="card-t">需要你介入 <span class="badge">1</span></div><ul class="needs"><li><span class='dot warn'></span>给 23:00 日报等定时任务开启常开审批（App → 头像 → Upcoming → 任务详情 → 权限设为允许）<span class='muted'> · 10-09 23:28</span></li></ul>
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
-<div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+<div class="card"><div class="ev"><span class="ev-tag" style="background:#9aa0aa">系统</span>
+        <div class="ev-body"><div class="ev-h"><b>虚拟盘峰值回撤8.2%（接近熔断线），降半仓运行</b><span class="muted">10-13 06:52</span></div><div class='ev-d'>交易循环 equity=45894.85 cash=40033.97 持仓=6，市场状态 trend（ADX=27.1），本轮无买入/卖出/止损成交。峰值回撤8.2%超过8%报告线（接近12%熔断），已自动降半仓运行（新开仓风险预算×0.5）。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>虚拟盘交易轮次 06:47</b><span class="muted">10-13 06:47</span></div><div class='ev-d'>本轮无成交。峰值回撤8.2%接近熔断线，已降半仓运行（新开仓风险预算×0.5）。市场状态: trend (ADX=27.1)。权益45894.85，现金40033.97，持仓6。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>虚拟盘净值距峰值回撤8.2%（接近熔断线），已降半仓运行</b><span class="muted">10-13 06:43</span></div><div class='ev-d'>2026-10-13 06:42 CST交易轮：equity=45894.85，峰值49983.07，回撤8.18%；市场状态trend(ADX=27.1)；持仓6只（RLCUSDT/OGNUSDT/ONDOUSDT/PUMPUSDT/NEARUSDT/ZECUSDT）；本轮无成交。24h内有2笔止损：CRCLBUSDT SELL_STOP 84.13 亏损-154.46，AEROUSDT SELL_STOP 0.9297 盈利+40.92。</div></div></div>
@@ -285,8 +287,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>AI策略竞赛看板更新</b><span class="muted">10-12 13:01</span></div><div class='ev-d'>arena/us/loss 三页发布成功（commit 29d5f49），butler/company 与远端 d47944d 一致无实质变化；9页 pinned blob md5 逐字节校验通过</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>复盘检查：震荡市趋势策略连亏，建议 regime 过滤（待回测验证）</b><span class="muted">10-12 13:00</span></div><div class='ev-d'>过去7天25笔复盘合计-3583 CNY：dual_ma 6战全败(-1711)、atr_channel 6/8败(-1148，单笔最大-11.9%)、keltner 2/2败(-514)；仅momrot/dualma_j为正。四层环境判定=震荡，病根是震荡市开趋势仓而非参数。建议：趋势策略加 regime 过滤（震荡降仓/停开新仓）+ 复查 atr_channel 止损有效性。改动须走回测证据链+门禁后落地。持仓5只中 OGNUSDT 浮亏-5.8% 未触线，ONDO/PUMP 浮盈健康。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>擂台优化：管家/AI公司运行状态文案改诚实</b><span class="muted">10-12 13:00</span></div><div class='ev-d'>export_arena.py 管家状态改读 data_butler 账本（今日早计划2笔→如实展示），AI公司兜底改为尚未运行；extra_pages.py 两处缺省文案同步；9页重建、AST+smoke通过；butler.html、company.html 经浏览器上传发布（commit d47944de），pinned blob 逐字节校验一致。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>复盘检查：震荡市趋势策略连亏，建议 regime 过滤（待回测验证）</b><span class="muted">10-12 13:00</span></div><div class='ev-d'>过去7天25笔复盘合计-3583 CNY：dual_ma 6战全败(-1711)、atr_channel 6/8败(-1148，单笔最大-11.9%)、keltner 2/2败(-514)；仅momrot/dualma_j为正。四层环境判定=震荡，病根是震荡市开趋势仓而非参数。建议：趋势策略加 regime 过滤（震荡降仓/停开新仓）+ 复查 atr_channel 止损有效性。改动须走回测证据链+门禁后落地。持仓5只中 OGNUSDT 浮亏-5.8% 未触线，ONDO/PUMP 浮盈健康。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
