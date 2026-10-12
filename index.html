@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-12 23:02（北京时间）· 每5分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-12 23:05（北京时间）· 每5分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -47,7 +47,9 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="card attn"><div class="card-t">需要你介入 <span class="badge">1</span></div><ul class="needs"><li><span class='dot warn'></span>给 23:00 日报等定时任务开启常开审批（App → 头像 → Upcoming → 任务详情 → 权限设为允许）<span class='muted'> · 10-09 23:28</span></li></ul>
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
-<div class="card"><div class="ev"><span class="ev-tag" style="background:#22b573">日报</span>
+<div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>擂台优化轮：zoneinfo 退化路径健壮性修复</b><span class="muted">10-12 23:03</span></div><div class='ev-d'>arena_settle.py / arena_intraday.py / loss_arena.py 的 ZoneInfo 兜底 SH=None 改为固定+8时区，避免 tzdata 缺失时交易时段/日期判定静默错8小时；AST/行为断言/smoke 全部通过，本机行为零变化，无页面变动无需发布。arena_common.py 同模式下一轮处理。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#22b573">日报</span>
         <div class="ev-body"><div class="ev-h"><b>虚拟盘日报 2026-10-12</b><span class="muted">10-12 22:56</span></div><div class='ev-d'>净值 46,266.26 CNY（累计-7.47%），今日 -0.71% 跑赢 BTC 基准；今日 3 笔交易已实现 +130.39 CNY；距峰值回撤 7.44%（熔断线 12%），接近 8% 关注线</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#22b573">日报</span>
         <div class="ev-body"><div class="ev-h"><b>日报已生成 2026-10-12</b><span class="muted">10-12 22:56</span></div><div class='ev-d'>净值 46,266.26（-7.47%）今日 3 笔交易，明细见目标资料库</div></div></div>
@@ -284,8 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#f5a623">交易</span>
         <div class="ev-body"><div class="ev-h"><b>虚拟盘成交 SELL_STOP APTUSDT</b><span class="muted">10-12 00:07</span></div><div class='ev-d'>策略 dualma_j 价格 0.8974 数量 3409.3144 盈亏 +89.47</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#22b573">日报</span>
-        <div class="ev-body"><div class="ev-h"><b>复盘检查：atr_channel 震荡市连续大额亏损 + RLC 止盈问题复现</b><span class="muted">10-12 00:02</span></div><div class='ev-d'>近10笔复盘8亏2盈：atr_channel 7笔中6亏（ATOMUSDT -11.9%/-410元、TIAUSDT -11.2%/-217元、FILUSDT -7.7%/-239元、CRCLBUSDT -6.3%/-392元、DOTUSDT -2.9%），市场环境为震荡（BTC 24h +0.43%），趋势策略逆市开仓且单笔亏损远超合理ATR止损幅度。RLCUSDT(dual_mom)今日22:00冲高1.19（浮盈+14.9%）无止盈回落至1.0797（+4.3%），回吐约80元。建议：震荡市降仓/暂停趋势策略新开仓并排查止损执行；dual_mom加分批止盈/移动止盈。数据通道31分钟延迟（阈值30分），交易心跳正常，暂观察。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>x402正式接入完成：双过滤器已上线P组纸账本</b><span class="muted">10-12 00:01</span></div><div class='ev-d'>采集：agentpay_ingest/hyperliquid/okx_oi 三脚本就绪；回测：双所一致+OI确认均有增量；team_p_trader已接入，cron已更新</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>复盘检查：atr_channel 震荡市连续大额亏损 + RLC 止盈问题复现</b><span class="muted">10-12 00:02</span></div><div class='ev-d'>近10笔复盘8亏2盈：atr_channel 7笔中6亏（ATOMUSDT -11.9%/-410元、TIAUSDT -11.2%/-217元、FILUSDT -7.7%/-239元、CRCLBUSDT -6.3%/-392元、DOTUSDT -2.9%），市场环境为震荡（BTC 24h +0.43%），趋势策略逆市开仓且单笔亏损远超合理ATR止损幅度。RLCUSDT(dual_mom)今日22:00冲高1.19（浮盈+14.9%）无止盈回落至1.0797（+4.3%），回吐约80元。建议：震荡市降仓/暂停趋势策略新开仓并排查止损执行；dual_mom加分批止盈/移动止盈。数据通道31分钟延迟（阈值30分），交易心跳正常，暂观察。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
