@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-13 02:29（北京时间）· 每5分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-13 02:35（北京时间）· 每5分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -47,7 +47,9 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="card attn"><div class="card-t">需要你介入 <span class="badge">1</span></div><ul class="needs"><li><span class='dot warn'></span>给 23:00 日报等定时任务开启常开审批（App → 头像 → Upcoming → 任务详情 → 权限设为允许）<span class='muted'> · 10-09 23:28</span></li></ul>
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
-<div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+<div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>复盘检查：atr_channel/keltner 连续亏损+止损异常</b><span class="muted">10-13 02:32</span></div><div class='ev-d'>最近20笔：atr_channel 8笔-1148元(胜率25%)，keltner 2笔-515元；KAIAUSDT(keltner)单笔-509元(-29.5%)、ATOMUSDT-410元(-12%)、TIAUSDT-217元(-11.3%)，买入时环境=trend、当前=震荡，止损未按预期触发。建议：核查止损链+震荡regime过滤器（改动先走回测门禁）。实盘照常跑。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>arena-hourly-opt 02:24 轮：修复告警失败静默吞告警</b><span class="muted">10-13 02:29</span></div><div class='ev-d'>改2文件：① arena_common.alert_once 改查 push() 各渠道返回值，全渠道失败时不写去重标记、下轮可重试（此前必记标记导致当日告警静默丢失）；② notify.py 修正 bark() 过时注释（分片已下沉渠道层，各调用方自动安全）。AST/4组行为断言/smoke/import 全过；账本健康（109决策0失败、0拒单），服务/gate 200 正常，无页面变化未发布。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>完成：刷新量化看板数据（5分钟轮次）</b><span class="muted">10-13 02:18</span></div></div></div>
@@ -284,8 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>arena 每半小时优化：亏钱场账本原子写入 + smoke_test 自举</b><span class="muted">10-12 05:28</span></div><div class='ev-d'>亏钱场下午首次生产运行前补齐账本原子写入（tmp+rename），崩溃中途写坏风险消除；smoke_test.py 在项目根可直接运行；AST/冒烟/原子写入往返测试均通过，页面无变化不发布。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>AI擂台半小时优化：亏钱场+A股主擂台 prompt 补60%仓位上限规则</b><span class="muted">10-12 05:02</span></div><div class='ev-d'>loss_arena.py（上轮结转）与 arena_common.py 的决策 prompt 统一补上「单只股票市值不超过组合净值60%（超限自动降手）」，与撮合层 MAX_SINGLE_POS 一致，避免模型发超限指令被静默降手。AST+prompt渲染断言通过，9页生成正常，看板3页已发布（commit d7f2c57，pinned blob MD5逐字节一致）。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>AI量化看板5分钟刷新</b><span class="muted">10-12 04:57</span></div><div class='ev-d'>commit f01f42a 已发布，pinned blob 逐字节校验通过（index.html 436a6e3f、quant.html bb2cf876）</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>AI擂台半小时优化：亏钱场+A股主擂台 prompt 补60%仓位上限规则</b><span class="muted">10-12 05:02</span></div><div class='ev-d'>loss_arena.py（上轮结转）与 arena_common.py 的决策 prompt 统一补上「单只股票市值不超过组合净值60%（超限自动降手）」，与撮合层 MAX_SINGLE_POS 一致，避免模型发超限指令被静默降手。AST+prompt渲染断言通过，9页生成正常，看板3页已发布（commit d7f2c57，pinned blob MD5逐字节一致）。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
