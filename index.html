@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-12 13:39（北京时间）· 每5分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-12 13:44（北京时间）· 每5分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -48,6 +48,8 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
 <div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>muse-AI策略竞赛看板已发布更新</b><span class="muted">10-12 13:40</span></div><div class='ev-d'>9页重建，arena/us/loss/rank 四页有变化并通过上传链路发布（commit cfa059c1，pinned blob 逐字节校验通过）</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>擂台优化轮：prompt补仓位占比与可卖手数</b><span class="muted">10-12 13:26</span></div><div class='ev-d'>账本最近200行15笔拒单100%为60%仓位上限/T+1无可卖两类，根因在prompt持仓行缺信息；arena_common.py持仓行追加仓位占比%+已达上限标注+可卖手数（today缺省向后兼容），arena_intraday.py传today；AST+功能断言+engine冒烟全通过，无页面变化无需发布。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>AI策略竞赛看板更新</b><span class="muted">10-12 13:01</span></div><div class='ev-d'>arena/us/loss 三页发布成功（commit 29d5f49），butler/company 与远端 d47944d 一致无实质变化；9页 pinned blob md5 逐字节校验通过</div></div></div>
@@ -284,8 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>学习轮：日报新增BTC基准行</b><span class="muted">10-11 14:15</span></div><div class='ev-d'>14:12 hourly-learn：daily_report.py 账户总览加 BTC buy-and-hold 今日基准（报告层小改，交易逻辑零改动）；权益46163.65距峰值回撤7.64%近8%软线但未触发；22笔已平仓累计-3613.08无新增</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>复盘检查 13:44：整改门控运行中，无新增调整</b><span class="muted">10-11 13:46</span></div><div class='ev-d'>市场震荡；实盘循环正常（权益46194.50，-7.6%）。趋势策略历史连亏已被今日大整改拦截：dual_ma/donchian/squeeze/meanrevert/keltner/dualma_j/atr_channel 全部 entry_enabled=false，decision 日志显示信号被&#x27;策略暂停新开仓&#x27;拦截。遗留持仓仅止损管理：CRCLUSDT 量比9.35异动，现价85.43 距ATR止损85.16仅0.3%，可能近日触发，属正常风控。本轮无需调整。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#9aa0aa">系统</span>
-        <div class="ev-body"><div class="ev-h"><b>大整改：Chandelier止损按周期等效缩放</b><span class="muted">10-11 13:35</span></div><div class='ev-d'>实盘R崩塌机制确认：22根固定回看在1h上过紧（99.7%比初始止损更紧），已改为时间等效窗口；dual_ma/meanrevert扫描无达标保持暂停；rsi_mr三周期全灭淘汰。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>复盘检查 13:44：整改门控运行中，无新增调整</b><span class="muted">10-11 13:46</span></div><div class='ev-d'>市场震荡；实盘循环正常（权益46194.50，-7.6%）。趋势策略历史连亏已被今日大整改拦截：dual_ma/donchian/squeeze/meanrevert/keltner/dualma_j/atr_channel 全部 entry_enabled=false，decision 日志显示信号被&#x27;策略暂停新开仓&#x27;拦截。遗留持仓仅止损管理：CRCLUSDT 量比9.35异动，现价85.43 距ATR止损85.16仅0.3%，可能近日触发，属正常风控。本轮无需调整。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
