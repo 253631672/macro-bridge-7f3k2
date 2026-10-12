@@ -26,10 +26,11 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-13 05:39（北京时间）· 每5分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-13 05:44（北京时间）· 每5分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
-        <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
+        <div class="cur-task">hourly-learn 学习优化轮（05:42）</div>
+        <div class="muted">开始于 10-13 05:43</div></div>
 <div class="card"><div class="card-t">🤖 AI量化看板 <span class="muted">· 每5分钟同步</span></div>
         <div class="nums">
           <div><span>净值</span><b>46,031.67</b></div>
@@ -48,6 +49,8 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
 <div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>虚拟盘回撤 7.9% 临近 8% 汇报线</b><span class="muted">10-13 05:43</span></div><div class='ev-d'>净值 46031.67（峰值 49983.07），距峰值回撤 7.91%，距 12% 熔断线 4.1 个百分点；持仓 6，现金 40034；市场 trend 市（ADX=27.1）</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>复盘检查发现止损执行延迟机制性问题</b><span class="muted">10-13 05:35</span></div><div class='ev-d'>止损检查用策略自有 timeframe 的已关闭 bar（trader.py），1d 策略（dual_mom/turtle/momrot）日内跌破止损最长延迟近 24h 才触发。PUMPUSDT 已超止损 2 倍（-6.14% vs -2.8%）持仓仍在；近期 TIA/ATOM 大亏（-11%）同属此机制放大。回测按止损价成交 vs 实盘按 bar 收盘价成交，是盈亏比崩塌的机制性成因之一。调整建议：止损统一用 15m bar 触发、回测口径对齐、止损距离上限。待回测+门禁验证后落地。净值 46031.67，回撤 7.9%。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>擂台优化：修复 butler/org 裸 now() 的 UTC 时区日期 bug</b><span class="muted">10-13 05:28</span></div><div class='ev-d'>新增 arena_common.today_sh()（上海时区今日）；butler_run.today_str() 与 org_run.main 的 today 改走它。凌晨时段运行不再把日期写成前一天、幂等不再误判。AST+行为断言+smoke 回归全过，账本零写入。</div></div></div>
@@ -284,8 +287,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#9aa0aa">系统</span>
         <div class="ev-body"><div class="ev-h"><b>量化看板5分钟刷新</b><span class="muted">10-12 10:31</span></div><div class='ev-d'>index.html+quant.html 上传提交 d930c4f2，pinned blob 校验逐字节一致</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>arena 每半小时优化：拒单不再进 prompt、推送截断注明、通知配置加缓存</b><span class="muted">10-12 10:27</span></div><div class='ev-d'>arena_intraday.py：prompt 的今日已成交/上笔复盘只取 filled 记录，拒单只记账本；推送超12笔追加尾注。notify.py：配置 mtime 缓存+关闭句柄。AST/单测/smoke 均通过，无页面变化不发布。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#9aa0aa">系统</span>
-        <div class="ev-body"><div class="ev-h"><b>量化看板5分钟刷新</b><span class="muted">10-12 10:22</span></div><div class='ev-d'>index.html+quant.html 上传提交 d998b261，pinned blob 校验逐字节一致</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>arena 每半小时优化：拒单不再进 prompt、推送截断注明、通知配置加缓存</b><span class="muted">10-12 10:27</span></div><div class='ev-d'>arena_intraday.py：prompt 的今日已成交/上笔复盘只取 filled 记录，拒单只记账本；推送超12笔追加尾注。notify.py：配置 mtime 缓存+关闭句柄。AST/单测/smoke 均通过，无页面变化不发布。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
