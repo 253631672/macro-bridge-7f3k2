@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-12 19:24（北京时间）· 每5分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-12 19:29（北京时间）· 每5分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -47,7 +47,9 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="card attn"><div class="card-t">需要你介入 <span class="badge">1</span></div><ul class="needs"><li><span class='dot warn'></span>给 23:00 日报等定时任务开启常开审批（App → 头像 → Upcoming → 任务详情 → 权限设为允许）<span class='muted'> · 10-09 23:28</span></li></ul>
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
-<div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+<div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>arena-hourly-opt 19:24：管家页持仓表新增盈亏%列+加权成本口径</b><span class="muted">10-12 19:28</span></div><div class='ev-d'>健康度正常（336行，决策109/109 OK，拒单12笔均在13:24修复前）。2文件小优化：butler持仓成本改加权平均、新增盈亏%列（涨红跌绿，600036 +2.84%、600900 +1.28%）。commit e61933f4，pinned blob逐字节校验通过。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>复盘检查：dual_ma 6连亏、震荡环境趋势策略承压</b><span class="muted">10-12 19:00</span></div><div class='ev-d'>four_layer：环境=震荡（BTC 24h +0.95%，涨46/跌14）。复盘集群：dual_ma 近6笔全亏（HBAR-95/AAVE-260/WLD-329/SUI-263/NEAR-495/AVAX-270，合计约-1711 CNY），与已知盈亏比崩塌（实盘0.22）一致；atr_channel 近8笔5胜3负、末尾4连亏（ATOM -410、CRCLB -392、FIL -239、KAIA -6）。持仓5只：OGN(momrot) 24h -14.47%、浮亏约-5.5%，止损0.0228未触及；RLC(dual_mom) 24h -2.94% 属已知震荡市趋势策略磨损类。建议：加速 regime 过滤器离线验证（已批下一轮方向），优先覆盖 dual_ma/dual_mom/momrot；实盘不动，任何改动走回测门禁。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>完成：18:54 优化轮完成</b><span class="muted">10-12 18:58</span></div></div></div>
@@ -284,8 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>看板数据刷新 20:14</b><span class="muted">10-11 20:46</span></div><div class='ev-d'>上传链路首轮卡死3次（停在Uploading无进展）；粘贴链路远端校验发现损坏（转录错误+尾部142行缺失），立即弃用；重spawn上传链路一次成功，commit 978d3b3，pinned blob与基线逐字节一致（index 2976d122，quant 64a98a67）</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>复盘检查：atr_channel 连续亏损 + RLCUSDT 异动</b><span class="muted">10-11 20:45</span></div><div class='ev-d'>2026-10-11 20:44 定时复盘：环境=震荡；atr_channel 近8笔成交仅1盈，连续止损（FIL -239、ATOM -410、CRCLB -392、TIA -217、DOT -100），keltner KAIAUSDT 单笔 -509 穿仓级；持仓RLCUSDT 24h +12.19% 量比1.67 异动待止盈检查。建议：震荡市暂停atr_channel新开仓或降仓、复查keltner止损逻辑、RLCUSDT按策略止盈；所有改动走回测证据链+上线门禁后才落地。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#9aa0aa">系统</span>
-        <div class="ev-body"><div class="ev-h"><b>定时任务正文修正：解除冻结令条款同步</b><span class="muted">10-11 20:38</span></div><div class='ev-d'>quant-review-check（15分钟复盘检查）与 quant-hourly-learn（半小时学习优化）正文中的过期&#x27;实盘冻结令（2026-10-10 09:32）长期有效&#x27;条款，已按用户 2026-10-11 12:56 新指令更新：冻结令解除，整改决策权交给我，目标=盈利越多越好、不亏损；改动仍须走回测证据链+上线门禁验证后才落地。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>复盘检查：atr_channel 连续亏损 + RLCUSDT 异动</b><span class="muted">10-11 20:45</span></div><div class='ev-d'>2026-10-11 20:44 定时复盘：环境=震荡；atr_channel 近8笔成交仅1盈，连续止损（FIL -239、ATOM -410、CRCLB -392、TIA -217、DOT -100），keltner KAIAUSDT 单笔 -509 穿仓级；持仓RLCUSDT 24h +12.19% 量比1.67 异动待止盈检查。建议：震荡市暂停atr_channel新开仓或降仓、复查keltner止损逻辑、RLCUSDT按策略止盈；所有改动走回测证据链+上线门禁后才落地。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
