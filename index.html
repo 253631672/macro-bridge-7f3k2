@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-13 06:34（北京时间）· 每5分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-13 06:39（北京时间）· 每5分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task">交易循环运行完毕</div>
@@ -49,6 +49,8 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
 <div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>虚拟盘回撤警告：距峰值回撤8.2%，降半仓运行</b><span class="muted">10-13 06:38</span></div><div class='ev-d'>06:37交易循环完成：equity=45894.85 cash=40033.97 持仓=6，市场状态trend（ADX=27.1），momrot Top3=NEARUSDT/OGNUSDT/ZECUSDT；本轮无成交；回撤8.2%接近12%熔断线，已自动降半仓（新开仓风险预算×0.5）</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>量化虚拟盘峰值回撤8.2%，已降半仓运行</b><span class="muted">10-13 06:32</span></div><div class='ev-d'>trader轮次：市场trend(ADX=27.1)，无成交，equity=45894.85，cash=40033.97，持仓6。回撤超8%阈值，降半仓运行（新开仓风险预算×0.5），接近12%熔断线。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>复盘检查发现三类问题：震荡市趋势策略/ RLC 止盈/keltner</b><span class="muted">10-13 06:32</span></div><div class='ev-d'>环境震荡；近8笔复盘5亏3盈净-414CNY（盈亏比约0.28）；持仓RLCUSDT -12.4%深套止损线-31%过宽、NEARUSDT -10.48%、PUMPUSDT -7.66%、ONDOUSDT -4.74%；TIAUSDT触发ATR止损仍亏-11.2%；STRKUSDT keltner亏损-5.21；唯一赢家OGNUSDT +12.9%。调整建议：震荡市降趋势策略权重/加regime过滤器、RLCUSDT复核止盈止损逻辑、keltner复核买入信号、OGNUSDT分批止盈。所有改动须走回测证据链+上线门禁后才落地。</div></div></div>
@@ -285,8 +287,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>复盘检查：趋势策略在震荡市连续亏损</b><span class="muted">10-12 12:31</span></div><div class='ev-d'>近7天25笔平仓合计-3583：dual_ma连亏6笔(-1711)、atr_channel(-1148)、keltner(-514)。止损正常执行，当前5只持仓均在非亏损策略上，无紧急问题。建议加速regime过滤器研究，按回测门禁上线。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>AI策略竞赛半小时优化：修复收盘汇总日报被推送截断</b><span class="muted">10-12 12:26</span></div><div class='ev-d'>EOD 汇总正文（16 队+92 笔成交明细）超 Bark 1800 字上限将被静默截断；新增 notify.push_long 按行分片推送（≤1700字/片，自动编号），arena_settle 当日汇总已切换。验证：长正文 2 片无缝拼接、短正文无编号、超长单行硬切均通过；账本格式与竞赛规则未动。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>AI量化看板数据刷新并发布（12:14轮次）</b><span class="muted">10-12 12:17</span></div><div class='ev-d'>commit 525eada：index.html+quant.html 逐字节一致（pinned blob md5校验通过）</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>AI策略竞赛半小时优化：修复收盘汇总日报被推送截断</b><span class="muted">10-12 12:26</span></div><div class='ev-d'>EOD 汇总正文（16 队+92 笔成交明细）超 Bark 1800 字上限将被静默截断；新增 notify.push_long 按行分片推送（≤1700字/片，自动编号），arena_settle 当日汇总已切换。验证：长正文 2 片无缝拼接、短正文无编号、超长单行硬切均通过；账本格式与竞赛规则未动。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
