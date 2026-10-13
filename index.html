@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-13 10:49（北京时间）· 每5分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-13 10:54（北京时间）· 每5分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -48,6 +48,8 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
 <div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>虚拟盘回撤 8.4% 接近熔断线</b><span class="muted">10-13 10:52</span></div><div class='ev-d'>equity=45775.86，峰值回撤8.4%（接近12%熔断线），已自动降半仓运行；市场状态 range（ADX=24.8 震荡市，趋势策略暂停）；StoplossGuard 冷却中暂停新开仓；持仓4，cash=42035.69</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>修复 regime=range 下趋势策略止损被整体跳过的风控漏洞</b><span class="muted">10-13 10:48</span></div><div class='ev-d'>trader.py 第246-249行：regime=range 时 continue 跳过整个策略循环，止损/保本/移动止损同步被跳过（自10-13 08:07 CST 持续2.5小时+，ZEC/PUMP 已跌破止损线未触发）。改为 regime_paused 标记：止损检查照常执行、仅跳过新开仓。隔离干跑验证：ZEC SELL_STOP @1167.15/-122.00、PUMP @0.005/-75.01 与预测一致，暂停期零新开仓。下个5分钟周期自动按系统规则处理。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>复盘检查(15min)：震荡市趋势策略失血，权益-8.3%</b><span class="muted">10-13 10:47</span></div><div class='ev-d'>权益45834 CNY(-8.3%)；60币中56下跌、regime=震荡；6持仓NEAR-11.1%、PUMP-8.7%、RLC-6.4%、ZEC-6.4%深浮亏；近20笔复盘14亏(70%)累计-2450 CNY，atr_channel/dual_ma/dualm a_j三组大亏(TIA-217/CRCLB-154/DOT-100/HBAR-95)。建议：落地regime过滤器(震荡市趋势策略降仓/空仓)，需先走回测证据链+上线门禁。</div></div></div>
@@ -284,8 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>擂台优化轮：补齐 us/loss 账本每日备份</b><span class="muted">10-13 01:01</span></div><div class='ev-d'>新增 arena_common.backup_ledger 共享函数，us_arena/loss_arena 结算接入；data_us/data_loss 一次性回填备份并 md5 校验一致</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>完成：arena-hourly-opt 优化轮运行中</b><span class="muted">10-13 00:31</span></div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>arena 优化轮：Bark 长正文硬截断改自动分片</b><span class="muted">10-13 00:31</span></div><div class='ev-d'>notify.py 的 bark() 对超 1800 字正文曾硬截断静默丢尾，仅收盘汇总走 push_long。现改为按行边界自动分片（≤1700字/片，标题编号），7 组行为断言全过，短正文行为不变。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>完成：arena-hourly-opt 优化轮运行中</b><span class="muted">10-13 00:31</span></div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
