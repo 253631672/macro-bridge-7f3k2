@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-13 14:19（北京时间）· 每5分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-13 14:24（北京时间）· 每5分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -47,7 +47,9 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="card attn"><div class="card-t">需要你介入 <span class="badge">1</span></div><ul class="needs"><li><span class='dot warn'></span>给 23:00 日报等定时任务开启常开审批（App → 头像 → Upcoming → 任务详情 → 权限设为允许）<span class='muted'> · 10-09 23:28</span></li></ul>
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
-<div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+<div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>完成：quant-dashboard-refresh: 正在发布看板（upload链路）</b><span class="muted">10-13 14:22</span></div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>复盘检查：已被证伪的range一刀切暂停仍在实盘生效</b><span class="muted">10-13 13:46</span></div><div class='ev-d'>2026-10-13 13:44轮复盘检查：live_decisions近200条中180条为regime=range 趋势策略暂停，趋势策略新开仓被一刀切拦停（src/core/regime.py+trader.py:249）。今日反事实研究已证伪该规则：dual_ma/dualm_a_j的range入场样本外为正期望，暂停分别少赚2091/2066 CNY。建议走上线门禁验证后移除该暂停（donchian保留过滤器A候选）。独立风控正常：峰值回撤8.3%降半仓、连损减仓均生效；近20笔复盘14亏合计-2134，小样本不加暂停。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>虚拟盘回撤预警：峰值回撤8.3%</b><span class="muted">10-13 13:37</span></div><div class='ev-d'>13:37轮：净值45833.37（距峰值-8.3%，接近12%熔断线），系统已自动降半仓运行（新开仓风险预算×0.5）；连损减仓（连续3笔亏损）继续生效；市场状态range（ADX=24.8震荡市），趋势策略全部暂停；本轮无新开仓、无平仓；持仓4只：RLCUSDT/OGNUSDT/NEARUSDT/ONDOUSDT。</div></div></div>
@@ -284,8 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>擂台优化：A股主赛场结算补齐 data-fail 告警+幂等早检</b><span class="muted">10-13 04:58</span></div><div class='ev-d'>arena_settle.py：行情拉取包 try/except，失败打 WARN+推 settle-data-fail 告警（当日去重）后跳过，与美股/亏钱场同口径；拉取前加 settlement_state(today) 幂等早检，done/partial 直接跳过省一次网络拉取+16 次模型调用。行为断言 3 组全过（/tmp 隔离账本），真实账本零写入。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#9aa0aa">系统</span>
-        <div class="ev-body"><div class="ev-h"><b>复盘检查(15分钟)：震荡市趋势策略集体失血，近26笔复盘净约-3737CNY</b><span class="muted">10-13 04:46</span></div><div class='ev-d'>四层分析：环境=震荡，持仓6只（RLCUSDT 24h -8.3% 量比0.4 浮亏-8.3% 止损0.7147 未触；PUMPUSDT -9.08%；NEARUSDT -3.68%；OGNUSDT +11.8%）。近40笔复盘净-3737.5：dual_ma 6笔-1711.6 / atr_channel 8笔-1148.6 / keltner 2笔-514.9 / meanrevert 3笔-350.8 / dualma_j -65.0 / dual_mom -16.5，唯一盈利 momrot +69.9。复盘明确标记买入逻辑待查：CRCLBUSDT(dualma_j,-154.46,-2.2%)、DOTUSDT(atr_channel,-100.31,-2.9%)、STRKUSDT(keltner,-5.21)；STRKUSDT另有一笔keltner大亏-509.69。数据通道正常（最新15m K线04:15）。建议：regime过滤器震荡市趋势策略降仓/暂停新开仓、审查keltner与dualma_j入场逻辑、收紧RLCUSDT保护，均须走回测门禁后落地。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>完成：quant-dashboard-refresh: 刷新量化看板数据</b><span class="muted">10-13 04:32</span></div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>复盘检查(15分钟)：震荡市趋势策略集体失血，近26笔复盘净约-3737CNY</b><span class="muted">10-13 04:46</span></div><div class='ev-d'>四层分析：环境=震荡，持仓6只（RLCUSDT 24h -8.3% 量比0.4 浮亏-8.3% 止损0.7147 未触；PUMPUSDT -9.08%；NEARUSDT -3.68%；OGNUSDT +11.8%）。近40笔复盘净-3737.5：dual_ma 6笔-1711.6 / atr_channel 8笔-1148.6 / keltner 2笔-514.9 / meanrevert 3笔-350.8 / dualma_j -65.0 / dual_mom -16.5，唯一盈利 momrot +69.9。复盘明确标记买入逻辑待查：CRCLBUSDT(dualma_j,-154.46,-2.2%)、DOTUSDT(atr_channel,-100.31,-2.9%)、STRKUSDT(keltner,-5.21)；STRKUSDT另有一笔keltner大亏-509.69。数据通道正常（最新15m K线04:15）。建议：regime过滤器震荡市趋势策略降仓/暂停新开仓、审查keltner与dualma_j入场逻辑、收紧RLCUSDT保护，均须走回测门禁后落地。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
