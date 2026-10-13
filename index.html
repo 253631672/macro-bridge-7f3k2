@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-14 06:39（北京时间）· 每5分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-14 06:44（北京时间）· 每5分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -48,6 +48,10 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
 <div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>quant-hourly-learn 06:45：AL 连亏成分归因完成</b><span class="muted">10-14 06:44</span></div><div class='ev-d'>28 笔平仓实为 14 有效事件；dual_ma 名义 6 连亏实为 2 次事件（10-09 闪崩一簇）。新双口径评估记入 learnings/CHANGELOG；候选风控事件熔断排队待回测。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>虚拟盘交易循环（06:42）</b><span class="muted">10-14 06:42</span></div><div class='ev-d'>本轮无买入/卖出/止损成交。峰值回撤8.6%接近12%熔断线，半仓运行；连损3笔新开仓风险预算×0.5；市场range（ADX=24.8震荡市，趋势策略暂停）。equity=45708.82，cash=42035.69，持仓=4。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>复盘检查：实盘仍含被证伪的震荡市一刀切暂停规则</b><span class="muted">10-14 06:32</span></div><div class='ev-d'>quant-review-check 发现 trader.py 的 TREND_STRATEGIES 门禁（keltner/dualm_a_j/atr_channel/turtle）在 regime=range 时仍阻止新开仓，与 10-13 反事实研究结论（dualm_a_j 暂停有害、少赚 2066 CNY）及任务正文前提矛盾。建议差异化调整（dualm_a_j 移出暂停集合、donchian+过滤器A 继续走门禁），不直接落地，须经完整门禁。最近3笔均为 ATR 止损正常执行，无异常。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>擂台每半小时优化轮（06:24）</b><span class="muted">10-14 06:28</span></div><div class='ev-d'>健康度：账本712行零异常，10-13拒单7笔均为合规类（T+1/仓位上限），16队决策正常。优化3文件：①backup_ledger原子写入（tmp+rename，5赛场共用）；②arena_settle改用共享备份实现（删内联copy2）；③sina_data畸形行情行打WARN日志。验证：AST通过、功能实测通过、smoke OK、账本md5不变。无页面变化、无推送。</div></div></div>
@@ -282,10 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#9aa0aa">系统</span>
         <div class="ev-body"><div class="ev-h"><b>quant-dashboard-refresh 发布中</b><span class="muted">10-13 09:55</span></div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>复盘检查：震荡市趋势策略连续亏损</b><span class="muted">10-13 09:46</span></div><div class='ev-d'>实盘权益45662（起点50000，回撤-8.7%）逼近12%熔断线；近20笔复盘合计-2450.63，6只持仓中4只24h跌超10%（RLCUSDT/ONDOUSDT/PUMPUSDT/NEARUSDT）。复盘多笔标注买入逻辑需检查，亏损集中在震荡市趋势策略。建议：①震荡regime下趋势策略降仓/暂停新开仓；②收紧单仓止损（现-20%~-31%）。改动须先过回测门禁，本次实盘未动。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>复盘检查：发现趋势策略止损在震荡市被整段跳过（实质性风控bug）</b><span class="muted">10-13 09:35</span></div><div class='ev-d'>regime=range（震荡）期间，trader.py 第246行 regime 暂停用 continue 跳过 dual_mom/momrot/mtf_trend/turtle 整个策略分支——包括其持仓止损检查（第267-318行 ATR 止损触发、Chandelier 移动止损、+1R 保本移动）。242 行注释声称&#x27;止损检查在上面已对所有持仓策略执行&#x27;，但代码里并不存在这样的全局止损检查。后果：PUMPUSDT(dual_mom,10-12 日线 low 0.004907≤止损 0.0053086，浮亏-9.9%)、ZECUSDT(momrot,10-12 日线 low 1157.65≤止损 1199.58，浮亏-9.3%) 的止损条件已满足但未执行，仍在持仓。regime=range 暂停自今日 08:07 CST 起。组合回撤 -8.66%(45662 vs 峰值 49983)，已越过 8% 软熔断线。调整建议：把止损/移动止损检查从 regime continue 中剥离为独立全局持仓管理循环；两笔已破止损仓位待主代理评估处理。任何代码改动须走回测证据链+上线门禁验证后落地。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#9aa0aa">系统</span>
-        <div class="ev-body"><div class="ev-h"><b>虚拟盘净值距峰值回撤8.6%</b><span class="muted">10-13 09:32</span></div><div class='ev-d'>2026-10-13 09:32轮次：无成交，equity=45662.15，cash=40033.97，持仓=6组。市场状态 range（ADX=24.8 震荡市，趋势策略暂停），降半仓运行（新开仓风险预算×0.5）。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>复盘检查：震荡市趋势策略连续亏损</b><span class="muted">10-13 09:46</span></div><div class='ev-d'>实盘权益45662（起点50000，回撤-8.7%）逼近12%熔断线；近20笔复盘合计-2450.63，6只持仓中4只24h跌超10%（RLCUSDT/ONDOUSDT/PUMPUSDT/NEARUSDT）。复盘多笔标注买入逻辑需检查，亏损集中在震荡市趋势策略。建议：①震荡regime下趋势策略降仓/暂停新开仓；②收紧单仓止损（现-20%~-31%）。改动须先过回测门禁，本次实盘未动。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
