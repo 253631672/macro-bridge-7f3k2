@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-13 09:30（北京时间）· 每5分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-13 09:34（北京时间）· 每5分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -47,7 +47,9 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="card attn"><div class="card-t">需要你介入 <span class="badge">1</span></div><ul class="needs"><li><span class='dot warn'></span>给 23:00 日报等定时任务开启常开审批（App → 头像 → Upcoming → 任务详情 → 权限设为允许）<span class='muted'> · 10-09 23:28</span></li></ul>
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
-<div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+<div class="card"><div class="ev"><span class="ev-tag" style="background:#9aa0aa">系统</span>
+        <div class="ev-body"><div class="ev-h"><b>虚拟盘净值距峰值回撤8.6%</b><span class="muted">10-13 09:32</span></div><div class='ev-d'>2026-10-13 09:32轮次：无成交，equity=45662.15，cash=40033.97，持仓=6组。市场状态 range（ADX=24.8 震荡市，趋势策略暂停），降半仓运行（新开仓风险预算×0.5）。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>擂台优化：拒单提醒加近3日累计被拒次数</b><span class="muted">10-13 09:28</span></div><div class='ev-d'>开盘 prompt 的拒单行追加近3日累计被拒次数（如600519买入连续被拒5次），连续被拒的警告按次数排序置顶；纯 prompt 加法，账本/风控/竞赛规则不变，验证通过（AST+断言+smoke），赶在今日 09:27 开盘决策前落地。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>虚拟盘回撤预警：峰值回撤8.6%，接近熔断线</b><span class="muted">10-13 09:23</span></div><div class='ev-d'>净值45662.15（现金40033.97），距峰值49983.07回撤8.6%，已超8%预警线、接近12%熔断线；系统自动降半仓运行（新开仓风险预算×0.5）。市场为震荡市（ADX=24.8），趋势策略暂停。本轮无成交，持仓6个币种。</div></div></div>
@@ -284,8 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>擂台每半小时优化轮：账本坏行与实验结论告警收口</b><span class="muted">10-12 21:32</span></div><div class='ev-d'>健康度全绿（109 decision 全 OK、账本 0 坏行、cron 全 succeeded）。2 处微改：engine/ledger.py 账本坏行计数+同版本只告警一次；arena_lab.py lab_latest 损坏时兜底文案不再静默、每进程告警一次。AST+smoke+行为断言全过，无页面变化未发布。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>复盘检查：震荡市下趋势持仓风险+策略复核标记</b><span class="muted">10-12 21:20</span></div><div class='ev-d'>市场环境=震荡；5只持仓4只趋势型(dual_mom×3、dualma_j×1)。RLCUSDT -9.85%（止损-31%未破）、OGNUSDT -8.38%。最近10笔复盘6亏：TIAUSDT(atr_channel)-217(-11.2%)、DOTUSDT(atr_channel)-100(-2.9%)、STRKUSDT(keltner)三连亏复盘均标记&#x27;需检查买入逻辑是否失效&#x27;。CRCLBUSDT量比3.0异动待观察。建议：regime过滤器立项(震荡市趋势策略暂停开仓)走回测门禁；atr_channel/dual_mom止盈纳入下一轮复核。实盘照常跑，风控在。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>擂台每半小时优化轮（20:54）</b><span class="muted">10-12 20:56</span></div><div class='ev-d'>健康度正常：账本336行盘后静默，16队决策全覆盖，cron近10轮无报错。2处小优化：notify.py配置损坏静默失效改WARN告警（按mtime限频），arena_common.py告警标记损坏静默重置改WARN。AST+行为断言均通过，无页面变化未发布。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>复盘检查：震荡市下趋势持仓风险+策略复核标记</b><span class="muted">10-12 21:20</span></div><div class='ev-d'>市场环境=震荡；5只持仓4只趋势型(dual_mom×3、dualma_j×1)。RLCUSDT -9.85%（止损-31%未破）、OGNUSDT -8.38%。最近10笔复盘6亏：TIAUSDT(atr_channel)-217(-11.2%)、DOTUSDT(atr_channel)-100(-2.9%)、STRKUSDT(keltner)三连亏复盘均标记&#x27;需检查买入逻辑是否失效&#x27;。CRCLBUSDT量比3.0异动待观察。建议：regime过滤器立项(震荡市趋势策略暂停开仓)走回测门禁；atr_channel/dual_mom止盈纳入下一轮复核。实盘照常跑，风控在。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
