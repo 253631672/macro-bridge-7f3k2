@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-13 12:24（北京时间）· 每5分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-13 12:29（北京时间）· 每5分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -48,6 +48,10 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
 <div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>虚拟盘回撤8.3%接近熔断线，已自动降半仓</b><span class="muted">10-13 12:27</span></div><div class='ev-d'>2026-10-13 12:27轮：本轮无成交；净值45822.32 CNY、现金42035.69、持仓4只；峰值回撤8.3%（触发降半仓：新开仓风险预算×0.5）；连续3笔亏损（新开仓风险预算×0.5）；市场状态range，ADX=24.8震荡市，趋势策略暂停</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>擂台优化：推送失败自动重试一次</b><span class="muted">10-13 12:27</span></div><div class='ev-d'>notify.py _post/_get 异常失败时自动重试一次（非200不重试），10-12晚间Bark三片超时类事件可自恢复；AST+5组行为断言+撮合冒烟全部通过，数据零写入</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>虚拟盘交易轮次：峰值回撤8.3%预警</b><span class="muted">10-13 12:22</span></div><div class='ev-d'>本轮无成交；净值45822.32，持仓4，现金42035.69；峰值回撤8.3%（接近12%熔断线），已降半仓；市场range（ADX=24.8震荡，趋势策略暂停）；momrot Top3: ONDOUSDT/STRKUSDT/OGNUSDT</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>复盘检查：近20笔成交14笔亏损</b><span class="muted">10-13 12:16</span></div><div class='ev-d'>2026-10-13 复盘检查：市场震荡（BTC -2.3%，60币种仅4家上涨）；最近20笔平仓中14笔亏损（70%），最近3笔全部亏损（PUMPUSDT -75、ZECUSDT -122、CRCLBUSDT -154），复盘三连提示&#x27;买入逻辑是否失效&#x27;（dual_mom/momrot）。持仓4只：RLCUSDT/NEARUSDT/ONDOUSDT 24h 跌超7%，均已设止损。总权益 45822（-8.36%），距12%熔断线约1822。交易循环正常，止损卫士在生效。建议：震荡市下 dual_mom/momrot 暂缓开新仓，推进 regime 过滤器研究；继续盯熔断线。</div></div></div>
@@ -282,10 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>arena-hourly-opt：亏钱场结算幂等统一到 settlement_state</b><span class="muted">10-13 03:27</span></div><div class='ev-d'>loss_arena.py 的 any-team 幂等循环替换为 arena_common.settlement_state（done/partial/clean 三态）；中途崩溃残留部分记录时打 WARN + alert_once(&#x27;loss-partial-settle&#x27;) 告警并跳过，避免重复追加决策/重复成交。5 组行为断言全部通过，真实账本新旧逻辑逐日一致，engine 烟雾测试 OK。无页面变化、无发布。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>完成：quant-dashboard-refresh：发布新数据到 GitHub Pages（浏览器上传链路）</b><span class="muted">10-13 03:22</span></div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>复盘检查：震荡市趋势策略持续失血，OGNUSDT浮盈评估止盈</b><span class="muted">10-13 03:18</span></div><div class='ev-d'>市场震荡，持仓6只；72h各策略均为负（atr_channel -1148.64胜率25%、keltner -514.9、meanrevert -350.76）；近7天26笔平仓共-3737.47 CNY。OGNUSDT 24h+26.94%、量比4.92（momrot持有，浮盈可观），建议研究分批止盈（待回测+门禁）。RLCUSDT -8.85%、PUMPUSDT -9.82%接近止损暂不动。CRCLBUSDT×dualma_j止损复盘建议暂停该币种该策略（dualma_j已全局暂停）。regime过滤器（震荡市空仓/降仓）回测验证后落地。实盘照常，风控生效。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>量化看板数据刷新发布（5分钟轮）</b><span class="muted">10-13 03:06</span></div><div class='ev-d'>数据刷新+双页构建完成，经浏览器上传链路发布到 main（commit 3ed3bc2）；commits API 确认 hash 真实存在，pinned blob 与发布基线 md5 逐字节一致（index.html 51098d43、quant.html 718e7f91），零差异。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>完成：quant-dashboard-refresh：发布新数据到 GitHub Pages（浏览器上传链路）</b><span class="muted">10-13 03:22</span></div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
