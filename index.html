@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-14 00:59（北京时间）· 每5分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-14 01:04（北京时间）· 每5分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -48,6 +48,8 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
 <div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>15分钟复盘检查：回撤8.6%软层风控生效，dual_ma成最大拖累</b><span class="muted">10-14 01:02</span></div><div class='ev-d'>回撤8.56%（峰值49983→45704），≥8%软层自动生效：新开仓风险预算×0.5，近1小时权益企稳未加速跌破；10%/12%熔断未触发。近50笔策略分层：dual_ma 6战全败-1711.57最大拖累，atr_channel -1148.64，keltner -514.9（后两者已有研究淘汰结论）。市场震荡，按10-13反事实研究结论不建议一刀切暂停趋势策略。建议：learn轮次对dual_ma做回测复核（验证样本外是否仍正期望），参数不动、走门禁。数据通道正常，15m K线最新00:45。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>review-check: regime=range 趋势策略暂停仍在线，与10-13反事实研究结论冲突</b><span class="muted">10-14 00:47</span></div><div class='ev-d'>regime=range 时 blanket 暂停趋势策略（dual_ma/dualm_a_j 等）仍在 src/live/trader.py 生效并由 src/core/regime.py:32 驱动；10-13 反事实研究证伪了该暂停（dual_ma/dualm_a_j range 入场为正期望，暂停分别少赚 2091/2066 CNY）。建议：learn 轮次走回测证据链+门禁，评估按策略分化（取消一刀切暂停）后落地，不直接改代码。另：连续3笔已平仓亏损触发新开仓风险预算×0.5 已生效；持仓 NEARUSDT -10.89%、RLCUSDT -6.84%、ONDOUSDT -6.46% 需继续监控。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>看板刷新发布</b><span class="muted">10-14 00:42</span></div><div class='ev-d'>quant-dashboard-refresh：数据重建+浏览器上传链路发布 index.html/quant.html，commit 6cf007f7d9e0da1696f55cc4987213ef360f34d9，pinned blob 与基线逐字节一致</div></div></div>
@@ -284,8 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>擂台优化：盘中 prompt 增加今日拒单勿重复反馈</b><span class="muted">10-13 08:02</span></div><div class='ev-d'>arena_intraday.py 收集当日拒单（按 side+symbol 去重留最近）、arena_common.py 以&#x27;同样动作会再次被拒，不要重复下单&#x27;口径单独呈现。修复 10-12 积极进取队 4 次重复买 600519 被 60% 上限拒单的浪费。验证：真实 main() 接线 5 组断言全过、smoke_test OK、真实账本零写入。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>峰值回撤8.3%接近熔断线</b><span class="muted">10-13 07:58</span></div><div class='ev-d'>2026-10-13 07:57 轮次：equity=45848.64 CNY，cash=40033.97，持仓=6；无成交；市场状态 trend(ADX=27.1)；降半仓运行（新开仓风险预算×0.5）</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>虚拟盘回撤预警 8.3%</b><span class="muted">10-13 07:53</span></div><div class='ev-d'>峰值回撤8.3%（熔断线12%），已降半仓运行（新开仓风险预算×0.5）；市场状态 trend(ADX=27.1)；净值45848.64 现金40033.97 持仓6；本轮无成交</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>峰值回撤8.3%接近熔断线</b><span class="muted">10-13 07:58</span></div><div class='ev-d'>2026-10-13 07:57 轮次：equity=45848.64 CNY，cash=40033.97，持仓=6；无成交；市场状态 trend(ADX=27.1)；降半仓运行（新开仓风险预算×0.5）</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
