@@ -26,13 +26,13 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-13 13:04（北京时间）· 每5分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-13 13:09（北京时间）· 每5分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
 <div class="card"><div class="card-t">🤖 AI量化看板 <span class="muted">· 每5分钟同步</span></div>
         <div class="nums">
-          <div><span>净值</span><b>45,822.32</b></div>
+          <div><span>净值</span><b>45,833.37</b></div>
           <div><span>胜率</span><b>28.6%</b></div>
           <div><span>累计盈亏</span><b class="dn">-3934.48</b></div>
           <div><span>今日交易</span><b>4 笔</b></div>
@@ -47,7 +47,9 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="card attn"><div class="card-t">需要你介入 <span class="badge">1</span></div><ul class="needs"><li><span class='dot warn'></span>给 23:00 日报等定时任务开启常开审批（App → 头像 → Upcoming → 任务详情 → 权限设为允许）<span class='muted'> · 10-09 23:28</span></li></ul>
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
-<div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+<div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>完成：刷新AI量化看板数据</b><span class="muted">10-13 13:06</span></div><div class='ev-d'>13:04 例行刷新：index.html/quant.html 走浏览器上传链路发布（commit 4d2e5f9），pinned blob 与本地基线逐字节一致（diff exit 0）。新增 13:01 复盘事件（趋势策略震荡市连亏，建议加速落地regime过滤器）。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>复盘检查：趋势策略震荡市连续亏损</b><span class="muted">10-13 13:01</span></div><div class='ev-d'>震荡市（BTC 24h -2.3%、上涨4/56）。近30笔：dual_ma 6/6全亏-1711.57、atr_channel 8笔6亏-1148.64、keltner 2/2亏-514.9。今早10:47两笔止损正常触发（PUMP -75.01、ZEC -122.00）。建议加速落地regime过滤器（回测门禁验证后）。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>擂台优化：盘中prompt防重复拒单补强+市价成交声明</b><span class="muted">10-13 12:58</span></div><div class='ev-d'>arena_common.py 两处文案：①防重复区头行补拒因时效（T+1=今日全天不可卖，60%上限=不减仓今日全天不可买）+每轮一次下单机会的机会成本（证据：事件驱动队600276今日3次T+1被拒）；②规则行加市价成交声明（证据：模型误写挂单承接，引擎实际按现价±0.05%滑点立即成交）。AST/行为断言/撮合冒烟全过，数据零写入，13:08盘中轮生效。</div></div></div>
@@ -284,8 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#f5a623">交易</span>
         <div class="ev-body"><div class="ev-h"><b>虚拟盘交易循环：无成交，回撤7.73%</b><span class="muted">10-13 04:08</span></div><div class='ev-d'>2026-10-13 04:07 轮次：市场状态 trend（ADX=27.1），无买卖/止损成交。净值46119.77（现金40033.97，持仓6），距峰值49983回撤7.73%，接近8%软层（风险预算减半线）但未触发，12%熔断未触发。momrot Top3: ZECUSDT/OGNUSDT/NEARUSDT。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>OGNUSDT止损核查结论：系统按设计工作，不手动干预</b><span class="muted">10-13 04:04</span></div><div class='ev-d'>针对复盘提出的OGNUSDT（momrot，浮盈约14.5%）止损过远问题已逐项验证：①Chandelier候选位=22日最高0.05345-2×ATR(0.005941)=0.04157，高于现价0.039，按_cand&lt;_close规则正确不移动（移上去会立刻止损）；②+1R保本未触发正确，当前浮盈约103CNY≈0.44R，未达1R（初始风险约232CNY）；③1d数据无滞后，最新收盘日线覆盖至10-12 08:00，采集正常。结论：不手动收紧止损，避免自由裁量破坏系统纪律。设计层观察：22天回看窗口在V型反转后利润保护跟进慢，已记入regime/追踪止损研究输入，待回测证据链+门禁。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>擂台优化：补上无行情动作的审计拒单行</b><span class="muted">10-13 04:02</span></div><div class='ev-d'>arena_intraday.py 与 loss_arena.py：动作标的无实时行情/无当日bar（停牌、无价、模型幻觉出非候选池代码）时，原先静默跳过致账本无痕；现记一条拒单审计行（price=0.0，note注明原因），与引擎拒单同口径。AST+行为断言+smoke回归全过；未动页面逻辑，未发布。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>OGNUSDT止损核查结论：系统按设计工作，不手动干预</b><span class="muted">10-13 04:04</span></div><div class='ev-d'>针对复盘提出的OGNUSDT（momrot，浮盈约14.5%）止损过远问题已逐项验证：①Chandelier候选位=22日最高0.05345-2×ATR(0.005941)=0.04157，高于现价0.039，按_cand&lt;_close规则正确不移动（移上去会立刻止损）；②+1R保本未触发正确，当前浮盈约103CNY≈0.44R，未达1R（初始风险约232CNY）；③1d数据无滞后，最新收盘日线覆盖至10-12 08:00，采集正常。结论：不手动收紧止损，避免自由裁量破坏系统纪律。设计层观察：22天回看窗口在V型反转后利润保护跟进慢，已记入regime/追踪止损研究输入，待回测证据链+门禁。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
