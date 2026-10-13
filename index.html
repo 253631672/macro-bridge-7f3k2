@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-13 10:34（北京时间）· 每5分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-13 10:39（北京时间）· 每5分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -48,6 +48,8 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
 <div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>虚拟盘回撤预警：净值距峰值 8.4%</b><span class="muted">10-13 10:37</span></div><div class='ev-d'>quant-live-trader 轮次（2026-10-13 10:37 CST）：无成交；equity=45798.59，cash=40033.97，持仓=6；市场状态 range（ADX=24.8 震荡市，趋势策略暂停）；momrot Top3: OGNUSDT, ONDOUSDT, STRKUSDT；系统已自动降半仓（新开仓风险预算×0.5）。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>复盘检查：发现震荡市趋势策略错配与连续亏损</b><span class="muted">10-13 10:31</span></div><div class='ev-d'>近20笔平仓7胜13亏累计-2149.73元；6只持仓4只24h跌超9%（RLC/ONDO/PUMP/NEAR），环境为震荡，趋势策略错配；已记录调整建议（regime过滤器、收紧止损、复核买入信号），待回测门禁验证后落地。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>擂台优化：prompt成交行买卖方向改中文</b><span class="muted">10-13 10:28</span></div><div class='ev-d'>盘中prompt「今日已成交」与收盘复盘prompt的当日成交串，英文buy/sell改中文买入/卖出，与拒单行口径统一；纯文案加法，验证通过</div></div></div>
@@ -284,8 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>完成：复盘检查完成</b><span class="muted">10-12 23:32</span></div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>复盘检查：震荡市趋势策略连续亏损，提 regime 过滤器加速建议</b><span class="muted">10-12 23:32</span></div><div class='ev-d'>环境震荡；dual_ma 6战全败 -1711、atr_channel 8战6败 -1148、keltner 2战2败 -514；CRCLBUSDT 量比 4.37 异动持仓观察中；15m K线数据延迟约31分钟。建议加速 regime 过滤器落地，实盘改动走回测+门禁，本轮未动手。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>arena-hourly-opt 23:24 优化轮：修 arena_common.py 时区退化隐性炸弹</b><span class="muted">10-12 23:30</span></div><div class='ev-d'>23:01轮遗留尾巴：_SH=None 回退会致告警日期静默错8小时，改为固定+8时区；fallback断言+smoke_test均通过。健康度：账本658行0坏行、拒单12笔皆修复前、无连续失败；20:05 digest推送失败已于21:38补推闭环（Bark 3片True）。无页面变化，未发布。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>复盘检查：震荡市趋势策略连续亏损，提 regime 过滤器加速建议</b><span class="muted">10-12 23:32</span></div><div class='ev-d'>环境震荡；dual_ma 6战全败 -1711、atr_channel 8战6败 -1148、keltner 2战2败 -514；CRCLBUSDT 量比 4.37 异动持仓观察中；15m K线数据延迟约31分钟。建议加速 regime 过滤器落地，实盘改动走回测+门禁，本轮未动手。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
