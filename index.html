@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-14 05:44（北京时间）· 每5分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-14 05:50（北京时间）· 每5分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -48,6 +48,8 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
 <div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>复盘检查：发现实盘代码与既定研究结论冲突</b><span class="muted">10-14 05:47</span></div><div class='ev-d'>trader.py:246-250 仍在执行&#x27;震荡市一刀切暂停9个趋势/动量策略新开仓&#x27;，而10-13反事实研究已证伪该做法（dual_ma/dualma_j暂停有害，分别少赚2091/2066 CNY）。当前环境=震荡，暂停正在生效。建议：移除一刀切暂停改为分策略差异化（仅donchian候选，走门禁后定），独立回撤风控（8.3%降半仓、StoplossGuard）保留。另：复盘next_action&#x27;暂停该币种该策略&#x27;无代码执行机制（只写不读），需实现symbol×策略黑名单或修正模板。近10笔7亏3赢属小样本+急跌市况，不构成regime失效证据；P组净值-0.1%无回撤紧急。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>交易循环 05:32 轮次：无成交</b><span class="muted">10-14 05:34</span></div><div class='ev-d'>净值 45699.21 / 现金 42035.69 / 持仓 4。市场状态 range（ADX=24.8 震荡市，趋势策略暂停）。峰值回撤 8.6% 接近熔断线，新开仓风险预算 ×0.5；连续 3 笔亏损再 ×0.5；momrot Top3：ONDOUSDT、OGNUSDT、STRKUSDT。本轮无买入/卖出/止损成交（查询 live_trades 确认）。不打扰用户，由 23:00 日报统一汇总。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>竞技场优化轮：对齐 10-14 推送新规的 2 处注释/日志措辞</b><span class="muted">10-14 05:26</span></div><div class='ev-d'>arena_common.py（alert_once 告警标记损坏路径）与 arena_settle.py（send_partial_recovery_note docstring）中 3 处仍写&#x27;推送&#x27;的注释/日志文案已对齐 10-14 新规（告警只记日志、不推送到手机）；零运行时行为变化。AST 与 engine/smoke_test.py 均通过，账本零写入、notify_config 未触碰。</div></div></div>
@@ -284,8 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>完成：竞技看板刷新：4 文件已重建，正在上传发布</b><span class="muted">10-13 09:12</span></div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>虚拟盘交易轮次：峰值回撤8.6%</b><span class="muted">10-13 09:12</span></div><div class='ev-d'>equity=45662.15 cash=40033.97 持仓=6；市场状态range（ADX=24.8震荡市，趋势策略暂停）；momrot Top3 OGNUSDT/ONDOUSDT/STRKUSDT；本轮无成交；峰值回撤8.6%接近8%告警线，已降半仓运行</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>峰值回撤 8.6% 预警</b><span class="muted">10-13 09:07</span></div><div class='ev-d'>虚拟盘净值 45662.15（现金 40033.97，持仓 6），距峰值回撤 8.6%，接近 12% 熔断线；已降半仓运行（新开仓风险预算×0.5）。市场状态 range（ADX=24.8 震荡市，趋势策略暂停）。本轮无成交。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>虚拟盘交易轮次：峰值回撤8.6%</b><span class="muted">10-13 09:12</span></div><div class='ev-d'>equity=45662.15 cash=40033.97 持仓=6；市场状态range（ADX=24.8震荡市，趋势策略暂停）；momrot Top3 OGNUSDT/ONDOUSDT/STRKUSDT；本轮无成交；峰值回撤8.6%接近8%告警线，已降半仓运行</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
