@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-13 08:34（北京时间）· 每5分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-13 08:39（北京时间）· 每5分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -48,6 +48,8 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
 <div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>量化看板5分钟刷新发布成功</b><span class="muted">10-13 08:36</span></div><div class='ev-d'>上传链路一次成功，commit 6ab62636038c279c8d6d6d66d44b376b85a5a461；pinned blob 全文 diff 逐字节一致</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>完成：复盘检查: 震荡市趋势策略连续亏损, 账户-8.5%需关注</b><span class="muted">10-13 08:31</span></div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#22b573">日报</span>
         <div class="ev-body"><div class="ev-h"><b>15分钟复盘检查(10-13 08:30): 震荡市趋势策略连续亏损,账户回撤-8.5%</b><span class="muted">10-13 08:31</span></div><div class='ev-d'>市场环境: 震荡(BTC 24h -2.3%, 60币中56家下跌)。持仓6只5亏: RLCUSDT -10.36%(dual_mom, 止损0.7147/-31%过松)、ONDOUSDT -10.0%(dual_mom)、PUMPUSDT -11.74%(dual_mom)、NEARUSDT -13.62%(momrot)、OGNUSDT +6.54%(momrot,唯一盈利)、ZECUSDT 01:12刚开仓(momrot)。复盘: 最近20笔14亏, 包括dualmaj CRCLUSDT -154.46、atr_channel DOTUSDT -100.31、atr_channel TIAUSDT -217.08(-11.2%)、dual_ma HBARUSDT -95.09。账户权益45749.67USDT, 相对50000起始回撤-8.5%, 未触发12%熔断但逼近。结论: 震荡市趋势策略(dual_mom/momrot/dualma_j/atr_channel/keltner)连续失血, 与regime研究结论一致, 建议加速regime过滤器(震荡降仓/空仓)回测证据链+上线门禁; 检查dual_mom止损逻辑(个别持仓止损-31%过松)。实盘照常跑。</div></div></div>
@@ -284,8 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>完成：arena 每小时优化轮：18:24 健康度检查中</b><span class="muted">10-12 18:29</span></div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>arena优化轮：修复组织账本重复nav与看板错读账本bug，发布3页</b><span class="muted">10-12 18:29</span></div><div class='ev-d'>org_run.py 去掉重复净值快照（幂等改为model=org）；export_arena.py 的org状态与决策日志改读data_org账本并修正键映射；浏览器上传发布 company.html/org.html/loss.html（commit 38f8282e，pinned blob逐字节校验通过）</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>arena 优化轮：T+1 拒单 note 信息增强</b><span class="muted">10-12 18:03</span></div><div class='ev-d'>撮合卖出拒单 note 区分「无持仓」与「今日买入锁仓中」并标注手数/股数；smoke_test 增 3 条回归断言；验证全过，无页面变化。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>arena优化轮：修复组织账本重复nav与看板错读账本bug，发布3页</b><span class="muted">10-12 18:29</span></div><div class='ev-d'>org_run.py 去掉重复净值快照（幂等改为model=org）；export_arena.py 的org状态与决策日志改读data_org账本并修正键映射；浏览器上传发布 company.html/org.html/loss.html（commit 38f8282e，pinned blob逐字节校验通过）</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
