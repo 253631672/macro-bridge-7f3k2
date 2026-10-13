@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-13 09:59（北京时间）· 每5分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-13 10:04（北京时间）· 每5分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -47,7 +47,11 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="card attn"><div class="card-t">需要你介入 <span class="badge">1</span></div><ul class="needs"><li><span class='dot warn'></span>给 23:00 日报等定时任务开启常开审批（App → 头像 → Upcoming → 任务详情 → 权限设为允许）<span class='muted'> · 10-09 23:28</span></li></ul>
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
-<div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+<div class="card"><div class="ev"><span class="ev-tag" style="background:#9aa0aa">系统</span>
+        <div class="ev-body"><div class="ev-h"><b>复盘发现：震荡市 regime 下止损检查被连带暂停</b><span class="muted">10-13 10:04</span></div><div class='ev-d'>trader.py regime=range 时对趋势策略 continue，跳过了持仓止损检查（08:07 起）。6 只持仓（momrot/dual_mom）2 小时无止损保护；ZECUSDT、PUMPUSDT 已跌破 1d 止损仍持仓，浮亏合计约 -433 CNY。建议把 regime 门移到止损检查之后，待验证后重启落地。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>擂台优化：累计拒单计数同步进盘中prompt</b><span class="muted">10-13 10:00</span></div><div class='ev-d'>盘中prompt的今日拒单提醒新增近3日累计被拒次数（与开盘prompt同口径），2文件改动，AST/行为断言/回归均通过，零写入账本</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>虚拟盘回撤告警：净值距峰值回撤 8.6%</b><span class="muted">10-13 09:57</span></div><div class='ev-d'>2026-10-13 09:57 轮次：equity=45662.15，现金 40033.97，持仓 6 个；本轮无成交。回撤已达 8.6%，接近 12% 熔断线，按规则降半仓运行（新开仓风险预算×0.5）；市场状态 range（ADX=24.8 震荡市，趋势策略暂停）。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#9aa0aa">系统</span>
         <div class="ev-body"><div class="ev-h"><b>quant-dashboard-refresh 发布完成</b><span class="muted">10-13 09:56</span></div></div></div>
@@ -282,10 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#22b573">日报</span>
         <div class="ev-body"><div class="ev-h"><b>日报已生成 2026-10-12</b><span class="muted">10-12 22:56</span></div><div class='ev-d'>净值 46,266.26（-7.47%）今日 3 笔交易，明细见目标资料库</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>quant-review-check 22:29 复盘：无实质调整建议，静默</b><span class="muted">10-12 22:36</span></div><div class='ev-d'>环境震荡，持仓6；权益46266.26距峰回撤7.44%（未触发8%预警）；CRCLBUSDT量比12.12异动；ATR止损单笔-11%观察；复盘next_action的暂停指令无代码执行机制，已纳入hourly-learn候选清单，按规则静默。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#f5a623">交易</span>
-        <div class="ev-body"><div class="ev-h"><b>虚拟盘成交 BUY NEARUSDT</b><span class="muted">10-12 22:32</span></div><div class='ev-d'>策略 momrot 价格 5.8989 数量 190.1053</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>复盘检查：震荡市趋势策略持续失血</b><span class="muted">10-12 22:20</span></div><div class='ev-d'>市场环境震荡；近7天 dual_ma -1711(12笔)、atr_channel -1149(16笔)、keltner -514(4笔)；CRCLUSDT 现价85.08已跌破止损85.16(dualma_j)+量比12.12异动；RLCUSDT 浮亏约1%止损未触及；不改动实盘，regime过滤器研究已在进行中</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>quant-review-check 22:29 复盘：无实质调整建议，静默</b><span class="muted">10-12 22:36</span></div><div class='ev-d'>环境震荡，持仓6；权益46266.26距峰回撤7.44%（未触发8%预警）；CRCLBUSDT量比12.12异动；ATR止损单笔-11%观察；复盘next_action的暂停指令无代码执行机制，已纳入hourly-learn候选清单，按规则静默。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
