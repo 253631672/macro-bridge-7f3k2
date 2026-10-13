@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-14 03:19（北京时间）· 每5分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-14 03:24（北京时间）· 每5分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -47,7 +47,9 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="card attn"><div class="card-t">需要你介入 <span class="badge">1</span></div><ul class="needs"><li><span class='dot warn'></span>给 23:00 日报等定时任务开启常开审批（App → 头像 → Upcoming → 任务详情 → 权限设为允许）<span class='muted'> · 10-09 23:28</span></li></ul>
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
-<div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+<div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>虚拟盘交易循环(03:22轮)：无成交，回撤8.5%触发半仓</b><span class="muted">10-14 03:22</span></div><div class='ev-d'>equity=45714.96 cash=42035.69 持仓=4；峰值回撤8.5%接近熔断线，新开仓风险预算×0.5；连续3笔亏损，新开仓风险预算×0.5；市场状态 range(ADX=24.8，趋势策略暂停)；momrot Top3=ONDOUSDT/STRKUSDT/OGNUSDT。本轮无买入/卖出/止损成交。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>整点同步 03:19：02:12/02:42 学习复盘轮完成（AJ-1、AE 均 parked）</b><span class="muted">10-14 03:19</span></div><div class='ev-d'>02:12 轮：AJ-1 连亏降仓 guard vs 三层熔断 head-to-head → FAIL（合并池 PF 持平 1.31、maxDD 18.63% 不达门禁），AJ 降级 parked，不改产品代码；排队下一项 AE（资金费率过热降仓）→ 02:42 轮 OI 数据冻结 63h（覆盖率 4/9 币种），前置条件 FAIL，AE 同步 parked。下一项：AF 向量化回测加速。实盘仍 28 笔（-3934.48），无新增平仓，n=28&lt;50 门槛，不改实盘参数。无实质改进可落地，按推送规则静默。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#f5a623">交易</span>
         <div class="ev-body"><div class="ev-h"><b>虚拟盘交易轮次</b><span class="muted">10-14 03:02</span></div><div class='ev-d'>equity=45689.76 cash=42035.69 持仓=4；峰值回撤8.6%接近熔断线，降半仓运行；连续3笔亏损，新开仓风险预算×0.5；市场状态 range(ADX=24.8 震荡市)，趋势策略暂停；本轮无成交</div></div></div>
@@ -284,8 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>完成：复盘检查: 震荡市趋势策略连续亏损, 账户-8.5%需关注</b><span class="muted">10-13 08:31</span></div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#22b573">日报</span>
-        <div class="ev-body"><div class="ev-h"><b>15分钟复盘检查(10-13 08:30): 震荡市趋势策略连续亏损,账户回撤-8.5%</b><span class="muted">10-13 08:31</span></div><div class='ev-d'>市场环境: 震荡(BTC 24h -2.3%, 60币中56家下跌)。持仓6只5亏: RLCUSDT -10.36%(dual_mom, 止损0.7147/-31%过松)、ONDOUSDT -10.0%(dual_mom)、PUMPUSDT -11.74%(dual_mom)、NEARUSDT -13.62%(momrot)、OGNUSDT +6.54%(momrot,唯一盈利)、ZECUSDT 01:12刚开仓(momrot)。复盘: 最近20笔14亏, 包括dualmaj CRCLUSDT -154.46、atr_channel DOTUSDT -100.31、atr_channel TIAUSDT -217.08(-11.2%)、dual_ma HBARUSDT -95.09。账户权益45749.67USDT, 相对50000起始回撤-8.5%, 未触发12%熔断但逼近。结论: 震荡市趋势策略(dual_mom/momrot/dualma_j/atr_channel/keltner)连续失血, 与regime研究结论一致, 建议加速regime过滤器(震荡降仓/空仓)回测证据链+上线门禁; 检查dual_mom止损逻辑(个别持仓止损-31%过松)。实盘照常跑。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>擂台优化：开盘 prompt 接入实验室结论+近期拒单提醒</b><span class="muted">10-13 08:31</span></div><div class='ev-d'>开盘决策 prompt 新增实验室回测结论与近期拒单提醒（积极进取队 4 次 600519 60% 上限拒单、行业轮动队 3 次 601899 T+1 拒单不再跨日重复）；纯加法、默认 prompt 逐字节一致、断言+回归全过</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>15分钟复盘检查(10-13 08:30): 震荡市趋势策略连续亏损,账户回撤-8.5%</b><span class="muted">10-13 08:31</span></div><div class='ev-d'>市场环境: 震荡(BTC 24h -2.3%, 60币中56家下跌)。持仓6只5亏: RLCUSDT -10.36%(dual_mom, 止损0.7147/-31%过松)、ONDOUSDT -10.0%(dual_mom)、PUMPUSDT -11.74%(dual_mom)、NEARUSDT -13.62%(momrot)、OGNUSDT +6.54%(momrot,唯一盈利)、ZECUSDT 01:12刚开仓(momrot)。复盘: 最近20笔14亏, 包括dualmaj CRCLUSDT -154.46、atr_channel DOTUSDT -100.31、atr_channel TIAUSDT -217.08(-11.2%)、dual_ma HBARUSDT -95.09。账户权益45749.67USDT, 相对50000起始回撤-8.5%, 未触发12%熔断但逼近。结论: 震荡市趋势策略(dual_mom/momrot/dualma_j/atr_channel/keltner)连续失血, 与regime研究结论一致, 建议加速regime过滤器(震荡降仓/空仓)回测证据链+上线门禁; 检查dual_mom止损逻辑(个别持仓止损-31%过松)。实盘照常跑。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
