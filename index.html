@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-14 04:44（北京时间）· 每5分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-14 04:49（北京时间）· 每5分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -48,6 +48,8 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
 <div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>quant-review-check：回撤8.54%自动风控生效，连续3笔亏损已触发连损减仓</b><span class="muted">10-14 04:46</span></div><div class='ev-d'>回撤8.54%≥8%软层→新开仓风险预算×0.5；连续3笔亏损（dual_mom/momrot/dualma_j，-122/-75/-154）→再×0.5；4持仓全浮亏但均有止损位；距10%中层熔断约730CNY；learn轮次跟进买入信号质量检查，不直接调参</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>量化虚拟盘交易循环轮次完成</b><span class="muted">10-14 04:37</span></div><div class='ev-d'>本轮无成交；权益 45713.11 CNY，现金 42035.69，持仓 4 只；峰值回撤 8.5%（降半仓运行）；连续3笔亏损减仓；市场 range（ADX=24.8），趋势策略暂停；momrot Top3: ONDOUSDT/OGNUSDT/STRKUSDT</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>arena-hourly-opt 04:24 优化轮：源码注释对齐推送新规</b><span class="muted">10-14 04:27</span></div><div class='ev-d'>健康度正常（账本712行零写入，近200行93决策/72成交/5合规拒单，cron近30轮无报错）。改动2文件：awards.py/zouwei.py 源码注释与日志文案的&#x27;推送到手机/已推送过&#x27;改为&#x27;只记日志不推送&#x27;，与2026-10-14推送新规对齐；push()调用点不动（抑制由notify层保证）。AST+smoke验证通过，账本md5不变，无页面变化、无发布。</div></div></div>
@@ -284,8 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>虚拟盘交易轮次</b><span class="muted">10-13 08:57</span></div><div class='ev-d'>交易循环完成：equity=45749.67，cash=40033.97，持仓6。无买卖成交。峰值回撤8.5%（超8%汇报阈值，距12%熔断线仍有空间），已自动降半仓运行（新开仓风险预算×0.5）。市场状态range（ADX=24.8震荡市，趋势策略暂停）。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>虚拟盘峰值回撤8.5%</b><span class="muted">10-13 08:52</span></div><div class='ev-d'>峰值回撤8.5%，接近8%预警线（熔断12%），已降半仓运行；市场状态 range，趋势策略暂停；净值45749.67，现金40033.97，持仓6，本轮无成交</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>虚拟盘峰值回撤8.5%接近熔断线，自动降半仓</b><span class="muted">10-13 08:47</span></div><div class='ev-d'>市场状态range(ADX=24.8震荡市，趋势策略暂停)；equity=45749.67，cash=40033.97，持仓6；本轮无成交</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>虚拟盘峰值回撤8.5%</b><span class="muted">10-13 08:52</span></div><div class='ev-d'>峰值回撤8.5%，接近8%预警线（熔断12%），已降半仓运行；市场状态 range，趋势策略暂停；净值45749.67，现金40033.97，持仓6，本轮无成交</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
