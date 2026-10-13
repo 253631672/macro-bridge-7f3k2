@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-14 04:34（北京时间）· 每5分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-14 04:39（北京时间）· 每5分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -47,7 +47,9 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="card attn"><div class="card-t">需要你介入 <span class="badge">1</span></div><ul class="needs"><li><span class='dot warn'></span>给 23:00 日报等定时任务开启常开审批（App → 头像 → Upcoming → 任务详情 → 权限设为允许）<span class='muted'> · 10-09 23:28</span></li></ul>
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
-<div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+<div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>量化虚拟盘交易循环轮次完成</b><span class="muted">10-14 04:37</span></div><div class='ev-d'>本轮无成交；权益 45713.11 CNY，现金 42035.69，持仓 4 只；峰值回撤 8.5%（降半仓运行）；连续3笔亏损减仓；市场 range（ADX=24.8），趋势策略暂停；momrot Top3: ONDOUSDT/OGNUSDT/STRKUSDT</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>arena-hourly-opt 04:24 优化轮：源码注释对齐推送新规</b><span class="muted">10-14 04:27</span></div><div class='ev-d'>健康度正常（账本712行零写入，近200行93决策/72成交/5合规拒单，cron近30轮无报错）。改动2文件：awards.py/zouwei.py 源码注释与日志文案的&#x27;推送到手机/已推送过&#x27;改为&#x27;只记日志不推送&#x27;，与2026-10-14推送新规对齐；push()调用点不动（抑制由notify层保证）。AST+smoke验证通过，账本md5不变，无页面变化、无发布。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>学习轮 04:12 沉淀：AH parked（NLP 数据源不可行）、新候选 AP（分数差分特征）；AE parked 获结构性佐证</b><span class="muted">10-14 04:20</span></div><div class='ev-d'>研究排队：AG-1 FAIL（ICT FVG 裸 edge，合并池 PF 1.29&lt;1.3 且彩票型盈利集中，parked）、AH parked（fear_greed 仅 33 天日粒度、新闻无稳定免费源、OI 采集链未恢复，无可测试数据源，证伪淘汰不记 CHANGELOG）、AF-1 已落地（ATR 滚动增量，bitwise 一致）。下一项 AI（策略分歧度风控）。实盘 28 笔累计 -3934.47，无新增平仓，参数不动。</div></div></div>
@@ -284,8 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>虚拟盘峰值回撤8.5%</b><span class="muted">10-13 08:52</span></div><div class='ev-d'>峰值回撤8.5%，接近8%预警线（熔断12%），已降半仓运行；市场状态 range，趋势策略暂停；净值45749.67，现金40033.97，持仓6，本轮无成交</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>虚拟盘峰值回撤8.5%接近熔断线，自动降半仓</b><span class="muted">10-13 08:47</span></div><div class='ev-d'>市场状态range(ADX=24.8震荡市，趋势策略暂停)；equity=45749.67，cash=40033.97，持仓6；本轮无成交</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#9aa0aa">系统</span>
-        <div class="ev-body"><div class="ev-h"><b>虚拟盘峰值回撤 8.5% 接近熔断线</b><span class="muted">10-13 08:42</span></div><div class='ev-d'>quant-live-trader 08:42 轮次：无买入/卖出/止损成交；市场状态 range（ADX=24.8 震荡市，趋势策略暂停），momrot Top3=STRKUSDT/OGNUSDT/ONDOUSDT；equity=45749.67 cash=40033.97 持仓=6；已降半仓运行（新开仓风险预算×0.5）</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>虚拟盘峰值回撤8.5%接近熔断线，自动降半仓</b><span class="muted">10-13 08:47</span></div><div class='ev-d'>市场状态range(ADX=24.8震荡市，趋势策略暂停)；equity=45749.67，cash=40033.97，持仓6；本轮无成交</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
