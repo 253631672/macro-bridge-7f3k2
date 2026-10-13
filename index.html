@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-14 05:54（北京时间）· 每5分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-14 05:59（北京时间）· 每5分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -47,7 +47,9 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="card attn"><div class="card-t">需要你介入 <span class="badge">1</span></div><ul class="needs"><li><span class='dot warn'></span>给 23:00 日报等定时任务开启常开审批（App → 头像 → Upcoming → 任务详情 → 权限设为允许）<span class='muted'> · 10-09 23:28</span></li></ul>
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
-<div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+<div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>arena-hourly-opt 05:54 优化轮</b><span class="muted">10-14 05:57</span></div><div class='ev-d'>parse_decision 加空代码丢弃防御（engine/competition.py）+ smoke_test 加 1b 回归断言；AST 通过、smoke OK、账本 md5 不变、无页面变化</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>虚拟盘轮次 05:52：无成交，equity=45699.21，回撤8.6%接近熔断线</b><span class="muted">10-14 05:53</span></div><div class='ev-d'>市场range(ADX=24.8)，趋势策略暂停；降半仓+连损减仓双重减半运行；持仓4：ONDOUSDT/NEARUSDT/OGNUSDT/RLCUSDT；本轮全部skip/hold，无买入卖出止损成交。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>复盘检查：发现实盘代码与既定研究结论冲突</b><span class="muted">10-14 05:47</span></div><div class='ev-d'>trader.py:246-250 仍在执行&#x27;震荡市一刀切暂停9个趋势/动量策略新开仓&#x27;，而10-13反事实研究已证伪该做法（dual_ma/dualma_j暂停有害，分别少赚2091/2066 CNY）。当前环境=震荡，暂停正在生效。建议：移除一刀切暂停改为分策略差异化（仅donchian候选，走门禁后定），独立回撤风控（8.3%降半仓、StoplossGuard）保留。另：复盘next_action&#x27;暂停该币种该策略&#x27;无代码执行机制（只写不读），需实现symbol×策略黑名单或修正模板。近10笔7亏3赢属小样本+急跌市况，不构成regime失效证据；P组净值-0.1%无回撤紧急。</div></div></div>
@@ -284,8 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>虚拟盘回撤预警：峰值回撤8.6%，接近熔断线</b><span class="muted">10-13 09:23</span></div><div class='ev-d'>净值45662.15（现金40033.97），距峰值49983.07回撤8.6%，已超8%预警线、接近12%熔断线；系统自动降半仓运行（新开仓风险预算×0.5）。市场为震荡市（ADX=24.8），趋势策略暂停。本轮无成交，持仓6个币种。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#f5a623">交易</span>
-        <div class="ev-body"><div class="ev-h"><b>虚拟盘峰值回撤 8.6%，自动降半仓</b><span class="muted">10-13 09:18</span></div><div class='ev-d'>交易循环本轮无成交（持仓6个，净值45662.15）；峰值回撤8.6%超8%预警线、接近12%熔断线，系统自动新开仓风险预算减半；市场状态震荡（ADX=24.8），趋势策略暂停。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>完成：竞技看板刷新：4 文件已重建，正在上传发布</b><span class="muted">10-13 09:12</span></div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>虚拟盘峰值回撤 8.6%，自动降半仓</b><span class="muted">10-13 09:18</span></div><div class='ev-d'>交易循环本轮无成交（持仓6个，净值45662.15）；峰值回撤8.6%超8%预警线、接近12%熔断线，系统自动新开仓风险预算减半；市场状态震荡（ADX=24.8），趋势策略暂停。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
