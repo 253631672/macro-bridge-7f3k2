@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-14 05:14（北京时间）· 每5分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-14 05:19（北京时间）· 每5分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -47,7 +47,9 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="card attn"><div class="card-t">需要你介入 <span class="badge">1</span></div><ul class="needs"><li><span class='dot warn'></span>给 23:00 日报等定时任务开启常开审批（App → 头像 → Upcoming → 任务详情 → 权限设为允许）<span class='muted'> · 10-09 23:28</span></li></ul>
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
-<div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+<div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>复盘检查：已证伪的regime暂停仍在实盘生效</b><span class="muted">10-14 05:17</span></div><div class='ev-d'>05:14检查发现：10-13反事实研究已证伪的regime=range一刀切暂停趋势策略新开仓，仍在trader.py生效（2分钟前仍在触发），9个趋势/动量策略被禁新开仓。建议移除该逻辑（至少dual_ma/dualma_j解除），落地走learn轮次门禁。近20笔复盘14亏累计-2134.6，亏损集中atr_channel/keltner；4只持仓全跌但止损在位；回撤约8.57%。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>arena 每半小时优化轮 04:54</b><span class="muted">10-14 04:56</span></div><div class='ev-d'>健康度正常（账本 712 行零写入、16 队决策全覆盖、smoke OK）。对齐 10-14 推送新规的注释/日志措辞 3 处：export_arena.py 走位订阅注释、zouwei.py 告警正文、butler_run.py 日报送达注释；零运行时行为变化、无页面变化、账本未动。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>quant-review-check：回撤8.54%自动风控生效，连续3笔亏损已触发连损减仓</b><span class="muted">10-14 04:46</span></div><div class='ev-d'>回撤8.54%≥8%软层→新开仓风险预算×0.5；连续3笔亏损（dual_mom/momrot/dualma_j，-122/-75/-154）→再×0.5；4持仓全浮亏但均有止损位；距10%中层熔断约730CNY；learn轮次跟进买入信号质量检查，不直接调参</div></div></div>
@@ -284,8 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>完成：擂台 30 分钟优化轮完成</b><span class="muted">10-13 08:58</span></div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>擂台优化：拒单提醒补拒单时间+中文方向</b><span class="muted">10-13 08:58</span></div><div class='ev-d'>engine/competition.py 开盘 prompt 拒单行加日期（如 2026-10-12 600519 买入 2手）、arena_common.py 盘中 prompt 拒单行加盘中时间（at）+买入/卖出中文方向；AST+行为断言+smoke 回归全过，账本零写入</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>虚拟盘交易轮次</b><span class="muted">10-13 08:57</span></div><div class='ev-d'>交易循环完成：equity=45749.67，cash=40033.97，持仓6。无买卖成交。峰值回撤8.5%（超8%汇报阈值，距12%熔断线仍有空间），已自动降半仓运行（新开仓风险预算×0.5）。市场状态range（ADX=24.8震荡市，趋势策略暂停）。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>擂台优化：拒单提醒补拒单时间+中文方向</b><span class="muted">10-13 08:58</span></div><div class='ev-d'>engine/competition.py 开盘 prompt 拒单行加日期（如 2026-10-12 600519 买入 2手）、arena_common.py 盘中 prompt 拒单行加盘中时间（at）+买入/卖出中文方向；AST+行为断言+smoke 回归全过，账本零写入</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
