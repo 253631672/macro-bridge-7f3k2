@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-13 11:50（北京时间）· 每5分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-13 11:54（北京时间）· 每5分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -48,6 +48,8 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
 <div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>虚拟盘轮次：无成交，回撤8.3%接近熔断线</b><span class="muted">10-13 11:52</span></div><div class='ev-d'>equity=45810.46，持仓4，峰值回撤8.3%（距12%熔断线接近），已降半仓运行（新开仓风险预算×0.5）；连损3笔≥3再×0.5；市场range（ADX=24.8震荡市，趋势策略暂停）</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>虚拟盘净值距峰值回撤8.3%接近熔断线</b><span class="muted">10-13 11:47</span></div><div class='ev-d'>本轮equity=45810.46，持仓4；降半仓运行（回撤8.3%→新开仓预算×0.5，连损3笔再×0.5）；市场震荡range（ADX=24.8）趋势策略暂停；本轮无成交</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>复盘检查：24小时内3连亏，震荡市趋势策略整体性跑输</b><span class="muted">10-13 11:45</span></div><div class='ev-d'>近3笔平仓全亏：CRCLBUSDT dualma_j -154.46（10-12 16:07）、ZECUSDT momrot -122.00、PUMPUSDT dual_mom -75.01（10-13 02:47）。近15笔净-1482 CNY（11亏4盈）。当前环境震荡：BTC 24h -2.3%，56家下跌。持仓异动：NEARUSDT -9.95%（接近12%熔断）、ONDOUSDT -7.71%。建议：regime过滤器（震荡市趋势策略降仓/空仓）研究提优先级，熔断收紧方案待回测验证后再落地。</div></div></div>
@@ -284,8 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>优化轮：结算幂等健壮性修复</b><span class="muted">10-13 03:00</span></div><div class='ev-d'>新增 arena_common.settlement_state，us_arena/arena_settle 改用三态幂等（done跳过/partial告警跳过/clean结算），防止崩溃重跑重复成交；7组断言+smoke回归全过</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>量化看板数据刷新发布（5分钟轮）</b><span class="muted">10-13 02:57</span></div><div class='ev-d'>commit 80f37b5f95149191d145218c211610dfc947781b；index.html/quant.html 浏览器上传链路发布，pinned blob 与基线全文逐字节一致</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>复盘检查：atr_channel/keltner 连续亏损+止损异常</b><span class="muted">10-13 02:32</span></div><div class='ev-d'>最近20笔：atr_channel 8笔-1148元(胜率25%)，keltner 2笔-515元；KAIAUSDT(keltner)单笔-509元(-29.5%)、ATOMUSDT-410元(-12%)、TIAUSDT-217元(-11.3%)，买入时环境=trend、当前=震荡，止损未按预期触发。建议：核查止损链+震荡regime过滤器（改动先走回测门禁）。实盘照常跑。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>量化看板数据刷新发布（5分钟轮）</b><span class="muted">10-13 02:57</span></div><div class='ev-d'>commit 80f37b5f95149191d145218c211610dfc947781b；index.html/quant.html 浏览器上传链路发布，pinned blob 与基线全文逐字节一致</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
