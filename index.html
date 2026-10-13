@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-13 10:19（北京时间）· 每5分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-13 10:24（北京时间）· 每5分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -47,7 +47,9 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="card attn"><div class="card-t">需要你介入 <span class="badge">1</span></div><ul class="needs"><li><span class='dot warn'></span>给 23:00 日报等定时任务开启常开审批（App → 头像 → Upcoming → 任务详情 → 权限设为允许）<span class='muted'> · 10-09 23:28</span></li></ul>
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
-<div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+<div class="card"><div class="ev"><span class="ev-tag" style="background:#9aa0aa">系统</span>
+        <div class="ev-body"><div class="ev-h"><b>实盘风控缺陷：震荡市下趋势策略止损检查被跳过</b><span class="muted">10-13 10:21</span></div><div class='ev-d'>review-check 发现 src/live/trader.py 缺陷：regime=range 时 9 个趋势策略整循环 continue，连带跳过止损/保本/移动止损检查（08:07 CST 起 2+ 小时无止损评估）。ZECUSDT、PUMPUSDT 已跌破各自止损线未触发（预估漏止损约 -119 / -73.5 CNY）。已提 3 行修复建议待验证落地，未直接改实盘代码。回撤 8.37%，其余风控层正常。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>竞技看板发布成功（commit 709779f）</b><span class="muted">10-13 10:11</span></div><div class='ev-d'>10:08 轮：export_arena 重建 9 页，3 页实质变化（arena/rank/butler）经浏览器上传链路发布，pinned blob md5 逐字节一致。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>虚拟盘净值回撤 8.4%（接近12%熔断线），已降半仓运行</b><span class="muted">10-13 10:07</span></div><div class='ev-d'>本轮净值 45798.59 CNY，现金 40033.97，持仓 6 个；市场状态 range（ADX=24.8，趋势策略暂停），本轮无新成交。净值距峰值回撤 8.4% 超过 8% 报告线，系统自动降半仓（新开仓风险预算×0.5）。</div></div></div>
@@ -284,8 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#9aa0aa">系统</span>
         <div class="ev-body"><div class="ev-h"><b>ai-arena 看门狗修复服务</b><span class="muted">10-12 23:20</span></div><div class='ev-d'>systemd 单元 ai-arena.service 丢失（VM 重建导致 /etc 丢失），已重建单元并重启，/gate 返回 200，服务恢复正常；单元备份存于 goals/ai/hidden_files/ai-arena.service</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>擂台优化轮：zoneinfo 退化路径健壮性修复</b><span class="muted">10-12 23:03</span></div><div class='ev-d'>arena_settle.py / arena_intraday.py / loss_arena.py 的 ZoneInfo 兜底 SH=None 改为固定+8时区，避免 tzdata 缺失时交易时段/日期判定静默错8小时；AST/行为断言/smoke 全部通过，本机行为零变化，无页面变动无需发布。arena_common.py 同模式下一轮处理。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#22b573">日报</span>
-        <div class="ev-body"><div class="ev-h"><b>虚拟盘日报 2026-10-12</b><span class="muted">10-12 22:56</span></div><div class='ev-d'>净值 46,266.26 CNY（累计-7.47%），今日 -0.71% 跑赢 BTC 基准；今日 3 笔交易已实现 +130.39 CNY；距峰值回撤 7.44%（熔断线 12%），接近 8% 关注线</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>擂台优化轮：zoneinfo 退化路径健壮性修复</b><span class="muted">10-12 23:03</span></div><div class='ev-d'>arena_settle.py / arena_intraday.py / loss_arena.py 的 ZoneInfo 兜底 SH=None 改为固定+8时区，避免 tzdata 缺失时交易时段/日期判定静默错8小时；AST/行为断言/smoke 全部通过，本机行为零变化，无页面变动无需发布。arena_common.py 同模式下一轮处理。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
