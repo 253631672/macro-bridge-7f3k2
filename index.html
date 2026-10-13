@@ -26,11 +26,10 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-13 23:19（北京时间）· 每5分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-13 23:24（北京时间）· 每5分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
-        <div class="cur-task">每小时学习轮：AD=Hurst 趋势门回测门禁执行中（dual_ma 3 窗 walk-forward）</div>
-        <div class="muted">开始于 10-13 23:15</div></div>
+        <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
 <div class="card"><div class="card-t">🤖 AI量化看板 <span class="muted">· 每5分钟同步</span></div>
         <div class="nums">
           <div><span>净值</span><b>45,730.69</b></div>
@@ -48,7 +47,9 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="card attn"><div class="card-t">需要你介入 <span class="badge">1</span></div><ul class="needs"><li><span class='dot warn'></span>给 23:00 日报等定时任务开启常开审批（App → 头像 → Upcoming → 任务详情 → 权限设为允许）<span class='muted'> · 10-09 23:28</span></li></ul>
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
-<div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+<div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>完成：每小时学习轮：AD=Hurst 趋势门回测门禁执行中（dual_ma 3 窗 walk-forward）</b><span class="muted">10-13 23:20</span></div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>复盘检查 23:14：近10笔7亏、建议暂停3个币种×策略组合</b><span class="muted">10-13 23:17</span></div><div class='ev-d'>trade_reviews近10笔7亏3盈；最新3笔连续ATR止损亏损（dual_mom/PUMPUSDT -75、momrot/ZECUSDT -122、dualma_j/CRCLBUSDT -154），复盘建议暂停这3个币种×策略组合新开仓观察企稳。持仓4只：RLCUSDT -11.39%距止损还有-31%、NEARUSDT -10.24%距止损-19.5%（止损宽度偏宽、learn轮次复核ATR倍数）；OGNUSDT +11.96%检查止盈执行。震荡市：不一刀切暂停趋势策略（反事实已证伪）。实盘控制开关位置未确认，未擅自改动，留待交易循环执行。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#22b573">日报</span>
         <div class="ev-body"><div class="ev-h"><b>日报已生成 2026-10-13</b><span class="muted">10-13 22:56</span></div><div class='ev-d'>净值 45,710.44（-8.58%）今日 4 笔交易，明细见目标资料库</div></div></div>
@@ -285,8 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>回撤突破8%软预警线</b><span class="muted">10-13 07:47</span></div><div class='ev-d'>权益45797.82 CNY（现金40033.97），较初始50000回撤8.40%，已过8%汇报线、距12%熔断线仍有空间。4/6持仓浮亏：NEARUSDT-156.4、ZECUSDT-98.8、RLCUSDT-73.3、PUMPUSDT-69.7；OGNUSDT+33.8。止损普遍偏宽（RLCUSDT-31%、NEARUSDT-20%），已知问题仍在；本轮不改代码，继续走回测证据链。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>虚拟盘回撤警告：距峰值回撤8.3%</b><span class="muted">10-13 07:47</span></div><div class='ev-d'>净值 45848.64（现金 40033.97，持仓 6），距峰值回撤 8.3%，接近 12% 熔断线；已自动降半仓运行（新开仓风险预算×0.5）。市场状态：trend（ADX=27.1 趋势市），momrot Top3: NEARUSDT/ZECUSDT/OGNUSDT。本轮无新开仓/平仓。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>复盘检查：趋势策略在震荡市持续失血，regime 分类器被刀口值绕过</b><span class="muted">10-13 07:33</span></div><div class='ev-d'>最近约25笔平仓净-3766（dual_ma-1712/atr-1149/keltner-515/meanrevert-351），6只持仓4只24h跌6-13%。BTC日线ADX=27.1刚过25阈值，实盘判trend照常开仓；四层分析判震荡。已提4项调整建议（regime多资产复合指标、环境分歧降仓、keltner复核、RLCUSDT观察），须走回测+门禁后落地，未改代码。详见 goal hidden_files/review-check-20261013-0730.md</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>虚拟盘回撤警告：距峰值回撤8.3%</b><span class="muted">10-13 07:47</span></div><div class='ev-d'>净值 45848.64（现金 40033.97，持仓 6），距峰值回撤 8.3%，接近 12% 熔断线；已自动降半仓运行（新开仓风险预算×0.5）。市场状态：trend（ADX=27.1 趋势市），momrot Top3: NEARUSDT/ZECUSDT/OGNUSDT。本轮无新开仓/平仓。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
