@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-14 01:49（北京时间）· 每5分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-14 01:54（北京时间）· 每5分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -48,6 +48,8 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
 <div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>hourly-learn 01:42 轮：AB-2 门禁 FAIL</b><span class="muted">10-14 01:52</span></div><div class='ev-d'>AB（宏观事件日历±2天跳过新开仓）vs 现行三层熔断 head-to-head：熔断 PF1.31/maxDD15.69% vs AB PF1.30/maxDD16.30%（Δpnl-3693.5），AB-2 FAIL 降级 parked。现行熔断栈仍是最强回撤控制（Z/AA/AB 均倒下）。下一轮排队：AJ 连亏降仓 guard。实盘无新增平仓，28 笔 -3934.47。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>review-check 01:44：连续3笔亏损+回撤8.6%，软层降半仓已自动生效</b><span class="muted">10-14 01:46</span></div><div class='ev-d'>最新3笔复盘全亏损（PUMPUSDT/dual_mom -75.0、ZECUSDT/momrot -122.0、CRCLBUSDT/dualm_a_j -154.5，震荡市中动量/趋势策略反复被磨）。权益45722/50000，回撤8.56%，已触发≥8%软层（新开仓风险×0.5自动执行中），中层10%/硬层12%未触及。4持仓中RLCUSDT(-5.84%)/NEARUSDT(-8.1%)跌幅较大但止损位仍在。结论：风险控制已按设计自动响应，无需人工干预；按10-13反事实研究结论，不建议一刀切暂停趋势策略，任何策略级改动须先走回测+上线门禁。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>整点同步：过去1小时3个实质文件变更</b><span class="muted">10-14 01:20</span></div><div class='ev-d'>00:42-01:15 CST：AA-2（AA逆波动率缩放 vs 现行三层熔断head-to-head）→FAIL，AA降级parked；AE（资金费率过热降仓）优先级由低提为中；AB（宏观事件日历regime过滤）脚本已创建并正在运行中（01:16启动）。实盘无新增平仓，仍28笔累计-3934.48。</div></div></div>
@@ -284,8 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>虚拟盘峰值回撤8.5%（接近8%预警线，12%熔断线）</b><span class="muted">10-13 08:12</span></div><div class='ev-d'>净值 45749.67 CNY，现金 40033.97，持仓 6；市场状态 range（ADX=24.8 震荡市，趋势策略暂停）；已降半仓运行（新开仓风险预算×0.5）；本轮无买入/卖出/止损成交</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>复盘检查 08:00：两持仓跌破止损线待 08:02 轮验证</b><span class="muted">10-13 08:03</span></div><div class='ev-d'>PUMPUSDT 现价 0.00497 跌破止损 0.00530857（-6.4%）、ZECUSDT 现价 1168 跌破止损 1199.58（-2.6%）仍持仓，待 08:02 交易循环确认是否触发止损；账户回撤 -8.3% 在 8% 预警线附近；市场环境震荡，趋势策略持仓为已知错配，regime 研究继续。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>虚拟盘回撤 8.3% 接近 12% 熔断线</b><span class="muted">10-13 08:02</span></div><div class='ev-d'>2026-10-13 08:02 轮次：equity=45848.64，cash=40033.97，持仓 6。峰值回撤 8.3%，已触发降半仓运行（新开仓风险预算×0.5）。市场状态 trend(ADX=27.1)。本轮无新成交。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>复盘检查 08:00：两持仓跌破止损线待 08:02 轮验证</b><span class="muted">10-13 08:03</span></div><div class='ev-d'>PUMPUSDT 现价 0.00497 跌破止损 0.00530857（-6.4%）、ZECUSDT 现价 1168 跌破止损 1199.58（-2.6%）仍持仓，待 08:02 交易循环确认是否触发止损；账户回撤 -8.3% 在 8% 预警线附近；市场环境震荡，趋势策略持仓为已知错配，regime 研究继续。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
