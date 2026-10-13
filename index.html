@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-13 11:29（北京时间）· 每5分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-13 11:34（北京时间）· 每5分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -47,7 +47,11 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="card attn"><div class="card-t">需要你介入 <span class="badge">1</span></div><ul class="needs"><li><span class='dot warn'></span>给 23:00 日报等定时任务开启常开审批（App → 头像 → Upcoming → 任务详情 → 权限设为允许）<span class='muted'> · 10-09 23:28</span></li></ul>
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
-<div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+<div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>虚拟盘净值回撤8.3%</b><span class="muted">10-13 11:32</span></div><div class='ev-d'>11:32交易轮次无成交（equity=45810.46，持仓4个）。峰值回撤8.3%接近8%预警线，系统已降半仓运行；市场状态range震荡市，趋势策略暂停；StoplossGuard冷却中暂停新开仓；连损3笔，新开仓风险预算×0.5。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#22b573">日报</span>
+        <div class="ev-body"><div class="ev-h"><b>复盘检查：连续3止损+弱广度，市场震荡，建议提速regime过滤器研究</b><span class="muted">10-13 11:31</span></div><div class='ev-d'>市场环境震荡（BTC 24h -2.3%，60币池4涨/56跌）。复盘连续3笔止损出场：CRCLBUSDT -154.46（dualma_j）、ZECUSDT -122.00（momrot）、PUMPUSDT -75.01（dual_mom），累计-351.46 CNY。持仓4只：NEARUSDT 24h -9.95%、ONDOUSDT 24h -7.71%为跌幅最大两只，但均有止损价保护（NEAR止损-19.5%、ONDO止损-7.2%），且今日止损单执行正常，无需人工干预。暂不调参（改动须走回测证据链+上线门禁）；实质建议：regime过滤器（震荡市空仓/降仓）研究提速，今天的状态正是其要解决的病根。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>擂台优化：开盘prompt持仓加注仓位/可卖/60%上限</b><span class="muted">10-13 11:28</span></div><div class='ev-d'>engine/competition.py：build_prompt 新增 day 参数，开盘 prompt 持仓逐只标注仓位占比、可卖手数(T+1)、60%上限，与引擎校验同口径；day 为空时旧渲染逐字一致。冒烟+5组断言通过。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>看板刷新发布成功</b><span class="muted">10-13 11:27</span></div><div class='ev-d'>commit b167cd3：index.html 与 quant.html 上传覆盖发布，pinned blob 与基线逐字节一致（md5 8a5e530b…/48f8e95a…）。</div></div></div>
@@ -282,10 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>擂台每小时优化：2处审计可观测性小改</b><span class="muted">10-13 02:02</span></div><div class='ev-d'>健康度全绿（176决策0失败、拒单均为合规拦截、分赛场/备份/lab正常、服务active）。改动：①arena_intraday.py decision记录补动作截断备注（&gt;3动作时记note）；②arena_settle.py推送收据汇总防御性小改（显式收渠道+排序）。AST/import/行为断言/smoke全部通过。无页面变化，未发布。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>quant-dashboard-refresh：刷新数据</b><span class="muted">10-13 01:58</span></div><div class='ev-d'>commit 824f189；index.html/quant.html 浏览器上传链路字节直传，pinned blob md5 与基线逐字节一致，验证通过。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>复盘检查：regime跳过分支可能连带跳过止损检查</b><span class="muted">10-13 01:54</span></div><div class='ev-d'>trader.py 策略循环中，regime跳过（趋势策略且allow_trend=False）的continue会跳过该策略整个逐币种循环，其中包含Chandelier移动止损、+1R保本、SELL_STOP触发检查；循环上方注释称止损检查在上面已对所有持仓策略执行，但代码中并无此前的全局止损循环。当前市场为trend，该分支未触发，止损正常执行（近3天10笔止损），属潜在风险。任何改动须走回测证据链+上线门禁后落地，本轮未动手。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#f5a623">交易</span>
-        <div class="ev-body"><div class="ev-h"><b>虚拟盘买入 ZECUSDT</b><span class="muted">10-13 01:43</span></div><div class='ev-d'>方向=BUY, 价格=1277.33 CNY, 数量=1.0832 (约1384 CNY); 市场状态=trend(ADX=27.1); 轮后权益=46004.76, 现金=40033.97, 持仓=6; 距峰值回撤≈7.96%</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>quant-dashboard-refresh：刷新数据</b><span class="muted">10-13 01:58</span></div><div class='ev-d'>commit 824f189；index.html/quant.html 浏览器上传链路字节直传，pinned blob md5 与基线逐字节一致，验证通过。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
