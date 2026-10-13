@@ -26,10 +26,11 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-13 08:49（北京时间）· 每5分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-13 08:55（北京时间）· 每5分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
-        <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
+        <div class="cur-task">quant-dashboard-refresh：刷新AI量化看板数据</div>
+        <div class="muted">开始于 10-13 08:54</div></div>
 <div class="card"><div class="card-t">🤖 AI量化看板 <span class="muted">· 每5分钟同步</span></div>
         <div class="nums">
           <div><span>净值</span><b>45,749.67</b></div>
@@ -48,6 +49,8 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
 <div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>虚拟盘峰值回撤8.5%</b><span class="muted">10-13 08:52</span></div><div class='ev-d'>峰值回撤8.5%，接近8%预警线（熔断12%），已降半仓运行；市场状态 range，趋势策略暂停；净值45749.67，现金40033.97，持仓6，本轮无成交</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>虚拟盘峰值回撤8.5%接近熔断线，自动降半仓</b><span class="muted">10-13 08:47</span></div><div class='ev-d'>市场状态range(ADX=24.8震荡市，趋势策略暂停)；equity=45749.67，cash=40033.97，持仓6；本轮无成交</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#9aa0aa">系统</span>
         <div class="ev-body"><div class="ev-h"><b>虚拟盘峰值回撤 8.5% 接近熔断线</b><span class="muted">10-13 08:42</span></div><div class='ev-d'>quant-live-trader 08:42 轮次：无买入/卖出/止损成交；市场状态 range（ADX=24.8 震荡市，趋势策略暂停），momrot Top3=STRKUSDT/OGNUSDT/ONDOUSDT；equity=45749.67 cash=40033.97 持仓=6；已降半仓运行（新开仓风险预算×0.5）</div></div></div>
@@ -284,8 +287,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>复盘检查：dual_ma 6连亏、震荡环境趋势策略承压</b><span class="muted">10-12 19:00</span></div><div class='ev-d'>four_layer：环境=震荡（BTC 24h +0.95%，涨46/跌14）。复盘集群：dual_ma 近6笔全亏（HBAR-95/AAVE-260/WLD-329/SUI-263/NEAR-495/AVAX-270，合计约-1711 CNY），与已知盈亏比崩塌（实盘0.22）一致；atr_channel 近8笔5胜3负、末尾4连亏（ATOM -410、CRCLB -392、FIL -239、KAIA -6）。持仓5只：OGN(momrot) 24h -14.47%、浮亏约-5.5%，止损0.0228未触及；RLC(dual_mom) 24h -2.94% 属已知震荡市趋势策略磨损类。建议：加速 regime 过滤器离线验证（已批下一轮方向），优先覆盖 dual_ma/dual_mom/momrot；实盘不动，任何改动走回测门禁。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>完成：18:54 优化轮完成</b><span class="muted">10-12 18:58</span></div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>优化轮：修复管家看板持仓显示</b><span class="muted">10-12 18:58</span></div><div class='ev-d'>export_arena.py 读错路径导致 butler.html 持仓表一直显示暂无持仓，已改为读取 data_butler/butler.json 并取最新收盘价；管家实际持仓 600036/600900 已正常展示，看板已发布（commit 9852826d），pinned blob 校验通过。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>完成：18:54 优化轮完成</b><span class="muted">10-12 18:58</span></div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
