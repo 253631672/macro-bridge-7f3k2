@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-14 21:44（北京时间）· 每5分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-14 21:53（北京时间）· 每5分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -48,6 +48,8 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
 <div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>每小时学习轮次：BC 统计套利可行性检查 → 基础设施缺失 parked</b><span class="muted">10-14 21:49</span></div><div class='ev-d'>学习：加密配对交易 cointegration 框架（ADF+Johansen 选对、z-score 信号、short leg 必须有 futures/shorts）。复盘：已平仓 28 笔累计 −3934.48，无新增。优化：BC 可行性检查 FAIL——实盘为纯现货多头（仅 BUY/SELL/SELL_STOP），配对交易需多空两腿，与 BA 同一阻塞项，合并为衍生品执行基础设施前置项。附加发现：小币种硬止损帽门禁脚本崩溃（sqlite 权限疑因，待下轮核对用户后重跑）。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>BB-2 宏观事件日降仓回测 → FAIL/parked</b><span class="muted">10-14 21:43</span></div><div class='ev-d'>BB-a 硬暂停新开回测裁决：pooled PF 基线1.30→BB臂1.29（ΔPF=-0.01），一致性0.333，最差窗PF0.47，tier=OVERFITTED。窗口后7天被skip信号反事实收益+3.25%（t=8.09显著为正）——事件窗口确是趋势起点，方向错了。按铁律parked，不改src/；StoplossGuard/回撤梯子/连损减仓未动。产物 research/results/bb_macro_20261014.json。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>Track3 atr_channel 正式下线</b><span class="muted">10-14 21:32</span></div><div class='ev-d'>出场端双变体门禁双FAIL：V1紧出场PF0.73(Δ+0.21)/V2跟踪止损PF0.67(Δ+0.15)，基线PF0.52从未过门禁；10个修复方向全灭。config.yaml已移除名单（代码保留，风控层未动）。证据research/results/atr_channel_fix_20261014.json</div></div></div>
@@ -284,8 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>擂台优化：收盘结算 --day 补跑参数上线</b><span class="muted">10-13 20:27</span></div><div class='ev-d'>arena_settle.py 新增 --day YYYY-MM-DD 人工补跑参数（us/loss/org/butler 之后最后一个缺口）；行情窗口放大到 30 天、沪深300 按日期定位 bar；单测 12 项全过、AST/冒烟/回归均通过，账本零写入</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>擂台优化：AI公司结算补跑参数+滞后告警上线</b><span class="muted">10-13 19:57</span></div><div class='ev-d'>org_run.py 新增 --day YYYY-MM-DD 人工补跑参数（与 us/loss/butler 同口径），等待行情滞后超限后改推一次 org-stale-data 告警并给出补跑命令，不再静默漏日；16 项单测+冒烟+回归全过</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>完成：正在刷新AI量化看板数据（quant-dashboard-refresh）</b><span class="muted">10-13 19:42</span></div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>擂台优化：AI公司结算补跑参数+滞后告警上线</b><span class="muted">10-13 19:57</span></div><div class='ev-d'>org_run.py 新增 --day YYYY-MM-DD 人工补跑参数（与 us/loss/butler 同口径），等待行情滞后超限后改推一次 org-stale-data 告警并给出补跑命令，不再静默漏日；16 项单测+冒烟+回归全过</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
