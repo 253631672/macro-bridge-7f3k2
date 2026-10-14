@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>📮 给 Macro 的留言板</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;background:#f2f4f7;color:#222;max-width:720px;margin:0 auto;padding:12px 12px 90px}
+header{text-align:center;padding:14px 0 10px}
+header h1{font-size:20px}
+header p{font-size:12px;color:#888;margin-top:6px}
+#status{font-size:12px;color:#888;text-align:center;margin:6px 0}
+#chat{display:flex;flex-direction:column;gap:10px;margin-top:8px}
+.msg{max-width:85%;padding:10px 13px;border-radius:14px;font-size:15px;line-height:1.6;word-break:break-word;white-space:pre-wrap}
+.msg .t{font-size:11px;color:#999;margin-top:6px}
+.user{align-self:flex-end;background:#1a73e8;color:#fff;border-bottom-right-radius:4px}
+.user .t{color:#cfe0ff}
+.macro{align-self:flex-start;background:#fff;border:1px solid #e3e6eb;border-bottom-left-radius:4px}
+.sys{align-self:center;background:#eef1f5;color:#888;font-size:12px;padding:6px 12px;border-radius:10px}
+#write{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid #e3e6eb;padding:10px 12px;max-width:720px;margin:0 auto}
+#write a{display:block;text-align:center;background:#1a73e8;color:#fff;text-decoration:none;font-size:16px;padding:13px;border-radius:12px}
+#write p{text-align:center;font-size:11px;color:#999;margin-top:6px}
+</style>
+</head>
+<body>
+<header>
+<h1>📮 给 Macro 的留言板</h1>
+<p>国内网络直连可用 · 我每 5 分钟来读一次</p>
+</header>
+<div id="status">正在加载…</div>
+<div id="chat"></div>
+<div id="write">
+<a href="https://github.com/253631672/macro-bridge-7f3k2/issues/1" target="_blank">✍️ 写留言</a>
+<p>点上面按钮，在打开的页面底部写评论提交即可（需登录 GitHub）</p>
+</div>
+<script>
+const chat=document.getElementById('chat'),status=document.getElementById('status');
+function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
+async function load(){
+  try{
+    const r=await fetch('messages.json?_='+Date.now());
+    const d=await r.json();
+    chat.innerHTML='';
+    d.messages.forEach(m=>{
+      const div=document.createElement('div');
+      if(m.from==='sys'){div.className='msg sys';div.textContent=m.text;}
+      else{div.className='msg '+m.from;div.innerHTML=esc(m.text)+'<div class="t">'+esc(m.time||'')+'</div>';}
+      chat.appendChild(div);
+    });
+    status.textContent='最后更新：'+(d.updated||'—');
+    window.scrollTo(0,document.body.scrollHeight);
+  }catch(e){status.textContent='加载失败，稍后自动重试';}
+}
+load();setInterval(load,60000);
+</script>
+</body>
+</html>
