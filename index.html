@@ -26,11 +26,10 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-14 22:43（北京时间）· 每5分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-14 22:48（北京时间）· 每5分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
-        <div class="cur-task">quant-dashboard-refresh 22:39 轮次：重建中</div>
-        <div class="muted">开始于 10-14 22:43</div></div>
+        <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
 <div class="card"><div class="card-t">🤖 AI量化看板 <span class="muted">· 每5分钟同步</span></div>
         <div class="nums">
           <div><span>净值</span><b>45,511.89</b></div>
@@ -48,7 +47,11 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="card attn"><div class="card-t">需要你介入 <span class="badge">1</span></div><ul class="needs"><li><span class='dot warn'></span>给 23:00 日报等定时任务开启常开审批（App → 头像 → Upcoming → 任务详情 → 权限设为允许）<span class='muted'> · 10-09 23:28</span></li></ul>
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
-<div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+<div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>quant-dashboard-refresh 22:39 轮次：发布完成</b><span class="muted">10-14 22:47</span></div><div class='ev-d'>index.html=5b20e10, quant.html=91d8080, pinned blob diff 逐字节一致</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>完成：quant-dashboard-refresh 22:39 轮次：重建中</b><span class="muted">10-14 22:47</span></div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>整点进度检查（22:19）: 1小时内实质变更</b><span class="muted">10-14 22:20</span></div><div class='ev-d'>过去1小时内 quant-crypto 有实质文件变更：① docs/CHANGELOG.md — 2026-10-14 21:35 atr_channel 正式下线（config.yaml 实盘名单移除，Track3 修或砍门禁两变体双 FAIL，PF 0.73/0.67，tier=WEAK；基线 PF 0.52 OVERFITTED）；② docs/learnings.md — BC（配对交易）基础设施可行性检查 FAIL parked（纯现货多头、无空头执行能力），并记录 Track2 小币种硬止损帽门禁初版崩溃（sqlite 权限 640 root:nogroup，疑非 root 运行）；③ research/bb_macro_event_design.md — BB 宏观事件日降仓设计+预注册（五项优化之一）；④ research/wf_gate_atrfix_20261014.py（已出结果 FAIL→下线）+ wf_gate_hardstop_20261014.py / _resume.py（Track2 门禁重跑，checkpoint 22:19 仍在跑，结果文件未生成）。均为研究沙盒/文档层改动，实盘参数未动（仅下线已暂停的 atr_channel）。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>复盘检查：回撤 -8.95% 仍在风控内，暂无调整动作</b><span class="muted">10-14 22:11</span></div><div class='ev-d'>市场震荡（BTC 24h +1.61%，涨42/跌18）。最新权益 45512 CNY，最大回撤 -8.95%（10-14 22:07，历史最低点；初始 49983），距 12% 熔断约 3pt，8.3% 降半仓风控已覆盖。4 只持仓全部浮亏：RLCUSDT -19.14%（止损尚远 14.6%）、OGNUSDT -8.34%（24h -13.26% 单日大跌、无放量，止损 26.8% 外）、NEARUSDT -16.19%（距止损 3.5%）、ONDOUSDT -6.66%（距止损 0.4%，下一轮自动止损触发）。复盘 3 笔（PUMPUSDT/ZECUSDT/CRCLBUSDT）均为 10-13 止损出场，止损机制正常工作，入场逻辑失效的复盘标注留给 learn 轮次研究。不做手动调整，无代码改动。</div></div></div>
@@ -283,10 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>复盘检查：已被证伪的 regime 一刀切暂停仍在实盘生效</b><span class="muted">10-13 20:47</span></div><div class='ev-d'>实盘回撤 -8.37% 已过 8% 软层（新开仓风险预算×0.5）。今日反事实研究已证伪 range 一刀切暂停（dual_ma/dualm_a_j 暂停少赚 2091/2066 CNY），但 trader.py 的 regime=range 暂停仍对 9 个趋势策略生效，与回撤软层叠加。建议移除一刀切暂停（保留 donchian 门禁排队、保留回撤三层风控），改动走门禁验证后落地，本轮次未改代码。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>完成：看板数据刷新中（quant-dashboard-refresh 20:39轮次）</b><span class="muted">10-13 20:40</span></div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>复盘检查：OGNUSDT 24h+26% 浮盈 14% 无止盈保护；近 8 笔 6 止损累计 -321 CNY（震荡磨损，止损正常工作）</b><span class="muted">10-13 20:30</span></div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>完成：擂台优化轮：收盘结算 --day 补跑参数已上线</b><span class="muted">10-13 20:27</span></div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>完成：看板数据刷新中（quant-dashboard-refresh 20:39轮次）</b><span class="muted">10-13 20:40</span></div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
