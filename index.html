@@ -26,11 +26,11 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-14 20:14（北京时间）· 每5分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-14 20:27（北京时间）· 每5分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
-        <div class="cur-task">Track2硬止损帽：预注册完成，36组回测运行中</div>
-        <div class="muted">开始于 10-14 20:01</div></div>
+        <div class="cur-task">Track3 atr_channel 修或砍：预注册已定稿（V1紧出场/V2跟踪止损），walk-forward 门禁回测运行中（9组合/3并行，预计约25分钟）</div>
+        <div class="muted">开始于 10-14 20:18</div></div>
 <div class="card"><div class="card-t">🤖 AI量化看板 <span class="muted">· 每5分钟同步</span></div>
         <div class="nums">
           <div><span>净值</span><b>45,626.64</b></div>
@@ -49,6 +49,12 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
 <div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>Track3 atr_channel 出场端修复门禁回测中</b><span class="muted">10-14 20:18</span></div><div class='ev-d'>预注册 research/atr_channel_fix_design.md；V1=TIGHT_EXIT(EMA30-1.0×ATR出场)/V2=CHANDELIER(跟踪止损close-2.5×ATR)；门禁11项北极星+bootstrap/压力/悲观成交；脚本 research/atr_channel_fix_20261014.py 运行中</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>arena-hourly-opt 19:54：验证Muse阵营落地并发布10页看板</b><span class="muted">10-14 20:17</span></div><div class='ev-d'>验证19:45用户批准的Muse阵营上线+4项盈利优化（AST/撮合断言/风控断言全过）；浏览器上传链路发布10个竞技场页面各独立提交main（pk.html新建），pinned-blob MD5 10/10一致，基线已更新为10页，线上200正常。无用户推送。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>quant-hourly-learn 20:12：风控方法学习 + BB-2 门禁执行中</b><span class="muted">10-14 20:15</span></div><div class='ev-d'>学习风控方法主题（连亏缩仓/分级止盈/drift guard），新增3个低优先级风控候选；复盘28笔无新增；BB-2宏观事件日降仓门禁（21组重跑）运行中，裁决待下轮。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>Track2 小币种硬止损帽：预注册设计完成</b><span class="muted">10-14 20:01</span></div><div class='ev-d'>research/hardstop_cap_design.md 已写（假设/cap=8%/九项门禁/判错条件）；wf_gate_hardstop_20261014.py 后台运行中（6策略×3窗×2臂）。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>Track4 donchian+过滤器A 门禁 FAIL/parked</b><span class="muted">10-14 19:59</span></div><div class='ev-d'>G1-G12 5项FAIL（n=46&lt;50, PF1.25&lt;1.5, bootstrap CI下界&lt;0, 一致性0.33, 最差窗0.48）；tier=WEAK；parked 不碰src/。结果research/results/donchian_filterA_gate_20261014.json</div></div></div>
@@ -281,12 +287,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>擂台优化：管家结算补跑参数上线</b><span class="muted">10-13 18:56</span></div><div class='ev-d'>butler_run.py 新增 --phase settle --day YYYY-MM-DD 人工补跑参数（关闭 18:24 轮 TODO），与 us_arena 同口径；13 项单测全过，账本未动。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>完成：刷新AI量化看板数据（5分钟轮）</b><span class="muted">10-13 18:51</span></div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>quant-hourly-learn 18:42 完成</b><span class="muted">10-13 18:43</span></div><div class='ev-d'>学习:regime过滤器主题,登记新候选S(ATR衰竭跳过,下轮优先离线验证)/T(CHOP三态门禁)/U(放量确认);复盘:28笔无新增,dual_ma仍最差(小样本噪音);优化:无代码改动,不记CHANGELOG</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>擂台优化：管家结算延迟漏日加固</b><span class="muted">10-13 18:27</span></div><div class='ev-d'>butler_run.py 收盘结算接入行情有界等待（15分钟），数据延迟不再静默漏整日结算；仍滞后则告警一次。单测18/18通过，账本零改动。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>擂台优化：prompt 显式卖出持仓规则</b><span class="muted">10-13 17:55</span></div><div class='ev-d'>今日 5 笔 T+1 拒单均为模型对无持仓股票下卖出指令；A 股（engine/competition.py）与美股（us_arena.py）prompt 模板规则句新增「卖出只能针对当前持仓标的」；AST+smoke（含撮合核心断言）全过，页面无变化未发布。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>完成：刷新AI量化看板数据（5分钟轮）</b><span class="muted">10-13 18:51</span></div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
