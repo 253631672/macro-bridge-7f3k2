@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-14 16:59（北京时间）· 每5分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-14 17:04（北京时间）· 每5分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -47,7 +47,9 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="card attn"><div class="card-t">需要你介入 <span class="badge">1</span></div><ul class="needs"><li><span class='dot warn'></span>给 23:00 日报等定时任务开启常开审批（App → 头像 → Upcoming → 任务详情 → 权限设为允许）<span class='muted'> · 10-09 23:28</span></li></ul>
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
-<div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+<div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>复盘检查：回撤 8.6%，软层熔断运行中</b><span class="muted">10-14 17:00</span></div><div class='ev-d'>市场震荡，持仓4只（RLCUSDT/OGNUSDT/NEARUSDT/ONDOUSDT）。峰值回撤8.6%，8%软层已激活：新开仓风险预算×0.5；中层熔断10%、硬层12%尚未触发。亏损集中：dual_ma 6笔0胜-1712、atr_channel -1149、keltner -515，建议按北极星门禁核验三策略是否偏离回测，改动走回测证据链。OGNUSDT持仓-13.35%，止损0.0228宽幅，列入观察。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>arena-hourly-opt 16:54：发现亏钱场今日漏结算，已人工补跑恢复</b><span class="muted">10-14 16:57</span></div><div class='ev-d'>loss-daily 15:12 cron 空跑（2秒结束、无写入）；用 loss_arena.py --day 2026-10-14 补跑，8/8队活跃、19笔成交全filled、nav 8/8；其余赛场健康</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>16:42 学习轮：GitHub新项目主题 + AY相关性敞口上限设计/预注册完成</b><span class="muted">10-14 16:43</span></div><div class='ev-d'>学习：itshenrique09/crypto_trading_bot 的 Max per correlation group=3 为 AY 找到最贴近的外部先例。复盘：live_trades 已平仓仍 28 笔、累计 −3934.48，无新增样本，不改实盘参数。优化：research/ay_corr_design.md 设计+预注册完成（AY-a 组上限式 cap=25% 净值，corr_bar=1d/lookback=60d/rho_cut=0.8/每日重算，meanrevert 排除；与 AW 方向假设正交，AA 为其超集待议），AY-1 回测下一轮执行；不改 src/，不记 CHANGELOG。</div></div></div>
@@ -284,8 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>虚拟盘回撤预警</b><span class="muted">10-13 12:52</span></div><div class='ev-d'>2026-10-13 12:52 轮次：峰值回撤 8.3%（超过8%预警线，接近12%熔断线），已降半仓运行；连续3笔亏损，新开仓风险预算×0.5；市场状态 range（ADX=24.8 震荡市，趋势策略暂停）；本轮无成交；净值 45822.32，现金 42035.69，持仓 4</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#22b573">日报</span>
-        <div class="ev-body"><div class="ev-h"><b>AI策略竞赛看板更新</b><span class="muted">10-13 12:49</span></div><div class='ev-d'>arena.html、rank.html 有实质变化，已上传发布（commit aba034a），远端 pinned blob 与本地 md5 逐字节一致。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#9aa0aa">系统</span>
-        <div class="ev-body"><div class="ev-h"><b>虚拟盘峰值回撤 8.3%，接近 12% 熔断线，已降半仓运行</b><span class="muted">10-13 12:42</span></div><div class='ev-d'>equity=45822.32 cash=42035.69 持仓4只；市场状态range（ADX=24.8震荡市，趋势策略暂停）；连损3笔后新开仓风险预算×0.5；momrot Top3: STRKUSDT/ONDOUSDT/OGNUSDT</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>AI策略竞赛看板更新</b><span class="muted">10-13 12:49</span></div><div class='ev-d'>arena.html、rank.html 有实质变化，已上传发布（commit aba034a），远端 pinned blob 与本地 md5 逐字节一致。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
