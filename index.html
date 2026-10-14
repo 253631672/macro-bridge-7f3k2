@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-14 21:20（北京时间）· 每5分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-14 21:44（北京时间）· 每5分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -47,7 +47,11 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="card attn"><div class="card-t">需要你介入 <span class="badge">1</span></div><ul class="needs"><li><span class='dot warn'></span>给 23:00 日报等定时任务开启常开审批（App → 头像 → Upcoming → 任务详情 → 权限设为允许）<span class='muted'> · 10-09 23:28</span></li></ul>
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
-<div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+<div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>BB-2 宏观事件日降仓回测 → FAIL/parked</b><span class="muted">10-14 21:43</span></div><div class='ev-d'>BB-a 硬暂停新开回测裁决：pooled PF 基线1.30→BB臂1.29（ΔPF=-0.01），一致性0.333，最差窗PF0.47，tier=OVERFITTED。窗口后7天被skip信号反事实收益+3.25%（t=8.09显著为正）——事件窗口确是趋势起点，方向错了。按铁律parked，不改src/；StoplossGuard/回撤梯子/连损减仓未动。产物 research/results/bb_macro_20261014.json。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>Track3 atr_channel 正式下线</b><span class="muted">10-14 21:32</span></div><div class='ev-d'>出场端双变体门禁双FAIL：V1紧出场PF0.73(Δ+0.21)/V2跟踪止损PF0.67(Δ+0.15)，基线PF0.52从未过门禁；10个修复方向全灭。config.yaml已移除名单（代码保留，风控层未动）。证据research/results/atr_channel_fix_20261014.json</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>Track1 range暂停收窄门禁：FAIL，parked</b><span class="muted">10-14 21:14</span></div><div class='ev-d'>dual_ma/dualm_a_j range豁免门禁未过（ΔPF=+0.05&lt;+0.15，pooled PF 0.95&lt;1.3，dual_ma range-only期望为负，dualm_a_j样本n=18&lt;50），tier=WEAK，src/未动；设计文档/结果/学习笔记已沉淀。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>美国节点订阅已发布</b><span class="muted">10-14 21:06</span></div><div class='ev-d'>筛选4个免费源760个节点，保留44个美国出口节点，生成Shadowrocket订阅 https://253631672.github.io/macro-bridge-7f3k2/vpn-us.txt，每日早上自动刷新</div></div></div>
@@ -282,10 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>擂台优化：AI公司结算补跑参数+滞后告警上线</b><span class="muted">10-13 19:57</span></div><div class='ev-d'>org_run.py 新增 --day YYYY-MM-DD 人工补跑参数（与 us/loss/butler 同口径），等待行情滞后超限后改推一次 org-stale-data 告警并给出补跑命令，不再静默漏日；16 项单测+冒烟+回归全过</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>完成：正在刷新AI量化看板数据（quant-dashboard-refresh）</b><span class="muted">10-13 19:42</span></div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>完成：quant-dashboard-refresh：上传链路发布中（index.html/quant.html）</b><span class="muted">10-13 19:35</span></div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>复盘检查：atr_channel 连续亏损</b><span class="muted">10-13 19:30</span></div><div class='ev-d'>atr_channel 近8笔复盘6亏2盈、合计约-1148 CNY（含ATOMUSDT -410、CRCLBUSDT -392两笔大亏）；该策略基线PF 0.71不及格、过滤器方案已证伪淘汰。keltner 近2笔全亏约-515 CNY。建议：启动专项研究评估暂停/降权atr_channel实盘，走回测证据链+上线门禁验证后落地；不重复建议已淘汰的过滤器方案和已证伪的regime一刀切暂停。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>完成：正在刷新AI量化看板数据（quant-dashboard-refresh）</b><span class="muted">10-13 19:42</span></div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
