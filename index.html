@@ -26,11 +26,10 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-14 13:20（北京时间）· 每5分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-14 13:24（北京时间）· 每5分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
-        <div class="cur-task">发布量化看板（13:20 轮次）</div>
-        <div class="muted">开始于 10-14 13:20</div></div>
+        <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
 <div class="card"><div class="card-t">🤖 AI量化看板 <span class="muted">· 每5分钟同步</span></div>
         <div class="nums">
           <div><span>净值</span><b>45,703.67</b></div>
@@ -48,7 +47,9 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="card attn"><div class="card-t">需要你介入 <span class="badge">1</span></div><ul class="needs"><li><span class='dot warn'></span>给 23:00 日报等定时任务开启常开审批（App → 头像 → Upcoming → 任务详情 → 权限设为允许）<span class='muted'> · 10-09 23:28</span></li></ul>
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
-<div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+<div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>完成：发布量化看板（13:20 轮次）</b><span class="muted">10-14 13:22</span></div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>整点同步：过去1小时量化研究有实质变更</b><span class="muted">10-14 13:19</span></div><div class='ev-d'>hourly-learn 轮产出：research/aq_stoptrigger_design.md（止损触发从 wick 语义改为收盘价确认的 mark-price 近似，AQ-1 预注册设计，下一轮执行）、research/ap_fracdiff_20261014.py（分数差分特征 AP-1 回测脚本）、research/capped_backtest.py（新增 trigger 键，冒烟验证通过）、docs/learnings.md 更新。本任务永不向用户发送消息，无实质变更才静默；有变更仅内部沉淀。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>hourly-learn 13:12：AQ 止损触发语义（mark-price 近似）预注册完成</b><span class="muted">10-14 13:15</span></div><div class='ev-d'>主题风控方法；排队执行 AQ：预注册设计 research/aq_stoptrigger_design.md + capped_backtest.py 新增 trigger 键（wick|mark）已冒烟验证；实盘 28 笔无新增样本，未改实盘参数；无 CHANGELOG。</div></div></div>
@@ -285,8 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>完成：AI擂台看门狗：检查服务状态</b><span class="muted">10-13 11:43</span></div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>虚拟盘峰值回撤8.3%</b><span class="muted">10-13 11:37</span></div><div class='ev-d'>交易循环完成 equity=45810.46 cash=42035.69 持仓=4；净值距峰值回撤8.3%（接近12%熔断线），降半仓运行；连续3笔亏损，新开仓风险预算×0.5；市场状态range(ADX=24.8震荡市)趋势策略暂停；止损冷却中暂停新开仓；本轮无成交</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>quant-dashboard-refresh：刷新数据</b><span class="muted">10-13 11:36</span></div><div class='ev-d'>commit f99e789；index.html/quant.html 浏览器上传链路字节直传，pinned blob md5 与基线逐字节一致，验证通过。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>虚拟盘峰值回撤8.3%</b><span class="muted">10-13 11:37</span></div><div class='ev-d'>交易循环完成 equity=45810.46 cash=42035.69 持仓=4；净值距峰值回撤8.3%（接近12%熔断线），降半仓运行；连续3笔亏损，新开仓风险预算×0.5；市场状态range(ADX=24.8震荡市)趋势策略暂停；止损冷却中暂停新开仓；本轮无成交</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
