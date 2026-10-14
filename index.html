@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-14 12:54（北京时间）· 每5分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-14 12:59（北京时间）· 每5分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -47,7 +47,9 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="card attn"><div class="card-t">需要你介入 <span class="badge">1</span></div><ul class="needs"><li><span class='dot warn'></span>给 23:00 日报等定时任务开启常开审批（App → 头像 → Upcoming → 任务详情 → 权限设为允许）<span class='muted'> · 10-09 23:28</span></li></ul>
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
-<div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+<div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>arena-hourly-opt 12:54 轮：修复策略实验室数据健壮性缺陷</b><span class="muted">10-14 12:57</span></div><div class='ev-d'>run_lab 改为逐标的容错拉取+剔除不足60日历史的标的，避免单标失败/截断拖垮全矩阵或污染回测结论；lab_summary_line 空 top 兜底。验证：AST+单元断言+假行情端到端全过。改动 1 文件，账本零写入，无页面变化未发布。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>quant-review-check：三连亏但回撤8.56%风控正常，无新增调整</b><span class="muted">10-14 12:45</span></div><div class='ev-d'>环境震荡；持仓4只正常；近8笔5亏3胜净-543.7，最近3连亏(PUMP/MOM/ZEC/CRCLB，dual_mom/momrot/dualma_j各一笔，均在止损范围内)；权益45721CNY，回撤8.56%（距12%熔断线仍有空间），8.3%降半仓+StoplossGuard冷却已生效；按10-13反事实结论不暂停趋势策略；唯一候选donchian+过滤器A由learn轮次跟进门禁，本轮无新增调整建议。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>arena-hourly-opt 修复公司页持仓陈旧 bug 并发布</b><span class="muted">10-14 12:28</span></div><div class='ev-d'>export_arena.py org_holds 取第一条nav导致公司页持仓长期为空，改为取最新一条；org.html 已重生成并经浏览器上传发布（commit 7b9a040，pinned blob md5 校验通过）</div></div></div>
@@ -284,8 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#22b573">日报</span>
         <div class="ev-body"><div class="ev-h"><b>复盘检查：连续3止损+弱广度，市场震荡，建议提速regime过滤器研究</b><span class="muted">10-13 11:31</span></div><div class='ev-d'>市场环境震荡（BTC 24h -2.3%，60币池4涨/56跌）。复盘连续3笔止损出场：CRCLBUSDT -154.46（dualma_j）、ZECUSDT -122.00（momrot）、PUMPUSDT -75.01（dual_mom），累计-351.46 CNY。持仓4只：NEARUSDT 24h -9.95%、ONDOUSDT 24h -7.71%为跌幅最大两只，但均有止损价保护（NEAR止损-19.5%、ONDO止损-7.2%），且今日止损单执行正常，无需人工干预。暂不调参（改动须走回测证据链+上线门禁）；实质建议：regime过滤器（震荡市空仓/降仓）研究提速，今天的状态正是其要解决的病根。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>擂台优化：开盘prompt持仓加注仓位/可卖/60%上限</b><span class="muted">10-13 11:28</span></div><div class='ev-d'>engine/competition.py：build_prompt 新增 day 参数，开盘 prompt 持仓逐只标注仓位占比、可卖手数(T+1)、60%上限，与引擎校验同口径；day 为空时旧渲染逐字一致。冒烟+5组断言通过。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>看板刷新发布成功</b><span class="muted">10-13 11:27</span></div><div class='ev-d'>commit b167cd3：index.html 与 quant.html 上传覆盖发布，pinned blob 与基线逐字节一致（md5 8a5e530b…/48f8e95a…）。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>擂台优化：开盘prompt持仓加注仓位/可卖/60%上限</b><span class="muted">10-13 11:28</span></div><div class='ev-d'>engine/competition.py：build_prompt 新增 day 参数，开盘 prompt 持仓逐只标注仓位占比、可卖手数(T+1)、60%上限，与引擎校验同口径；day 为空时旧渲染逐字一致。冒烟+5组断言通过。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
