@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-14 17:54（北京时间）· 每5分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-14 17:59（北京时间）· 每5分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -48,6 +48,8 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
 <div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>arena-hourly-opt 17:54 轮：run_marker 覆盖 butler/org/us 三个脚本</b><span class="muted">10-14 17:55</span></div><div class='ev-d'>butler_run.py（butler-morning/patrol/settle）、org_run.py（org-run）、us_arena.py（us-run）接入 arena_common.run_with_marker，补齐全部 5 路 cron 定时脚本的空跑诊断标记；py_compile+沙箱分发测试通过；账本/notify_config 未动</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>量化看板5分钟刷新发布成功</b><span class="muted">10-14 17:32</span></div><div class='ev-d'>upload链路双文件逐个提交：index.html(12a3e9d) + quant.html(fea39673)；commits API双验通过；pinned blob md5与发布基线逐字节一致。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>arena-hourly-opt 17:24 轮：cron 空跑诊断标记上线</b><span class="muted">10-14 17:27</span></div><div class='ev-d'>关闭上轮遗留项：loss-daily 连续两日 worker 侧空跑。arena_common 新增 run_with_marker/write_run_marker 共享 helper；loss_arena.py 与 arena_settle.py 的 __main__ 入口改走标记包装（tag=loss-settle/settle），下次 cron 运行起可区分&#x27;worker 没执行脚本&#x27;与&#x27;脚本中途崩溃&#x27;。3 文件，AST/单测 5 项/smoke 全过，账本零改动。</div></div></div>
@@ -284,8 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>完成：刷新AI量化看板数据</b><span class="muted">10-13 13:06</span></div><div class='ev-d'>13:04 例行刷新：index.html/quant.html 走浏览器上传链路发布（commit 4d2e5f9），pinned blob 与本地基线逐字节一致（diff exit 0）。新增 13:01 复盘事件（趋势策略震荡市连亏，建议加速落地regime过滤器）。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>复盘检查：趋势策略震荡市连续亏损</b><span class="muted">10-13 13:01</span></div><div class='ev-d'>震荡市（BTC 24h -2.3%、上涨4/56）。近30笔：dual_ma 6/6全亏-1711.57、atr_channel 8笔6亏-1148.64、keltner 2/2亏-514.9。今早10:47两笔止损正常触发（PUMP -75.01、ZEC -122.00）。建议加速落地regime过滤器（回测门禁验证后）。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>擂台优化：盘中prompt防重复拒单补强+市价成交声明</b><span class="muted">10-13 12:58</span></div><div class='ev-d'>arena_common.py 两处文案：①防重复区头行补拒因时效（T+1=今日全天不可卖，60%上限=不减仓今日全天不可买）+每轮一次下单机会的机会成本（证据：事件驱动队600276今日3次T+1被拒）；②规则行加市价成交声明（证据：模型误写挂单承接，引擎实际按现价±0.05%滑点立即成交）。AST/行为断言/撮合冒烟全过，数据零写入，13:08盘中轮生效。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>复盘检查：趋势策略震荡市连续亏损</b><span class="muted">10-13 13:01</span></div><div class='ev-d'>震荡市（BTC 24h -2.3%、上涨4/56）。近30笔：dual_ma 6/6全亏-1711.57、atr_channel 8笔6亏-1148.64、keltner 2/2亏-514.9。今早10:47两笔止损正常触发（PUMP -75.01、ZEC -122.00）。建议加速落地regime过滤器（回测门禁验证后）。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
