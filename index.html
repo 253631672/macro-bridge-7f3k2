@@ -26,11 +26,10 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-14 19:16（北京时间）· 每5分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-14 19:19（北京时间）· 每5分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
-        <div class="cur-task">quant-dashboard-refresh: 刷新看板数据</div>
-        <div class="muted">开始于 10-14 19:16</div></div>
+        <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
 <div class="card"><div class="card-t">🤖 AI量化看板 <span class="muted">· 每5分钟同步</span></div>
         <div class="nums">
           <div><span>净值</span><b>45,637.27</b></div>
@@ -49,6 +48,12 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
 <div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>整点同步：19:12 学习轮更新沉淀</b><span class="muted">10-14 19:19</span></div><div class='ev-d'>learnings.md 新增 19:12 三条：GitHub 新项目轮换学习（argus/omnitrader/btc-quant-analysis）；live_trades 仍 28 笔、累计 -3934.48 无新增平仓；BB（宏观事件日降仓）事件日历数据源可行性检查 PASS，排队 BB-1 设计文档+预注册；实盘 n=28&lt;50 参数不动。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>完成：quant-dashboard-refresh: 刷新看板数据</b><span class="muted">10-14 19:18</span></div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#9aa0aa">系统</span>
+        <div class="ev-body"><div class="ev-h"><b>虚拟盘交易轮 19:17：无成交</b><span class="muted">10-14 19:17</span></div><div class='ev-d'>equity=45637.27 cash=42035.69 持仓=4；峰值回撤8.7%接近12%熔断线，降半仓运行（新开仓风险预算×0.5）；连续3笔亏损继续减仓；市场状态range（ADX=21.7震荡市，趋势策略暂停）；momrot Top3: STRKUSDT/ONDOUSDT/OGNUSDT</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>BB事件日历可行性PASS</b><span class="muted">10-14 19:13</span></div><div class='ev-d'>宏观事件日降仓（BB）事件日历数据源可行性检查通过：采用静态curated日历JSON（FOMC/CPI/NFP/PPI/PCE约40个/年）随repo提交，免key免网络。下一轮BB-1做设计文档+预注册。实盘仍28笔-3934.48，无新样本，不改实盘参数。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>arena-hourly-opt 18:54 轮：run_marker 接入最后 3 个 cron 脚本</b><span class="muted">10-14 18:56</span></div><div class='ev-d'>arena_intraday.py（30分钟盘中）/zouwei.py（每日）/awards.py（每周）接入 run_with_marker 启停标记，全 cron 脚本覆盖收官；py_compile+沙箱3组测试PASS；无页面变化未发布。</div></div></div>
@@ -281,12 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>完成：擂台优化轮：健康度检查中</b><span class="muted">10-13 16:30</span></div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>擂台优化：补跑亏钱场/AI公司漏结算+行情等待加固</b><span class="muted">10-13 16:30</span></div><div class='ev-d'>新浪日K延迟致loss-daily/org-daily漏跑今日结算，已补跑（loss 8/8队/AI公司nav 991268）；arena_common新增wait_for_today_data有界等待，loss/org脚本接入，验证全过。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#9aa0aa">系统</span>
-        <div class="ev-body"><div class="ev-h"><b>ai-arena 看门狗：单元文件丢失已恢复、服务重启成功</b><span class="muted">10-13 16:23</span></div><div class='ev-d'>16:23 轮次：/etc/systemd/system/ai-arena.service 不存在（VM 重建导致），从 ~/workspace/goals/ai/hidden_files/ai-arena.service 恢复并 enable；systemctl restart 后 /gate 返回 200，服务正常。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>擂台优化：结算误报告警自动纠正</b><span class="muted">10-13 15:57</span></div><div class='ev-d'>arena_settle.py 新增 send_partial_recovery_note：结算成功时若当日曾推过 settle-partial 误报警，自动补推一条告警解除通知。AST+5用例+engine冒烟全部通过，账本零改动。今日15:10的误报已手动补推解除通知（Bark送达）。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>复盘检查：连续亏损+持仓环境错位</b><span class="muted">10-13 15:30</span></div><div class='ev-d'>最近20笔6胜14负，净-2134.6 CNY；最近3笔连亏(PUMPUSDT-75/ZECUSDT-122/CRCLBUSDT-154)。4个持仓(RLCUSDT-6.47%/OGNUSDT+26.13%/NEARUSDT-9.2%/ONDOUSDT-6.91%)均由momrot/dual_mom在trend环境下买入，当前环境已切震荡(BTC 24h-2.3%，4涨56跌)。复盘连续三笔提示检查买入逻辑。调整方向：把&#x27;趋势环境买入信号在震荡环境后失效&#x27;作为研究题提交学习轮回测验证，不一刀切暂停(10-13研究已证伪)。NEARUSDT-9.2%接近8.3%降半仓线，按既有StoplossGuard规则自动执行，不手动干预。另：15m K线数据延迟30分钟，待排查klines-ingest。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>擂台优化：补跑亏钱场/AI公司漏结算+行情等待加固</b><span class="muted">10-13 16:30</span></div><div class='ev-d'>新浪日K延迟致loss-daily/org-daily漏跑今日结算，已补跑（loss 8/8队/AI公司nav 991268）；arena_common新增wait_for_today_data有界等待，loss/org脚本接入，验证全过。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
