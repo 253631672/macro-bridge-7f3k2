@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-14 08:24（北京时间）· 每5分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-14 08:29（北京时间）· 每5分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -48,6 +48,8 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
 <div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>arena-hourly-opt：修复盘中午休停滞价成交漏洞</b><span class="muted">10-14 08:27</span></div><div class='ev-d'>arena_intraday.py 的 in_session 之前把午盘休市 11:30-13:00 算进交易时段，实盘 75 笔成交按停滞报价执行；已剔除该窗口并验证通过（AST/边界断言/冒烟测试）。页面重建零实质变化，未发布。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>完成：quant-hourly-learn：学习+复盘+优化轮次</b><span class="muted">10-14 08:20</span></div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>整点进度检查：过去1小时实质变更已确认</b><span class="muted">10-14 08:20</span></div><div class='ev-d'>08:15 CST 学习轮：主题「新策略思路」— AdaptiveTrend/H6 中频信号、ATR 动态仓位行业标准、单所价格源致命单点→新增候选 AQ（止损触发价格源）。复盘：已平仓仍 28 笔（累计 −3934.48，无新增平仓），实盘 n=28&lt;50 门禁，实盘参数不动。新增研究脚本 research/wf_gate_baj_20261014.py（熔断+AJ 叠加 vs 现行三层熔断 walk-forward head-to-head 门禁预注册实现），结果尚未产出。候选排队：熔断+AJ head-to-head → regime 过滤器（Hurst 门槛法/合成验证法）→ AN/AO/AP。</div></div></div>
@@ -284,8 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>虚拟盘轮次完成：回撤8.4%近熔断线</b><span class="muted">10-13 10:27</span></div><div class='ev-d'>equity=45798.59 cash=40033.97 持仓=6；峰值回撤8.4%（接近12%熔断），已降半仓（新开仓风险预算×0.5）；市场range/ADX=24.8震荡，趋势策略暂停；本轮无新成交，近成交为10-13 01:12 ZECUSDT BUY</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#9aa0aa">系统</span>
-        <div class="ev-body"><div class="ev-h"><b>实盘风控缺陷：震荡市下趋势策略止损检查被跳过</b><span class="muted">10-13 10:21</span></div><div class='ev-d'>review-check 发现 src/live/trader.py 缺陷：regime=range 时 9 个趋势策略整循环 continue，连带跳过止损/保本/移动止损检查（08:07 CST 起 2+ 小时无止损评估）。ZECUSDT、PUMPUSDT 已跌破各自止损线未触发（预估漏止损约 -119 / -73.5 CNY）。已提 3 行修复建议待验证落地，未直接改实盘代码。回撤 8.37%，其余风控层正常。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>竞技看板发布成功（commit 709779f）</b><span class="muted">10-13 10:11</span></div><div class='ev-d'>10:08 轮：export_arena 重建 9 页，3 页实质变化（arena/rank/butler）经浏览器上传链路发布，pinned blob md5 逐字节一致。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>实盘风控缺陷：震荡市下趋势策略止损检查被跳过</b><span class="muted">10-13 10:21</span></div><div class='ev-d'>review-check 发现 src/live/trader.py 缺陷：regime=range 时 9 个趋势策略整循环 continue，连带跳过止损/保本/移动止损检查（08:07 CST 起 2+ 小时无止损评估）。ZECUSDT、PUMPUSDT 已跌破各自止损线未触发（预估漏止损约 -119 / -73.5 CNY）。已提 3 行修复建议待验证落地，未直接改实盘代码。回撤 8.37%，其余风控层正常。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
