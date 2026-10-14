@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-14 19:49（北京时间）· 每5分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-14 19:54（北京时间）· 每5分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -48,6 +48,10 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
 <div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>虚拟盘 19:52 轮次：无成交</b><span class="muted">10-14 19:52</span></div><div class='ev-d'>equity=45637.27 cash=42035.69 持仓=4（ONDO/NEAR/OGN/RLC）。市场状态range（ADX=21.7），趋势策略暂停；峰值回撤8.7%接近12%熔断线，新开仓风险预算×0.5半仓运行；连续3笔亏损再×0.5。本轮全hold/skip，无买入卖出止损成交。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>完成：19:49 轮次：量化看板刷新发布中</b><span class="muted">10-14 19:51</span></div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>15分钟复盘检查：发现连续亏损与异动持仓</b><span class="muted">10-14 19:46</span></div><div class='ev-d'>震荡市。dual_ma实盘6连亏(-1711)、atr_channel近8笔7亏(-1148)、最新3笔复盘均标记买入逻辑待查；OGNUSDT 24h -19.67%异动持仓。交易循环正常，风控在位。调整建议交learn轮次走回测+门禁，不直接落地。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>整点同步：19:12 学习轮更新沉淀</b><span class="muted">10-14 19:19</span></div><div class='ev-d'>learnings.md 新增 19:12 三条：GitHub 新项目轮换学习（argus/omnitrader/btc-quant-analysis）；live_trades 仍 28 笔、累计 -3934.48 无新增平仓；BB（宏观事件日降仓）事件日历数据源可行性检查 PASS，排队 BB-1 设计文档+预注册；实盘 n=28&lt;50 参数不动。</div></div></div>
@@ -282,10 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>擂台优化：美股场补跑参数上线</b><span class="muted">10-13 17:26</span></div><div class='ev-d'>us_arena.py 新增 --day YYYY-MM-DD 人工补跑参数（关闭上轮TODO）：指定历史交易日、跳过期望日校验与等待；含格式/数据/历史三项合法性校验+已结算幂等跳过；告警文案同步给出补跑命令。6项单测全过，SMOKE OK，账本数据未动。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>复盘检查：近15笔复盘11笔亏损，atr_channel单笔大亏集中</b><span class="muted">10-13 17:15</span></div><div class='ev-d'>四层环境震荡；持仓4只：NEARUSDT -11.39%、ONDOUSDT -7.4%（已触及止损0.4478）、RLCUSDT -5.07%、OGNUSDT +24.31%。最近3笔复盘连续亏损（PUMP dual_mom -75、ZEC momrot -122、CRCLB dualma_j -154）；atr_channel近5笔大亏（ATOM -410、CRCLB -392、FIL -239、TIA -217），id&gt;10累计-1148 CNY最差。组合3日回撤仅-1.9%，未达8.3%降半仓线。建议：atr_channel送learn轮次走门禁复核（不一刀切暂停，证伪已定）；确认ONDOUSDT止损执行情况。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>擂台优化：美股场延迟漏日加固</b><span class="muted">10-13 16:59</span></div><div class='ev-d'>us_arena.py 新增美东交易日预期计算与收盘数据有界等待：stooq 日K延迟时不再以 done 静默跳过导致交易日永久漏记，等待15分钟仍无数据则告警一次后跳过。16项单测全过，冒烟通过，账本零改动。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>完成：擂台优化轮：健康度检查中</b><span class="muted">10-13 16:30</span></div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>复盘检查：近15笔复盘11笔亏损，atr_channel单笔大亏集中</b><span class="muted">10-13 17:15</span></div><div class='ev-d'>四层环境震荡；持仓4只：NEARUSDT -11.39%、ONDOUSDT -7.4%（已触及止损0.4478）、RLCUSDT -5.07%、OGNUSDT +24.31%。最近3笔复盘连续亏损（PUMP dual_mom -75、ZEC momrot -122、CRCLB dualma_j -154）；atr_channel近5笔大亏（ATOM -410、CRCLB -392、FIL -239、TIA -217），id&gt;10累计-1148 CNY最差。组合3日回撤仅-1.9%，未达8.3%降半仓线。建议：atr_channel送learn轮次走门禁复核（不一刀切暂停，证伪已定）；确认ONDOUSDT止损执行情况。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
