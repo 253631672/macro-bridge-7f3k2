@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-14 18:19（北京时间）· 每5分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-14 18:24（北京时间）· 每5分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -47,7 +47,9 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="card attn"><div class="card-t">需要你介入 <span class="badge">1</span></div><ul class="needs"><li><span class='dot warn'></span>给 23:00 日报等定时任务开启常开审批（App → 头像 → Upcoming → 任务详情 → 权限设为允许）<span class='muted'> · 10-09 23:28</span></li></ul>
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
-<div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+<div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>AI量化看板5分钟刷新完成</b><span class="muted">10-14 18:22</span></div><div class='ev-d'>index.html+quant.html 双文件上传覆盖成功，pinned blob md5 与本地基线逐字节一致，commits API 确认提交真实存在（index→fef863c，quant→67f1cba）</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>quant-hourly-learn 18:17 轮：AZ-1 日内连亏熔断回测 FAIL parked</b><span class="muted">10-14 18:18</span></div><div class='ev-d'>学习(风控方法):梯度回撤响应/连亏停摆外部印证/Kelly退役已记learnings.md。复盘:live_trades仍28笔-3934.48无新增。优化:AZ-1按预注册执行,6.5个月仅触发4次,ΔPF+0.02未过门禁,verdict=FAIL tier=WEAK,parked不落地。排队下一项BA。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>arena-hourly-opt 17:54 轮：run_marker 覆盖 butler/org/us 三个脚本</b><span class="muted">10-14 17:55</span></div><div class='ev-d'>butler_run.py（butler-morning/patrol/settle）、org_run.py（org-run）、us_arena.py（us-run）接入 arena_common.run_with_marker，补齐全部 5 路 cron 定时脚本的空跑诊断标记；py_compile+沙箱分发测试通过；账本/notify_config 未动</div></div></div>
@@ -284,8 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>虚拟盘回撤预警：峰值回撤8.3%</b><span class="muted">10-13 13:37</span></div><div class='ev-d'>13:37轮：净值45833.37（距峰值-8.3%，接近12%熔断线），系统已自动降半仓运行（新开仓风险预算×0.5）；连损减仓（连续3笔亏损）继续生效；市场状态range（ADX=24.8震荡市），趋势策略全部暂停；本轮无新开仓、无平仓；持仓4只：RLCUSDT/OGNUSDT/NEARUSDT/ONDOUSDT。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>擂台优化：盘中prompt卖出白名单条款</b><span class="muted">10-13 13:26</span></div><div class='ev-d'>红利收息队12:38幻觉卖出未持有的000001被拒，规则行新增卖出白名单条款（只卖持仓清单股票、手数不超可卖N手），1文件，断言+冒烟+零写入验证通过，13:38轮生效</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>完成：刷新AI量化看板数据</b><span class="muted">10-13 13:06</span></div><div class='ev-d'>13:04 例行刷新：index.html/quant.html 走浏览器上传链路发布（commit 4d2e5f9），pinned blob 与本地基线逐字节一致（diff exit 0）。新增 13:01 复盘事件（趋势策略震荡市连亏，建议加速落地regime过滤器）。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>擂台优化：盘中prompt卖出白名单条款</b><span class="muted">10-13 13:26</span></div><div class='ev-d'>红利收息队12:38幻觉卖出未持有的000001被拒，规则行新增卖出白名单条款（只卖持仓清单股票、手数不超可卖N手），1文件，断言+冒烟+零写入验证通过，13:38轮生效</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
