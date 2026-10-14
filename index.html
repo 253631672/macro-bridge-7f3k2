@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-14 11:19（北京时间）· 每5分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-14 11:24（北京时间）· 每5分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -47,7 +47,9 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="card attn"><div class="card-t">需要你介入 <span class="badge">1</span></div><ul class="needs"><li><span class='dot warn'></span>给 23:00 日报等定时任务开启常开审批（App → 头像 → Upcoming → 任务详情 → 权限设为允许）<span class='muted'> · 10-09 23:28</span></li></ul>
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
-<div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+<div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>整点检查：AN-1门禁四档标签化落地</b><span class="muted">10-14 11:19</span></div><div class='ev-d'>11:19轮次检查：过去1小时实质变更——①research/gate_tiers.py 新增（AN-1）：门禁结论从二元 PASS/FAIL 扩展为 ROBUST/MODERATE/WEAK/OVERFITTED 四档标签，纯报告层、不改门禁数学/阈值/结论，不碰实盘，9条合成断言全过；②docs/learnings.md 追加 10:42优化轮（AN-1落地记）与 11:12学习+复盘轮（风控方法五抓手映射到 AY/AZ/AW/S 组排队项；live_trades 仍28笔平仓累计-3934.48，无新增样本，实盘参数不动）；③docs/CHANGELOG.md 同步。已按推送规则静默沉淀，无用户推送。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>15分钟复盘检查（11:15）：回撤8.5%持仓管理正常，regime=range暂停仍在生效</b><span class="muted">10-14 11:17</span></div><div class='ev-d'>市场震荡；持仓4只全跌但止损管理正常；最新3笔复盘亏损属不同策略、无单策略崩坏；回撤8.52%处8%软层降半仓；发现regime=range一刀切暂停仍在实盘代码生效（与10-13证伪结论存在张力），建议作为RH后续项排进上线门禁后才动实盘；无用户推送。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>量化看板5分钟刷新</b><span class="muted">10-14 11:02</span></div><div class='ev-d'>数据重建+双文件浏览器上传发布完成，pinned blob 全文 diff 与基线一致（index.html 8aa04c47…, quant.html e65945fa…；commit c9a1dfb / b2369ad）</div></div></div>
@@ -284,8 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>擂台优化：上笔复盘补卖出实现盈亏+方向走SIDE_CN</b><span class="muted">10-13 10:58</span></div><div class='ev-d'>arena_common.py：上笔复盘行硬编码方向改走 SIDE_CN 映射（与旧渲染逐字一致）；上笔卖出追加净口径实现盈亏=毛盈亏-费用（与日报同口径），历史无pnl账本自动跳过。AST+4行为断言+smoke回归全过；无页面变化，不发布。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>虚拟盘回撤 8.4% 接近熔断线</b><span class="muted">10-13 10:52</span></div><div class='ev-d'>equity=45775.86，峰值回撤8.4%（接近12%熔断线），已自动降半仓运行；市场状态 range（ADX=24.8 震荡市，趋势策略暂停）；StoplossGuard 冷却中暂停新开仓；持仓4，cash=42035.69</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>修复 regime=range 下趋势策略止损被整体跳过的风控漏洞</b><span class="muted">10-13 10:48</span></div><div class='ev-d'>trader.py 第246-249行：regime=range 时 continue 跳过整个策略循环，止损/保本/移动止损同步被跳过（自10-13 08:07 CST 持续2.5小时+，ZEC/PUMP 已跌破止损线未触发）。改为 regime_paused 标记：止损检查照常执行、仅跳过新开仓。隔离干跑验证：ZEC SELL_STOP @1167.15/-122.00、PUMP @0.005/-75.01 与预测一致，暂停期零新开仓。下个5分钟周期自动按系统规则处理。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>虚拟盘回撤 8.4% 接近熔断线</b><span class="muted">10-13 10:52</span></div><div class='ev-d'>equity=45775.86，峰值回撤8.4%（接近12%熔断线），已自动降半仓运行；市场状态 range（ADX=24.8 震荡市，趋势策略暂停）；StoplossGuard 冷却中暂停新开仓；持仓4，cash=42035.69</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
