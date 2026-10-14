@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-14 16:24（北京时间）· 每5分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-14 16:29（北京时间）· 每5分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -47,7 +47,9 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="card attn"><div class="card-t">需要你介入 <span class="badge">1</span></div><ul class="needs"><li><span class='dot warn'></span>给 23:00 日报等定时任务开启常开审批（App → 头像 → Upcoming → 任务详情 → 权限设为允许）<span class='muted'> · 10-09 23:28</span></li></ul>
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
-<div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+<div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>arena-hourly-opt 16:24 优化轮</b><span class="muted">10-14 16:26</span></div><div class='ev-d'>收官上轮遗留项：butler/daily.py 新增 _warn_no_bar()，execute_open/close_action 四处静默跳过改为 stderr WARN（bars 缺标的不崩溃，但缺 bar 跳过、overnight 未清仓/未买入现可在 cron 日志自证）；账本格式与成交行为零变化。验证：AST 过、3 组 WARN 路径断言全过、engine smoke OK。无页面变化、无发布。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>整点检查：过去1小时量化工程有实质变更（已沉淀）</b><span class="muted">10-14 16:19</span></div><div class='ev-d'>变更：AW-1 组合归一化逆波动定仓回测脚本就绪（预注册已完成，待下一轮执行）；AV 回撤渐进乘数复核 parked（与已证伪候选 Z 重复，走漏教训）；学习轮新增候选 BK（Monte Carlo 稳健性检查）与 BL（市场级 regime 分解报告，BI 待 BL 先行）。实盘仍 28 笔无新增、参数不动。详情见 docs/learnings.md。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>arena-hourly-opt 15:54 轮：空日K同族缺陷收尾 ×2</b><span class="muted">10-14 15:56</span></div><div class='ev-d'>zouwei.py（9:27顶级走位）与 butler_run.py phase_morning（8:30管家早计划）补上 Sina multi() 空标守卫，空标时走 data-fail 告警+跳过而非 IndexError 崩溃；全仓库 8 处 multi() 调用点守卫全覆盖。AST/集成测试/smoke 全过，账本未动。</div></div></div>
@@ -284,8 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>虚拟盘峰值回撤8.3%预警</b><span class="muted">10-13 12:37</span></div><div class='ev-d'>净值45822.32，回撤超8%接近12%熔断线，降半仓运行（新开仓风险预算×0.5）；连续3笔亏损≥3触发连损减仓；市场状态range震荡市，趋势策略暂停</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>quant-dashboard-refresh 定时发布成功</b><span class="muted">10-13 12:31</span></div><div class='ev-d'>index.html/quant.html 数据刷新构建后经浏览器上传链路发布到 main，commit bb0b79c，pinned blob 与基线逐字节一致</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>虚拟盘回撤8.3%接近熔断线，已自动降半仓</b><span class="muted">10-13 12:27</span></div><div class='ev-d'>2026-10-13 12:27轮：本轮无成交；净值45822.32 CNY、现金42035.69、持仓4只；峰值回撤8.3%（触发降半仓：新开仓风险预算×0.5）；连续3笔亏损（新开仓风险预算×0.5）；市场状态range，ADX=24.8震荡市，趋势策略暂停</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>quant-dashboard-refresh 定时发布成功</b><span class="muted">10-13 12:31</span></div><div class='ev-d'>index.html/quant.html 数据刷新构建后经浏览器上传链路发布到 main，commit bb0b79c，pinned blob 与基线逐字节一致</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
