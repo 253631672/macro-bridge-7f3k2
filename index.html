@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-14 16:54（北京时间）· 每5分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-14 16:59（北京时间）· 每5分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -48,6 +48,8 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
 <div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>arena-hourly-opt 16:54：发现亏钱场今日漏结算，已人工补跑恢复</b><span class="muted">10-14 16:57</span></div><div class='ev-d'>loss-daily 15:12 cron 空跑（2秒结束、无写入）；用 loss_arena.py --day 2026-10-14 补跑，8/8队活跃、19笔成交全filled、nav 8/8；其余赛场健康</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>16:42 学习轮：GitHub新项目主题 + AY相关性敞口上限设计/预注册完成</b><span class="muted">10-14 16:43</span></div><div class='ev-d'>学习：itshenrique09/crypto_trading_bot 的 Max per correlation group=3 为 AY 找到最贴近的外部先例。复盘：live_trades 已平仓仍 28 笔、累计 −3934.48，无新增样本，不改实盘参数。优化：research/ay_corr_design.md 设计+预注册完成（AY-a 组上限式 cap=25% 净值，corr_bar=1d/lookback=60d/rho_cut=0.8/每日重算，meanrevert 排除；与 AW 方向假设正交，AA 为其超集待议），AY-1 回测下一轮执行；不改 src/，不记 CHANGELOG。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>arena-hourly-opt 16:24 优化轮</b><span class="muted">10-14 16:26</span></div><div class='ev-d'>收官上轮遗留项：butler/daily.py 新增 _warn_no_bar()，execute_open/close_action 四处静默跳过改为 stderr WARN（bars 缺标的不崩溃，但缺 bar 跳过、overnight 未清仓/未买入现可在 cron 日志自证）；账本格式与成交行为零变化。验证：AST 过、3 组 WARN 路径断言全过、engine smoke OK。无页面变化、无发布。</div></div></div>
@@ -284,8 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#22b573">日报</span>
         <div class="ev-body"><div class="ev-h"><b>AI策略竞赛看板更新</b><span class="muted">10-13 12:49</span></div><div class='ev-d'>arena.html、rank.html 有实质变化，已上传发布（commit aba034a），远端 pinned blob 与本地 md5 逐字节一致。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#9aa0aa">系统</span>
-        <div class="ev-body"><div class="ev-h"><b>虚拟盘峰值回撤 8.3%，接近 12% 熔断线，已降半仓运行</b><span class="muted">10-13 12:42</span></div><div class='ev-d'>equity=45822.32 cash=42035.69 持仓4只；市场状态range（ADX=24.8震荡市，趋势策略暂停）；连损3笔后新开仓风险预算×0.5；momrot Top3: STRKUSDT/ONDOUSDT/OGNUSDT</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>虚拟盘峰值回撤8.3%预警</b><span class="muted">10-13 12:37</span></div><div class='ev-d'>净值45822.32，回撤超8%接近12%熔断线，降半仓运行（新开仓风险预算×0.5）；连续3笔亏损≥3触发连损减仓；市场状态range震荡市，趋势策略暂停</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>虚拟盘峰值回撤 8.3%，接近 12% 熔断线，已降半仓运行</b><span class="muted">10-13 12:42</span></div><div class='ev-d'>equity=45822.32 cash=42035.69 持仓4只；市场状态range（ADX=24.8震荡市，趋势策略暂停）；连损3笔后新开仓风险预算×0.5；momrot Top3: STRKUSDT/ONDOUSDT/OGNUSDT</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
