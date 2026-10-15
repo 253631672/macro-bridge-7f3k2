@@ -26,13 +26,13 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-15 14:54（北京时间）· 每20分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-15 15:14（北京时间）· 每20分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
 <div class="card"><div class="card-t">🤖 AI量化看板 <span class="muted">· 每5分钟同步</span></div>
         <div class="nums">
-          <div><span>净值</span><b>45,446.43</b></div>
+          <div><span>净值</span><b>45,464.47</b></div>
           <div><span>胜率</span><b>26.7%</b></div>
           <div><span>累计盈亏</span><b class="dn">-4252.20</b></div>
           <div><span>今日交易</span><b>2 笔</b></div>
@@ -47,7 +47,9 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="card attn"><div class="card-t">需要你介入 <span class="badge">1</span></div><ul class="needs"><li><span class='dot warn'></span>给 23:00 日报等定时任务开启常开审批（App → 头像 → Upcoming → 任务详情 → 权限设为允许）<span class='muted'> · 10-09 23:28</span></li></ul>
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
-<div class="card"><div class="ev"><span class="ev-tag" style="background:#9aa0aa">系统</span>
+<div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>复盘检查：风控梯子全部生效、无新增调整</b><span class="muted">10-15 15:01</span></div><div class='ev-d'>15:00轮次。BTC −1.79%、2涨58跌、range环境；净值45446（回撤9.07%，8%降半仓生效中）；近5笔连续亏损触发连损减仓×0.5；RLCUSDT/OGNUSDT各−10%/−8%由策略退出管理；数据通道30分钟延迟为阈值边缘偶发，继续观察。无需调整，静默。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#9aa0aa">系统</span>
         <div class="ev-body"><div class="ev-h"><b>复盘检查：5连损触发自动减仓，权益-9.1%逼近熔断线</b><span class="muted">10-15 14:46</span></div><div class='ev-d'>四层分析：BTC 24h -1.79%，涨2家/跌58家，震荡市。最近5笔已平仓全部亏损（CRCLB -154.46、ZEC -122.00、PUMP -75.01、NEAR -209.62、ONDO -108.10），复盘标记需检查买入逻辑。连损减仓规则已自动触发（新开仓风险预算减半）；趋势策略新开仓全停（震荡暂停）。持仓 RLCUSDT 24h -10.0%、OGNUSDT 24h -8.1%，止损很宽（-31%/-33%）仍在位上。权益45446元回撤-9.1%，已过半仓梯子、逼近12%熔断。动量策略入场质量问题由两个并行上线门禁继续验证，本轮不临时改代码。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>整点学习 14:42：新策略思路轮换（多周期共振/情绪入场），无代码改动</b><span class="muted">10-15 14:44</span></div><div class='ev-d'>复盘：30笔平仓无新样本，dual_ma仍最差（-1711.57）；净值45446.43，回撤-9.08%，8%软层生效；持仓2个不变；regime=range趋势策略暂停。学习产出2个设计输入（S-mtfconfirm、S-sentiment）+过拟合陷阱方法论确认，均不改src/。门禁：无新产物，排队BE step2/BO/BN。</div></div></div>
@@ -284,8 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>整点同步：hourly-learn 12:12 轮产出（AO-1 FAIL、AP 预注册）</b><span class="muted">10-14 12:19</span></div><div class='ev-d'>quant-hourly-learn 12:12 轮三项实质产出沉淀到文档，未改实盘代码、无推送：① AO-1 迟滞阈值回测门禁 FAIL（ΔPF=+0.0584&lt;+0.15、最差窗 PF 0.6233&lt;0.8），AO 按预注册 parked、不调参重试；② AP（分数差分特征）完成设计+预注册（d* 仅样本内窗 ADF 估计、冻结全窗，不调参红线），AP-1 回测排队下一轮执行；③ 新增候选 BC（统计套利配对交易）/BD（FP-Growth 胜率模式挖掘），优先级最低不启动。实盘仍 28 笔已平仓（累计 -3934.48），n&lt;50 可信门槛，实盘参数不动。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>复盘检查(12:15)：无新调整方向，降半仓风控生效中</b><span class="muted">10-14 12:15</span></div><div class='ev-d'>震荡市；持仓4只无异动；近期3笔常规止损(PUMP/ZEC/CRCLB)；近7日28笔共-3934CNY，失血集中dual_ma/atr_channel；回撤-8.53%已触发8.3%降半仓风控+StoplossGuard。证伪方向(震荡一刀切暂停、keltner/atr过滤器)不再建议。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>完成：正在刷新量化看板数据并发布 index.html</b><span class="muted">10-14 11:58</span></div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>复盘检查(12:15)：无新调整方向，降半仓风控生效中</b><span class="muted">10-14 12:15</span></div><div class='ev-d'>震荡市；持仓4只无异动；近期3笔常规止损(PUMP/ZEC/CRCLB)；近7日28笔共-3934CNY，失血集中dual_ma/atr_channel；回撤-8.53%已触发8.3%降半仓风控+StoplossGuard。证伪方向(震荡一刀切暂停、keltner/atr过滤器)不再建议。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
