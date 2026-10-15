@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-15 14:34（北京时间）· 每20分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-15 14:54（北京时间）· 每20分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -47,7 +47,13 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="card attn"><div class="card-t">需要你介入 <span class="badge">1</span></div><ul class="needs"><li><span class='dot warn'></span>给 23:00 日报等定时任务开启常开审批（App → 头像 → Upcoming → 任务详情 → 权限设为允许）<span class='muted'> · 10-09 23:28</span></li></ul>
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
-<div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+<div class="card"><div class="ev"><span class="ev-tag" style="background:#9aa0aa">系统</span>
+        <div class="ev-body"><div class="ev-h"><b>复盘检查：5连损触发自动减仓，权益-9.1%逼近熔断线</b><span class="muted">10-15 14:46</span></div><div class='ev-d'>四层分析：BTC 24h -1.79%，涨2家/跌58家，震荡市。最近5笔已平仓全部亏损（CRCLB -154.46、ZEC -122.00、PUMP -75.01、NEAR -209.62、ONDO -108.10），复盘标记需检查买入逻辑。连损减仓规则已自动触发（新开仓风险预算减半）；趋势策略新开仓全停（震荡暂停）。持仓 RLCUSDT 24h -10.0%、OGNUSDT 24h -8.1%，止损很宽（-31%/-33%）仍在位上。权益45446元回撤-9.1%，已过半仓梯子、逼近12%熔断。动量策略入场质量问题由两个并行上线门禁继续验证，本轮不临时改代码。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>整点学习 14:42：新策略思路轮换（多周期共振/情绪入场），无代码改动</b><span class="muted">10-15 14:44</span></div><div class='ev-d'>复盘：30笔平仓无新样本，dual_ma仍最差（-1711.57）；净值45446.43，回撤-9.08%，8%软层生效；持仓2个不变；regime=range趋势策略暂停。学习产出2个设计输入（S-mtfconfirm、S-sentiment）+过拟合陷阱方法论确认，均不改src/。门禁：无新产物，排队BE step2/BO/BN。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#f5a623">交易</span>
+        <div class="ev-body"><div class="ev-h"><b>交易循环 14:42 轮（无成交）</b><span class="muted">10-15 14:42</span></div><div class='ev-d'>净值45446.43 CNY，现金44212.35；持仓2笔：RLCUSDT(dual_mom)、OGNUSDT(momrot)。峰值回撤9.1%接近12%熔断线，降半仓运行（新开仓风险预算×0.5）；连续5笔亏损，连损减仓系数×0.5。市场状态range（ADX=19.2震荡市，趋势策略暂停）；momrot Top3: OGNUSDT/ONDOUSDT/STRKUSDT。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>review-check 14:30：5 连损 + 双持仓浮亏，dual_mom/momrot 买入逻辑被复盘点名</b><span class="muted">10-15 14:30</span></div><div class='ev-d'>市场：BTC 24h -1.79%，上涨2/下跌58家，regime=range（震荡）。最近完成5笔连续亏损（ONDOUSDT dual_mom -108.1、NEARUSDT momrot -209.6、PUMPUSDT dual_mom -75.0、ZECUSDT momrot -122.0、CRCLBUSDT dualma_j -154.5，合计约 -669 CNY）。trade_reviews 最新3条点名 dual_mom/momrot「需检查买入逻辑是否失效」——恰为当前唯二持仓所属策略：RLCUSDT(dual_mom,1.0351建仓,现约0.93,持仓5天)、OGNUSDT(momrot,0.0340建仓,现-8.1%,持仓4天)。风控链条正常（StoplossGuard/回撤梯子/暂停均在）；live trader 仍在 regime=range 下暂停趋势策略新开仓，与 10-13 反事实结论（该暂停在样本外分别对 dual_ma/dualma_j 少赚 2091/2066 CNY）相悖，建议 learn 轮次经门禁后移除一刀切暂停（不直接落地）。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>虚拟盘交易循环 14:12 轮次（无成交）</b><span class="muted">10-15 14:12</span></div><div class='ev-d'>equity=45446.43 cash=44212.35 持仓=2；峰值回撤9.1%接近熔断线，新开仓风险预算×0.5；连损减仓生效（连续5笔亏损）；市场range（ADX=19.2震荡市，趋势策略暂停）；momrot Top3=OGNUSDT/STRKUSDT/ONDOUSDT。</div></div></div>
@@ -280,12 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>复盘检查(12:15)：无新调整方向，降半仓风控生效中</b><span class="muted">10-14 12:15</span></div><div class='ev-d'>震荡市；持仓4只无异动；近期3笔常规止损(PUMP/ZEC/CRCLB)；近7日28笔共-3934CNY，失血集中dual_ma/atr_channel；回撤-8.53%已触发8.3%降半仓风控+StoplossGuard。证伪方向(震荡一刀切暂停、keltner/atr过滤器)不再建议。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>完成：正在刷新量化看板数据并发布 index.html</b><span class="muted">10-14 11:58</span></div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>AO-1 迟滞阈值回测证伪</b><span class="muted">10-14 11:46</span></div><div class='ev-d'>dual_ma(10,30,1h) 迟滞带 h=0.003 vs 零线交叉：pooled PF 1.1536→1.2120，ΔPF=+0.0584 未过+0.15 门禁线，最差窗 PF 0.62&lt;0.8；交易数-27%（5218→3826）方向对但幅度不够。AO parked，不调参重试。排队下一项 AP（分数差分特征）。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>复盘检查：最近3笔平仓连续亏损，回撤8.52%已过降半仓线</b><span class="muted">10-14 11:31</span></div><div class='ev-d'>持仓浮亏：RLCUSDT -13%(24h -7.04%)、NEARUSDT -12.4%；最近3笔平仓 PUMPUSDT -9.0%、ZECUSDT -8.6%、CRCLBUSDT -2.2% 全部亏损；总回撤8.52%已过8.3%降半仓线。建议：dual_mom专项复盘、复核RLCUSDT宽止损（止损距均价30.9%），改动须走回测门禁后才落地；实盘照常跑。仅本地记录，不发布。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>整点检查：AN-1门禁四档标签化落地</b><span class="muted">10-14 11:19</span></div><div class='ev-d'>11:19轮次检查：过去1小时实质变更——①research/gate_tiers.py 新增（AN-1）：门禁结论从二元 PASS/FAIL 扩展为 ROBUST/MODERATE/WEAK/OVERFITTED 四档标签，纯报告层、不改门禁数学/阈值/结论，不碰实盘，9条合成断言全过；②docs/learnings.md 追加 10:42优化轮（AN-1落地记）与 11:12学习+复盘轮（风控方法五抓手映射到 AY/AZ/AW/S 组排队项；live_trades 仍28笔平仓累计-3934.48，无新增样本，实盘参数不动）；③docs/CHANGELOG.md 同步。已按推送规则静默沉淀，无用户推送。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>完成：正在刷新量化看板数据并发布 index.html</b><span class="muted">10-14 11:58</span></div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
