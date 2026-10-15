@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-15 21:34（北京时间）· 每20分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-15 21:54（北京时间）· 每20分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -48,6 +48,10 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
 <div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>quant-hourly-learn 21:42 轮次</b><span class="muted">10-15 21:44</span></div><div class='ev-d'>主题=市场分析：BloFin regime 仪表盘 + 衍生品信号层级，新增 4 个设计输入 G-regime5/G-fundfr/G-oifund/G-feathier（预注册前材料，不改 src/）；live_trades 仍 0 笔，range regime 下系统按设计暂停开仓，无异常；src 一行未动。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>quant-live-trader 21:42 轮次</b><span class="muted">10-15 21:42</span></div><div class='ev-d'>市场状态 range (ADX=19.2 震荡市，趋势策略暂停)；momrot Top3: STRKUSDT/OGNUSDT/ONDOUSDT；本轮无成交；equity=1,000,000.00 cash=1,000,000.00 持仓=0</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>整点同步：过去1小时有实质变更</b><span class="muted">10-15 21:20</span></div><div class='ev-d'>quant-crypto 过去1小时变更：① BQ +1R 保本移除门禁 FAIL（WEAK）→ parked（ΔPF=+0.184 未过门禁，保本移除配对反事实 −513/笔，保留保本）；② 学习轮两篇新笔记（低相关组合/funding carry 衰减、风险预算级联/ATR 仓位/持仓时间衰减止损），新增设计输入 G-funddecay/G-corr70/G-drift15/G-bh、G-corrhedge/G-atrsize/G-timedecay；③ 重置后状态确认：live_trades=0、equity=¥1,000,000、range regime 下趋势策略按设计暂停开仓，一切正常。src/ 未动，无 GitHub 写入。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>GitHub 留言板退役</b><span class="muted">10-15 21:04</span></div><div class='ev-d'>用户经微信下令：微信通道已打通，留言板用不到了。Issue #1 发告别评论并关闭归档，mailbox-poll 定时任务删除，PAT 等文件归档保留。此后微信为唯一直接对话通道。</div></div></div>
@@ -282,10 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>quant-hourly-sync 整点检查（17:19）</b><span class="muted">10-14 17:19</span></div><div class='ev-d'>过去1小时内 quant-crypto 有实质变更：docs/learnings.md 新增 16:42/17:15 两轮学习+复盘+优化轮次；research/ 新增 AY 相关性敞口上限设计文档（ay_corr_design.md）、AY-1 回测脚本（ay_corr_20261014.py，本轮执行中）、capped_backtest.py。实盘仍 28 笔、累计 −3934.48，无新增平仓，无实盘参数改动。按 2026-10-14 规则无推送，仅沉淀。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>复盘检查：回撤 8.6%，软层熔断运行中</b><span class="muted">10-14 17:00</span></div><div class='ev-d'>市场震荡，持仓4只（RLCUSDT/OGNUSDT/NEARUSDT/ONDOUSDT）。峰值回撤8.6%，8%软层已激活：新开仓风险预算×0.5；中层熔断10%、硬层12%尚未触发。亏损集中：dual_ma 6笔0胜-1712、atr_channel -1149、keltner -515，建议按北极星门禁核验三策略是否偏离回测，改动走回测证据链。OGNUSDT持仓-13.35%，止损0.0228宽幅，列入观察。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>arena-hourly-opt 16:54：发现亏钱场今日漏结算，已人工补跑恢复</b><span class="muted">10-14 16:57</span></div><div class='ev-d'>loss-daily 15:12 cron 空跑（2秒结束、无写入）；用 loss_arena.py --day 2026-10-14 补跑，8/8队活跃、19笔成交全filled、nav 8/8；其余赛场健康</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>16:42 学习轮：GitHub新项目主题 + AY相关性敞口上限设计/预注册完成</b><span class="muted">10-14 16:43</span></div><div class='ev-d'>学习：itshenrique09/crypto_trading_bot 的 Max per correlation group=3 为 AY 找到最贴近的外部先例。复盘：live_trades 已平仓仍 28 笔、累计 −3934.48，无新增样本，不改实盘参数。优化：research/ay_corr_design.md 设计+预注册完成（AY-a 组上限式 cap=25% 净值，corr_bar=1d/lookback=60d/rho_cut=0.8/每日重算，meanrevert 排除；与 AW 方向假设正交，AA 为其超集待议），AY-1 回测下一轮执行；不改 src/，不记 CHANGELOG。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>复盘检查：回撤 8.6%，软层熔断运行中</b><span class="muted">10-14 17:00</span></div><div class='ev-d'>市场震荡，持仓4只（RLCUSDT/OGNUSDT/NEARUSDT/ONDOUSDT）。峰值回撤8.6%，8%软层已激活：新开仓风险预算×0.5；中层熔断10%、硬层12%尚未触发。亏损集中：dual_ma 6笔0胜-1712、atr_channel -1149、keltner -515，建议按北极星门禁核验三策略是否偏离回测，改动走回测证据链。OGNUSDT持仓-13.35%，止损0.0228宽幅，列入观察。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
