@@ -26,13 +26,13 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-15 10:54（北京时间）· 每20分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-15 11:14（北京时间）· 每20分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
 <div class="card"><div class="card-t">🤖 AI量化看板 <span class="muted">· 每5分钟同步</span></div>
         <div class="nums">
-          <div><span>净值</span><b>45,484.41</b></div>
+          <div><span>净值</span><b>45,483.48</b></div>
           <div><span>胜率</span><b>26.7%</b></div>
           <div><span>累计盈亏</span><b class="dn">-4252.20</b></div>
           <div><span>今日交易</span><b>2 笔</b></div>
@@ -48,6 +48,8 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
 <div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>quant-review-check：近12笔复盘9亏（动量系集中）+2只在途持仓浮亏</b><span class="muted">10-15 11:00</span></div><div class='ev-d'>市场震荡、上涨2家下跌58家。最近5笔复盘全亏：NEARUSDT/momrot -18.5%、TIAUSDT/atr_channel -11.2%、ZECUSDT/momrot -8.6%、ONDOUSDT/dual_mom -7.7%、PUMPUSDT/dual_mom -9.0%。在途RLCUSDT -6.81%、OGNUSDT -8.26%（均有止损兜底）。建议对momrot近3笔大亏做卖出逻辑审查、走回测证据链后再决定是否调参；不建议一刀切暂停趋势新开仓（10-13反事实已证伪）；健康检查正常、P队权益49966.6，本轮不做实盘改动。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>复盘检查：5连亏+回撤9%，风控自动降半仓运行</b><span class="muted">10-15 10:32</span></div><div class='ev-d'>近5笔已平仓全亏（ONDO/NEAR/PUMP/ZEC/CRCLB），触发连损减仓×0.5；净值45484，回撤9.0%激活8%软层，新开仓风险预算双重减半。止损正常退出（NEAR/ONDO今晨止损离场）；regime=range下9个趋势策略只禁新开仓；持仓RLC/OGN浮亏但未触止损。无新证据，不提新方向。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>复盘检查：净值回撤 -9.06%，8% 软层自动降半仓运行中</b><span class="muted">10-15 10:01</span></div><div class='ev-d'>近8笔平仓6亏2盈；2持仓均绿转红但未到止损（RLCUSDT dual_mom 入场1.0351、24h -5.58%；OGNUSDT momrot 入场0.034、24h -10.58%）；熔断线10%/12%未触发，新开仓风险预算已按代码自动减半</div></div></div>
@@ -284,8 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#f5a623">交易</span>
         <div class="ev-body"><div class="ev-h"><b>虚拟盘交易轮次：无成交</b><span class="muted">10-14 09:17</span></div><div class='ev-d'>峰值回撤8.5%接近熔断线，降半仓运行；连续3笔亏损≥3减仓；市场状态range（ADX=21.7），趋势策略暂停；equity=45717.41 cash=42035.69 持仓=4</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#22b573">日报</span>
-        <div class="ev-body"><div class="ev-h"><b>muse-AI策略竞赛看板发布成功</b><span class="muted">10-14 09:12</span></div><div class='ev-d'>09:08 轮次：arena.html、loss.html、company.html、backtest.html、org.html 5 个页面有实质变化（10-13 收盘数据/成交），走浏览器上传链路发布，commit d1a1827b3f514501e837399aae161d32174927d2，pinned blob 逐字节校验一致。us.html、rank.html、butler.html、zouwei.html 无变化。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>arena-hourly-opt：修复盘中午休停滞价成交漏洞</b><span class="muted">10-14 08:27</span></div><div class='ev-d'>arena_intraday.py 的 in_session 之前把午盘休市 11:30-13:00 算进交易时段，实盘 75 笔成交按停滞报价执行；已剔除该窗口并验证通过（AST/边界断言/冒烟测试）。页面重建零实质变化，未发布。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>muse-AI策略竞赛看板发布成功</b><span class="muted">10-14 09:12</span></div><div class='ev-d'>09:08 轮次：arena.html、loss.html、company.html、backtest.html、org.html 5 个页面有实质变化（10-13 收盘数据/成交），走浏览器上传链路发布，commit d1a1827b3f514501e837399aae161d32174927d2，pinned blob 逐字节校验一致。us.html、rank.html、butler.html、zouwei.html 无变化。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
