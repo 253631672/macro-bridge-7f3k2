@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-15 11:34（北京时间）· 每20分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-15 11:54（北京时间）· 每20分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -47,7 +47,9 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="card attn"><div class="card-t">需要你介入 <span class="badge">1</span></div><ul class="needs"><li><span class='dot warn'></span>给 23:00 日报等定时任务开启常开审批（App → 头像 → Upcoming → 任务详情 → 权限设为允许）<span class='muted'> · 10-09 23:28</span></li></ul>
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
-<div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+<div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>完成：arena_intraday: 运行盘中交易脚本</b><span class="muted">10-15 11:39</span></div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>复盘检查：5连亏，自动风控已接管（风险预算×0.25）</b><span class="muted">10-15 11:31</span></div><div class='ev-d'>胜率26.7%(8/30)低于35-60%健康区间；最近15笔13亏。回撤8.99%≥8%软层+连损减仓5≥3双层触发，新开仓风险预算×0.25，持仓仅RLCUSDT/OGNUSDT两笔小仓。动量策略(dual_mom/momrot)在震荡市连续失血（-18.5%/-8.6%/-7.7%/-9.0%），入场质量优化已有两项门禁在跑，不临动策略逻辑。15m K线约落后半小时，温和延迟不阻塞。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>review-check: 回撤 -9.0% 逼近中层10%暂停线</b><span class="muted">10-15 11:16</span></div><div class='ev-d'>11:15 复盘检查：权益45483 CNY/峰值49983，回撤-9.0%，软层8%已触发（新开仓风险预算×0.5）+连损减仓生效中；距中层10%（暂停新开仓）仅约1个百分点。持仓2只均浮亏（RLCUSDT/OGNUSDT），市场breadth 2涨58跌。风控梯子自动运行，无需手动干预；观察项已记learn backlog（NEARUSDT单笔-18.5%止损宽度复核）。</div></div></div>
@@ -284,8 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>竞技场看板更新（arena.html、rank.html）</b><span class="muted">10-14 09:42</span></div><div class='ev-d'>export_arena.py 重建 9 页，仅 arena.html、rank.html 有实质变化；经浏览器上传链路发布到 macro-bridge-7f3k2 main 分支，commits API 确认 hash 336bd4d（内容提交 1062228），pinned blob md5 与本地逐字节一致。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>复盘检查：atr_channel 策略连续亏损</b><span class="muted">10-14 09:31</span></div><div class='ev-d'>最近15笔复盘中atr_channel占8笔、累计约-1148CNY（最近8笔7亏）；建议learn轮次按回测门禁做复核/淘汰评估，实盘暂不动。环境震荡，持仓4只，RLCUSDT 24h -5.5%列观察。日志见 goals/crypto-ai-quant-trading-system/hidden_files/review-check-20261014-0930.md</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>整点检查：08:42 RH-1 研究、09:13 学习轮次完成</b><span class="muted">10-14 09:19</span></div><div class='ev-d'>08:42 轮：Hurst(200,R/S) 按标的制度过滤器 head-to-head(RH-1)证伪——删除 457/827 笔(55%)反而 pooled PF 1.16→0.84，删除入场合计 PnL +42907（删掉少赚），按预注册判错条件 RH parked，不调参、不改产品代码、不记 CHANGELOG。09:13 轮：学习波动率目标头寸管理（回撤渐进乘数 AV、逆波动组合权重 AW 排队研究项，须回测证据链才落地）。实盘已平仓仍 28 笔（累计 −3934.48），无新增平仓，实盘参数不动。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>复盘检查：atr_channel 策略连续亏损</b><span class="muted">10-14 09:31</span></div><div class='ev-d'>最近15笔复盘中atr_channel占8笔、累计约-1148CNY（最近8笔7亏）；建议learn轮次按回测门禁做复核/淘汰评估，实盘暂不动。环境震荡，持仓4只，RLCUSDT 24h -5.5%列观察。日志见 goals/crypto-ai-quant-trading-system/hidden_files/review-check-20261014-0930.md</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
