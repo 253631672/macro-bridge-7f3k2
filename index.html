@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-15 21:14（北京时间）· 每20分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-15 21:34（北京时间）· 每20分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -47,7 +47,9 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="card attn"><div class="card-t">需要你介入 <span class="badge">1</span></div><ul class="needs"><li><span class='dot warn'></span>给 23:00 日报等定时任务开启常开审批（App → 头像 → Upcoming → 任务详情 → 权限设为允许）<span class='muted'> · 10-09 23:28</span></li></ul>
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
-<div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+<div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>整点同步：过去1小时有实质变更</b><span class="muted">10-15 21:20</span></div><div class='ev-d'>quant-crypto 过去1小时变更：① BQ +1R 保本移除门禁 FAIL（WEAK）→ parked（ΔPF=+0.184 未过门禁，保本移除配对反事实 −513/笔，保留保本）；② 学习轮两篇新笔记（低相关组合/funding carry 衰减、风险预算级联/ATR 仓位/持仓时间衰减止损），新增设计输入 G-funddecay/G-corr70/G-drift15/G-bh、G-corrhedge/G-atrsize/G-timedecay；③ 重置后状态确认：live_trades=0、equity=¥1,000,000、range regime 下趋势策略按设计暂停开仓，一切正常。src/ 未动，无 GitHub 写入。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>GitHub 留言板退役</b><span class="muted">10-15 21:04</span></div><div class='ev-d'>用户经微信下令：微信通道已打通，留言板用不到了。Issue #1 发告别评论并关闭归档，mailbox-poll 定时任务删除，PAT 等文件归档保留。此后微信为唯一直接对话通道。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>微信直连通道上线</b><span class="muted">10-15 21:01</span></div><div class='ev-d'>用户微信经腾讯 ClawBot 插件（iLink）扫码绑定成功；常驻中继 wechat-relay 已启动（systemd），双向收发+「正在输入」提示均验证通过；每分钟收件箱检查任务 wechat-inbox-watch 已挂载。用户现可在微信直接对话。</div></div></div>
@@ -284,8 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>arena-hourly-opt 16:54：发现亏钱场今日漏结算，已人工补跑恢复</b><span class="muted">10-14 16:57</span></div><div class='ev-d'>loss-daily 15:12 cron 空跑（2秒结束、无写入）；用 loss_arena.py --day 2026-10-14 补跑，8/8队活跃、19笔成交全filled、nav 8/8；其余赛场健康</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>16:42 学习轮：GitHub新项目主题 + AY相关性敞口上限设计/预注册完成</b><span class="muted">10-14 16:43</span></div><div class='ev-d'>学习：itshenrique09/crypto_trading_bot 的 Max per correlation group=3 为 AY 找到最贴近的外部先例。复盘：live_trades 已平仓仍 28 笔、累计 −3934.48，无新增样本，不改实盘参数。优化：research/ay_corr_design.md 设计+预注册完成（AY-a 组上限式 cap=25% 净值，corr_bar=1d/lookback=60d/rho_cut=0.8/每日重算，meanrevert 排除；与 AW 方向假设正交，AA 为其超集待议），AY-1 回测下一轮执行；不改 src/，不记 CHANGELOG。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>arena-hourly-opt 16:24 优化轮</b><span class="muted">10-14 16:26</span></div><div class='ev-d'>收官上轮遗留项：butler/daily.py 新增 _warn_no_bar()，execute_open/close_action 四处静默跳过改为 stderr WARN（bars 缺标的不崩溃，但缺 bar 跳过、overnight 未清仓/未买入现可在 cron 日志自证）；账本格式与成交行为零变化。验证：AST 过、3 组 WARN 路径断言全过、engine smoke OK。无页面变化、无发布。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>16:42 学习轮：GitHub新项目主题 + AY相关性敞口上限设计/预注册完成</b><span class="muted">10-14 16:43</span></div><div class='ev-d'>学习：itshenrique09/crypto_trading_bot 的 Max per correlation group=3 为 AY 找到最贴近的外部先例。复盘：live_trades 已平仓仍 28 笔、累计 −3934.48，无新增样本，不改实盘参数。优化：research/ay_corr_design.md 设计+预注册完成（AY-a 组上限式 cap=25% 净值，corr_bar=1d/lookback=60d/rho_cut=0.8/每日重算，meanrevert 排除；与 AW 方向假设正交，AA 为其超集待议），AY-1 回测下一轮执行；不改 src/，不记 CHANGELOG。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
