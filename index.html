@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-15 14:14（北京时间）· 每20分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-15 14:34（北京时间）· 每20分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -48,6 +48,8 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
 <div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>review-check 14:30：5 连损 + 双持仓浮亏，dual_mom/momrot 买入逻辑被复盘点名</b><span class="muted">10-15 14:30</span></div><div class='ev-d'>市场：BTC 24h -1.79%，上涨2/下跌58家，regime=range（震荡）。最近完成5笔连续亏损（ONDOUSDT dual_mom -108.1、NEARUSDT momrot -209.6、PUMPUSDT dual_mom -75.0、ZECUSDT momrot -122.0、CRCLBUSDT dualma_j -154.5，合计约 -669 CNY）。trade_reviews 最新3条点名 dual_mom/momrot「需检查买入逻辑是否失效」——恰为当前唯二持仓所属策略：RLCUSDT(dual_mom,1.0351建仓,现约0.93,持仓5天)、OGNUSDT(momrot,0.0340建仓,现-8.1%,持仓4天)。风控链条正常（StoplossGuard/回撤梯子/暂停均在）；live trader 仍在 regime=range 下暂停趋势策略新开仓，与 10-13 反事实结论（该暂停在样本外分别对 dual_ma/dualma_j 少赚 2091/2066 CNY）相悖，建议 learn 轮次经门禁后移除一刀切暂停（不直接落地）。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>虚拟盘交易循环 14:12 轮次（无成交）</b><span class="muted">10-15 14:12</span></div><div class='ev-d'>equity=45446.43 cash=44212.35 持仓=2；峰值回撤9.1%接近熔断线，新开仓风险预算×0.5；连损减仓生效（连续5笔亏损）；市场range（ADX=19.2震荡市，趋势策略暂停）；momrot Top3=OGNUSDT/STRKUSDT/ONDOUSDT。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>整点检查：过去1小时有学习笔记新增</b><span class="muted">10-15 13:19</span></div><div class='ev-d'>13:12 hourly-learn 在 docs/learnings.md 新增两节：风控方法主题学习（5个候选 G-volbudget/VaR95只读/H-heatmeter/G-weekcap/G-breakeven1R caution，src/未动）+ 实盘复盘（已平仓30笔，胜率26.7%，回撤-9.08%，持仓2个无变化，regime=range趋势策略暂停）；门禁仍无新产物。</div></div></div>
@@ -284,8 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>复盘检查：最近3笔平仓连续亏损，回撤8.52%已过降半仓线</b><span class="muted">10-14 11:31</span></div><div class='ev-d'>持仓浮亏：RLCUSDT -13%(24h -7.04%)、NEARUSDT -12.4%；最近3笔平仓 PUMPUSDT -9.0%、ZECUSDT -8.6%、CRCLBUSDT -2.2% 全部亏损；总回撤8.52%已过8.3%降半仓线。建议：dual_mom专项复盘、复核RLCUSDT宽止损（止损距均价30.9%），改动须走回测门禁后才落地；实盘照常跑。仅本地记录，不发布。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>整点检查：AN-1门禁四档标签化落地</b><span class="muted">10-14 11:19</span></div><div class='ev-d'>11:19轮次检查：过去1小时实质变更——①research/gate_tiers.py 新增（AN-1）：门禁结论从二元 PASS/FAIL 扩展为 ROBUST/MODERATE/WEAK/OVERFITTED 四档标签，纯报告层、不改门禁数学/阈值/结论，不碰实盘，9条合成断言全过；②docs/learnings.md 追加 10:42优化轮（AN-1落地记）与 11:12学习+复盘轮（风控方法五抓手映射到 AY/AZ/AW/S 组排队项；live_trades 仍28笔平仓累计-3934.48，无新增样本，实盘参数不动）；③docs/CHANGELOG.md 同步。已按推送规则静默沉淀，无用户推送。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>15分钟复盘检查（11:15）：回撤8.5%持仓管理正常，regime=range暂停仍在生效</b><span class="muted">10-14 11:17</span></div><div class='ev-d'>市场震荡；持仓4只全跌但止损管理正常；最新3笔复盘亏损属不同策略、无单策略崩坏；回撤8.52%处8%软层降半仓；发现regime=range一刀切暂停仍在实盘代码生效（与10-13证伪结论存在张力），建议作为RH后续项排进上线门禁后才动实盘；无用户推送。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>整点检查：AN-1门禁四档标签化落地</b><span class="muted">10-14 11:19</span></div><div class='ev-d'>11:19轮次检查：过去1小时实质变更——①research/gate_tiers.py 新增（AN-1）：门禁结论从二元 PASS/FAIL 扩展为 ROBUST/MODERATE/WEAK/OVERFITTED 四档标签，纯报告层、不改门禁数学/阈值/结论，不碰实盘，9条合成断言全过；②docs/learnings.md 追加 10:42优化轮（AN-1落地记）与 11:12学习+复盘轮（风控方法五抓手映射到 AY/AZ/AW/S 组排队项；live_trades 仍28笔平仓累计-3934.48，无新增样本，实盘参数不动）；③docs/CHANGELOG.md 同步。已按推送规则静默沉淀，无用户推送。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
