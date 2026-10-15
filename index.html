@@ -26,14 +26,13 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-15 17:54（北京时间）· 每20分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-15 18:14（北京时间）· 每20分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
-        <div class="cur-task">arena-hourly-opt 健康检查（盘外 fast-path）</div>
-        <div class="muted">开始于 10-15 17:54</div></div>
+        <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
 <div class="card"><div class="card-t">🤖 AI量化看板 <span class="muted">· 每5分钟同步</span></div>
         <div class="nums">
-          <div><span>净值</span><b>45,497.13</b></div>
+          <div><span>净值</span><b>45,477.54</b></div>
           <div><span>胜率</span><b>26.7%</b></div>
           <div><span>累计盈亏</span><b class="dn">-4252.20</b></div>
           <div><span>今日交易</span><b>2 笔</b></div>
@@ -49,6 +48,10 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
 <div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>复盘检查：回撤-8.98%持平，两单深套，风控正常</b><span class="muted">10-15 18:02</span></div><div class='ev-d'>15分钟复盘检查：峰值回撤-8.98%（连续多轮持平），8%软层+连损减半自动生效中，各策略hold无新开仓；在手RLCUSDT -18.8%、OGNUSDT -9.3%深套（ATR初始止损过宽未上移）；近5笔已平仓全损皆动量策略止损。调整建议已沉淀给learn轮次（动量持仓超时退出门、keltner下线评估），均须回测+门禁后落地。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>完成：arena-hourly-opt 健康检查（盘外 fast-path）</b><span class="muted">10-15 17:55</span></div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>复盘检查：动量策略连续亏损，降半仓生效中</b><span class="muted">10-15 17:45</span></div><div class='ev-d'>近20笔5胜15负净-2360.6 CNY，回撤-9.0%触发8%降半仓软层；亏损集中震荡市dual_mom/momrot，与入场质量诊断一致，两项门禁并行验证中，无新调整建议</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>整点检查：过去1小时有学习笔记新增（17:12 轮）</b><span class="muted">10-15 17:20</span></div><div class='ev-d'>16:42/17:12 hourly-learn 在 docs/learnings.md 新增两轮笔记：①入场信号质量与信心门学习（Q-bngate 资金费率情绪门修订、Q-costdenom 成本分母核查、Q-regimebias/regimebias 五档偏置、Q-pullback 入场等待、Q-confgate 信心门远期，5 个设计输入）；②风控方法轮换学习（R-threefactor 三因子仓位/BO 设计输入、R-grossexp 组合毛敞口护栏、R-dailykill 日度熔断、R-voltarget 波动率目标、R-rollscore 滚动评分、R-scaledexit 跟踪止盈形状、R-cooldown 重入冷却、R-contradict 双向仓拦截，8 个设计输入）。复盘：已平仓 30 笔无新增样本，胜率 26.7%（低于 35-60% 健康区间），净值 45497.13 CNY，峰值回撤 -8.98%（8% 软层降半仓生效，10% 中层熔断未触发）；持仓 2 个（dual_mom|RLCUSDT、momrot|OGNUSDT）止损均在位。门禁：9 项已裁决（8 FAIL parked + atr_channel 下线），本轮无新产物、无新进程。src/ 一行未动、无 GitHub 写入。</div></div></div>
@@ -283,10 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>完成：发布量化看板（13:20 轮次）</b><span class="muted">10-14 13:22</span></div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>整点同步：过去1小时量化研究有实质变更</b><span class="muted">10-14 13:19</span></div><div class='ev-d'>hourly-learn 轮产出：research/aq_stoptrigger_design.md（止损触发从 wick 语义改为收盘价确认的 mark-price 近似，AQ-1 预注册设计，下一轮执行）、research/ap_fracdiff_20261014.py（分数差分特征 AP-1 回测脚本）、research/capped_backtest.py（新增 trigger 键，冒烟验证通过）、docs/learnings.md 更新。本任务永不向用户发送消息，无实质变更才静默；有变更仅内部沉淀。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>hourly-learn 13:12：AQ 止损触发语义（mark-price 近似）预注册完成</b><span class="muted">10-14 13:15</span></div><div class='ev-d'>主题风控方法；排队执行 AQ：预注册设计 research/aq_stoptrigger_design.md + capped_backtest.py 新增 trigger 键（wick|mark）已冒烟验证；实盘 28 笔无新增样本，未改实盘参数；无 CHANGELOG。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>完成：quant-dashboard-refresh 13:04 轮：正在刷新数据并发布</b><span class="muted">10-14 13:06</span></div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>整点同步：过去1小时量化研究有实质变更</b><span class="muted">10-14 13:19</span></div><div class='ev-d'>hourly-learn 轮产出：research/aq_stoptrigger_design.md（止损触发从 wick 语义改为收盘价确认的 mark-price 近似，AQ-1 预注册设计，下一轮执行）、research/ap_fracdiff_20261014.py（分数差分特征 AP-1 回测脚本）、research/capped_backtest.py（新增 trigger 键，冒烟验证通过）、docs/learnings.md 更新。本任务永不向用户发送消息，无实质变更才静默；有变更仅内部沉淀。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
