@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-15 19:14（北京时间）· 每20分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-15 19:34（北京时间）· 每20分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -48,6 +48,8 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
 <div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>hourly-sync：19:12轮学习/复盘产出已沉淀</b><span class="muted">10-15 19:19</span></div><div class='ev-d'>docs/learnings.md 新增19:12学习（分数Kelly/等风险预算/timing null证伪/R系列设计输入）与复盘（30笔平仓、胜率26.7%、回撤-9.04%逼近10%中层熔断线）；docs/review-process.md §2新增3个门禁checklist纪律项（G-costsanity/R-timingnull/S-concdiag）。src/未动、无GitHub写入。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>quant-live-trader 19:07 轮次完成（无成交）</b><span class="muted">10-15 19:07</span></div><div class='ev-d'>equity=45464.35（-9.1%），峰值回撤9.0%逼近12%熔断线：降半仓×连损减仓，新开仓预算约1/4；市场range（ADX=19.2震荡市）趋势策略暂停；持仓2（RLCUSDT/OGNUSDT），本轮无买入/卖出/止损成交。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>quant-review-check：动量策略连续亏损，需复盘入场端</b><span class="muted">10-15 18:45</span></div><div class='ev-d'>近20笔平仓15亏损、合计-2361 CNY；今日3笔动量策略（dual_mom×2、momrot×1）全亏，复盘标记买入逻辑失效；RLCUSDT放量下跌-7.14%量比2.14。调整方向：动量策略入场加过滤器，走回测+门禁后落地；实盘照常跑，风控未动。</div></div></div>
@@ -284,8 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>quant看板刷新完成</b><span class="muted">10-14 14:46</span></div><div class='ev-d'>14:46 两文件逐个上传提交：index.html(63644f2)、quant.html(7056264)，commits API+全文diff双验通过（逐字节一致），静默完成</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>arena-hourly-opt 14:24 轮：parse_decision 大小写归一化</b><span class="muted">10-14 14:27</span></div><div class='ev-d'>engine/competition.py 一处预防性健壮性修复：symbol.upper()/side.lower() 归一化，避免模型大小写漂移被误判非候选池代码拒单；us_arena 空日K同族排查无缺陷；smoke 全过；无页面变化不发布</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>完成：刷新AI量化看板数据（quant-dashboard-refresh）</b><span class="muted">10-14 14:07</span></div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>arena-hourly-opt 14:24 轮：parse_decision 大小写归一化</b><span class="muted">10-14 14:27</span></div><div class='ev-d'>engine/competition.py 一处预防性健壮性修复：symbol.upper()/side.lower() 归一化，避免模型大小写漂移被误判非候选池代码拒单；us_arena 空日K同族排查无缺陷；smoke 全过；无页面变化不发布</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
