@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-15 13:14（北京时间）· 每20分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-15 13:34（北京时间）· 每20分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -48,6 +48,12 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
 <div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>整点检查：过去1小时有学习笔记新增</b><span class="muted">10-15 13:19</span></div><div class='ev-d'>13:12 hourly-learn 在 docs/learnings.md 新增两节：风控方法主题学习（5个候选 G-volbudget/VaR95只读/H-heatmeter/G-weekcap/G-breakeven1R caution，src/未动）+ 实盘复盘（已平仓30笔，胜率26.7%，回撤-9.08%，持仓2个无变化，regime=range趋势策略暂停）；门禁仍无新产物。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>完成：复盘检查完成</b><span class="muted">10-15 13:16</span></div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>review-check：连续亏损/复盘疑点确认，无新调整方向</b><span class="muted">10-15 13:16</span></div><div class='ev-d'>近7天完结复盘30笔累计-4252.2、败率73%；连续5条复盘指dual_mom/momrot/dualm_a_j买入逻辑疑似失效(next_action=暂停该币种该策略，未接入实盘，仅建议文本)。持仓2只深浮亏：RLCUSDT(dual_mom)-21.6%、OGNUSDT(momrot)-8.9%，恰为被质疑策略；退出由止损/风控系统管。峰值回撤9.08%(49983→45447.5)，8%软层降半仓已生效，距10%中层停新开仓剩约420CNY。已证伪方向不再重复建议；入场质量双门禁(相关性过滤器/资金费率情绪门)已在跑。结论：维持现状、无代码改动。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>定期检查：震荡市动量策略连亏，调整建议待走回测门禁</b><span class="muted">10-15 13:01</span></div><div class='ev-d'>市场震荡（BTC 24h -1.79%）。近10笔复盘6笔亏损集中在 dual_mom/momrot，近5笔已结算全部亏损，今日已实现-317.7 CNY。持仓2只：RLCUSDT(dual_mom)浮亏约-20%持仓5天，OGNUSDT(momrot)浮亏约-7.8%，宽止损未触发。调整方向候选=震荡市暂停 dual_mom/momrot 新开仓（与10-13证伪的dual_ma/dualm_a_j暂停不同，属新假设），须经hourly-learn回测门禁验证后才落地，本轮无代码改动。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>quant-live-trader 轮次完成（无成交）</b><span class="muted">10-15 12:42</span></div><div class='ev-d'>equity=45455.03 cash=44212.35 持仓=2；峰值回撤9.1%接近熔断线，降半仓运行；连损5笔，新开仓风险预算×0.5；市场状态range（ADX=19.2震荡市），趋势策略暂停</div></div></div>
@@ -280,12 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>15分钟复盘检查（11:15）：回撤8.5%持仓管理正常，regime=range暂停仍在生效</b><span class="muted">10-14 11:17</span></div><div class='ev-d'>市场震荡；持仓4只全跌但止损管理正常；最新3笔复盘亏损属不同策略、无单策略崩坏；回撤8.52%处8%软层降半仓；发现regime=range一刀切暂停仍在实盘代码生效（与10-13证伪结论存在张力），建议作为RH后续项排进上线门禁后才动实盘；无用户推送。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>量化看板5分钟刷新</b><span class="muted">10-14 11:02</span></div><div class='ev-d'>数据重建+双文件浏览器上传发布完成，pinned blob 全文 diff 与基线一致（index.html 8aa04c47…, quant.html e65945fa…；commit c9a1dfb / b2369ad）</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>quant-review-check 例行检查（10:30）</b><span class="muted">10-14 10:30</span></div><div class='ev-d'>环境震荡（BTC 24h +1.61%，涨42/跌18）；持仓4只无异动（RLC-4.77%为最大跌幅）；净值45718.8，整体回撤约8.6%，未触12%熔断，8.3%降半仓风控已在；最近3笔复盘为亏损（PUMP/ZEC/CRCLB，-75/-122/-154），复盘建议暂停该币种该策略，需走回测门禁后才可落地，未执行任何调整。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>整点同步：过去1小时 quant-crypto 有实质变更（docs/learnings.md）</b><span class="muted">10-14 10:19</span></div><div class='ev-d'>每小时学习轮（hourly-learn）新增两条学习记录：10:12 风控方法「相关性调整的总敞口治理（portfolio heat）」+ live_trades 复盘；新增研究候选 AY（组合相关性敞口上限）、AZ（日内连亏熔断），须走回测证据链+门禁后才落地。实盘仍 28 笔平仓累计 −3934.47，无新增平仓，n=28&lt;50 不改任何实盘参数。无实质可落地改进，无用户推送。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>虚拟盘交易循环 10:02 轮：无成交</b><span class="muted">10-14 10:02</span></div><div class='ev-d'>equity=45717.41 cash=42035.69 持仓=4；峰值回撤8.5%接近熔断线，降半仓运行（新开仓风险预算×0.5）；连损3笔（风险预算×0.5）；市场状态 range（ADX=21.7震荡市，趋势策略暂停）；momrot Top3=ONDOUSDT/OGNUSDT/STRKUSDT</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>量化看板5分钟刷新</b><span class="muted">10-14 11:02</span></div><div class='ev-d'>数据重建+双文件浏览器上传发布完成，pinned blob 全文 diff 与基线一致（index.html 8aa04c47…, quant.html e65945fa…；commit c9a1dfb / b2369ad）</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
