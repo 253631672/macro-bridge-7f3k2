@@ -26,13 +26,13 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-15 18:54（北京时间）· 每20分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-15 19:14（北京时间）· 每20分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
 <div class="card"><div class="card-t">🤖 AI量化看板 <span class="muted">· 每5分钟同步</span></div>
         <div class="nums">
-          <div><span>净值</span><b>45,477.54</b></div>
+          <div><span>净值</span><b>45,464.35</b></div>
           <div><span>胜率</span><b>26.7%</b></div>
           <div><span>累计盈亏</span><b class="dn">-4252.20</b></div>
           <div><span>今日交易</span><b>2 笔</b></div>
@@ -48,6 +48,8 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
 <div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>quant-live-trader 19:07 轮次完成（无成交）</b><span class="muted">10-15 19:07</span></div><div class='ev-d'>equity=45464.35（-9.1%），峰值回撤9.0%逼近12%熔断线：降半仓×连损减仓，新开仓预算约1/4；市场range（ADX=19.2震荡市）趋势策略暂停；持仓2（RLCUSDT/OGNUSDT），本轮无买入/卖出/止损成交。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>quant-review-check：动量策略连续亏损，需复盘入场端</b><span class="muted">10-15 18:45</span></div><div class='ev-d'>近20笔平仓15亏损、合计-2361 CNY；今日3笔动量策略（dual_mom×2、momrot×1）全亏，复盘标记买入逻辑失效；RLCUSDT放量下跌-7.14%量比2.14。调整方向：动量策略入场加过滤器，走回测+门禁后落地；实盘照常跑，风控未动。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>整点同步：过去1小时实质变更</b><span class="muted">10-15 18:19</span></div><div class='ev-d'>quant-hourly-sync 检查到 ~/workspace/quant-crypto/docs/learnings.md 过去1小时有两轮新增（17:42、18:12），均为 hourly-learn 轮次学习笔记：17:42 轮产出 6 个设计输入（M-rangeconfirm / M-volbreakout / M-liqcluster / M-altbeta / M-macroshock / M-etfbasis）；18:12 轮产出 5 个设计输入（G-metlabel / G-killlist / G-quattro / G-threelayer / G-costsanity），均为预注册前候选材料，src/ 一行未动。复盘：已平仓 30 笔（无新样本），总计 −4252.2，胜率 26.7%；净值 45477.54，回撤约 −9.01%（10% 熔断线未触发）；持仓 2 个（dual_mom|RLCUSDT、momrot|OGNUSDT），止损在位；regime=range 趋势策略按设计暂停，无新开仓。门禁：无新产物、无在跑门禁，本轮不判。按任务规则只记本地、不打扰用户、不推 GitHub。</div></div></div>
@@ -284,8 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>arena-hourly-opt 14:24 轮：parse_decision 大小写归一化</b><span class="muted">10-14 14:27</span></div><div class='ev-d'>engine/competition.py 一处预防性健壮性修复：symbol.upper()/side.lower() 归一化，避免模型大小写漂移被误判非候选池代码拒单；us_arena 空日K同族排查无缺陷；smoke 全过；无页面变化不发布</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>完成：刷新AI量化看板数据（quant-dashboard-refresh）</b><span class="muted">10-14 14:07</span></div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>arena 优化轮：修复收盘结算/管家/AI公司三处空日K静默崩溃</b><span class="muted">10-14 13:56</span></div><div class='ev-d'>SinaHistoryProvider.multi() 空标不抛异常，在 arena_settle.py/org_run.py/butler_run.py 的 history[SYMBOLS[0]][-1][0] 处 IndexError 崩出 try 之外、cron 崩溃且无 data-fail 告警。已在 fetch try 内加显式空标校验走统一告警+跳过路径；AST 全过、空标/满行情端到端断言全过；账本格式未动、无 web 变化、无发布。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>完成：刷新AI量化看板数据（quant-dashboard-refresh）</b><span class="muted">10-14 14:07</span></div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
