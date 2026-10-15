@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-16 00:14（北京时间）· 每20分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-16 00:34（北京时间）· 每20分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -47,7 +47,9 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="card attn"><div class="card-t">需要你介入 <span class="badge">1</span></div><ul class="needs"><li><span class='dot warn'></span>给 23:00 日报等定时任务开启常开审批（App → 头像 → Upcoming → 任务详情 → 权限设为允许）<span class='muted'> · 10-09 23:28</span></li></ul>
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
-<div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+<div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>quant 学习轮次 00:12：7 个新设计输入（统计套利/费率套利等），实盘无变化</b><span class="muted">10-16 00:19</span></div><div class='ev-d'>docs/learnings.md 新增 2026-10-16 00:12 三段：学习（新策略思路：统计套利 pairs、资金费率套利、ATR 体制过滤器、成本意识）新增 G-pairspread/G-fundarb/G-spreadwiden/G-zipexit/G-atrregime/G-costlimit/G-momtrail，均为预注册前材料；复盘：live_trades 仍 0 笔、账本 1000000 分毫不差、8 策略 range 下全停；优化：无新证据、src/ 一行未动、门禁仍 BQ FAIL→parked。G-fundarb 与已有 funding 数据源咬合，优先级候选靠前。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>完成：quant-live-trader 23:42 轮次：虚拟盘交易循环运行中</b><span class="muted">10-15 23:43</span></div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>23:19 整点检查：两项实质文档更新</b><span class="muted">10-15 23:19</span></div><div class='ev-d'>docs/learnings.md 新增两轮学习（23:12 风控主题：G-heatlevels 四级热度阶梯、G-cathe 策略族敞口上限、G-triheat 实时热度+RECOVERY半停态、G-decaytracker 衰减调权；22:42 入场质量：G-relstrength 相对强度选币、G-squeezebody 挤压实体确认、G-xsec 横截面方法论）均为预注册前材料、src 一行未动；reports/daily-2026-10-15.md 日报草稿生成（净值100万、0笔交易、range regime 按设计暂停开仓）；23:00 日报将汇总。</div></div></div>
@@ -284,8 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>arena-hourly-opt 18:54 轮：run_marker 接入最后 3 个 cron 脚本</b><span class="muted">10-14 18:56</span></div><div class='ev-d'>arena_intraday.py（30分钟盘中）/zouwei.py（每日）/awards.py（每周）接入 run_with_marker 启停标记，全 cron 脚本覆盖收官；py_compile+沙箱3组测试PASS；无页面变化未发布。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>完成：quant-hourly-learn：18:42 轮（市场分析学习 + BA 基差可行性检查）</b><span class="muted">10-14 18:44</span></div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>arena 每小时优化轮：修复预言家榜指数缺失+大盘预测自我校准</b><span class="muted">10-14 18:30</span></div><div class='ev-d'>修bug：arena_settle.py 新增指数回填（40根日K补缺失交易日，append-only），一次性回填 index_daily.json 38 天（39 值独立验算 0 误差），预言家榜从全员 0% 恢复为 7 队 33%/9 队 0%；新增每队大盘预测战绩自我校准行进盘中 prompt（≥2 天才展示，中性措辞）。改动 3 文件，AST/编译/沙箱/SMOKE 全过。发布 arena.html(5ee31ff)/loss.html(a8fda0d)/butler.html(1073edd)，pinned blob MD5 3/3 一致，基线已更新。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>完成：quant-hourly-learn：18:42 轮（市场分析学习 + BA 基差可行性检查）</b><span class="muted">10-14 18:44</span></div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
