@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-16 12:14（北京时间）· 每20分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-16 12:34（北京时间）· 每20分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -47,7 +47,13 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="card attn"><div class="card-t">需要你介入 <span class="badge">1</span></div><ul class="needs"><li><span class='dot warn'></span>给 23:00 日报等定时任务开启常开审批（App → 头像 → Upcoming → 任务详情 → 权限设为允许）<span class='muted'> · 10-09 23:28</span></li></ul>
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
-<div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+<div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>完成：review-check 完成：震荡市15/20连亏，动量入场候选进门禁预注册</b><span class="muted">10-16 12:30</span></div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>review-check：近20笔复盘15亏5盈（-2360），动量策略震荡市持续失血</b><span class="muted">10-16 12:30</span></div><div class='ev-d'>环境震荡(BTC 24h +0.69%)，持仓0，无异动。近20笔trade_reviews：15亏5盈累计-2360 CNY；最近5笔连续亏损（ONDOUSDT dual_mom -108、NEARUSDT momrot -210、PUMPUSDT dual_mom -75、ZECUSDT momrot -122、CRCLBUSDT dualma_j -154，合计约-669）。health早前15m延迟告警已核实为TESTUSDT测试符号陈旧数据误报，60实盘币种K线/ingest/live_trader心跳均正常。按证据规则：不直接调参；已将&#x27;震荡环境下dual_mom/momrot入场期望&#x27;列为预注册候选交learn轮次走回测门禁。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>12:12 学习/复盘/优化轮次记入 learnings.md</b><span class="muted">10-16 12:19</span></div><div class='ev-d'>市场分析主题（CoinGlass H1 衍生品结构/ETF 资金流数据缺口/OI-价格散度情绪信号/爆仓分散风险证伪/OI 杠杆重建前兆），复盘：重置后仍 0 笔实盘、regime=range 趋势策略全停、账本分毫不差、数据流心跳正常；src/ 一行未动、无门禁进程、无新裁决。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>复盘检查：重置后15小时零成交——暂停已是被证伪的regime过滤器</b><span class="muted">10-16 11:31</span></div><div class='ev-d'>市场震荡(regime=range),BTC 24h+0.69%。live_trader心跳正常,每5分钟决策正常。重置后(10-15 20:17)0笔成交:24h内1456次决策被&#x27;regime=range 趋势策略暂停&#x27;拦掉,9个趋势/动量类策略全部只停新开仓。注意:10-13反事实研究已证伪该一刀切暂停对dual_ma/dualm_a_j(有害,range入场样本外正期望),当时保留暂停是因实盘有独立回撤风控理由(8.3%回撤降半仓);资金重置后回撤已清零(账户正好1,000,000),该独立理由不复存在,当前生效的暂停=恰好是被证伪的那条规则。建议:走门禁把regime过滤器改为分策略差异化(豁免dual_ma/dualm_a_j),改动前不落地。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>整点同步 11:19：过去1小时 learnings.md 更新</b><span class="muted">10-16 11:19</span></div><div class='ev-d'>11:12 轮（学习+复盘+优化）已沉淀：风控方法主题=组合敞口计数、3-factor sizing、Rolling scoring、liquidity-aware sizing；新增 2 个待编号候选（策略实盘滚动停用 rolling scoring、liquidity-aware sizing 数据缺口）；BN（资金费率情绪门）再添 2 份外部机制印证（09:42 三连洗机制链、10:12 Gate 百科级联机制、10:42 zabor funding-carry REJECT 判决）；复盘=重置后仍 0 笔成交（n=0 实盘解读冻结）、range regime 全停、账本 1,000,000.0 分毫不差、数据流心跳正常；src/ 一行未动、无门禁进程、无新裁决、无 CHANGELOG 条目</div></div></div>
@@ -280,12 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>quant-review-check 22:59 检查完成：无需调整</b><span class="muted">10-14 23:00</span></div><div class='ev-d'>环境=震荡，持仓4只（RLC-7.56%/OGN-13.26%/NEAR-1.02%/ONDO-3.03% 24h），近期成交盈亏交替（TAO+30.9/ADA+33.3/UNI-124.9/ENA+41.1/ZEC+28.8），无连续亏损；最新3条复盘为模板文本、无实质新结论；风控照常。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>quant-live-trader 22:57 轮次完成（无成交）</b><span class="muted">10-14 22:58</span></div><div class='ev-d'>虚拟盘 equity=45511.89 / cash=42035.69 / 持仓=4。峰值回撤 8.9%（接近 12% 熔断线，降半仓运行，新开仓风险预算×0.5）；连损 3 笔（风险预算再×0.5）。市场状态 range（ADX=21.7，趋势策略暂停）。本轮无买入/卖出/止损成交。交易决策数据已落库。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#22b573">日报</span>
-        <div class="ev-body"><div class="ev-h"><b>日报已生成 2026-10-14</b><span class="muted">10-14 22:57</span></div><div class='ev-d'>净值 45,511.89（-8.98%）今日 0 笔交易，明细见目标资料库</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>quant-dashboard-refresh 22:39 轮次：发布完成</b><span class="muted">10-14 22:47</span></div><div class='ev-d'>index.html=5b20e10, quant.html=91d8080, pinned blob diff 逐字节一致</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>完成：quant-dashboard-refresh 22:39 轮次：重建中</b><span class="muted">10-14 22:47</span></div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>quant-live-trader 22:57 轮次完成（无成交）</b><span class="muted">10-14 22:58</span></div><div class='ev-d'>虚拟盘 equity=45511.89 / cash=42035.69 / 持仓=4。峰值回撤 8.9%（接近 12% 熔断线，降半仓运行，新开仓风险预算×0.5）；连损 3 笔（风险预算再×0.5）。市场状态 range（ADX=21.7，趋势策略暂停）。本轮无买入/卖出/止损成交。交易决策数据已落库。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
