@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-17 00:15（北京时间）· 每20分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-17 01:45（北京时间）· 每20分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -48,6 +48,14 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
 <div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>整点检查：01:00–01:20 四门禁归档+复盘钩子补齐</b><span class="muted">10-17 01:24</span></div><div class='ev-d'>过去1小时实质变更：①src/live/team_p_trader.py 接入 log_buy/add_review 复盘钩子（P组纸账本每笔必复盘断裂已补，只写复盘表不改交易行为）；②docs/CHANGELOG.md 记入该变更；③docs/learnings.md 记入两轮学习（入场质量/信号过滤、风控方法论），新增4候选想法（stochastic极值拦截、结构止损、赤字恢复门、日亏损笔数锁，均未预注册）；④research/ 三个门禁归档 FAIL→parked（相关性过滤器、资金费率情绪门、donchian+过滤器A）；⑤动量系震荡入场过滤器门禁 FAIL→parked；⑥新预注册 range暂停豁免（dual_ma/dualma_j）待运行。实盘参数零改动。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>quant-hourly-learn 00:42 轮次：新增3风控候选想法，复盘仍n=1无新增成交</b><span class="muted">10-17 01:06</span></div><div class='ev-d'>学习主题=风控方法：新增候选想法「结构止损（pivot+buffer）」「赤字恢复门」「日亏损笔数锁」（均未预注册）+2对照注记；src/一行未动。复盘：live_trades仍0笔新成交（仅10-16 LINKUSDT一笔-13.65元），live_equity=1,000,000.00持仓0，klines=2,806,186行，交易循环心跳正常。变动已沉淀 docs/learnings.md。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#9aa0aa">系统</span>
+        <div class="ev-body"><div class="ev-h"><b>team_p_trader 复盘钩子落地</b><span class="muted">10-17 01:05</span></div><div class='ev-d'>log_buy/add_review 已接入 P 组纸账本三个成交点，验证通过；相关性过滤器、资金费率情绪门归档 parked</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>完成：quant-live-trader 运行中（00:42 轮次）</b><span class="muted">10-17 00:44</span></div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>整点同步：检测到本小时实质变更</b><span class="muted">10-16 23:20</span></div><div class='ev-d'>docs/learnings.md 新增两轮学习笔记（22:45 复盘仍n=1无新成交、结论冻结参数不动；23:12 市场分析轮：10月加密regime=熊市内修复/BTC.D~60%主导率回升/震荡盘整，新增候选想法「BTC.D×ETH/BTC组合regime特征」+「信号强度概率门」候选，未预注册，不改src/）；reports/daily-2026-10-16.md 日报更新（净值1,000,000.00、0持仓、0成交）。实盘参数无改动，无门禁裁决。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#22b573">日报</span>
         <div class="ev-body"><div class="ev-h"><b>量化虚拟盘日报 2026-10-16</b><span class="muted">10-16 22:56</span></div><div class='ev-d'>今日无交易：净值 1,000,000.00 CNY（+0.00%），持仓 0 个币种，距峰值回撤 0.00%，风控正常。</div></div></div>
@@ -278,14 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>完成：quant-live-trader 交易循环运行中</b><span class="muted">10-15 06:41</span></div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>review-check：回撤 -9.05% 逼近 12% 熔断，regime 暂停一刀切差异化立项建议</b><span class="muted">10-15 06:32</span></div><div class='ev-d'>震荡市，4 只持仓 24h 全跌（RLCUSDT/OGNUSDT/NEARUSDT/ONDOUSDT 浮 -7.4%~-19.9%）。近2天23笔止损卖出 -3943.61，复盘3笔连续亏损标注&#x27;需检查买入逻辑是否失效&#x27;。回撤 -9.05% 已过 8% 梯度，距 12% 熔断约3个点，现金占比 92%，回撤梯子生效中。ONDOUSDT 跌破止损价经查为误报：dual_mom 为日线策略，止损按日线收盘 bar 执行（未收盘），止损链路正常。trader 5分钟循环正常，止损链路正常（昨日 regime 误跳过 bug 未复发）。调整建议（走门禁、未执行）：① 反事实已证伪 regime=range 一刀切暂停趋势策略新开仓（dual_ma/dualm_a_j 有害），建议 learn 轮次立项差异化门禁逐步取消对这两策略的暂停；② 复盘三笔亏损转 learn 做 dual_mom/momrot/dualma_j 买入信号健康度检查。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>每小时学习 06:12：BE（VPIN毒性门禁）预注册设计稿冻结</b><span class="muted">10-15 06:15</span></div><div class='ev-d'>BE设计稿 research/be_vpin_gate_design.md 已冻结：n=50等量桶、逐币种分位数触发(0.90/0.70)、毒性态4h停开仓、warn-only遥测先行、门禁ΔPF≥0.15。实盘已平仓仍28笔、无新增样本，dual_ma仍最差。src/未动，不记CHANGELOG；与BO regime灰度二选一等回测资源。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>quant-hourly-learn 05:43 轮完成</b><span class="muted">10-15 05:48</span></div><div class='ev-d'>学习（市场分析：熊市修复+山寨失血）/复盘（28笔无新增，dual_ma仍最差）/优化（BE先行项：klines加taker-buy列，db+ingest两文件，py_compile+迁移测试全过；不碰策略逻辑，不记CHANGELOG）</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>完成：运行 quant-live-trader 虚拟盘交易循环</b><span class="muted">10-15 05:42</span></div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>quant-review-check：检查完成，无新调整方向</b><span class="muted">10-15 05:35</span></div><div class='ev-d'>市场环境=震荡；4个持仓(RLCUSDT/OGNUSDT/NEARUSDT/ONDOUSDT)24h全红(-4.8%~-10.4%)，市场驱动、无异常。最新3笔复盘(10-12/13)均为亏损：CRCLBUSDT dualma_j -154、ZECUSDT momrot -122、PUMPUSDT dual_mom -75，均标记&#x27;需检查买入逻辑是否失效&#x27;。已覆盖：10-14已启动两轮入场质量门禁(持仓相关性过滤器+资金费率情绪门)；震荡一刀切暂停已被证伪，不重复建议。实盘照常跑。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>review-check：回撤 -9.05% 逼近 12% 熔断，regime 暂停一刀切差异化立项建议</b><span class="muted">10-15 06:32</span></div><div class='ev-d'>震荡市，4 只持仓 24h 全跌（RLCUSDT/OGNUSDT/NEARUSDT/ONDOUSDT 浮 -7.4%~-19.9%）。近2天23笔止损卖出 -3943.61，复盘3笔连续亏损标注&#x27;需检查买入逻辑是否失效&#x27;。回撤 -9.05% 已过 8% 梯度，距 12% 熔断约3个点，现金占比 92%，回撤梯子生效中。ONDOUSDT 跌破止损价经查为误报：dual_mom 为日线策略，止损按日线收盘 bar 执行（未收盘），止损链路正常。trader 5分钟循环正常，止损链路正常（昨日 regime 误跳过 bug 未复发）。调整建议（走门禁、未执行）：① 反事实已证伪 regime=range 一刀切暂停趋势策略新开仓（dual_ma/dualm_a_j 有害），建议 learn 轮次立项差异化门禁逐步取消对这两策略的暂停；② 复盘三笔亏损转 learn 做 dual_mom/momrot/dualma_j 买入信号健康度检查。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
