@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-16 16:54（北京时间）· 每20分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-16 17:14（北京时间）· 每20分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -47,7 +47,9 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="card attn"><div class="card-t">需要你介入 <span class="badge">1</span></div><ul class="needs"><li><span class='dot warn'></span>给 23:00 日报等定时任务开启常开审批（App → 头像 → Upcoming → 任务详情 → 权限设为允许）<span class='muted'> · 10-09 23:28</span></li></ul>
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
-<div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+<div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>quant-hourly-learn 17:14 轮次完成</b><span class="muted">10-16 17:14</span></div><div class='ev-d'>学习主题：GitHub新项目（honest-backtester MIT真实费率注入/OpenCryptoSignalEngine同根K线碰撞策略/quantdinger PBO+Deflated Sharpe门禁指标等），4个待编号候选+3对照注记+1许可红线，全部预注册前材料；复盘：仍n=1无新增成交，结论冻结不动参数；门禁无进程、无新裁决；src/一行未动，无实质改进，不记CHANGELOG，未推送用户。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>review-check 发现：震荡一刀切暂停仍在实盘生效</b><span class="muted">10-16 16:45</span></div><div class='ev-d'>16:44 轮：live_decisions 自 10-15 20:17 重置后累计 1960 条 regime=range 趋势策略暂停跳过（trader.py:253，regime.py allow_trend=False），全策略零开仓、持仓 0。该做法已被 10-13 反事实研究 regime_filter_cf_20261013.md 证伪（dual_ma/dualm_a_j range 入场样本外正期望，暂停分别少赚 2091/2066 CNY）。建议 learn 轮次按门禁流程解除或软化 range 一刀切暂停（至少豁免 dual_ma/dualm_a_j），不得直接改代码。另：最近 5 条复盘连亏（NEARUSDT momrot -209.6/-18.5%、ONDOUSDT dual_mom -108.1、PUMPUSDT dual_mom -75.0），入场端问题持续存在。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>复盘检查：实盘被一刀切暂停机制拦截，零可开仓策略</b><span class="muted">10-16 16:31</span></div><div class='ev-d'>16:30 检查：系统健康（trader/ingest 心跳新鲜、每5分钟决策）；市场震荡（BTC 24h +0.69%，44涨/16跌）；持仓0。资金重置（10-15 20:17）后 20 小时零成交——4 个 entry_enabled=True 策略（momrot/mtf_trend/dual_mom/turtle）全被 regime=range 趋势暂停逻辑拦截，其余策略本就禁用。复盘最近5笔均为重置前亏损（已归档）。调整方向：10-13 反事实研究已证伪该一刀切暂停（dual_ma/dualm_a_j 样本外正期望），建议 learn 轮次按上线门禁针对当前可用策略做选择性解除验证；turtle/mtf_trend 研究方向为负应保持暂停。本轮不改动代码。</div></div></div>
@@ -284,8 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>量化研究：两项入场端预注册，BP 资金费率情绪门门禁 FAIL</b><span class="muted">10-15 01:26</span></div><div class='ev-d'>学习轮完成两项入场端预注册（参数冻结）：① correlation filter 持仓相关性过滤器（新开仓候选币与任一持仓30天日收益相关&gt;0.85则禁止，目标 pooled ΔPF≥+0.15），脚本 research/wf_gate_corrfilter_20261015.py 已建、门禁待跑；② BP 资金费率情绪门（费率z-score&gt;+2禁止新开多仓），脚本 research/wf_gate_bp_20261015.py 已建并跑出门禁：verdict=FAIL，费率数据缺失率100%（三臂恒等，ΔPF=0.0），按铁律 parked，另立预注册先补数据再测。实盘28笔仍 -3934.48 CNY，无新成交。结论记入 docs/learnings.md。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>📮 留言板升级为直接回评论</b><span class="muted">10-15 01:14</span></div><div class='ev-d'>GitHub PAT 已建好（用户同意代建），mailbox-poll 改为直接在 Issue #1 下回评论，不再走浏览器上传+Pages 页面；旧 messages.html 改为跳转提示。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>📮 留言板上线</b><span class="muted">10-15 00:49</span></div><div class='ev-d'>用户无VPN时用的异步留言板：写留言去 GitHub Issue #1，看结果去 messages.html 页面；mailbox-poll 每5分钟轮询执行。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>📮 留言板升级为直接回评论</b><span class="muted">10-15 01:14</span></div><div class='ev-d'>GitHub PAT 已建好（用户同意代建），mailbox-poll 改为直接在 Issue #1 下回评论，不再走浏览器上传+Pages 页面；旧 messages.html 改为跳转提示。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
