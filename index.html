@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-16 19:34（北京时间）· 每20分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-16 19:54（北京时间）· 每20分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -47,7 +47,9 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="card attn"><div class="card-t">需要你介入 <span class="badge">1</span></div><ul class="needs"><li><span class='dot warn'></span>给 23:00 日报等定时任务开启常开审批（App → 头像 → Upcoming → 任务详情 → 权限设为允许）<span class='muted'> · 10-09 23:28</span></li></ul>
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
-<div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+<div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>quant-dashboard-refresh 本轮发布成功</b><span class="muted">10-16 19:39</span></div><div class='ev-d'>commit 06ed50d（index.html）+89250d0（quant.html）；pinned blob md5 与基线逐字节一致；两次 Pages 部署均成功</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>整点检查：docs/learnings.md 新增学习复盘</b><span class="muted">10-16 19:19</span></div><div class='ev-d'>quant-hourly-sync 19:19 轮次：过去1小时内仅 docs/learnings.md 有实质变更（quant-hourly-learn 的 18:42/19:12 轮次记入）。学习产出：入场质量 checklist 主题，新增2个待编号候选（有效突破确认清单/分批入场 pyramiding）+多条对照注记（BN 资金费率情绪门佐证+1、hardstop_cap 佐证、volatility-targeting 佐证+1）+1诚实注记；复盘仍 n=1 无新成交，现金 1,000,000.00 分毫不差，src/ 一行未动，无门禁新裁决，排队照旧。无代码改动，无 GitHub 写入。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>整点学习（19:12）</b><span class="muted">10-16 19:14</span></div><div class='ev-d'>学习主题=震荡市/高波动入场质量 checklist（有效突破确认清单、假突破特征、现货vs杠杆资金判别、费率拥挤度、分批入场），新增2待编号候选（有效突破确认清单/pyramiding分批入场）+3对照注记（BN佐证+1/hardstop_cap佐证/vol-targeting佐证+1）；复盘仍n=1无新成交，不动参数；src/一行未动，无实质改进不记CHANGELOG</div></div></div>
@@ -284,8 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>整点检查：近1小时量化工程有实质变更</b><span class="muted">10-15 03:20</span></div><div class='ev-d'>docs/learnings.md 新增 02:05/02:12/02:42 三轮记录（VPIN/风控/市场分析学习、dual_ma 复盘、BQ资金费率回填完成、HL 48/60 永续可用性验证）；research/results/hl_perp_availability_20261015.json 新产物。无用户推送，内部沉淀。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>量化复盘检查：回撤加深至9.01%，连续3笔止损</b><span class="muted">10-15 02:45</span></div><div class='ev-d'>权益45479.14 CNY，峰值回撤9.01%（已过8%降半仓线，逼近10%中层熔断暂停新开仓）；最近3笔成交止损：CRCLBUSDT dualma_j -154.46、ZECUSDT momrot -122.00、PUMPUSDT dual_mom -75.01；复盘标记3笔均需检查买入逻辑。持仓OGNUSDT -11.92%浮亏、RLCUSDT -6.82%。风控梯子代码自动生效，无需手动改动；调整建议待learn轮次走回测门禁。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>整点进度检查：过去1小时有4个实质文件变更（已沉淀）</b><span class="muted">10-15 02:31</span></div><div class='ev-d'>research/wf_gate_corrfilter_20261015.py 新建——持仓相关性过滤器（新开仓与现有持仓相关性&gt;0.85拦掉）walk-forward门禁脚本，预注册已锁定，不动实盘；src/data/hyperliquid_funding_ingest.py 新增--since参数（BQ资金费率回填前置工程）；docs/learnings.md 记02:05/02:12两轮学习（VPIN毒性门控对冲、BQ回填可行性验证、风控分层架构+regime条件退出）与复盘（dual_ma最差策略诊断，regime不匹配）；BQ回填已执行完成，HYPERLIQUID行数3518→6893，窗口前推至2026-03-01。均来自hourly-learn任务，无用户推送。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>量化复盘检查：回撤加深至9.01%，连续3笔止损</b><span class="muted">10-15 02:45</span></div><div class='ev-d'>权益45479.14 CNY，峰值回撤9.01%（已过8%降半仓线，逼近10%中层熔断暂停新开仓）；最近3笔成交止损：CRCLBUSDT dualma_j -154.46、ZECUSDT momrot -122.00、PUMPUSDT dual_mom -75.01；复盘标记3笔均需检查买入逻辑。持仓OGNUSDT -11.92%浮亏、RLCUSDT -6.82%。风控梯子代码自动生效，无需手动改动；调整建议待learn轮次走回测门禁。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
