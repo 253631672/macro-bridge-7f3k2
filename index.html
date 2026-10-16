@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-16 13:14（北京时间）· 每20分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-16 13:34（北京时间）· 每20分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -48,6 +48,10 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
 <div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>完成：arena-hourly-opt 健康检查中</b><span class="muted">10-16 13:28</span></div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>review-check 13:15：发现实盘仍在执行已证伪的 regime 一刀切暂停</b><span class="muted">10-16 13:15</span></div><div class='ev-d'>live_decisions 最近200条：9个趋势策略（dual_ma/donchian/momrot/mtf_trend/dual_mom/keltner/dualm_a_j/atr_channel/turtle）在 regime=range 下全部 skip 新开仓（原因&#x27;regime=range 趋势策略暂停&#x27;）。与 2026-10-13 反事实研究结论矛盾：dual_ma/dualm_a_j 在 range 的入场样本外为正期望，暂停分别少赚 2091/2066 CNY。建议：learn 轮次走门禁后移除一刀切暂停（dual_ma、dualm_a_j 优先解除），回撤风控（8.3%降半仓/StoplossGuard）保留不动。重置后空仓、heartbeat/ingest 正常、无异动持仓。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>13:13 每小时学习优化完成</b><span class="muted">10-16 13:13</span></div><div class='ev-d'>主题=GitHub新项目（QuantDinger的PBO+Deflated Sharpe门禁工具链、成本压力测试；OSS框架全景；TradingAgents release）。复盘：实盘仍0笔，账本100万分毫不差，心跳正常。无新证据、无代码改动，不记CHANGELOG。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#f5a623">交易</span>
         <div class="ev-body"><div class="ev-h"><b>P组纸账本 SELL LINKUSDT @12.429 平仓</b><span class="muted">10-16 12:52</span></div><div class='ev-d'>策略 funding_reversal，数量 235.89；信号=情绪修复；本笔 -13.65；持仓已清零；未触发熔断。</div></div></div>
@@ -282,10 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>完成：quant-dashboard-refresh: 23:54 轮次浏览器上传中（双文件独立提交）</b><span class="muted">10-15 00:06</span></div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>整点同步：23:19 轮次内部沉淀完成</b><span class="muted">10-14 23:20</span></div><div class='ev-d'>过去1小时实质变更（learnings/CHANGELOG/日报）已记入记忆与目标时间线；五项优化终报 0/5 通过门禁，atr_channel 已下线。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>虚拟盘：峰值回撤8.9%逼近熔断线，降半仓运行</b><span class="muted">10-14 23:13</span></div><div class='ev-d'>23:12轮：无成交；equity=45517.03 cash=42035.69 持仓4（RLCUSDT/OGNUSDT/NEARUSDT/ONDOUSDT）；市场range(ADX=21.7)趋势策略暂停；连续3笔亏损连损减仓，新开仓风险预算×0.25</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>Track2 硬止损帽门禁 FAIL/parked</b><span class="muted">10-14 23:03</span></div><div class='ev-d'>ΔPF=−0.07（BASE PF0.93→CAP PF0.86），左尾截断但whipsaw税翻倍总损（pnl −12504→−26128）；铁律 FAIL→parked，src/未动。产物 research/results/hardstop_cap_20261014.json</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>整点同步：23:19 轮次内部沉淀完成</b><span class="muted">10-14 23:20</span></div><div class='ev-d'>过去1小时实质变更（learnings/CHANGELOG/日报）已记入记忆与目标时间线；五项优化终报 0/5 通过门禁，atr_channel 已下线。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
