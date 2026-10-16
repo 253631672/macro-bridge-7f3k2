@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-16 10:14（北京时间）· 每20分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-16 10:34（北京时间）· 每20分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -47,7 +47,9 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="card attn"><div class="card-t">需要你介入 <span class="badge">1</span></div><ul class="needs"><li><span class='dot warn'></span>给 23:00 日报等定时任务开启常开审批（App → 头像 → Upcoming → 任务详情 → 权限设为允许）<span class='muted'> · 10-09 23:28</span></li></ul>
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
-<div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+<div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>复盘检查：5连损+胜率低迷，dual_ma 是头号亏损源</b><span class="muted">10-16 10:15</span></div><div class='ev-d'>市场环境：震荡（BTC 24h +0.69%，涨44家/跌16家）；当前持仓0。trade_reviews 30笔：总胜率26.7%（8/30），PF≈0.099，净-4252；最近5笔连损（ONDOUSDT dual_mom -108、NEARUSDT momrot -210、PUMPUSDT dual_mom -75、ZECUSDT momrot -122、CRCLBUSDT dualma_j -154）。分策略：dual_ma 6笔0胜-1711.57 为最大亏损源；atr_channel 已下线；keltner 2笔0胜-514.9。结论：入场质量问题仍在，方向=learn 轮次专项诊断 dual_ma 入场（相关性过滤器/资金费率情绪门门禁在跑中）。无紧急风险敞口，无用户可见推送。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>每日VPN节点推送 2026-10-16</b><span class="muted">10-16 09:23</span></div><div class='ev-d'>筛选44个美/加节点（⭐AI优先8、🟢高存活14），已发布至GitHub（commit b92d66e），pinned blob校验通过。GitHub Pages部署队列有一卡住16小时的僵死run，UI无法取消，已照常提交，Pages生效可能延迟。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>09:12 学习轮：新增 5 个风控候选门禁</b><span class="muted">10-16 09:20</span></div><div class='ev-d'>风控方法主题（kryhr 仓位管理技能 + BTC 尾部风险分析）：新增候选 G-draw95（95分位重采样回撤风控限）、G-voltarget（波动率目标 sizing）、G-kellyfrac（Kelly折扣敞口上限）、G-heat（组合相关性热度限）、G-ES（熔断后 Expected Shortfall 诊断+重启条件）；去风险触发器预先自动化=我方回撤风控梯子外部印证，策略生命周期 sizing=我方暂停/恢复机制外部印证（不新增）。复盘：重置后仍 0 笔成交、账本 1,000,000.0 分毫不差、regime=range 下 8 策略全 hold、数据流心跳正常；本轮无 src/ 改动、不记 CHANGELOG。</div></div></div>
@@ -284,8 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>复盘检查：回撤 -8.95% 仍在风控内，暂无调整动作</b><span class="muted">10-14 22:11</span></div><div class='ev-d'>市场震荡（BTC 24h +1.61%，涨42/跌18）。最新权益 45512 CNY，最大回撤 -8.95%（10-14 22:07，历史最低点；初始 49983），距 12% 熔断约 3pt，8.3% 降半仓风控已覆盖。4 只持仓全部浮亏：RLCUSDT -19.14%（止损尚远 14.6%）、OGNUSDT -8.34%（24h -13.26% 单日大跌、无放量，止损 26.8% 外）、NEARUSDT -16.19%（距止损 3.5%）、ONDOUSDT -6.66%（距止损 0.4%，下一轮自动止损触发）。复盘 3 笔（PUMPUSDT/ZECUSDT/CRCLBUSDT）均为 10-13 止损出场，止损机制正常工作，入场逻辑失效的复盘标注留给 learn 轮次研究。不做手动调整，无代码改动。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>每小时学习轮次：BC 统计套利可行性检查 → 基础设施缺失 parked</b><span class="muted">10-14 21:49</span></div><div class='ev-d'>学习：加密配对交易 cointegration 框架（ADF+Johansen 选对、z-score 信号、short leg 必须有 futures/shorts）。复盘：已平仓 28 笔累计 −3934.48，无新增。优化：BC 可行性检查 FAIL——实盘为纯现货多头（仅 BUY/SELL/SELL_STOP），配对交易需多空两腿，与 BA 同一阻塞项，合并为衍生品执行基础设施前置项。附加发现：小币种硬止损帽门禁脚本崩溃（sqlite 权限疑因，待下轮核对用户后重跑）。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>BB-2 宏观事件日降仓回测 → FAIL/parked</b><span class="muted">10-14 21:43</span></div><div class='ev-d'>BB-a 硬暂停新开回测裁决：pooled PF 基线1.30→BB臂1.29（ΔPF=-0.01），一致性0.333，最差窗PF0.47，tier=OVERFITTED。窗口后7天被skip信号反事实收益+3.25%（t=8.09显著为正）——事件窗口确是趋势起点，方向错了。按铁律parked，不改src/；StoplossGuard/回撤梯子/连损减仓未动。产物 research/results/bb_macro_20261014.json。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>每小时学习轮次：BC 统计套利可行性检查 → 基础设施缺失 parked</b><span class="muted">10-14 21:49</span></div><div class='ev-d'>学习：加密配对交易 cointegration 框架（ADF+Johansen 选对、z-score 信号、short leg 必须有 futures/shorts）。复盘：已平仓 28 笔累计 −3934.48，无新增。优化：BC 可行性检查 FAIL——实盘为纯现货多头（仅 BUY/SELL/SELL_STOP），配对交易需多空两腿，与 BA 同一阻塞项，合并为衍生品执行基础设施前置项。附加发现：小币种硬止损帽门禁脚本崩溃（sqlite 权限疑因，待下轮核对用户后重跑）。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
