@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-16 22:34（北京时间）· 每20分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-16 22:54（北京时间）· 每20分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -48,6 +48,8 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
 <div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>quant-hourly-learn 22:45：风控方法学习</b><span class="muted">10-16 22:44</span></div><div class='ev-d'>学习 fractional Kelly×波动率缩放/drawdown brake/probability edge gate；新增候选「信号强度概率门」（未预注册）。实盘仍 n=1 无新增；src 未动。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>量化整点检查：learn 轮 22:12 学习新产出</b><span class="muted">10-16 22:20</span></div><div class='ev-d'>learn 轮次在 docs/learnings.md 新增一轮学习记录（22:12）：主题=微结构/订单流新策略思路（order book imbalance、volume delta、liquidity-aware 执行）。产出：候选想法『volume-delta 吸收特征』入队（未预注册），execution 层 liquidity-aware TWAP 远期想法（缺簿口数据前置），多周期动量对齐外部佐证+1，VPIN 毒性门控反证据注记。复盘仍 n=1 无新增成交，结论冻结；src/ 一行未动。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>完成：quant-hourly-learn：学习+复盘轮次</b><span class="muted">10-16 21:44</span></div></div></div>
@@ -284,8 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>复盘检查：回撤9.06%（超8.3%半仓线）+ 近3笔连续亏损</b><span class="muted">10-15 04:55</span></div><div class='ev-d'>15分钟复盘检查。市场环境震荡，BTC 24h +1.61%。净值45454 vs 峰值49983，回撤9.06%，已触发半仓风控梯子，未破12%熔断，实盘照常运行。最近3笔复盘均亏损：PUMPUSDT/dual_mom -9.0%、ZECUSDT/momrot -8.6%、CRCLBUSDT/dualma_j -2.2%，均被标记需检查买入逻辑。4持仓全部浮亏：RLCUSDT -7.61%、OGNUSDT -14.43%（24h跌幅最深，需核查momrot入场信号）、NEARUSDT -4.15%、ONDOUSDT -4.74%。暂无新策略落地（震荡一刀切暂停已证伪，donchian+过滤器A在门禁排队中）。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#f5a623">交易</span>
-        <div class="ev-body"><div class="ev-h"><b>虚拟盘交易循环 04:47</b><span class="muted">10-15 04:48</span></div><div class='ev-d'>本轮无成交。市场状态 range(ADX=21.7)，趋势策略暂停。峰值回撤9.1%（逼近12%熔断），降半仓+连损减仓生效。持仓4个：ONDOUSDT(dual_mom)、NEARUSDT(momrot)、OGNUSDT(momrot)、RLCUSDT(dual_mom)。equity=45453.99 CNY。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>整点进度检查：过去1小时6个文件实质变更（BP v3预注册）</b><span class="muted">10-15 04:20</span></div><div class='ev-d'>每小时学习轮次推进：BP情绪门v2作废（post-mortem：§5.5缺失率度量把warmup阶段人工产物计入，按构造膨胀，非实盘效应）→ 立v3预注册（假设/参数/门禁阈值逐字冻结，唯一修改=缺失率只统计窗内评估）；wf_gate_bp_v2脚本同步更新；学习笔记新增GitHub项目拥挤度/相对强度学习；无实盘改动、不打扰。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>虚拟盘交易循环 04:47</b><span class="muted">10-15 04:48</span></div><div class='ev-d'>本轮无成交。市场状态 range(ADX=21.7)，趋势策略暂停。峰值回撤9.1%（逼近12%熔断），降半仓+连损减仓生效。持仓4个：ONDOUSDT(dual_mom)、NEARUSDT(momrot)、OGNUSDT(momrot)、RLCUSDT(dual_mom)。equity=45453.99 CNY。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
