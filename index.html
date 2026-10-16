@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-17 06:14（北京时间）· 每20分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-17 06:34（北京时间）· 每20分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -47,7 +47,11 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="card attn"><div class="card-t">需要你介入 <span class="badge">1</span></div><ul class="needs"><li><span class='dot warn'></span>给 23:00 日报等定时任务开启常开审批（App → 头像 → Upcoming → 任务详情 → 权限设为允许）<span class='muted'> · 10-09 23:28</span></li></ul>
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
-<div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+<div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>06:12 学习轮：AMQS多窗动量/回调入场门新候选</b><span class="muted">10-17 06:19</span></div><div class='ev-d'>docs/learnings.md 新增06:12学习/复盘/优化三段：学习主题=新策略思路（AMQS多窗动量复合、Pullback-in-Uptrend入场门、dip-buy窗口实证、结构化Guardrail），2新增候选（多窗动量复合信号/Pullback-in-Uptrend入场门，全部预注册前）+5对照注记；复盘=仍n=1无新成交（LINKUSDT SELL pnl=-13.65），参数不动；优化=无新证据无代码改动，src一行未动，未记CHANGELOG。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>quant-hourly-learn 06:12 轮次完成</b><span class="muted">10-17 06:15</span></div><div class='ev-d'>学习=新策略思路(AMQS多窗动量复合/Pullback-in-Uptrend入场门/dip-buy窗口实证/结构化交易Guardrail), 2新增候选(预注册前)+5对照注记; 复盘=仍n=1无新增成交, 8趋势策略regime=range暂停, 交易循环存活, 现金1000000.0未动; 优化=无新证据无代码改动, src/未动, 未推送GitHub</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>完成：整点检查完成</b><span class="muted">10-17 05:20</span></div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>整点检查：05:12 学习+复盘轮次已沉淀（n=1 仍无新成交）</b><span class="muted">10-17 05:20</span></div><div class='ev-d'>docs/learnings.md 追加 05:12 三轮记录：学习（风控方法：资金费率压力/止损聚集/R:R硬门/分批建仓，3候选细化+4对照注记，预注册前材料）、复盘（仍n=1无新增成交，账本/持仓无变动，ingest+交易循环存活，趋势策略regime=range暂停，参数不动）、优化（无新证据、无代码改动）。未运行publish.sh、无GitHub写入。</div></div></div>
@@ -282,10 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#f5a623">交易</span>
         <div class="ev-body"><div class="ev-h"><b>虚拟盘成交 SELL_STOP ONDOUSDT</b><span class="muted">10-15 08:07</span></div><div class='ev-d'>策略 dual_mom 价格 0.4455 数量 2839.4935 盈亏 -108.10</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#f5a623">交易</span>
-        <div class="ev-body"><div class="ev-h"><b>虚拟盘成交 SELL_STOP NEARUSDT</b><span class="muted">10-15 08:07</span></div><div class='ev-d'>策略 momrot 价格 4.8070 数量 190.1053 盈亏 -209.62</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>复盘检查：近7天-3934元，回撤约9%，持仓全绿</b><span class="muted">10-15 07:31</span></div><div class='ev-d'>连续亏损：近7天累计-3934.5 CNY，12笔平仓8笔亏损，复盘12/16条提示检查买入逻辑；4只持仓24h全跌（RLC-7.98%/OGN-9.6%/NEAR-3.71%/ONDO-4.07%）；净值45497.5 vs 30天峰49983.1，回撤约9.0%，过8%预警逼近12%熔断。调整方向=入场质量，走门禁验证后落地，不手动干预。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>07:00–07:12 学习/复盘/优化三轮完成</b><span class="muted">10-15 07:20</span></div><div class='ev-d'>三轮：06:12 BE 设计稿冻结（research/be_vpin_gate_design.md）；06:47 相对 BTC 强度描述性统计（新增只读脚本 research/rs_relstrength_stat.py，前20% n=5 平均pnl −75.9 vs 其余 −154.6，方向符合但样本太小、不做实盘改动）；07:12 BE step 1 计算层 research/vpin.py 纯函数实现+合成测试 5/5 通过。src/ 一行未动，实盘参数未动。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>虚拟盘成交 SELL_STOP NEARUSDT</b><span class="muted">10-15 08:07</span></div><div class='ev-d'>策略 momrot 价格 4.8070 数量 190.1053 盈亏 -209.62</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
