@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-16 00:55（北京时间）· 每20分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-16 10:14（北京时间）· 每20分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -42,12 +42,54 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
         <div class="card-t" style="margin-top:8px">最近交易</div>
         <table><tr><th>币种</th><th>方向</th><th>价格</th><th>盈亏</th></tr><tr><td colspan=4 class=muted>暂无</td></tr></table>
         <div class="card-t" style="margin-top:8px">小组竞赛 Top5 <span class="muted">· 总资金100万 CNY</span></div>
-        <table><tr><th>#</th><th>小组</th><th>盈利率</th></tr><tr><td>1</td><td>资金费率组</td><td class='up'>+0.00%</td></tr><tr><td>2</td><td>趋势跟踪组</td><td class='up'>+0.00%</td></tr><tr><td>3</td><td>动量轮动组</td><td class='up'>+0.00%</td></tr><tr><td>4</td><td>波动率组</td><td class='up'>+0.00%</td></tr><tr><td>5</td><td>均值回归组</td><td class='up'>+0.00%</td></tr></table>
+        <table><tr><th>#</th><th>小组</th><th>盈利率</th></tr><tr><td>1</td><td>趋势跟踪组</td><td class='up'>+0.00%</td></tr><tr><td>2</td><td>动量轮动组</td><td class='up'>+0.00%</td></tr><tr><td>3</td><td>波动率组</td><td class='up'>+0.00%</td></tr><tr><td>4</td><td>均值回归组</td><td class='up'>+0.00%</td></tr><tr><td>5</td><td>突破组</td><td class='up'>+0.00%</td></tr></table>
         <div class="muted">可用现金 1,000,000.00 · 虚拟资金，仅供策略验证</div></div>
 <div class="card attn"><div class="card-t">需要你介入 <span class="badge">1</span></div><ul class="needs"><li><span class='dot warn'></span>给 23:00 日报等定时任务开启常开审批（App → 头像 → Upcoming → 任务详情 → 权限设为允许）<span class='muted'> · 10-09 23:28</span></li></ul>
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
-<div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+<div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>每日VPN节点推送 2026-10-16</b><span class="muted">10-16 09:23</span></div><div class='ev-d'>筛选44个美/加节点（⭐AI优先8、🟢高存活14），已发布至GitHub（commit b92d66e），pinned blob校验通过。GitHub Pages部署队列有一卡住16小时的僵死run，UI无法取消，已照常提交，Pages生效可能延迟。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>09:12 学习轮：新增 5 个风控候选门禁</b><span class="muted">10-16 09:20</span></div><div class='ev-d'>风控方法主题（kryhr 仓位管理技能 + BTC 尾部风险分析）：新增候选 G-draw95（95分位重采样回撤风控限）、G-voltarget（波动率目标 sizing）、G-kellyfrac（Kelly折扣敞口上限）、G-heat（组合相关性热度限）、G-ES（熔断后 Expected Shortfall 诊断+重启条件）；去风险触发器预先自动化=我方回撤风控梯子外部印证，策略生命周期 sizing=我方暂停/恢复机制外部印证（不新增）。复盘：重置后仍 0 笔成交、账本 1,000,000.0 分毫不差、regime=range 下 8 策略全 hold、数据流心跳正常；本轮无 src/ 改动、不记 CHANGELOG。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>免费VPN每日推送：筛选44节点，发布跳过（Pages部署被僵死队列卡住）</b><span class="muted">10-16 09:11</span></div><div class='ev-d'>filter.py 筛选出 44 个 US/CA 节点（⭐AI优先8、🟢高存活14）；发布前检查发现 pages build and deployment 有一个 queued 僵死 run（2026-10-15T16:58:40Z，已卡8小时+），3次重试仍在+第3轮锁被并发发布任务占用，按规则跳过本次发布，文件本地保留（staging md5 36f5d49c50589b0971417b178371e8e7）；推送消息已附一次性 Oracle 自建VPS手册提示，7a 已从任务定义移除。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#f5a623">交易</span>
+        <div class="ev-body"><div class="ev-h"><b>P组纸账本 BUY LINKUSDT @12.4682</b><span class="muted">10-16 08:54</span></div><div class='ev-d'>策略 funding_reversal，数量 235.89；信号=双所费率均跌破60期5%分位、OI 24h +1.7%；止损 11.8584；当前持仓 1，权益 ¥58,817.65，未触发熔断。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>复盘检查：动量策略连续亏损</b><span class="muted">10-16 08:45</span></div><div class='ev-d'>震荡市（BTC 24h +0.69%，涨44家/跌16家），持仓0无异动。trade_reviews 最近10笔8亏2盈，连续5笔亏损全部在动量策略（dual_mom/momrot）：ONDOUSDT -108.10、NEARUSDT -209.62、PUMPUSDT -75.01、ZECUSDT -122.00、CRCLBUSDT -154.46。模式=震荡市入场被whipsaw，与10-14终报主要矛盾在入场质量一致。建议交learn轮立预注册、走回测门禁研究动量策略震荡入场过滤；不一刀切暂停趋势策略（10-13反事实研究已证伪）。实盘照常跑，无需用户介入。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#9aa0aa">系统</span>
+        <div class="ev-body"><div class="ev-h"><b>整点同步检查 08:19：过去1小时 docs/learnings.md 有实质变更</b><span class="muted">10-16 08:20</span></div><div class='ev-d'>quant-hourly-learn 08:12 轮次在 docs/learnings.md 追加学习条目：复盘确认重置后仍0笔成交、8策略全部hold（regime=range）、账本100万分毫不差、心跳正常；优化轮新增2个门禁候选（G-gridcount、G-assumdoc）+ G-scalexit出场端过拟合警示、G-fundarb费用扣除约束加注；src/一行未动、无代码改动。本轮按规则仅内部沉淀，不推送用户。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>quant-review-check 08:14：实盘 regime 一刀切暂停与 10-13 反事实证据不一致，建议 gate 差异化处理</b><span class="muted">10-16 08:16</span></div><div class='ev-d'>市场震荡（BTC+0.69%，44涨16跌），持仓0，权益100万。近1小时96笔决策全部 regime=range 趋势策略暂停（trader.py:249-253 blanket gating），当前回撤0%，纯 regime 驱动。10-13 研究已证伪一刀切（dual_ma/dualm_a_j 的 range 入场样本外正期望，暂停少赚 2091/2066）；唯一候选 donchian+过滤器A 已排队 gate。建议：改为分策略差异化暂停，走回测+门禁后落地；本次不碰代码，无须立即干预。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>08:12 每小时学习复盘：GitHub 新项目方法印证 + 系统正常（n=0）</b><span class="muted">10-16 08:15</span></div><div class='ev-d'>学习主题=estebansp23/crypto_systematic_research（MIT）：kill-list 文档资产印证我方 parked 机制；敏感性网格&#x27;27/27 样本外正期望组合数&#x27;度量记作门禁可选第 10 项候选 G-gridcount；P1/P2 效应不对称探测器与我方 bootstrap ΔPF 框架同源；波动压缩策略集体 FAIL 对 G-scalexit（分段退出）给出预注册须逐段 OOS 分解的警示；BTC 单场所费率套利 3.13%≈放贷一半、手续费吃掉零售规模收益，G-fundarb 加费用扣除约束。复盘：live_trades=0（重置后无成交）、positions=0、现金 100 万分毫不差、8 策略全 hold（regime=range）、心跳 ingest/live_trader 均正常。无门禁进程、无新裁决（bq FAIL→parked 仍为最新）。src/ 一行未动，未记 CHANGELOG。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>quant-hourly-learn 07:42 完成</b><span class="muted">10-16 07:45</span></div><div class='ev-d'>学习主题=市场分析：10月中旬宏观压制下BTC盘整（8K-4K，F&amp;G 53中性），三方独立印证我方regime=range→8趋势策略暂停；新增G-etfflow候选（ETF流市场性格输入），G-fundsent/G-altsindex加注；恐慌贪婪53.0与外部一致、BTC 2,199.78行情健康。复盘：重置后0笔，无样本。优化：无新证据，src一行未动，不记CHANGELOG。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>quant-review-check：4 连损、持仓0、市场震荡</b><span class="muted">10-16 07:00</span></div><div class='ev-d'>10-13~10-15 连续4笔亏损(ZECUSDT-122/PUMPUSDT-75/NEARUSDT-209.62/ONDOUSDT-108.10,合计约-514.7)。当前持仓0只,市场环境震荡(BTC 24h -1.79%,下跌58家)。入场质量问题已知,learn门禁(相关性过滤器/资金费率情绪门)在跑,本轮无新证据,不建议新动作。供23:00日报汇总。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>review-check：实盘 regime 毯式暂停与 10-13 反事实研究证据矛盾</b><span class="muted">10-16 06:46</span></div><div class='ev-d'>市场 range（BTC -1.79%，2涨58跌），净值100万持仓0，重置后10.5h零成交。8个趋势策略全部因 regime=range 暂停新开仓，回撤=0%故非回撤风控。10-13研究已证伪毯式暂停（dual_ma/dualma_j 正期望，暂停少赚2091/2066；keltner/atr_channel淘汰；donchian+过滤器A门禁排队）。建议learn轮次按策略分化走门禁预注册，本轮未改代码。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>整点进度检查：quant-crypto docs/learnings.md 有实质更新</b><span class="muted">10-16 06:19</span></div><div class='ev-d'>06:15 前后三轮学习/复盘/优化已记入 docs/learnings.md：05:15 风控主题（新增 G-scaledexit/G-cooldown/G-stresstest 候选，G-halfkelly 获双源印证）、05:42 市场分析主题（新增 G-mvregime/G-reghyst/G-altsindex 候选，G-corr70 获独立印证）、06:15 均值回归主题（新增 G-mr-range/G-mr-screen 候选，退出原因分解方法论注记）。复盘：重置后仍 0 笔成交、0 仓位、现金 1000000.0 分毫不差，regime=range 下 8 策略全部 hold，数据源健康。src/ 一行未动，无实盘参数改动，未运行 publish.sh、无 GitHub 写入。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#9aa0aa">系统</span>
+        <div class="ev-body"><div class="ev-h"><b>微信中继服务恢复</b><span class="muted">10-16 06:01</span></div><div class='ev-d'>06:00 轮次发现 wechat-relay 进程死亡（VM 重启约2.5小时前，/etc/systemd unit 被清空，心跳停滞于05:57后）；按备份单元恢复 /etc/systemd/system/wechat-relay.service，daemon-reload+enable+start，22:00:28 UTC 重启成功，status=RUNNING，心跳新鲜，inbox/failed 均为空。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>复盘检查：5连亏+盈利回吐异常</b><span class="muted">10-16 05:17</span></div><div class='ev-d'>震荡市（BTC-1.79%，2涨58跌），持仓0。近5笔连亏-669 CNY，近7天胜率26.7%低于健康区间；NEARUSDT momrot单笔-18.5%为左尾暴露（硬止损帽门禁已证伪，不调参数）；ONDOUSDT dual_mom mfe+10.33%回吐至-7.7%，+1R保本移动未触发原因待查。实盘照常跑，无改动。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#9aa0aa">系统</span>
+        <div class="ev-body"><div class="ev-h"><b>quant-review-check：复位后 9 个趋势策略被 regime=range 一刀切冻结 8.7h、零开仓；10-13 反事实已证伪该暂停对 dual_ma/dualma_j 有害，建议分策略差异化但须走门禁</b><span class="muted">10-16 05:04</span></div><div class='ev-d'>市场环境震荡（BTC 24h -1.79%，2涨/58跌），持仓0，账本¥1,000,000整。10-15 20:17 复位后 922 个决策全部 hold/skip：832 个为 regime=range 趋势策略暂停（9 策略）、90 个为 meanrevert 暂停新开仓（回测待优化）。最新复盘为复位前旧样本（10-15 00:07 前），最近10笔8亏2盈、五连亏（ONDO/dual_mom -108.1、NEAR/momrot -209.62、PUMP/dual_mom -75.01、ZEC/momrot -122.0、CRCL/dualma_j -154.46），按 n&lt;30 回测先验不构成策略失效证据。三类授权项：keltner 已淘汰无动作；RLCUSDT 止盈无回测证据不落地；震荡市趋势策略——实盘仍在执行 10-13 反事实研究证伪的一刀切暂停（dual_ma/dualma_j 暂停在样本外少赚 2091/2066 CNY，turtle/mtf_trend 方向为负），研究结论建议分策略差异化（donchian 可暂停、其余恢复，donchian+过滤器A 已排队走门禁）。本轮不直接改代码，调整方向已记入门禁候选复盘；无推送。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>虚拟盘交易循环 05:02</b><span class="muted">10-16 05:02</span></div><div class='ev-d'>市场状态 range（ADX=19.2，趋势策略暂停），无成交；净值 1000000.00，持仓 0</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>整点检查：学习笔记已更新（docs/learnings.md）</b><span class="muted">10-16 04:19</span></div><div class='ev-d'>过去1小时内 ~/workspace/quant-crypto/ 唯一实质变更：docs/learnings.md，半小时学习任务追加 03:43、04:12 两轮记录（学习/复盘/优化）。03:43 新增门禁候选 G-crashtrade/G-thompson/G-macro/G-volshift；04:12 新增 G-dsr/G-varlimit/G-pesbar，G-rhalt-gradient/G-regime5 获外部印证。复盘：重置后实盘仍 0 笔，range 体制下 8 策略全 hold，账本 1000000.0 分毫不差。src/ 一行未动，无 CHANGELOG 记录；无门禁进程在跑，最新裁决仍为 BQ FAIL→parked。仅本地记事件，未发布。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>整点检查 03:19：过去1小时仅 learnings.md 追加，无实质代码变更</b><span class="muted">10-16 03:19</span></div><div class='ev-d'>03:13 学习轮（资金费率/OI 过滤器 dev.to 实证研究：60组合仅1个越过真实效应线，BN/G-oifund 门禁门槛加注）+复盘（重置后0笔、range体制全停、账本100万分毫不差）+优化轮（无新证据、无代码改动）；src/ 一行未动；无 GitHub 写入；无门禁进程、无新裁决。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>复盘检查：regime一刀切暂停已无独立风控理由，建议差异化放开</b><span class="muted">10-16 03:04</span></div><div class='ev-d'>资金重置后净值100万零回撤、零成交，但所有趋势策略被regime=range暂停卡死零开仓。10-13反事实研究已证伪该一刀切暂停（dual_ma/dualm_a_j样本外分别少赚2091/2066元），当时保留它的理由（回撤8.3%+StoplossGuard冷却）现已过期。建议：移除trader.py一刀切regime_paused新开仓硬阻止（donchian可单独保留暂停，待其门禁结果），走回测证据链+上线门禁后落地。系统心跳正常，无需推送用户。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>整点同步：learnings.md 新增 3 轮学习记录（无实盘成交/无代码改动）</b><span class="muted">10-16 02:20</span></div><div class='ev-d'>01:13/01:52/02:12 三轮学习：资金费率快照刷新解耦（数据基建、记CHANGELOG）、风控方法主题（G-halfkelly/G-volclust/G-montecarlo 新增，G-atrsize 获印证）、市场体制识别主题（G-btcgate/G-regperf/G-trendage 新增）、GitHub 新项目学习（G-lookaud/G-entrybreak 新增，G-flatbet 记为疑问门待实盘 n≥30 检验）。复盘：重置后 live_trades 仍 0 笔，8 个策略因 range regime 全部 skip/hold，账本分毫不差（1000000.0）。无门禁进程在跑，无新裁决（最新仍 BQ FAIL→parked）。src/ 一行未动。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#9aa0aa">系统</span>
+        <div class="ev-body"><div class="ev-h"><b>quant整点同步：01:13轮三处变更</b><span class="muted">10-16 01:20</span></div><div class='ev-d'>docs/learnings.md 新增01:13学习/复盘/优化三节（风控方法轮换：波动率仓位/G-atrsize外部印证、新增G-halfkelly/G-volclust/G-montecarlo/G-rhalt-gradient；复盘live_trades仍0笔、账本1000000分毫不差；优化轮无改动）。CHANGELOG新增2026-10-16 00:44 funding_rates快照刷新解耦（数据基建：FNG 20h门与funding 6h门拆开，修复27.5h未刷新耦合bug，端到端验证通过）。src/data/ingest.py 尾部一块改动，策略/参数/风控零触碰。门禁仍无进程，最新裁决BQ FAIL→parked。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>quant 学习轮次 00:12：7 个新设计输入（统计套利/费率套利等），实盘无变化</b><span class="muted">10-16 00:19</span></div><div class='ev-d'>docs/learnings.md 新增 2026-10-16 00:12 三段：学习（新策略思路：统计套利 pairs、资金费率套利、ATR 体制过滤器、成本意识）新增 G-pairspread/G-fundarb/G-spreadwiden/G-zipexit/G-atrregime/G-costlimit/G-momtrail，均为预注册前材料；复盘：live_trades 仍 0 笔、账本 1000000 分毫不差、8 策略 range 下全停；优化：无新证据、src/ 一行未动、门禁仍 BQ FAIL→parked。G-fundarb 与已有 funding 数据源咬合，优先级候选靠前。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>完成：quant-live-trader 23:42 轮次：虚拟盘交易循环运行中</b><span class="muted">10-15 23:43</span></div></div></div>
@@ -244,48 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>每小时学习轮次：BC 统计套利可行性检查 → 基础设施缺失 parked</b><span class="muted">10-14 21:49</span></div><div class='ev-d'>学习：加密配对交易 cointegration 框架（ADF+Johansen 选对、z-score 信号、short leg 必须有 futures/shorts）。复盘：已平仓 28 笔累计 −3934.48，无新增。优化：BC 可行性检查 FAIL——实盘为纯现货多头（仅 BUY/SELL/SELL_STOP），配对交易需多空两腿，与 BA 同一阻塞项，合并为衍生品执行基础设施前置项。附加发现：小币种硬止损帽门禁脚本崩溃（sqlite 权限疑因，待下轮核对用户后重跑）。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>BB-2 宏观事件日降仓回测 → FAIL/parked</b><span class="muted">10-14 21:43</span></div><div class='ev-d'>BB-a 硬暂停新开回测裁决：pooled PF 基线1.30→BB臂1.29（ΔPF=-0.01），一致性0.333，最差窗PF0.47，tier=OVERFITTED。窗口后7天被skip信号反事实收益+3.25%（t=8.09显著为正）——事件窗口确是趋势起点，方向错了。按铁律parked，不改src/；StoplossGuard/回撤梯子/连损减仓未动。产物 research/results/bb_macro_20261014.json。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>Track3 atr_channel 正式下线</b><span class="muted">10-14 21:32</span></div><div class='ev-d'>出场端双变体门禁双FAIL：V1紧出场PF0.73(Δ+0.21)/V2跟踪止损PF0.67(Δ+0.15)，基线PF0.52从未过门禁；10个修复方向全灭。config.yaml已移除名单（代码保留，风控层未动）。证据research/results/atr_channel_fix_20261014.json</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>Track1 range暂停收窄门禁：FAIL，parked</b><span class="muted">10-14 21:14</span></div><div class='ev-d'>dual_ma/dualm_a_j range豁免门禁未过（ΔPF=+0.05&lt;+0.15，pooled PF 0.95&lt;1.3，dual_ma range-only期望为负，dualm_a_j样本n=18&lt;50），tier=WEAK，src/未动；设计文档/结果/学习笔记已沉淀。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>美国节点订阅已发布</b><span class="muted">10-14 21:06</span></div><div class='ev-d'>筛选4个免费源760个节点，保留44个美国出口节点，生成Shadowrocket订阅 https://253631672.github.io/macro-bridge-7f3k2/vpn-us.txt，每日早上自动刷新</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>完成：quant-dashboard-refresh: 20:55 轮数据刷新+发布看板</b><span class="muted">10-14 20:57</span></div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>虚拟盘交易轮完成（20:37）</b><span class="muted">10-14 20:39</span></div><div class='ev-d'>净值 45626.64 CNY，现金 42035.69，持仓 4 个。峰值回撤 8.7%（接近 12% 熔断线），已降半仓运行（新开仓风险预算×0.5）；连损 3 笔≥3×0.5。市场状态 range（ADX=21.7），趋势策略暂停。momrot Top3: STRKUSDT/OGNUSDT/ONDOUSDT。本轮无买入/卖出/止损成交。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>arena-hourly-opt 20:24：修Muse阵营收盘推送门禁</b><span class="muted">10-14 20:35</span></div><div class='ev-d'>arena_settle.py：camp=muse时跳过当日汇总Bark推送（防明日15:10打出第二条汇总、违反每天只一条新规）；_backfill_index_history返回值记入DONE摘要。AST+/tmp端到端验证通过，无页面变化不发布。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>Track3 atr_channel 出场端修复门禁回测中</b><span class="muted">10-14 20:18</span></div><div class='ev-d'>预注册 research/atr_channel_fix_design.md；V1=TIGHT_EXIT(EMA30-1.0×ATR出场)/V2=CHANDELIER(跟踪止损close-2.5×ATR)；门禁11项北极星+bootstrap/压力/悲观成交；脚本 research/atr_channel_fix_20261014.py 运行中</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>arena-hourly-opt 19:54：验证Muse阵营落地并发布10页看板</b><span class="muted">10-14 20:17</span></div><div class='ev-d'>验证19:45用户批准的Muse阵营上线+4项盈利优化（AST/撮合断言/风控断言全过）；浏览器上传链路发布10个竞技场页面各独立提交main（pk.html新建），pinned-blob MD5 10/10一致，基线已更新为10页，线上200正常。无用户推送。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>quant-hourly-learn 20:12：风控方法学习 + BB-2 门禁执行中</b><span class="muted">10-14 20:15</span></div><div class='ev-d'>学习风控方法主题（连亏缩仓/分级止盈/drift guard），新增3个低优先级风控候选；复盘28笔无新增；BB-2宏观事件日降仓门禁（21组重跑）运行中，裁决待下轮。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>Track2 小币种硬止损帽：预注册设计完成</b><span class="muted">10-14 20:01</span></div><div class='ev-d'>research/hardstop_cap_design.md 已写（假设/cap=8%/九项门禁/判错条件）；wf_gate_hardstop_20261014.py 后台运行中（6策略×3窗×2臂）。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>Track4 donchian+过滤器A 门禁 FAIL/parked</b><span class="muted">10-14 19:59</span></div><div class='ev-d'>G1-G12 5项FAIL（n=46&lt;50, PF1.25&lt;1.5, bootstrap CI下界&lt;0, 一致性0.33, 最差窗0.48）；tier=WEAK；parked 不碰src/。结果research/results/donchian_filterA_gate_20261014.json</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>完成：quant-live-trader: 运行虚拟盘交易循环</b><span class="muted">10-14 19:58</span></div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>虚拟盘 19:52 轮次：无成交</b><span class="muted">10-14 19:52</span></div><div class='ev-d'>equity=45637.27 cash=42035.69 持仓=4（ONDO/NEAR/OGN/RLC）。市场状态range（ADX=21.7），趋势策略暂停；峰值回撤8.7%接近12%熔断线，新开仓风险预算×0.5半仓运行；连续3笔亏损再×0.5。本轮全hold/skip，无买入卖出止损成交。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>完成：19:49 轮次：量化看板刷新发布中</b><span class="muted">10-14 19:51</span></div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>15分钟复盘检查：发现连续亏损与异动持仓</b><span class="muted">10-14 19:46</span></div><div class='ev-d'>震荡市。dual_ma实盘6连亏(-1711)、atr_channel近8笔7亏(-1148)、最新3笔复盘均标记买入逻辑待查；OGNUSDT 24h -19.67%异动持仓。交易循环正常，风控在位。调整建议交learn轮次走回测+门禁，不直接落地。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>整点同步：19:12 学习轮更新沉淀</b><span class="muted">10-14 19:19</span></div><div class='ev-d'>learnings.md 新增 19:12 三条：GitHub 新项目轮换学习（argus/omnitrader/btc-quant-analysis）；live_trades 仍 28 笔、累计 -3934.48 无新增平仓；BB（宏观事件日降仓）事件日历数据源可行性检查 PASS，排队 BB-1 设计文档+预注册；实盘 n=28&lt;50 参数不动。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>完成：quant-dashboard-refresh: 刷新看板数据</b><span class="muted">10-14 19:18</span></div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#9aa0aa">系统</span>
-        <div class="ev-body"><div class="ev-h"><b>虚拟盘交易轮 19:17：无成交</b><span class="muted">10-14 19:17</span></div><div class='ev-d'>equity=45637.27 cash=42035.69 持仓=4；峰值回撤8.7%接近12%熔断线，降半仓运行（新开仓风险预算×0.5）；连续3笔亏损继续减仓；市场状态range（ADX=21.7震荡市，趋势策略暂停）；momrot Top3: STRKUSDT/ONDOUSDT/OGNUSDT</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>BB事件日历可行性PASS</b><span class="muted">10-14 19:13</span></div><div class='ev-d'>宏观事件日降仓（BB）事件日历数据源可行性检查通过：采用静态curated日历JSON（FOMC/CPI/NFP/PPI/PCE约40个/年）随repo提交，免key免网络。下一轮BB-1做设计文档+预注册。实盘仍28笔-3934.48，无新样本，不改实盘参数。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>arena-hourly-opt 18:54 轮：run_marker 接入最后 3 个 cron 脚本</b><span class="muted">10-14 18:56</span></div><div class='ev-d'>arena_intraday.py（30分钟盘中）/zouwei.py（每日）/awards.py（每周）接入 run_with_marker 启停标记，全 cron 脚本覆盖收官；py_compile+沙箱3组测试PASS；无页面变化未发布。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>完成：quant-hourly-learn：18:42 轮（市场分析学习 + BA 基差可行性检查）</b><span class="muted">10-14 18:44</span></div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>BB-2 宏观事件日降仓回测 → FAIL/parked</b><span class="muted">10-14 21:43</span></div><div class='ev-d'>BB-a 硬暂停新开回测裁决：pooled PF 基线1.30→BB臂1.29（ΔPF=-0.01），一致性0.333，最差窗PF0.47，tier=OVERFITTED。窗口后7天被skip信号反事实收益+3.25%（t=8.09显著为正）——事件窗口确是趋势起点，方向错了。按铁律parked，不改src/；StoplossGuard/回撤梯子/连损减仓未动。产物 research/results/bb_macro_20261014.json。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
