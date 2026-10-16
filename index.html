@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-16 16:14（北京时间）· 每20分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-16 16:34（北京时间）· 每20分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -47,7 +47,11 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="card attn"><div class="card-t">需要你介入 <span class="badge">1</span></div><ul class="needs"><li><span class='dot warn'></span>给 23:00 日报等定时任务开启常开审批（App → 头像 → Upcoming → 任务详情 → 权限设为允许）<span class='muted'> · 10-09 23:28</span></li></ul>
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
-<div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+<div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>复盘检查：实盘被一刀切暂停机制拦截，零可开仓策略</b><span class="muted">10-16 16:31</span></div><div class='ev-d'>16:30 检查：系统健康（trader/ingest 心跳新鲜、每5分钟决策）；市场震荡（BTC 24h +0.69%，44涨/16跌）；持仓0。资金重置（10-15 20:17）后 20 小时零成交——4 个 entry_enabled=True 策略（momrot/mtf_trend/dual_mom/turtle）全被 regime=range 趋势暂停逻辑拦截，其余策略本就禁用。复盘最近5笔均为重置前亏损（已归档）。调整方向：10-13 反事实研究已证伪该一刀切暂停（dual_ma/dualm_a_j 样本外正期望），建议 learn 轮次按上线门禁针对当前可用策略做选择性解除验证；turtle/mtf_trend 研究方向为负应保持暂停。本轮不改动代码。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>整点同步（16:19）：learnings.md 15:44+16:14 两轮学习/复盘已沉淀</b><span class="muted">10-16 16:20</span></div><div class='ev-d'>16:14轮次市场分析：链上/情绪/宏观三支柱框架映射，新增3待编号候选（OI增长动量、taker-flow方差压缩爆仓预警、宏观regime环境层），BN门（资金费率情绪门）补BIS WP1087学术佐证。15:44轮次：funding carry/基差策略思路+相对强度入场过滤器候选。复盘仍n=1（P组LINKUSDT -13.65），账本1000000.00分毫不差；src/一行未动。仅本地记录，不发布。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>quant-dashboard-refresh 14:34轮次：index.html已发布，quant.html下轮补发</b><span class="muted">10-16 14:48</span></div><div class='ev-d'>dashboard/api.py+build_quant.py+build.py 正常；Actions无阻塞run；index.html commit 3259e21 已部署成功，pinned blob md5与基线一致；browser task在等Pages部署时报TIMEOUT-index（实际run已completed success，应为UI观察延迟）故quant.html未上传，关闭任务释放锁，下轮补发。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>复盘检查：regime=range 过滤器仍在阻断全部新开仓</b><span class="muted">10-16 14:31</span></div><div class='ev-d'>10-15 20:17 空仓重启后约18小时，9个趋势策略(dual_ma/donchian/momrot/mtf_trend/dual_mom/keltner/dualm_a_j/atr_channel/turtle)全部被 regime=range 暂停新开仓，meanrevert 因回测待优化暂停，其余entry_enabled=False；账户100%现金¥1,000,000，live_trades 0行。10-13反事实研究已证伪该一刀切暂停(dual_ma/dualm_a_j少赚2091/2066)，建议排入learn轮次完整上线门禁验证后移除/放宽。</div></div></div>
@@ -282,10 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>📮 留言板上线</b><span class="muted">10-15 00:49</span></div><div class='ev-d'>用户无VPN时用的异步留言板：写留言去 GitHub Issue #1，看结果去 messages.html 页面；mailbox-poll 每5分钟轮询执行。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#f5a623">交易</span>
-        <div class="ev-body"><div class="ev-h"><b>quant-live-trader 00:42 轮次完成</b><span class="muted">10-15 00:43</span></div><div class='ev-d'>无成交。equity=45481.22 cash=42035.69 持仓=4；市场 range（ADX=21.7）趋势策略暂停；峰值回撤9.0%（降半仓运行）；连续3笔亏损，新开仓风险预算×0.5。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>quant-review-check：震荡市4持仓水下、回撤约9%、连损风控已降仓</b><span class="muted">10-15 00:21</span></div><div class='ev-d'>市场环境：震荡（BTC 24h +1.61%，上涨42家/下跌18家）。持仓4只（dual_mom/momrot，均为1d周期趋势策略），日线口径浮亏：RLCUSDT -13.8%、NEARUSDT -14.6%、ONDOUSDT -3.0%，OGNUSDT +2.4%；止损线都在且1d口径均未触发（15m口径下探更深但不触发止损）。连续3笔平仓亏损（PUMP/ZEC/CRCLB）→连损风控新开仓风险预算×0.5生效中。账户回撤：最高49983→45481，约9.0%，已超8.3%降半仓线、距12%熔断仍有空间；实盘暂停=回撤风控，与regime规则不混淆。注意：全部趋势策略仍在regime=range下暂停新开仓，与10-13反事实研究结论（震荡期一刀切暂停对dual_ma/dualm_a_j有害）矛盾，建议后续learn轮次评估是否移除该规则（需走回测门禁，不直接落地）。最近3笔复盘均为止损退出且标注&#x27;检查买入逻辑是否失效&#x27;，dual_mom/momrot买入逻辑待hourly-learn跟进。无紧急干预事项，实盘照常。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>00:15 学习轮：分级止盈门禁 FAIL（WEAK）→ parked，研究优先级转向入场质量</b><span class="muted">10-15 00:20</span></div><div class='ev-d'>过去1小时 quant-crypto 有4个实质文件变更：① 00:01 分级止盈门禁 FAIL（ΔPF=+0.05 未过门禁，bootstrap CI 含0，parked，不动实盘）；② 00:05 研究优先级调整：主要矛盾从出场/风控端转向入场质量（实盘胜率 26–32% 远低于 35–60% 健康区间）；③ 00:15 学习：BOTLAB 资金费率过滤器证据门槛（守门人框架/分歧频率门/尝试计数），+实盘成本体检（手续费仅占亏损 6.2%，主因是 edge）；④ 00:15 复盘：28 笔仍 −3934.48 CNY，无新成交，4 笔持仓均属开仓允许策略，无代码改动。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>quant-live-trader 00:42 轮次完成</b><span class="muted">10-15 00:43</span></div><div class='ev-d'>无成交。equity=45481.22 cash=42035.69 持仓=4；市场 range（ADX=21.7）趋势策略暂停；峰值回撤9.0%（降半仓运行）；连续3笔亏损，新开仓风险预算×0.5。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
