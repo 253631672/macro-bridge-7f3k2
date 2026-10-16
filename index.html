@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-16 19:54（北京时间）· 每20分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-16 20:14（北京时间）· 每20分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -47,7 +47,9 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="card attn"><div class="card-t">需要你介入 <span class="badge">1</span></div><ul class="needs"><li><span class='dot warn'></span>给 23:00 日报等定时任务开启常开审批（App → 头像 → Upcoming → 任务详情 → 权限设为允许）<span class='muted'> · 10-09 23:28</span></li></ul>
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
-<div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+<div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>学习轮次：配对交易新策略思路</b><span class="muted">10-16 20:14</span></div><div class='ev-d'>统计套利/配对交易 regime-adaptive 框架已记 learnings.md；新增候选（跨资产配对均值回归，待做空可行性前置结论）排队；实盘仍 n=1 无新成交，参数不动。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>quant-dashboard-refresh 本轮发布成功</b><span class="muted">10-16 19:39</span></div><div class='ev-d'>commit 06ed50d（index.html）+89250d0（quant.html）；pinned blob md5 与基线逐字节一致；两次 Pages 部署均成功</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>整点检查：docs/learnings.md 新增学习复盘</b><span class="muted">10-16 19:19</span></div><div class='ev-d'>quant-hourly-sync 19:19 轮次：过去1小时内仅 docs/learnings.md 有实质变更（quant-hourly-learn 的 18:42/19:12 轮次记入）。学习产出：入场质量 checklist 主题，新增2个待编号候选（有效突破确认清单/分批入场 pyramiding）+多条对照注记（BN 资金费率情绪门佐证+1、hardstop_cap 佐证、volatility-targeting 佐证+1）+1诚实注记；复盘仍 n=1 无新成交，现金 1,000,000.00 分毫不差，src/ 一行未动，无门禁新裁决，排队照旧。无代码改动，无 GitHub 写入。</div></div></div>
@@ -284,8 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>复盘检查：连续3笔止损出场，4只持仓全部浮亏</b><span class="muted">10-15 03:26</span></div><div class='ev-d'>PUMPUSDT dual_mom -75、ZECUSDT momrot -122、CRCLBUSDT dualma_j -154.5 三笔连续止损退出；当前持仓 RLCUSDT/OGNUSDT/NEARUSDT/ONDOUSDT 全部24h负；回撤9.06%（equity 45468），回撤梯子降半仓生效中。复盘30条中有20条标记需检查买入逻辑（横跨6策略），主矛盾在入场质量，等相关性过滤器/资金费率情绪门门禁结果，不单独改动。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>整点检查：近1小时量化工程有实质变更</b><span class="muted">10-15 03:20</span></div><div class='ev-d'>docs/learnings.md 新增 02:05/02:12/02:42 三轮记录（VPIN/风控/市场分析学习、dual_ma 复盘、BQ资金费率回填完成、HL 48/60 永续可用性验证）；research/results/hl_perp_availability_20261015.json 新产物。无用户推送，内部沉淀。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>量化复盘检查：回撤加深至9.01%，连续3笔止损</b><span class="muted">10-15 02:45</span></div><div class='ev-d'>权益45479.14 CNY，峰值回撤9.01%（已过8%降半仓线，逼近10%中层熔断暂停新开仓）；最近3笔成交止损：CRCLBUSDT dualma_j -154.46、ZECUSDT momrot -122.00、PUMPUSDT dual_mom -75.01；复盘标记3笔均需检查买入逻辑。持仓OGNUSDT -11.92%浮亏、RLCUSDT -6.82%。风控梯子代码自动生效，无需手动改动；调整建议待learn轮次走回测门禁。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>整点检查：近1小时量化工程有实质变更</b><span class="muted">10-15 03:20</span></div><div class='ev-d'>docs/learnings.md 新增 02:05/02:12/02:42 三轮记录（VPIN/风控/市场分析学习、dual_ma 复盘、BQ资金费率回填完成、HL 48/60 永续可用性验证）；research/results/hl_perp_availability_20261015.json 新产物。无用户推送，内部沉淀。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
