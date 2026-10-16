@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-16 11:14（北京时间）· 每20分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-16 11:34（北京时间）· 每20分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -47,7 +47,11 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="card attn"><div class="card-t">需要你介入 <span class="badge">1</span></div><ul class="needs"><li><span class='dot warn'></span>给 23:00 日报等定时任务开启常开审批（App → 头像 → Upcoming → 任务详情 → 权限设为允许）<span class='muted'> · 10-09 23:28</span></li></ul>
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
-<div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+<div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>复盘检查：重置后15小时零成交——暂停已是被证伪的regime过滤器</b><span class="muted">10-16 11:31</span></div><div class='ev-d'>市场震荡(regime=range),BTC 24h+0.69%。live_trader心跳正常,每5分钟决策正常。重置后(10-15 20:17)0笔成交:24h内1456次决策被&#x27;regime=range 趋势策略暂停&#x27;拦掉,9个趋势/动量类策略全部只停新开仓。注意:10-13反事实研究已证伪该一刀切暂停对dual_ma/dualm_a_j(有害,range入场样本外正期望),当时保留暂停是因实盘有独立回撤风控理由(8.3%回撤降半仓);资金重置后回撤已清零(账户正好1,000,000),该独立理由不复存在,当前生效的暂停=恰好是被证伪的那条规则。建议:走门禁把regime过滤器改为分策略差异化(豁免dual_ma/dualm_a_j),改动前不落地。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>整点同步 11:19：过去1小时 learnings.md 更新</b><span class="muted">10-16 11:19</span></div><div class='ev-d'>11:12 轮（学习+复盘+优化）已沉淀：风控方法主题=组合敞口计数、3-factor sizing、Rolling scoring、liquidity-aware sizing；新增 2 个待编号候选（策略实盘滚动停用 rolling scoring、liquidity-aware sizing 数据缺口）；BN（资金费率情绪门）再添 2 份外部机制印证（09:42 三连洗机制链、10:12 Gate 百科级联机制、10:42 zabor funding-carry REJECT 判决）；复盘=重置后仍 0 笔成交（n=0 实盘解读冻结）、range regime 全停、账本 1,000,000.0 分毫不差、数据流心跳正常；src/ 一行未动、无门禁进程、无新裁决、无 CHANGELOG 条目</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>arena-board-refresh：发布 arena.html、rank.html（ce2301e/adf5af0）</b><span class="muted">10-16 11:11</span></div><div class='ev-d'>两文件有实质变化，经浏览器上传链路独立提交，pinned blob md5 逐字节校验通过，锁已释放</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>复盘检查：5连损+胜率低迷，dual_ma 是头号亏损源</b><span class="muted">10-16 10:15</span></div><div class='ev-d'>市场环境：震荡（BTC 24h +0.69%，涨44家/跌16家）；当前持仓0。trade_reviews 30笔：总胜率26.7%（8/30），PF≈0.099，净-4252；最近5笔连损（ONDOUSDT dual_mom -108、NEARUSDT momrot -210、PUMPUSDT dual_mom -75、ZECUSDT momrot -122、CRCLBUSDT dualma_j -154）。分策略：dual_ma 6笔0胜-1711.57 为最大亏损源；atr_channel 已下线；keltner 2笔0胜-514.9。结论：入场质量问题仍在，方向=learn 轮次专项诊断 dual_ma 入场（相关性过滤器/资金费率情绪门门禁在跑中）。无紧急风险敞口，无用户可见推送。</div></div></div>
@@ -282,10 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>quant-dashboard-refresh 22:39 轮次：发布完成</b><span class="muted">10-14 22:47</span></div><div class='ev-d'>index.html=5b20e10, quant.html=91d8080, pinned blob diff 逐字节一致</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>完成：quant-dashboard-refresh 22:39 轮次：重建中</b><span class="muted">10-14 22:47</span></div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>整点进度检查（22:19）: 1小时内实质变更</b><span class="muted">10-14 22:20</span></div><div class='ev-d'>过去1小时内 quant-crypto 有实质文件变更：① docs/CHANGELOG.md — 2026-10-14 21:35 atr_channel 正式下线（config.yaml 实盘名单移除，Track3 修或砍门禁两变体双 FAIL，PF 0.73/0.67，tier=WEAK；基线 PF 0.52 OVERFITTED）；② docs/learnings.md — BC（配对交易）基础设施可行性检查 FAIL parked（纯现货多头、无空头执行能力），并记录 Track2 小币种硬止损帽门禁初版崩溃（sqlite 权限 640 root:nogroup，疑非 root 运行）；③ research/bb_macro_event_design.md — BB 宏观事件日降仓设计+预注册（五项优化之一）；④ research/wf_gate_atrfix_20261014.py（已出结果 FAIL→下线）+ wf_gate_hardstop_20261014.py / _resume.py（Track2 门禁重跑，checkpoint 22:19 仍在跑，结果文件未生成）。均为研究沙盒/文档层改动，实盘参数未动（仅下线已暂停的 atr_channel）。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>复盘检查：回撤 -8.95% 仍在风控内，暂无调整动作</b><span class="muted">10-14 22:11</span></div><div class='ev-d'>市场震荡（BTC 24h +1.61%，涨42/跌18）。最新权益 45512 CNY，最大回撤 -8.95%（10-14 22:07，历史最低点；初始 49983），距 12% 熔断约 3pt，8.3% 降半仓风控已覆盖。4 只持仓全部浮亏：RLCUSDT -19.14%（止损尚远 14.6%）、OGNUSDT -8.34%（24h -13.26% 单日大跌、无放量，止损 26.8% 外）、NEARUSDT -16.19%（距止损 3.5%）、ONDOUSDT -6.66%（距止损 0.4%，下一轮自动止损触发）。复盘 3 笔（PUMPUSDT/ZECUSDT/CRCLBUSDT）均为 10-13 止损出场，止损机制正常工作，入场逻辑失效的复盘标注留给 learn 轮次研究。不做手动调整，无代码改动。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>完成：quant-dashboard-refresh 22:39 轮次：重建中</b><span class="muted">10-14 22:47</span></div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
