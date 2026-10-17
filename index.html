@@ -35,7 +35,7 @@ details{margin-top:8px;border:1px solid #eef1f5;border-radius:8px;padding:8px 10
 summary{cursor:pointer;font-size:13px;font-weight:600;color:#4f8cff;outline:none}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-18 03:14（北京时间）· 每20分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-18 03:35（北京时间）· 每20分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -62,6 +62,10 @@ summary{cursor:pointer;font-size:13px;font-weight:600;color:#4f8cff;outline:none
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
 <div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>整点同步：过去1小时 docs/learnings.md 有实质更新（学习/复盘/优化三轮 03:12 记入）</b><span class="muted">10-18 03:19</span></div><div class='ev-d'>变更：docs/learnings.md 在 03:12 轮次新增学习笔记（Kelly 准则与保守化、三包络取最小定仓、波动率定仓，均观测级预注册前）+ 复盘（本轮无新成交；I 队 spot_grid 累计 −1519.46 根因定位到代码级死分支：跌破下轨止损分支死代码+网格语义与 runner 单 key 单仓位错配）+ 优化（无可落地改动，src/ 一行未动，按铁律记名预注册候选）。CHANGELOG 本轮不记；无 GitHub 写入；不向用户汇报。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>复盘检查 03:14：I队单轮8连亏 −1519元（震荡绞杀），未达熔断线，无需调整</b><span class="muted">10-18 03:17</span></div><div class='ev-d'>市场震荡（BTC 24h −0.77%），主账户空仓 ¥1,000,000。I队（spot_grid）8笔平仓全亏：STRK −470.15、ENA −192.56、SUI −183.34、ONDO −178.21、TAO −173.92、AVAX −142.93、ADA −124.28、BNB −54.07，权益 98349；平仓8笔&lt;20未触发[KILL]，按铁律待熔断规则自动处理。D队6仓位&gt;5上限为10-17 runner竞态旧残留（已修只拦新开仓）。S10止损卖出TIA/INJ/AMP（−2%级别）已生成3条复盘。E队 100511.8 唯一盈利；A/G/H/J 0成交。无熔断，实盘照常跑。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>复盘检查 10-18 02:44</b><span class="muted">10-18 02:46</span></div><div class='ev-d'>D队仍持有10-17 12:51竞态窗口超开的6个币种（MAX=5）；I队16:52周期5笔卖出全亏（合计-1158，STRKUSDT单笔-470）；复盘钩子正常；无[KILL]熔断；主账户空仓0持仓；ingest/live心跳新鲜</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>复盘检查：I 队 spot_grid 8 笔平仓全亏（-1519），F 队 SAND 止损后重买</b><span class="muted">10-18 01:16</span></div><div class='ev-d'>震荡市，主账户 0 持仓。I 队（网格）连续 8 笔平仓全亏、已实现 -1519.46（-1.52%），00:52 轮换整体砍仓换新篮子，STRK 单笔 -4.6%；平仓数未达 20 笔熔断阈值（当前 PF=0/胜率 0%）。F 队（通道突破）已实现 -1250.94，SAND 买入 3 分钟被止损 -6.8% 后 4 小时在更高价 0.0632 重新买入，观察 whipsaw。E 队权益 +0.51% 正常。暂不改参数，按铁律需回测证据链+门禁验证后才调；继续观察下一轮 04:52。</div></div></div>
@@ -296,10 +300,6 @@ summary{cursor:pointer;font-size:13px;font-weight:600;color:#4f8cff;outline:none
 <div class="ev"><span class="ev-tag" style="background:#9aa0aa">系统</span>
         <div class="ev-body"><div class="ev-h"><b>BQ门禁：+1R保本移除 FAIL（WEAK）→parked</b><span class="muted">10-15 20:38</span></div><div class='ev-d'>预注册门禁验证&#x27;移除+1R保本可提升4在启用策略ΔPF≥+0.15&#x27;假设。结果：ΔPF=+0.184但bootstrap CI含0、一致性0；配对反事实显示移除保本使触发过的交易平均-513/笔（t=-2.29）——保本是保护性的。结论：保留保本，不动实盘。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#9aa0aa">系统</span>
-        <div class="ev-body"><div class="ev-h"><b>muse-AI策略竞赛资金重置：两阵营各100万</b><span class="muted">10-15 20:22</span></div><div class='ev-d'>用户要求。DeepSeek阵营与Muse阵营同步重置：各16队，每队¥62,500，阵营各100万。规则版本升至1.2，PK对照继续有效。旧账本已归档，明日收盘结算起新口径记账。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#9aa0aa">系统</span>
-        <div class="ev-body"><div class="ev-h"><b>AI量化资金重置：总资金改为100万</b><span class="muted">10-15 20:22</span></div><div class='ev-d'>用户要求。实盘主账户重置为¥1,000,000（原净值¥45,460.21，-9.08%，62笔交易，2持仓已清空）；17个小组各¥58,823.53（合计100万）。旧账本已备份，今日起新口径运行。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>学习笔记更新（20:12轮）：门禁验证链方法论+5个设计输入</b><span class="muted">10-15 20:19</span></div><div class='ev-d'>学习轮消化了 quant-research-harness 的验证链：selftest 自证、7步 validation_report、|IC|&gt;0.10 未来偷看审计、circular-shift null、反问题校准(AUC 0.56-0.59)、对抗 fold-id 测试、point-in-time 币种池。新增 5 个预注册前设计输入：G-selftest（门禁自证）、G-icaudit（偷看审计）、G-featregime（对抗特征测试）、G-aueed（反问题校准）、G-surv（幸存者偏差审计）。另实测发现：60币种池中有7个2026年新币（HYPE/AERO/GRAM/MSTRB/SPCXB/CRCLB/SNDKB），门禁窗口1内 CRCLB/SNDKB/SPCXB 零数据零贡献——期末名单做期初回测的温和形态，回测报告强制记录币种池名单+选定日期。复盘：30笔平仓总-4252.2、胜率26.7%、净值45460.21、回撤-9.05%（距10%中层熔断0.95pp，预警维持）、2持仓止损在位、regime=range 系统按设计趴着。数据健康修正：OKX funding_rates 停滞~15h，但 BN 情绪门真正依赖的 Hyperliquid funding_history 正常（~4h），BN 数据源结论修正为健康。优化：无新证据，src/ 一行未动，无 CHANGELOG。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>muse-AI策略竞赛资金重置：两阵营各100万</b><span class="muted">10-15 20:22</span></div><div class='ev-d'>用户要求。DeepSeek阵营与Muse阵营同步重置：各16队，每队¥62,500，阵营各100万。规则版本升至1.2，PK对照继续有效。旧账本已归档，明日收盘结算起新口径记账。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
