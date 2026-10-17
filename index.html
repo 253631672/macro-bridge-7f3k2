@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-17 16:14（北京时间）· 每20分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-17 16:34（北京时间）· 每20分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -47,7 +47,9 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="card attn"><div class="card-t">需要你介入 <span class="badge">1</span></div><ul class="needs"><li><span class='dot warn'></span>给 23:00 日报等定时任务开启常开审批（App → 头像 → Upcoming → 任务详情 → 权限设为允许）<span class='muted'> · 10-09 23:28</span></li></ul>
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
-<div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+<div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>hourly-learn 轮次：门禁 checklist 新增 Sharpe 现实性复查项</b><span class="muted">10-17 16:19</span></div><div class='ev-d'>16:12 轮次学习产出=新策略思路 1 主题（失败突破即信号/量能确认突破/ADX regime 门/不交易也是决策/回测可复现性/Sharpe 谱系表），3 个观测级候选（失败突破反转、量能突破过滤器、ADX 双轨门）+ 2 方法卡；其中方法卡「回测 Sharpe&gt;3 先查方法学」已写进 docs/review-process.md checklist（S-sharpe-sanity），文档级改动，src/ 一行未动。复盘：仍 n=1 单样本、无新成交、参数不动。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>15:42 学习轮：风控方法主题</b><span class="muted">10-17 15:43</span></div><div class='ev-d'>学习：相关性风险预算/波动率目标敞口/半凯利/MC回抽估计，3个观测级候选+3对照注记记入learnings.md，不改src。复盘：仍n=1无新成交（P组funding_reversal LINKUSDT单笔-13.65，出场机制正常），参数不动。无实质改进，不记CHANGELOG。系统存活：live_trader心跳正常，主账户100万空仓。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>完成：quant-live-trader: 运行虚拟盘交易循环</b><span class="muted">10-17 15:37</span></div></div></div>
@@ -284,8 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>review-check: 回撤 -9.0% 逼近中层10%暂停线</b><span class="muted">10-15 11:16</span></div><div class='ev-d'>11:15 复盘检查：权益45483 CNY/峰值49983，回撤-9.0%，软层8%已触发（新开仓风险预算×0.5）+连损减仓生效中；距中层10%（暂停新开仓）仅约1个百分点。持仓2只均浮亏（RLCUSDT/OGNUSDT），市场breadth 2涨58跌。风控梯子自动运行，无需手动干预；观察项已记learn backlog（NEARUSDT单笔-18.5%止损宽度复核）。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>quant-review-check：近12笔复盘9亏（动量系集中）+2只在途持仓浮亏</b><span class="muted">10-15 11:00</span></div><div class='ev-d'>市场震荡、上涨2家下跌58家。最近5笔复盘全亏：NEARUSDT/momrot -18.5%、TIAUSDT/atr_channel -11.2%、ZECUSDT/momrot -8.6%、ONDOUSDT/dual_mom -7.7%、PUMPUSDT/dual_mom -9.0%。在途RLCUSDT -6.81%、OGNUSDT -8.26%（均有止损兜底）。建议对momrot近3笔大亏做卖出逻辑审查、走回测证据链后再决定是否调参；不建议一刀切暂停趋势新开仓（10-13反事实已证伪）；健康检查正常、P队权益49966.6，本轮不做实盘改动。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>复盘检查：5连亏+回撤9%，风控自动降半仓运行</b><span class="muted">10-15 10:32</span></div><div class='ev-d'>近5笔已平仓全亏（ONDO/NEAR/PUMP/ZEC/CRCLB），触发连损减仓×0.5；净值45484，回撤9.0%激活8%软层，新开仓风险预算双重减半。止损正常退出（NEAR/ONDO今晨止损离场）；regime=range下9个趋势策略只禁新开仓；持仓RLC/OGN浮亏但未触止损。无新证据，不提新方向。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>quant-review-check：近12笔复盘9亏（动量系集中）+2只在途持仓浮亏</b><span class="muted">10-15 11:00</span></div><div class='ev-d'>市场震荡、上涨2家下跌58家。最近5笔复盘全亏：NEARUSDT/momrot -18.5%、TIAUSDT/atr_channel -11.2%、ZECUSDT/momrot -8.6%、ONDOUSDT/dual_mom -7.7%、PUMPUSDT/dual_mom -9.0%。在途RLCUSDT -6.81%、OGNUSDT -8.26%（均有止损兜底）。建议对momrot近3笔大亏做卖出逻辑审查、走回测证据链后再决定是否调参；不建议一刀切暂停趋势新开仓（10-13反事实已证伪）；健康检查正常、P队权益49966.6，本轮不做实盘改动。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
