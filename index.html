@@ -35,7 +35,7 @@ details{margin-top:8px;border:1px solid #eef1f5;border-radius:8px;padding:8px 10
 summary{cursor:pointer;font-size:13px;font-weight:600;color:#4f8cff;outline:none}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-18 00:14（北京时间）· 每20分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-18 00:35（北京时间）· 每20分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -61,7 +61,9 @@ summary{cursor:pointer;font-size:13px;font-weight:600;color:#4f8cff;outline:none
 <div class="card attn"><div class="card-t">需要你介入 <span class="badge">1</span></div><ul class="needs"><li><span class='dot warn'></span>给 23:00 日报等定时任务开启常开审批（App → 头像 → Upcoming → 任务详情 → 权限设为允许）<span class='muted'> · 10-09 23:28</span></li></ul>
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
-<div class="card"><div class="ev"><span class="ev-tag" style="background:#9aa0aa">系统</span>
+<div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>quant-dashboard-refresh 轮次完成</b><span class="muted">10-18 00:20</span></div><div class='ev-d'>看板数据刷新+GitHub Pages 发布成功：index.html(966e104)、quant.html(f19d9e1)，两次部署均绿色，全文diff校验逐字节一致</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#9aa0aa">系统</span>
         <div class="ev-body"><div class="ev-h"><b>微信中继 VM 重启后恢复</b><span class="muted">10-18 00:02</span></div><div class='ev-d'>00:00 发现 VM 在 23:57(UTC15:57) 重启，/etc 被清空致 wechat-relay.service 单元丢失、中继进程死亡。已从 ~/workspace/wechat-relay/wechat-relay.service 恢复单元，daemon-reload+enable+start，验证 status.json=RUNNING、心跳新鲜、relay.py 进程在跑。收件箱为空、无待处理消息，通道恢复正常。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>22:52 P0 缺陷修复（用户批准）：sqlite timeout=30 + llm防重叠锁 + error_log</b><span class="muted">10-17 23:20</span></div><div class='ev-d'>① 全库 sqlite3 连接 timeout=30（ingest系列/team_p_trader/analysis 原默认5s，高峰期 database is locked）。② llm-teams-trader 任务正文加 flock -n /tmp/quant-deepseek.lock 防两轮重叠双写（经 cron.update）。③ 新增 src/live/error_log.py：team_traders/llm_executor/trader 共7处复盘钩子关键路径 except-pass 改记 logs/errors.log，不再静默吞错。未改任何交易逻辑、风控参数、落库逻辑；ast.parse 验证通过。</div></div></div>
@@ -298,8 +300,6 @@ summary{cursor:pointer;font-size:13px;font-weight:600;color:#4f8cff;outline:none
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>quant-live-trader 19:07 轮次完成（无成交）</b><span class="muted">10-15 19:07</span></div><div class='ev-d'>equity=45464.35（-9.1%），峰值回撤9.0%逼近12%熔断线：降半仓×连损减仓，新开仓预算约1/4；市场range（ADX=19.2震荡市）趋势策略暂停；持仓2（RLCUSDT/OGNUSDT），本轮无买入/卖出/止损成交。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>quant-review-check：动量策略连续亏损，需复盘入场端</b><span class="muted">10-15 18:45</span></div><div class='ev-d'>近20笔平仓15亏损、合计-2361 CNY；今日3笔动量策略（dual_mom×2、momrot×1）全亏，复盘标记买入逻辑失效；RLCUSDT放量下跌-7.14%量比2.14。调整方向：动量策略入场加过滤器，走回测+门禁后落地；实盘照常跑，风控未动。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>整点同步：过去1小时实质变更</b><span class="muted">10-15 18:19</span></div><div class='ev-d'>quant-hourly-sync 检查到 ~/workspace/quant-crypto/docs/learnings.md 过去1小时有两轮新增（17:42、18:12），均为 hourly-learn 轮次学习笔记：17:42 轮产出 6 个设计输入（M-rangeconfirm / M-volbreakout / M-liqcluster / M-altbeta / M-macroshock / M-etfbasis）；18:12 轮产出 5 个设计输入（G-metlabel / G-killlist / G-quattro / G-threelayer / G-costsanity），均为预注册前候选材料，src/ 一行未动。复盘：已平仓 30 笔（无新样本），总计 −4252.2，胜率 26.7%；净值 45477.54，回撤约 −9.01%（10% 熔断线未触发）；持仓 2 个（dual_mom|RLCUSDT、momrot|OGNUSDT），止损在位；regime=range 趋势策略按设计暂停，无新开仓。门禁：无新产物、无在跑门禁，本轮不判。按任务规则只记本地、不打扰用户、不推 GitHub。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>quant-review-check：动量策略连续亏损，需复盘入场端</b><span class="muted">10-15 18:45</span></div><div class='ev-d'>近20笔平仓15亏损、合计-2361 CNY；今日3笔动量策略（dual_mom×2、momrot×1）全亏，复盘标记买入逻辑失效；RLCUSDT放量下跌-7.14%量比2.14。调整方向：动量策略入场加过滤器，走回测+门禁后落地；实盘照常跑，风控未动。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
