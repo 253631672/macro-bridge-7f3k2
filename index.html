@@ -35,7 +35,7 @@ details{margin-top:8px;border:1px solid #eef1f5;border-radius:8px;padding:8px 10
 summary{cursor:pointer;font-size:13px;font-weight:600;color:#4f8cff;outline:none}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-18 05:55（北京时间）· 每20分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-18 06:14（北京时间）· 每20分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -61,7 +61,9 @@ summary{cursor:pointer;font-size:13px;font-weight:600;color:#4f8cff;outline:none
 <div class="card attn"><div class="card-t">需要你介入 <span class="badge">1</span></div><ul class="needs"><li><span class='dot warn'></span>给 23:00 日报等定时任务开启常开审批（App → 头像 → Upcoming → 任务详情 → 权限设为允许）<span class='muted'> · 10-09 23:28</span></li></ul>
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
-<div class="card"><div class="ev"><span class="ev-tag" style="background:#9aa0aa">系统</span>
+<div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>复盘检查：F/I 队连续亏损列入观察，无熔断</b><span class="muted">10-18 06:01</span></div><div class='ev-d'>06:00 检查：震荡市（BTC -0.77%，13涨/47跌），主账户空仓完好。F 队（通道突破）4 笔 0 胜 -1663、权益 97701；I 队（网格）8 笔 0 胜 -1519；S4 -1493。均未达 20 笔熔断阈值，无 [KILL]，无异动持仓。本轮无代码改动（需回测门禁），F/I 移交学习轮跟踪。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#9aa0aa">系统</span>
         <div class="ev-body"><div class="ev-h"><b>纠偏：runner 总结虚报成交为误判</b><span class="muted">10-18 05:55</span></div><div class='ev-d'>05:44 review-check 把 MAX ts=2026-10-17T21:28:57Z 误读为 10-17 数据，实为 10-18 05:28 CST；DB 在 10-18 00:00 CST 后新增 62 笔成交，与各轮总结逐笔吻合，不存在虚报。误报条目已撤销。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#9aa0aa">系统</span>
         <div class="ev-body"><div class="ev-h"><b>数据纠偏：10-18 四轮 runner 总结虚报成交，DB 实测零新增</b><span class="muted">10-18 05:52</span></div><div class='ev-d'>quant-review-check 核对 DB 真相：10-18 00:46/04:46（team-p-trader）与 01:30/05:30（llm-teams-trader）四轮 run 总结声称的全部&#x27;成交&#x27;（价格/数量/盈亏）与 10-17 历史成交逐笔一致；team_trades/team_equity/team_positions 在 10-18 全天零新增（MAX ts=2026-10-17T21:28:57Z）。各轮总结存在虚报/把历史成交当本轮成交的问题，涉及的 memory/看板/时间线成交记录以 DB 为准无效。无[KILL]熔断；各队权益正常（F 队 97701.88 最低 -2.3%）；主账户空仓、市场震荡。资金口径备注：各队种子 100000 在 runner 内按 USDT 计价开仓（≈0,000/笔），与&#x27;¥100,000&#x27;口径差约 7 倍，内部排名不受影响，待主代理裁决。</div></div></div>
@@ -298,8 +300,6 @@ summary{cursor:pointer;font-size:13px;font-weight:600;color:#4f8cff;outline:none
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>quant-live-trader 21:42 轮次</b><span class="muted">10-15 21:42</span></div><div class='ev-d'>市场状态 range (ADX=19.2 震荡市，趋势策略暂停)；momrot Top3: STRKUSDT/OGNUSDT/ONDOUSDT；本轮无成交；equity=1,000,000.00 cash=1,000,000.00 持仓=0</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>整点同步：过去1小时有实质变更</b><span class="muted">10-15 21:20</span></div><div class='ev-d'>quant-crypto 过去1小时变更：① BQ +1R 保本移除门禁 FAIL（WEAK）→ parked（ΔPF=+0.184 未过门禁，保本移除配对反事实 −513/笔，保留保本）；② 学习轮两篇新笔记（低相关组合/funding carry 衰减、风险预算级联/ATR 仓位/持仓时间衰减止损），新增设计输入 G-funddecay/G-corr70/G-drift15/G-bh、G-corrhedge/G-atrsize/G-timedecay；③ 重置后状态确认：live_trades=0、equity=¥1,000,000、range regime 下趋势策略按设计暂停开仓，一切正常。src/ 未动，无 GitHub 写入。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>GitHub 留言板退役</b><span class="muted">10-15 21:04</span></div><div class='ev-d'>用户经微信下令：微信通道已打通，留言板用不到了。Issue #1 发告别评论并关闭归档，mailbox-poll 定时任务删除，PAT 等文件归档保留。此后微信为唯一直接对话通道。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>整点同步：过去1小时有实质变更</b><span class="muted">10-15 21:20</span></div><div class='ev-d'>quant-crypto 过去1小时变更：① BQ +1R 保本移除门禁 FAIL（WEAK）→ parked（ΔPF=+0.184 未过门禁，保本移除配对反事实 −513/笔，保留保本）；② 学习轮两篇新笔记（低相关组合/funding carry 衰减、风险预算级联/ATR 仓位/持仓时间衰减止损），新增设计输入 G-funddecay/G-corr70/G-drift15/G-bh、G-corrhedge/G-atrsize/G-timedecay；③ 重置后状态确认：live_trades=0、equity=¥1,000,000、range regime 下趋势策略按设计暂停开仓，一切正常。src/ 未动，无 GitHub 写入。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
