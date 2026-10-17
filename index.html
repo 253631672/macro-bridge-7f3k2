@@ -35,7 +35,7 @@ details{margin-top:8px;border:1px solid #eef1f5;border-radius:8px;padding:8px 10
 summary{cursor:pointer;font-size:13px;font-weight:600;color:#4f8cff;outline:none}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-18 05:34（北京时间）· 每20分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-18 05:55（北京时间）· 每20分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -61,7 +61,11 @@ summary{cursor:pointer;font-size:13px;font-weight:600;color:#4f8cff;outline:none
 <div class="card attn"><div class="card-t">需要你介入 <span class="badge">1</span></div><ul class="needs"><li><span class='dot warn'></span>给 23:00 日报等定时任务开启常开审批（App → 头像 → Upcoming → 任务详情 → 权限设为允许）<span class='muted'> · 10-09 23:28</span></li></ul>
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
-<div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+<div class="card"><div class="ev"><span class="ev-tag" style="background:#9aa0aa">系统</span>
+        <div class="ev-body"><div class="ev-h"><b>纠偏：runner 总结虚报成交为误判</b><span class="muted">10-18 05:55</span></div><div class='ev-d'>05:44 review-check 把 MAX ts=2026-10-17T21:28:57Z 误读为 10-17 数据，实为 10-18 05:28 CST；DB 在 10-18 00:00 CST 后新增 62 笔成交，与各轮总结逐笔吻合，不存在虚报。误报条目已撤销。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#9aa0aa">系统</span>
+        <div class="ev-body"><div class="ev-h"><b>数据纠偏：10-18 四轮 runner 总结虚报成交，DB 实测零新增</b><span class="muted">10-18 05:52</span></div><div class='ev-d'>quant-review-check 核对 DB 真相：10-18 00:46/04:46（team-p-trader）与 01:30/05:30（llm-teams-trader）四轮 run 总结声称的全部&#x27;成交&#x27;（价格/数量/盈亏）与 10-17 历史成交逐笔一致；team_trades/team_equity/team_positions 在 10-18 全天零新增（MAX ts=2026-10-17T21:28:57Z）。各轮总结存在虚报/把历史成交当本轮成交的问题，涉及的 memory/看板/时间线成交记录以 DB 为准无效。无[KILL]熔断；各队权益正常（F 队 97701.88 最低 -2.3%）；主账户空仓、市场震荡。资金口径备注：各队种子 100000 在 runner 内按 USDT 计价开仓（≈0,000/笔），与&#x27;¥100,000&#x27;口径差约 7 倍，内部排名不受影响，待主代理裁决。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>quant-review-check：D队持仓超限（竞态遗留）+ 震荡市多队连亏</b><span class="muted">10-18 05:32</span></div><div class='ev-d'>D队现持6个币种（NEAR/OGN/ONDO/PUMP/RLC/STRK，9行，OGN/ONDO/STRK各两行未合并），超MAX_POSITIONS=5，为10-17 12:51-12:53Z代码保存竞态遗留；新开仓已被拦（len=9≥5），单币敞口10-20%未超25%，权益99820，无爆仓风险，自然平仓后恢复，无需手动干预。F队(-1663/4连亏)、I队(-1519/8连亏)、S4(-1494/6连亏)、S10(-1029/5连亏)均震荡市失血，0胜但均未达20笔熔断线，无[KILL]。team_traders无regime暂停逻辑，候选研究方向（需另立预注册门禁）。RLCUSDT现价0.7916 vs D买入0.8243（约-4%），未触发止盈/止损。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>复盘检查（04:15）：I 队网格 8 连亏、D 队 9 仓超限（已知竞态），暂不干预</b><span class="muted">10-18 04:17</span></div><div class='ev-d'>市场震荡（BTC 24h -0.77%，13涨/47跌），主账户空仓权益¥1,000,000未动。A-J 权益：E +511.8 领先；I 98349(-1.65%) 10-17 单轮 spot_grid 8卖全亏-1519；F 98600(-1.4%) 3卖全亏-1250；C 99290.97。I/F 卖出笔数未达20笔熔断门槛，继续观察。D 队 9 仓位&gt;MAX 5（10-17 竞态事故，当前-0.18%，OGN 双策略敞口约20%合规），已知非代码 bug，无需行动。DeepSeek 阵营 S2/S4/S10 约-1.4%，Muse 阵营多在-0.4%以内。trade_reviews 仅 LLM 模板复盘；buy_logs 42 条正常。无 KILL 熔断，heartbeat 正常。</div></div></div>
@@ -296,10 +300,6 @@ summary{cursor:pointer;font-size:13px;font-weight:600;color:#4f8cff;outline:none
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>整点同步：过去1小时有实质变更</b><span class="muted">10-15 21:20</span></div><div class='ev-d'>quant-crypto 过去1小时变更：① BQ +1R 保本移除门禁 FAIL（WEAK）→ parked（ΔPF=+0.184 未过门禁，保本移除配对反事实 −513/笔，保留保本）；② 学习轮两篇新笔记（低相关组合/funding carry 衰减、风险预算级联/ATR 仓位/持仓时间衰减止损），新增设计输入 G-funddecay/G-corr70/G-drift15/G-bh、G-corrhedge/G-atrsize/G-timedecay；③ 重置后状态确认：live_trades=0、equity=¥1,000,000、range regime 下趋势策略按设计暂停开仓，一切正常。src/ 未动，无 GitHub 写入。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>GitHub 留言板退役</b><span class="muted">10-15 21:04</span></div><div class='ev-d'>用户经微信下令：微信通道已打通，留言板用不到了。Issue #1 发告别评论并关闭归档，mailbox-poll 定时任务删除，PAT 等文件归档保留。此后微信为唯一直接对话通道。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>微信直连通道上线</b><span class="muted">10-15 21:01</span></div><div class='ev-d'>用户微信经腾讯 ClawBot 插件（iLink）扫码绑定成功；常驻中继 wechat-relay 已启动（systemd），双向收发+「正在输入」提示均验证通过；每分钟收件箱检查任务 wechat-inbox-watch 已挂载。用户现可在微信直接对话。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#9aa0aa">系统</span>
-        <div class="ev-body"><div class="ev-h"><b>竞技场intraday熔断落地：单队墙钟超时200s+连续3队失败熔断</b><span class="muted">10-15 20:38</span></div><div class='ev-d'>针对今日DeepSeek API trickle挂起23分钟拖死4轮决策的故障，arena_intraday.py加墙钟超时与熔断器。mock回归3/3通过，不改交易逻辑，RULE_VERSION维持1.2。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>GitHub 留言板退役</b><span class="muted">10-15 21:04</span></div><div class='ev-d'>用户经微信下令：微信通道已打通，留言板用不到了。Issue #1 发告别评论并关闭归档，mailbox-poll 定时任务删除，PAT 等文件归档保留。此后微信为唯一直接对话通道。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
