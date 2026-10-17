@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-17 22:14（北京时间）· 每20分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-17 22:34（北京时间）· 每20分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -47,7 +47,11 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="card attn"><div class="card-t">需要你介入 <span class="badge">1</span></div><ul class="needs"><li><span class='dot warn'></span>给 23:00 日报等定时任务开启常开审批（App → 头像 → Upcoming → 任务详情 → 权限设为允许）<span class='muted'> · 10-09 23:28</span></li></ul>
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
-<div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+<div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>整点同步：22:12 轮次学习/复盘/代码更新已沉淀</b><span class="muted">10-17 22:19</span></div><div class='ev-d'>hourly-learn 22:12 轮次：学习笔记新增 Regime 自适应/均值回归三件套/RSI 下限/多TF对齐要点；复盘：主账户 0 成交（regime=range 暂停），团队赛 llm 阵营新开 25 笔 BUY（M1–M10 共 21 笔、S4/S10 共 4 笔），今日 SELL 4 笔合计 −1923.22（C/F SANDUSDT 三笔假突破止损 −1898.25 + S4 NEARUSDT −24.97）；优化：team_traders.py 复盘钩子静默失败盲区修复（except pass→打印失败信息，根因=12:51Z runner 保存窗口竞态加载旧代码，非逻辑 bug）；实盘参数零改动，三门禁 FAIL 结论不变。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>quant-hourly-learn 22:12：复盘钩子盲区修复+新策略思路学习</b><span class="muted">10-17 22:19</span></div><div class='ev-d'>学习：新策略思路（regime自适应架构/deeptradex三大架构/均值回归ADX&lt;25三件套/RSI下限5/多TF对齐/叙事驱动），新增1观测级候选（meanrevert ADX过滤器）+3记名。复盘：主账户0成交空仓（regime=range暂停）；团队赛21:17-21:20 llm阵营+25 BUY（S10/S4/M1-M10），今日SELL仍4笔-1923.22（C/F SANDUSDT假突破止损）。优化：21:59复盘缺失根因定位=runner加载旧代码（保存窗口竞态，非bug）；唯一改动 team_traders.py except改打印异常（可观测性，ast通过）。CHANGELOG已记。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>复盘钩子锁库：10-17 新队买入/卖出复盘全部丢失</b><span class="muted">10-17 21:48</span></div><div class='ev-d'>team_traders.py 长事务内调 log_buy/add_review，新连接写库报 database is locked，被 try/except pass 静默吞掉。buy_logs 停在 10-12，trade_reviews 重置后为空。I 队 9 仓位系 12:51–12:53Z 轮次加载旧版代码（已知竞态），现代码正确，下一轮自动收敛。F 队 SANDUSDT 两笔止损（-5%/-6.8%）属正常止损行为，未达 20 笔熔断线。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>量化虚拟盘交易轮(21:37)：无成交</b><span class="muted">10-17 21:37</span></div><div class='ev-d'>市场状态=range(ADX=17.7震荡市，趋势策略暂停)；momrot Top3=OGNUSDT/STRKUSDT/RLCUSDT；equity=1000000.00，cash=1000000.00，持仓=0</div></div></div>
@@ -282,10 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>review-check：RLCUSDT 浮亏 -18.3% 异动持仓 + ingest 漏轮补跑</b><span class="muted">10-15 16:18</span></div><div class='ev-d'>15m 定时复盘：① RLCUSDT(dual_mom) 10-10 08:47 入场 1.0351，现 0.8457 浮亏 -18.3%（约 -138 CNY），Chandelier 止损 0.7147（-31%）仍未触发，持仓 5.3 天未止盈未止损；② 近 8 笔复盘中 5 笔连续亏损（ONDO-108/-7.7%、NEAR-209.6/-18.5%、PUMP-75/-9%、ZEC-122/-8.6%、CRCLB-154.5），均为&#x27;需检查买入逻辑是否失效&#x27;，dual_mom/momrot 趋势策略在震荡市（上涨2家/下跌58家）入场质量承压；③ ingest 15 分钟轮次 16:02 未执行（上次成功 15:47），已手动幂等补跑。结论：无立即实盘改动，全部按回测门禁流程走：RLC 止损逻辑与趋势策略入场质量转入 learn 轮次研究。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>交易检查：连续亏损预警已记录</b><span class="muted">10-15 15:15</span></div><div class='ev-d'>市场震荡；近10笔8亏2赢、最近5笔连续亏损；momrot 入场质量待 learn 复盘；RLCUSDT 浮亏-20.9%；净值-9.07%，距熔断缓冲1464元。本轮无调参。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>复盘检查：风控梯子全部生效、无新增调整</b><span class="muted">10-15 15:01</span></div><div class='ev-d'>15:00轮次。BTC −1.79%、2涨58跌、range环境；净值45446（回撤9.07%，8%降半仓生效中）；近5笔连续亏损触发连损减仓×0.5；RLCUSDT/OGNUSDT各−10%/−8%由策略退出管理；数据通道30分钟延迟为阈值边缘偶发，继续观察。无需调整，静默。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#9aa0aa">系统</span>
-        <div class="ev-body"><div class="ev-h"><b>复盘检查：5连损触发自动减仓，权益-9.1%逼近熔断线</b><span class="muted">10-15 14:46</span></div><div class='ev-d'>四层分析：BTC 24h -1.79%，涨2家/跌58家，震荡市。最近5笔已平仓全部亏损（CRCLB -154.46、ZEC -122.00、PUMP -75.01、NEAR -209.62、ONDO -108.10），复盘标记需检查买入逻辑。连损减仓规则已自动触发（新开仓风险预算减半）；趋势策略新开仓全停（震荡暂停）。持仓 RLCUSDT 24h -10.0%、OGNUSDT 24h -8.1%，止损很宽（-31%/-33%）仍在位上。权益45446元回撤-9.1%，已过半仓梯子、逼近12%熔断。动量策略入场质量问题由两个并行上线门禁继续验证，本轮不临时改代码。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>交易检查：连续亏损预警已记录</b><span class="muted">10-15 15:15</span></div><div class='ev-d'>市场震荡；近10笔8亏2赢、最近5笔连续亏损；momrot 入场质量待 learn 复盘；RLCUSDT 浮亏-20.9%；净值-9.07%，距熔断缓冲1464元。本轮无调参。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
