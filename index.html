@@ -35,7 +35,7 @@ details{margin-top:8px;border:1px solid #eef1f5;border-radius:8px;padding:8px 10
 summary{cursor:pointer;font-size:13px;font-weight:600;color:#4f8cff;outline:none}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-18 04:14（北京时间）· 每20分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-18 04:34（北京时间）· 每20分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -61,7 +61,9 @@ summary{cursor:pointer;font-size:13px;font-weight:600;color:#4f8cff;outline:none
 <div class="card attn"><div class="card-t">需要你介入 <span class="badge">1</span></div><ul class="needs"><li><span class='dot warn'></span>给 23:00 日报等定时任务开启常开审批（App → 头像 → Upcoming → 任务详情 → 权限设为允许）<span class='muted'> · 10-09 23:28</span></li></ul>
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
-<div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+<div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>复盘检查（04:15）：I 队网格 8 连亏、D 队 9 仓超限（已知竞态），暂不干预</b><span class="muted">10-18 04:17</span></div><div class='ev-d'>市场震荡（BTC 24h -0.77%，13涨/47跌），主账户空仓权益¥1,000,000未动。A-J 权益：E +511.8 领先；I 98349(-1.65%) 10-17 单轮 spot_grid 8卖全亏-1519；F 98600(-1.4%) 3卖全亏-1250；C 99290.97。I/F 卖出笔数未达20笔熔断门槛，继续观察。D 队 9 仓位&gt;MAX 5（10-17 竞态事故，当前-0.18%，OGN 双策略敞口约20%合规），已知非代码 bug，无需行动。DeepSeek 阵营 S2/S4/S10 约-1.4%，Muse 阵营多在-0.4%以内。trade_reviews 仅 LLM 模板复盘；buy_logs 42 条正常。无 KILL 熔断，heartbeat 正常。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>整点同步：过去1小时 docs/learnings.md 有实质更新（学习/复盘/优化三轮 03:12 记入）</b><span class="muted">10-18 03:19</span></div><div class='ev-d'>变更：docs/learnings.md 在 03:12 轮次新增学习笔记（Kelly 准则与保守化、三包络取最小定仓、波动率定仓，均观测级预注册前）+ 复盘（本轮无新成交；I 队 spot_grid 累计 −1519.46 根因定位到代码级死分支：跌破下轨止损分支死代码+网格语义与 runner 单 key 单仓位错配）+ 优化（无可落地改动，src/ 一行未动，按铁律记名预注册候选）。CHANGELOG 本轮不记；无 GitHub 写入；不向用户汇报。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>复盘检查 03:14：I队单轮8连亏 −1519元（震荡绞杀），未达熔断线，无需调整</b><span class="muted">10-18 03:17</span></div><div class='ev-d'>市场震荡（BTC 24h −0.77%），主账户空仓 ¥1,000,000。I队（spot_grid）8笔平仓全亏：STRK −470.15、ENA −192.56、SUI −183.34、ONDO −178.21、TAO −173.92、AVAX −142.93、ADA −124.28、BNB −54.07，权益 98349；平仓8笔&lt;20未触发[KILL]，按铁律待熔断规则自动处理。D队6仓位&gt;5上限为10-17 runner竞态旧残留（已修只拦新开仓）。S10止损卖出TIA/INJ/AMP（−2%级别）已生成3条复盘。E队 100511.8 唯一盈利；A/G/H/J 0成交。无熔断，实盘照常跑。</div></div></div>
@@ -298,8 +300,6 @@ summary{cursor:pointer;font-size:13px;font-weight:600;color:#4f8cff;outline:none
 <div class="ev"><span class="ev-tag" style="background:#9aa0aa">系统</span>
         <div class="ev-body"><div class="ev-h"><b>竞技场intraday熔断落地：单队墙钟超时200s+连续3队失败熔断</b><span class="muted">10-15 20:38</span></div><div class='ev-d'>针对今日DeepSeek API trickle挂起23分钟拖死4轮决策的故障，arena_intraday.py加墙钟超时与熔断器。mock回归3/3通过，不改交易逻辑，RULE_VERSION维持1.2。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#9aa0aa">系统</span>
-        <div class="ev-body"><div class="ev-h"><b>BQ门禁：+1R保本移除 FAIL（WEAK）→parked</b><span class="muted">10-15 20:38</span></div><div class='ev-d'>预注册门禁验证&#x27;移除+1R保本可提升4在启用策略ΔPF≥+0.15&#x27;假设。结果：ΔPF=+0.184但bootstrap CI含0、一致性0；配对反事实显示移除保本使触发过的交易平均-513/笔（t=-2.29）——保本是保护性的。结论：保留保本，不动实盘。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#9aa0aa">系统</span>
-        <div class="ev-body"><div class="ev-h"><b>muse-AI策略竞赛资金重置：两阵营各100万</b><span class="muted">10-15 20:22</span></div><div class='ev-d'>用户要求。DeepSeek阵营与Muse阵营同步重置：各16队，每队¥62,500，阵营各100万。规则版本升至1.2，PK对照继续有效。旧账本已归档，明日收盘结算起新口径记账。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>BQ门禁：+1R保本移除 FAIL（WEAK）→parked</b><span class="muted">10-15 20:38</span></div><div class='ev-d'>预注册门禁验证&#x27;移除+1R保本可提升4在启用策略ΔPF≥+0.15&#x27;假设。结果：ΔPF=+0.184但bootstrap CI含0、一致性0；配对反事实显示移除保本使触发过的交易平均-513/笔（t=-2.29）——保本是保护性的。结论：保留保本，不动实盘。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
