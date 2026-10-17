@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-17 15:35（北京时间）· 每20分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-17 15:54（北京时间）· 每20分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -47,7 +47,11 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="card attn"><div class="card-t">需要你介入 <span class="badge">1</span></div><ul class="needs"><li><span class='dot warn'></span>给 23:00 日报等定时任务开启常开审批（App → 头像 → Upcoming → 任务详情 → 权限设为允许）<span class='muted'> · 10-09 23:28</span></li></ul>
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
-<div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+<div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>15:42 学习轮：风控方法主题</b><span class="muted">10-17 15:43</span></div><div class='ev-d'>学习：相关性风险预算/波动率目标敞口/半凯利/MC回抽估计，3个观测级候选+3对照注记记入learnings.md，不改src。复盘：仍n=1无新成交（P组funding_reversal LINKUSDT单笔-13.65，出场机制正常），参数不动。无实质改进，不记CHANGELOG。系统存活：live_trader心跳正常，主账户100万空仓。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>完成：quant-live-trader: 运行虚拟盘交易循环</b><span class="muted">10-17 15:37</span></div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>完成：quant-live-trader 15:17 轮次完成：市场 range（ADX 17.7 震荡市，趋势策略暂停），equity=1000000.00，cash=1000000.00，持仓=0，本轮无买入/卖出/止损成交</b><span class="muted">10-17 15:17</span></div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>每小时学习轮次（13:12）：市场分析主题已记入学习笔记，复盘仍 n=1 无新成交，无代码改动</b><span class="muted">10-17 13:13</span></div><div class='ev-d'>学习=市场分析/regime检测方法（3新增候选：regime过渡带灰度/多时间框CHOP确认/Hurst慢确认，均为预注册前观测级）；复盘=team_trades仍1笔-13.65元，live_trades 0行，无持仓，5分钟cadence存活；门禁=无进程在跑，01:26收官结论不变；src/未动，无GitHub写入，无用户可见消息。</div></div></div>
@@ -282,10 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>quant-review-check：近12笔复盘9亏（动量系集中）+2只在途持仓浮亏</b><span class="muted">10-15 11:00</span></div><div class='ev-d'>市场震荡、上涨2家下跌58家。最近5笔复盘全亏：NEARUSDT/momrot -18.5%、TIAUSDT/atr_channel -11.2%、ZECUSDT/momrot -8.6%、ONDOUSDT/dual_mom -7.7%、PUMPUSDT/dual_mom -9.0%。在途RLCUSDT -6.81%、OGNUSDT -8.26%（均有止损兜底）。建议对momrot近3笔大亏做卖出逻辑审查、走回测证据链后再决定是否调参；不建议一刀切暂停趋势新开仓（10-13反事实已证伪）；健康检查正常、P队权益49966.6，本轮不做实盘改动。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>复盘检查：5连亏+回撤9%，风控自动降半仓运行</b><span class="muted">10-15 10:32</span></div><div class='ev-d'>近5笔已平仓全亏（ONDO/NEAR/PUMP/ZEC/CRCLB），触发连损减仓×0.5；净值45484，回撤9.0%激活8%软层，新开仓风险预算双重减半。止损正常退出（NEAR/ONDO今晨止损离场）；regime=range下9个趋势策略只禁新开仓；持仓RLC/OGN浮亏但未触止损。无新证据，不提新方向。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>复盘检查：净值回撤 -9.06%，8% 软层自动降半仓运行中</b><span class="muted">10-15 10:01</span></div><div class='ev-d'>近8笔平仓6亏2盈；2持仓均绿转红但未到止损（RLCUSDT dual_mom 入场1.0351、24h -5.58%；OGNUSDT momrot 入场0.034、24h -10.58%）；熔断线10%/12%未触发，新开仓风险预算已按代码自动减半</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>复盘检查 09:15：连亏5笔/回撤-9.1%</b><span class="muted">10-15 09:17</span></div><div class='ev-d'>最近5笔已平仓全为SELL_STOP亏损（共-669 CNY：NEAR -209.62/-18.5%、CRCLB -154.46、ZEC -122.00、ONDO -108.10/-7.7%、PUMP -75.01）；权益45471、较峰值49983回撤约-9.1%，已过8.3%降半仓阶梯、距12%熔断约4.4k。连损减仓（×0.5风险预算）已自动触发，StoplossGuard 兜底持仓（OGNUSDT -10.58%、RLCUSDT -5.58%）。按10-13反事实证据，不追加震荡市暂停规则、不动实盘参数；donchian+过滤器A 继续门禁排队。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>复盘检查：5连亏+回撤9%，风控自动降半仓运行</b><span class="muted">10-15 10:32</span></div><div class='ev-d'>近5笔已平仓全亏（ONDO/NEAR/PUMP/ZEC/CRCLB），触发连损减仓×0.5；净值45484，回撤9.0%激活8%软层，新开仓风险预算双重减半。止损正常退出（NEAR/ONDO今晨止损离场）；regime=range下9个趋势策略只禁新开仓；持仓RLC/OGN浮亏但未触止损。无新证据，不提新方向。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
