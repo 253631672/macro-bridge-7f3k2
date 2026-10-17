@@ -26,7 +26,7 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 .sec-t{font-size:15px;font-weight:700;margin:18px 4px 10px}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-17 08:54（北京时间）· 每20分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-17 09:14（北京时间）· 每20分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -48,6 +48,8 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
 <div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>免费VPN每日推送：美国节点订阅已刷新</b><span class="muted">10-17 09:02</span></div><div class='ev-d'>2026-10-17：44 个 US/CA 节点（⭐AI优先 8、🟢高存活 14），已发布到 GitHub Pages 固定订阅地址，commit 6002964；pinned blob 与本地基线 md5 逐字节一致。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>08:12 学习轮：新策略思路 3 主题</b><span class="muted">10-17 08:19</span></div><div class='ev-d'>ETH/BTC ratio pairs 策略臂（现货对冲）/ 分数阶差分特征工程 / RW 零假设准入测试 + ADF 平稳性并入门禁模板：4 候选（预注册前）+ 4 对照注记；src 一行未动。复盘仍 n=1 单样本无新成交，趋势策略 regime=range 暂停，参数不动。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>学习轮：风控方法学习+复盘</b><span class="muted">10-17 07:14</span></div><div class='ev-d'>主题=波动率自适应仓位缩放/固定分数 vs 信心加权/事件前降仓，3 个候选入队（预注册前材料）；复盘实盘仍 n=1 无新成交，8 趋势策略 regime=range 暂停；无代码改动，未记 CHANGELOG</div></div></div>
@@ -284,8 +286,6 @@ td{padding:6px 4px;border-bottom:1px solid #f4f6fa}.muted{color:#98a2b3;font-siz
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>复盘检查：连续5笔止损，回撤9.03%已触发8%降半仓软层</b><span class="muted">10-15 08:47</span></div><div class='ev-d'>10-13起连续5笔止损出局（合计约-669 CNY），全部SELL_STOP触发；仅剩RLCUSDT(-18.3%)、OGNUSDT(-8.2%)两只持仓均水下；峰值回撤9.03%，8%软层生效中（新开仓风险预算×0.5），10%中层/12%熔断未触发；实盘参数未改动，等入场质量两门禁结果</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>quant-hourly-learn 08:42 轮：AG/AI 两门禁终报均 FAIL，学习主题=新策略思路</b><span class="muted">10-15 08:44</span></div><div class='ev-d'>AG 持仓相关性过滤器 FAIL（ΔPF 三窗 +0.0013/-0.0229/-0.1381）；AI 资金费率情绪门 v3 重跑 FAIL（ΔPF=-0.017, CI(-0.3726,0.3481) 跨零，tier OVERFITTED，产物 bp_gate_v3_20261015.json）。实盘 30 笔无新增，dual_ma 仍最差（-1711.57）。学习：inverse-vol 调仓在 crypto 上 0/24 否证、截面动量方向（momrot 优先级提一档）、成本吞噬数字（毛 0.7bps vs 成本 60bps）。src 一行未动，无 CHANGELOG。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>学习/复盘 08:12 轮次：dual_ma 最差战绩实为单次相关性簇事件</b><span class="muted">10-15 08:20</span></div><div class='ev-d'>07:42–08:12 三轮学习复盘笔记已沉淀到 docs/learnings.md。诊断级发现：dual_ma 的 6 笔亏损中 5 笔（AVAX/NEAR/SUI/WLD/AAVE）在 2026-10-09 22:15–22:30 的 15 分钟窗口内集中平仓，是同一相关性簇的一次性批量死亡，非 6 个独立坏信号；相关输入已记入 BN（组合热度上限）设计稿。同时吸收 GitHub opencrypto 的 BTC crash gate 形状、botlab 的资金费率护栏注脚。已平仓 30 笔，n&lt;50，实盘参数不动。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>quant-hourly-learn 08:42 轮：AG/AI 两门禁终报均 FAIL，学习主题=新策略思路</b><span class="muted">10-15 08:44</span></div><div class='ev-d'>AG 持仓相关性过滤器 FAIL（ΔPF 三窗 +0.0013/-0.0229/-0.1381）；AI 资金费率情绪门 v3 重跑 FAIL（ΔPF=-0.017, CI(-0.3726,0.3481) 跨零，tier OVERFITTED，产物 bp_gate_v3_20261015.json）。实盘 30 笔无新增，dual_ma 仍最差（-1711.57）。学习：inverse-vol 调仓在 crypto 上 0/24 否证、截面动量方向（momrot 优先级提一档）、成本吞噬数字（毛 0.7bps vs 成本 60bps）。src 一行未动，无 CHANGELOG。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
