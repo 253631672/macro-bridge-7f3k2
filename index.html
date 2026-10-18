@@ -35,7 +35,7 @@ details{margin-top:8px;border:1px solid #eef1f5;border-radius:8px;padding:8px 10
 summary{cursor:pointer;font-size:13px;font-weight:600;color:#4f8cff;outline:none}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-18 10:54（北京时间）· 每20分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-18 11:14（北京时间）· 每20分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -62,6 +62,8 @@ summary{cursor:pointer;font-size:13px;font-weight:600;color:#4f8cff;outline:none
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
 <div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>完成：quant-hourly-learn：学习轮+复盘+优化</b><span class="muted">10-18 11:14</span></div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>联赛风险对比模块上线（纯可观测性）</b><span class="muted">10-18 10:20</span></div><div class='ev-d'>新增 src/live/league_risk_metrics.py：DeepSeek阵营/S10…S10、Muse阵营M1…M10、规则队A…J三联赛累计收益/最大回撤/夏普对比；快照&lt;20不计算夏普并明确标注样本不足。daily_report.py接入该模块，兑现10-17用户批准的「日报加入两边阵营夏普与最大回撤对比」。仅读team_equity快照，不改任何交易逻辑。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>复盘检查：D队持仓超限、F/I/E队连亏</b><span class="muted">10-18 09:49</span></div><div class='ev-d'>09:45 quant-review-check：D队持仓9条/6币种（OGN/STRK/ONDO两策略重复开仓，名义约9.4万≈94%权益，超5仓位风控；权益95323=-4.68%全队最差，10-17旧版本runner与代码保存竞态遗留）；F队实现-1773(胜率0/5)、I队-1519(0/8)、E队-840(2/7)，震荡市连续亏损但未达20笔熔断线，按铁律不直接动参数；G/H/J重置后零成交，资金费率策略待查。无KILL，主账户空仓。</div></div></div>
@@ -298,8 +300,6 @@ summary{cursor:pointer;font-size:13px;font-weight:600;color:#4f8cff;outline:none
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>quant 学习轮次 00:12：7 个新设计输入（统计套利/费率套利等），实盘无变化</b><span class="muted">10-16 00:19</span></div><div class='ev-d'>docs/learnings.md 新增 2026-10-16 00:12 三段：学习（新策略思路：统计套利 pairs、资金费率套利、ATR 体制过滤器、成本意识）新增 G-pairspread/G-fundarb/G-spreadwiden/G-zipexit/G-atrregime/G-costlimit/G-momtrail，均为预注册前材料；复盘：live_trades 仍 0 笔、账本 1000000 分毫不差、8 策略 range 下全停；优化：无新证据、src/ 一行未动、门禁仍 BQ FAIL→parked。G-fundarb 与已有 funding 数据源咬合，优先级候选靠前。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>完成：quant-live-trader 23:42 轮次：虚拟盘交易循环运行中</b><span class="muted">10-15 23:43</span></div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>23:19 整点检查：两项实质文档更新</b><span class="muted">10-15 23:19</span></div><div class='ev-d'>docs/learnings.md 新增两轮学习（23:12 风控主题：G-heatlevels 四级热度阶梯、G-cathe 策略族敞口上限、G-triheat 实时热度+RECOVERY半停态、G-decaytracker 衰减调权；22:42 入场质量：G-relstrength 相对强度选币、G-squeezebody 挤压实体确认、G-xsec 横截面方法论）均为预注册前材料、src 一行未动；reports/daily-2026-10-15.md 日报草稿生成（净值100万、0笔交易、range regime 按设计暂停开仓）；23:00 日报将汇总。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>完成：quant-live-trader 23:42 轮次：虚拟盘交易循环运行中</b><span class="muted">10-15 23:43</span></div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
