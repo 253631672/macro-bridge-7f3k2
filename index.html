@@ -35,7 +35,7 @@ details{margin-top:8px;border:1px solid #eef1f5;border-radius:8px;padding:8px 10
 summary{cursor:pointer;font-size:13px;font-weight:600;color:#4f8cff;outline:none}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-18 14:54（北京时间）· 每20分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-18 15:58（北京时间）· 每20分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -62,6 +62,14 @@ summary{cursor:pointer;font-size:13px;font-weight:600;color:#4f8cff;outline:none
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
 <div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>量化复盘检查：D队持仓超限9/5待纠偏；LLM联赛S4/S6/S10止损在正常范围</b><span class="muted">10-18 15:31</span></div><div class='ev-d'>复盘检查 15:30 CST：①D队持仓9条（上限5）未收敛，dual_mom臂6币种+momrot臂3币种，OGN/ONDO/STRK双臂重复，为10-17 runner竞态事故遗留，期间0卖出，建议将dual_mom臂压缩至≤5并合并重复币种至单臂（风控纠偏，避开整点±10分钟runner窗口）；②S4/S6/S10累计已实现-2650/-2092/-2319，今日多笔止损单笔-2%~-6%，未触发熔断，属正常风控退出，继续观察；③live_decisions KILL=0，无熔断；④trade_reviews的what_wrong为模板化文字，无实质策略诊断结论，建议hourly-learn改进复盘钩子产出质量。市场震荡，实盘主循环空仓。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>15:12 学习/复盘/优化三连</b><span class="muted">10-18 15:19</span></div><div class='ev-d'>学习：10月中旬加密市场结构实况（BTC区间震荡/统治率60%/Altseason65未确认/ETF周流出），外部多源印证主账户regime=range暂停。复盘：自14:42零新成交，主账户全现金；LLM联赛 −9170.95/35笔1胜，扎堆同币种同向同损。优化：无落地改进，src/一行未动；新排队候选=BTC统治率门控山寨敞口上限（预注册前观测级）。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#9aa0aa">系统</span>
+        <div class="ev-body"><div class="ev-h"><b>15:15 复盘检查：无[KILL]熔断；S系/D/F队持续亏损中观察</b><span class="muted">10-18 15:15</span></div><div class='ev-d'>市场：BTC 24h -0.15%、涨7跌53、震荡；主账户空仓。S4(9连亏-2650)/S10(9连亏-2319)/S6(6连亏-2092)均未达20笔熔断线；F队5连亏-1773；E队胜率28.6%。D队仍持9行仓位（10-17竞态旧事，未平）。TIAUSDT -626.10在S2/S4/S6/M4四队完全相同，需后续核查是否为持仓镜像。四层框架+heartbeat正常（live_trader 15:12 CST）。按铁律：无门禁PASS，无改动，维持现状。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>复盘检查：D队9仓位异常仍残留，S4/S10 9连亏观察中</b><span class="muted">10-18 15:01</span></div><div class='ev-d'>2026-10-18 15:00检查：①D队仍持9个position行（6币种，ONDO/STRK/OGN各重复两行），系10-17 runner代码竞态残留（代码已修、旧仓位未自清理），权益95323.58为A-J队中最差(-4.68%)；②连续亏损：S4 9连亏(-2650)、S10 9连亏(-2318)、S6 6连亏(-2092)、F 5连亏(-1772)、S2 6连亏(-1375)，均未满20笔未达熔断门槛，单笔-2%~-3%在StoplossGuard内；③实盘主账户空仓，环境震荡（BTC -0.15%、53/60下跌）；④复盘钩子正常，今日13:28一轮LLM联赛卖出产生3条复盘。无KILL熔断。无需行动，继续观察。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>quant-dashboard-refresh 14:14 轮次：quant.html 已发布，index.html 留待下轮</b><span class="muted">10-18 14:28</span></div><div class='ev-d'>quant.html 经粘贴链路发布（commit 07f9ddc），pinned blob 全文 diff 仅尾换行差异，Pages 部署成功。index.html 未发布：上传链路文件挂载 4 次 target_blocked；粘贴前自查发现转录文本与源文件有出入，已叫停，留待下轮重试上传。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>quant-dashboard-refresh 看板发布成功</b><span class="muted">10-18 13:59</span></div><div class='ev-d'>index.html d438126 + quant.html 39df114 双提交，pinned blob 校验通过（index仅尾换行差异，quant逐字节一致），Pages 部署两轮均绿</div></div></div>
@@ -292,14 +300,6 @@ summary{cursor:pointer;font-size:13px;font-weight:600;color:#4f8cff;outline:none
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>quant-review-check：4 连损、持仓0、市场震荡</b><span class="muted">10-16 07:00</span></div><div class='ev-d'>10-13~10-15 连续4笔亏损(ZECUSDT-122/PUMPUSDT-75/NEARUSDT-209.62/ONDOUSDT-108.10,合计约-514.7)。当前持仓0只,市场环境震荡(BTC 24h -1.79%,下跌58家)。入场质量问题已知,learn门禁(相关性过滤器/资金费率情绪门)在跑,本轮无新证据,不建议新动作。供23:00日报汇总。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>review-check：实盘 regime 毯式暂停与 10-13 反事实研究证据矛盾</b><span class="muted">10-16 06:46</span></div><div class='ev-d'>市场 range（BTC -1.79%，2涨58跌），净值100万持仓0，重置后10.5h零成交。8个趋势策略全部因 regime=range 暂停新开仓，回撤=0%故非回撤风控。10-13研究已证伪毯式暂停（dual_ma/dualma_j 正期望，暂停少赚2091/2066；keltner/atr_channel淘汰；donchian+过滤器A门禁排队）。建议learn轮次按策略分化走门禁预注册，本轮未改代码。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>整点进度检查：quant-crypto docs/learnings.md 有实质更新</b><span class="muted">10-16 06:19</span></div><div class='ev-d'>06:15 前后三轮学习/复盘/优化已记入 docs/learnings.md：05:15 风控主题（新增 G-scaledexit/G-cooldown/G-stresstest 候选，G-halfkelly 获双源印证）、05:42 市场分析主题（新增 G-mvregime/G-reghyst/G-altsindex 候选，G-corr70 获独立印证）、06:15 均值回归主题（新增 G-mr-range/G-mr-screen 候选，退出原因分解方法论注记）。复盘：重置后仍 0 笔成交、0 仓位、现金 1000000.0 分毫不差，regime=range 下 8 策略全部 hold，数据源健康。src/ 一行未动，无实盘参数改动，未运行 publish.sh、无 GitHub 写入。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#9aa0aa">系统</span>
-        <div class="ev-body"><div class="ev-h"><b>微信中继服务恢复</b><span class="muted">10-16 06:01</span></div><div class='ev-d'>06:00 轮次发现 wechat-relay 进程死亡（VM 重启约2.5小时前，/etc/systemd unit 被清空，心跳停滞于05:57后）；按备份单元恢复 /etc/systemd/system/wechat-relay.service，daemon-reload+enable+start，22:00:28 UTC 重启成功，status=RUNNING，心跳新鲜，inbox/failed 均为空。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>复盘检查：5连亏+盈利回吐异常</b><span class="muted">10-16 05:17</span></div><div class='ev-d'>震荡市（BTC-1.79%，2涨58跌），持仓0。近5笔连亏-669 CNY，近7天胜率26.7%低于健康区间；NEARUSDT momrot单笔-18.5%为左尾暴露（硬止损帽门禁已证伪，不调参数）；ONDOUSDT dual_mom mfe+10.33%回吐至-7.7%，+1R保本移动未触发原因待查。实盘照常跑，无改动。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#9aa0aa">系统</span>
-        <div class="ev-body"><div class="ev-h"><b>quant-review-check：复位后 9 个趋势策略被 regime=range 一刀切冻结 8.7h、零开仓；10-13 反事实已证伪该暂停对 dual_ma/dualma_j 有害，建议分策略差异化但须走门禁</b><span class="muted">10-16 05:04</span></div><div class='ev-d'>市场环境震荡（BTC 24h -1.79%，2涨/58跌），持仓0，账本¥1,000,000整。10-15 20:17 复位后 922 个决策全部 hold/skip：832 个为 regime=range 趋势策略暂停（9 策略）、90 个为 meanrevert 暂停新开仓（回测待优化）。最新复盘为复位前旧样本（10-15 00:07 前），最近10笔8亏2盈、五连亏（ONDO/dual_mom -108.1、NEAR/momrot -209.62、PUMP/dual_mom -75.01、ZEC/momrot -122.0、CRCL/dualma_j -154.46），按 n&lt;30 回测先验不构成策略失效证据。三类授权项：keltner 已淘汰无动作；RLCUSDT 止盈无回测证据不落地；震荡市趋势策略——实盘仍在执行 10-13 反事实研究证伪的一刀切暂停（dual_ma/dualma_j 暂停在样本外少赚 2091/2066 CNY，turtle/mtf_trend 方向为负），研究结论建议分策略差异化（donchian 可暂停、其余恢复，donchian+过滤器A 已排队走门禁）。本轮不直接改代码，调整方向已记入门禁候选复盘；无推送。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>review-check：实盘 regime 毯式暂停与 10-13 反事实研究证据矛盾</b><span class="muted">10-16 06:46</span></div><div class='ev-d'>市场 range（BTC -1.79%，2涨58跌），净值100万持仓0，重置后10.5h零成交。8个趋势策略全部因 regime=range 暂停新开仓，回撤=0%故非回撤风控。10-13研究已证伪毯式暂停（dual_ma/dualma_j 正期望，暂停少赚2091/2066；keltner/atr_channel淘汰；donchian+过滤器A门禁排队）。建议learn轮次按策略分化走门禁预注册，本轮未改代码。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
