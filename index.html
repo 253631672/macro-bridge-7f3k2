@@ -35,7 +35,7 @@ details{margin-top:8px;border:1px solid #eef1f5;border-radius:8px;padding:8px 10
 summary{cursor:pointer;font-size:13px;font-weight:600;color:#4f8cff;outline:none}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-18 12:54（北京时间）· 每20分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-18 13:14（北京时间）· 每20分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -43,11 +43,11 @@ summary{cursor:pointer;font-size:13px;font-weight:600;color:#4f8cff;outline:none
     <div class="card"><div class="prog"><div class="prog-h"><b>AI量化 · 小组竞赛（30 队）</b>
         <span class="muted">2026-10-18 <a href='quant.html' style='font-size:12px'>详细数据 →</a></span></div>
         <div class="nums">
-          <div><span>当日盈亏</span><b class="dn">-16,591.88</b></div>
+          <div><span>当日盈亏</span><b class="dn">-8,349.61</b></div>
           <div><span>当日收益</span><b class="dn">—</b></div>
-          <div><span>净值</span><b>2,972,794.08</b></div>
+          <div><span>净值</span><b>2,973,888.96</b></div>
           <div><span>累计收益</span><b>—</b></div>
-        </div><table><tr><th>联赛</th><th>当日盈亏</th><th>净值</th></tr><tr><td>规则队</td><td class='dn'>-7,147</td><td>988,989</td></tr><tr><td>DeepSeek</td><td class='dn'>-7,024</td><td>989,336</td></tr><tr><td>Muse</td><td class='dn'>-2,421</td><td>994,469</td></tr></table></div><div class="prog"><div class="prog-h"><b>AI策略竞赛 · A股（32 队）</b>
+        </div><table><tr><th>联赛</th><th>当日盈亏</th><th>净值</th></tr><tr><td>规则队</td><td class='up'>+1,095</td><td>990,083</td></tr><tr><td>DeepSeek</td><td class='dn'>-7,024</td><td>989,336</td></tr><tr><td>Muse</td><td class='dn'>-2,421</td><td>994,469</td></tr></table></div><div class="prog"><div class="prog-h"><b>AI策略竞赛 · A股（32 队）</b>
         <span class="muted">2026-10-16 <a href='arena.html' style='font-size:12px'>详细数据 →</a></span></div>
         <div class="nums">
           <div><span>当日盈亏</span><b class="dn">-423.75</b></div>
@@ -62,6 +62,8 @@ summary{cursor:pointer;font-size:13px;font-weight:600;color:#4f8cff;outline:none
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
 <div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>复盘检查：I/S4/S10 熔断疑似未生效</b><span class="muted">10-18 13:00</span></div><div class='ev-d'>20笔后胜率&lt;40%应停新开仓；I(23笔,胜率11%,-1455)、S4/S10(21笔,0胜)今日仍在开新仓；D队9行持仓为10-17已知竞态遗留。未改代码，待主代理确认熔断实现层后再立案。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>复盘检查：D 队超限持仓+浮亏 -4.7%，为 10 队最差</b><span class="muted">10-18 12:31</span></div><div class='ev-d'>D 队（动量轮动 momrot/dual_mom）权益 95,323.58（-4.68%），持有 9 个仓位（dual_mom 6 + momrot 3），超过每队≤5 仓位上限——系 10-17 runner 竞态事故遗留，仓位仍未消化。9 笔全为 BUY、0 笔 SELL（样本不足，未触 20 笔熔断门槛）。主账户空仓（震荡环境，BTC 24h -0.15%，53 跌/7 涨）。其余队：F -2.35%、I -1.56%、A/B/C/E 均约 -1% 内，G/H/J 未开仓。暂无可落地的调整（改仓位需走回测证据链），列为观察项。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>整点同步：docs/learnings.md 新增 11:12 学习与复盘记录</b><span class="muted">10-18 11:20</span></div><div class='ev-d'>10:42/11:12 两轮复盘：自 09:42 起零新成交（team_trades 180 笔、positions 88 不变），最差 S10（DeepSeek LLM 队，8 笔 0 胜，高频轮动缺乏持有纪律），唯一盈利 M5 +448.27；主账户仍全现金 ¥1,000,000。11:12 学习轮（主题：GitHub新项目）：Freqtrade FreqAI（ML 信号过滤器+后台重训练）、5800+ 策略开源仓+AI Agent 工具箱、自适应网格（I 队候选）、星数≠实战（TradingAgents/ai-hedge-fund/Qlib 纸盘、唯 Freqtrade/NautilusTrader 真实盘）外部证据+1；src/ 一行未动，无实盘参数改动。</div></div></div>
@@ -298,8 +300,6 @@ summary{cursor:pointer;font-size:13px;font-weight:600;color:#4f8cff;outline:none
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>整点检查 03:19：过去1小时仅 learnings.md 追加，无实质代码变更</b><span class="muted">10-16 03:19</span></div><div class='ev-d'>03:13 学习轮（资金费率/OI 过滤器 dev.to 实证研究：60组合仅1个越过真实效应线，BN/G-oifund 门禁门槛加注）+复盘（重置后0笔、range体制全停、账本100万分毫不差）+优化轮（无新证据、无代码改动）；src/ 一行未动；无 GitHub 写入；无门禁进程、无新裁决。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>复盘检查：regime一刀切暂停已无独立风控理由，建议差异化放开</b><span class="muted">10-16 03:04</span></div><div class='ev-d'>资金重置后净值100万零回撤、零成交，但所有趋势策略被regime=range暂停卡死零开仓。10-13反事实研究已证伪该一刀切暂停（dual_ma/dualm_a_j样本外分别少赚2091/2066元），当时保留它的理由（回撤8.3%+StoplossGuard冷却）现已过期。建议：移除trader.py一刀切regime_paused新开仓硬阻止（donchian可单独保留暂停，待其门禁结果），走回测证据链+上线门禁后落地。系统心跳正常，无需推送用户。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>整点同步：learnings.md 新增 3 轮学习记录（无实盘成交/无代码改动）</b><span class="muted">10-16 02:20</span></div><div class='ev-d'>01:13/01:52/02:12 三轮学习：资金费率快照刷新解耦（数据基建、记CHANGELOG）、风控方法主题（G-halfkelly/G-volclust/G-montecarlo 新增，G-atrsize 获印证）、市场体制识别主题（G-btcgate/G-regperf/G-trendage 新增）、GitHub 新项目学习（G-lookaud/G-entrybreak 新增，G-flatbet 记为疑问门待实盘 n≥30 检验）。复盘：重置后 live_trades 仍 0 笔，8 个策略因 range regime 全部 skip/hold，账本分毫不差（1000000.0）。无门禁进程在跑，无新裁决（最新仍 BQ FAIL→parked）。src/ 一行未动。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>复盘检查：regime一刀切暂停已无独立风控理由，建议差异化放开</b><span class="muted">10-16 03:04</span></div><div class='ev-d'>资金重置后净值100万零回撤、零成交，但所有趋势策略被regime=range暂停卡死零开仓。10-13反事实研究已证伪该一刀切暂停（dual_ma/dualm_a_j样本外分别少赚2091/2066元），当时保留它的理由（回撤8.3%+StoplossGuard冷却）现已过期。建议：移除trader.py一刀切regime_paused新开仓硬阻止（donchian可单独保留暂停，待其门禁结果），走回测证据链+上线门禁后落地。系统心跳正常，无需推送用户。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
