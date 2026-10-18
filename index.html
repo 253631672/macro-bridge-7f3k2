@@ -35,7 +35,7 @@ details{margin-top:8px;border:1px solid #eef1f5;border-radius:8px;padding:8px 10
 summary{cursor:pointer;font-size:13px;font-weight:600;color:#4f8cff;outline:none}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-18 19:54（北京时间）· 每20分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-18 20:14（北京时间）· 每20分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -62,6 +62,8 @@ summary{cursor:pointer;font-size:13px;font-weight:600;color:#4f8cff;outline:none
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
 <div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>hourly-learn 20:12：新学习=币圈协整配对交易（delta-neutral 候选），复盘零新成交，src 未动</b><span class="muted">10-18 20:13</span></div><div class='ev-d'>学习（新策略思路轮换）：币圈统计套利/协整配对交易的工程清单——Z-Score |Z|&gt;2 入场/|Z|&lt;1 平仓；2026 Frontiers 研究证实 ETH/BNB 最适、5min 频率优于日线；加密特色配对（stETH/ETH、WBTC/BTC、季度基差）。映射我方：60 币池适合离线滚动协整扫描，先在 klines 上验证再立预注册；delta-neutral 可对冲 LLM 队方向性 beta；注意 4h cadence 频率敏感性。复盘：team_trades 236 行（19:42 轮后零新增，max ts 17:28:20 CST 未动）、未平仓 92；最差仍为 S4/S6 churn 组与规则队 I/F，无质变；E −567.41（11 笔，距 20 笔熔断线最近）。优化：无可落地改进点，src 一行未动，CHANGELOG 不记。未运行 publish.sh、无 GitHub 写入。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>复盘检查：S4/S6 连亏但未触熔断</b><span class="muted">10-18 19:47</span></div><div class='ev-d'>S4 自重置后 11 笔卖出全亏（累计 -3172）、S6 8 笔全亏（累计 -2495），未满 20 笔熔断评估线仍正常开仓；I 队 9/10 亏损；D 队权益 -4.68% 最低（9 仓位为 10-17 已知竞态事故）。止损钩子、5 仓位、25% 敞口风控正常，无 [KILL]。按铁律暂不改参数，继续观察。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>AI量化看板数据已刷新</b><span class="muted">10-18 19:19</span></div><div class='ev-d'>index.html(ff4d03a)+quant.html(02aa8d6) 已上传提交，两次 Pages 部署绿色通过，远端 blob 与基线逐字节一致</div></div></div>
@@ -298,8 +300,6 @@ summary{cursor:pointer;font-size:13px;font-weight:600;color:#4f8cff;outline:none
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>整点同步 11:19：过去1小时 learnings.md 更新</b><span class="muted">10-16 11:19</span></div><div class='ev-d'>11:12 轮（学习+复盘+优化）已沉淀：风控方法主题=组合敞口计数、3-factor sizing、Rolling scoring、liquidity-aware sizing；新增 2 个待编号候选（策略实盘滚动停用 rolling scoring、liquidity-aware sizing 数据缺口）；BN（资金费率情绪门）再添 2 份外部机制印证（09:42 三连洗机制链、10:12 Gate 百科级联机制、10:42 zabor funding-carry REJECT 判决）；复盘=重置后仍 0 笔成交（n=0 实盘解读冻结）、range regime 全停、账本 1,000,000.0 分毫不差、数据流心跳正常；src/ 一行未动、无门禁进程、无新裁决、无 CHANGELOG 条目</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>arena-board-refresh：发布 arena.html、rank.html（ce2301e/adf5af0）</b><span class="muted">10-16 11:11</span></div><div class='ev-d'>两文件有实质变化，经浏览器上传链路独立提交，pinned blob md5 逐字节校验通过，锁已释放</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>复盘检查：5连损+胜率低迷，dual_ma 是头号亏损源</b><span class="muted">10-16 10:15</span></div><div class='ev-d'>市场环境：震荡（BTC 24h +0.69%，涨44家/跌16家）；当前持仓0。trade_reviews 30笔：总胜率26.7%（8/30），PF≈0.099，净-4252；最近5笔连损（ONDOUSDT dual_mom -108、NEARUSDT momrot -210、PUMPUSDT dual_mom -75、ZECUSDT momrot -122、CRCLBUSDT dualma_j -154）。分策略：dual_ma 6笔0胜-1711.57 为最大亏损源；atr_channel 已下线；keltner 2笔0胜-514.9。结论：入场质量问题仍在，方向=learn 轮次专项诊断 dual_ma 入场（相关性过滤器/资金费率情绪门门禁在跑中）。无紧急风险敞口，无用户可见推送。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>arena-board-refresh：发布 arena.html、rank.html（ce2301e/adf5af0）</b><span class="muted">10-16 11:11</span></div><div class='ev-d'>两文件有实质变化，经浏览器上传链路独立提交，pinned blob md5 逐字节校验通过，锁已释放</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
