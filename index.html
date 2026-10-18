@@ -35,7 +35,7 @@ details{margin-top:8px;border:1px solid #eef1f5;border-radius:8px;padding:8px 10
 summary{cursor:pointer;font-size:13px;font-weight:600;color:#4f8cff;outline:none}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-18 10:14（北京时间）· 每20分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-18 10:34（北京时间）· 每20分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -61,7 +61,9 @@ summary{cursor:pointer;font-size:13px;font-weight:600;color:#4f8cff;outline:none
 <div class="card attn"><div class="card-t">需要你介入 <span class="badge">1</span></div><ul class="needs"><li><span class='dot warn'></span>给 23:00 日报等定时任务开启常开审批（App → 头像 → Upcoming → 任务详情 → 权限设为允许）<span class='muted'> · 10-09 23:28</span></li></ul>
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
-<div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+<div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>联赛风险对比模块上线（纯可观测性）</b><span class="muted">10-18 10:20</span></div><div class='ev-d'>新增 src/live/league_risk_metrics.py：DeepSeek阵营/S10…S10、Muse阵营M1…M10、规则队A…J三联赛累计收益/最大回撤/夏普对比；快照&lt;20不计算夏普并明确标注样本不足。daily_report.py接入该模块，兑现10-17用户批准的「日报加入两边阵营夏普与最大回撤对比」。仅读team_equity快照，不改任何交易逻辑。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>复盘检查：D队持仓超限、F/I/E队连亏</b><span class="muted">10-18 09:49</span></div><div class='ev-d'>09:45 quant-review-check：D队持仓9条/6币种（OGN/STRK/ONDO两策略重复开仓，名义约9.4万≈94%权益，超5仓位风控；权益95323=-4.68%全队最差，10-17旧版本runner与代码保存竞态遗留）；F队实现-1773(胜率0/5)、I队-1519(0/8)、E队-840(2/7)，震荡市连续亏损但未达20笔熔断线，按铁律不直接动参数；G/H/J重置后零成交，资金费率策略待查。无KILL，主账户空仓。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#f5a623">交易</span>
         <div class="ev-body"><div class="ev-h"><b>LLM战队联赛4h轮：M5买入QNT，S阵营S1/S2/S4/S10调仓</b><span class="muted">10-18 09:31</span></div><div class='ev-d'>M阵营(worker决策,信息隔离):仅M5均值回归BUY QNTUSDT@195.218(51.1744,超卖反弹),其余M1-M4/M6-M10全部HOLD,无熔断。S阵营(DeepSeek API):S1清仓3卖(AMP-39/TIA-242/WLD-275);S2 2卖2买(WLD/ZRO止损,SAND/TIA买入);S4 2卖2买(APT/NEAR止损,SAND/HBAR买入);S10 3卖3买(APT/FIL/TIA止损,SAND/HBAR/KAIA买入);S3/S5/S6/S7/S8/S9无动作(多达5仓位上限)。顺序铁律遵守:M先S后;仅写team_*表,未碰live_*/A-J,未直推GitHub。</div></div></div>
@@ -298,8 +300,6 @@ summary{cursor:pointer;font-size:13px;font-weight:600;color:#4f8cff;outline:none
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>完成：quant-live-trader 23:42 轮次：虚拟盘交易循环运行中</b><span class="muted">10-15 23:43</span></div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>23:19 整点检查：两项实质文档更新</b><span class="muted">10-15 23:19</span></div><div class='ev-d'>docs/learnings.md 新增两轮学习（23:12 风控主题：G-heatlevels 四级热度阶梯、G-cathe 策略族敞口上限、G-triheat 实时热度+RECOVERY半停态、G-decaytracker 衰减调权；22:42 入场质量：G-relstrength 相对强度选币、G-squeezebody 挤压实体确认、G-xsec 横截面方法论）均为预注册前材料、src 一行未动；reports/daily-2026-10-15.md 日报草稿生成（净值100万、0笔交易、range regime 按设计暂停开仓）；23:00 日报将汇总。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>完成：每小时学习优化：复盘策略实盘表现、搜索新知识</b><span class="muted">10-15 23:14</span></div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>23:19 整点检查：两项实质文档更新</b><span class="muted">10-15 23:19</span></div><div class='ev-d'>docs/learnings.md 新增两轮学习（23:12 风控主题：G-heatlevels 四级热度阶梯、G-cathe 策略族敞口上限、G-triheat 实时热度+RECOVERY半停态、G-decaytracker 衰减调权；22:42 入场质量：G-relstrength 相对强度选币、G-squeezebody 挤压实体确认、G-xsec 横截面方法论）均为预注册前材料、src 一行未动；reports/daily-2026-10-15.md 日报草稿生成（净值100万、0笔交易、range regime 按设计暂停开仓）；23:00 日报将汇总。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
