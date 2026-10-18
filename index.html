@@ -35,7 +35,7 @@ details{margin-top:8px;border:1px solid #eef1f5;border-radius:8px;padding:8px 10
 summary{cursor:pointer;font-size:13px;font-weight:600;color:#4f8cff;outline:none}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-18 07:34（北京时间）· 每20分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-18 08:18（北京时间）· 每20分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -61,7 +61,9 @@ summary{cursor:pointer;font-size:13px;font-weight:600;color:#4f8cff;outline:none
 <div class="card attn"><div class="card-t">需要你介入 <span class="badge">1</span></div><ul class="needs"><li><span class='dot warn'></span>给 23:00 日报等定时任务开启常开审批（App → 头像 → Upcoming → 任务详情 → 权限设为允许）<span class='muted'> · 10-09 23:28</span></li></ul>
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
-<div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+<div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>quant-review-check：D队9仓位超限（已知竞态，自愈中）</b><span class="muted">10-18 07:50</span></div><div class='ev-d'>四层环境：震荡（BTC -0.77%，涨13/跌47），主账户空仓。D队持有9行/6币种超每队≤5上限、资金占用约90%，根因=10-17 12:51-12:53Z保存代码时间窗竞态（AGENTS已记录，非代码bug）；当前len(pos)&gt;=5拦新开仓、止损退出照常，属只出不进自愈中，单币种敞口均≤20%未破限。I/S4/S10/F分别8/6/5/4连亏但权益回撤均在-2.5%内、样本&lt;20笔，熔断未激活，按门禁铁律不做策略调整。G/H/J/S3尚未成交待机正常。无[KILL]熔断。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>完成：每小时学习：复盘策略表现+学习新知识</b><span class="muted">10-18 07:16</span></div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>AI量化主账户交易循环 06:42</b><span class="muted">10-18 06:42</span></div><div class='ev-d'>本轮无成交。市场状态：range（ADX=17.7 震荡市，趋势策略暂停）；momrot Top3: STRKUSDT/OGNUSDT/RLCUSDT；权益 ¥1,000,000，现金 ¥1,000,000，持仓 0。</div></div></div>
@@ -298,8 +300,6 @@ summary{cursor:pointer;font-size:13px;font-weight:600;color:#4f8cff;outline:none
 <div class="ev"><span class="ev-tag" style="background:#9aa0aa">系统</span>
         <div class="ev-body"><div class="ev-h"><b>【资金重置修复】daily_report.py 日报本金基准已改为 100 万</b><span class="muted">10-15 22:20</span></div><div class='ev-d'>21:28 修：日报收益基准从 backtest 的 5 万改为 config live.initial_equity（100万），避免今晚 23:00 日报显示虚假 +1900%。trader.py 21:29 同步修：虚拟账户初始化按 live.initial_equity 执行。两文件语法校验通过。重置核验：live_trades=0、账本 1000000.0 分毫不差；22:12 学习轮新增 7 个设计输入（G-entryconf 优先级最高），系统在 range regime 下按设计暂停开仓。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#22b573">日报</span>
-        <div class="ev-body"><div class="ev-h"><b>quant-dashboard-refresh 21:54 轮次发布成功</b><span class="muted">10-15 22:02</span></div><div class='ev-d'>index.html commit 19dfde6、quant.html commit ad78b22，pinned blob 全文 diff 零差异，Pages 部署完成</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>quant-hourly-learn 21:42 轮次</b><span class="muted">10-15 21:44</span></div><div class='ev-d'>主题=市场分析：BloFin regime 仪表盘 + 衍生品信号层级，新增 4 个设计输入 G-regime5/G-fundfr/G-oifund/G-feathier（预注册前材料，不改 src/）；live_trades 仍 0 笔，range regime 下系统按设计暂停开仓，无异常；src 一行未动。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>quant-dashboard-refresh 21:54 轮次发布成功</b><span class="muted">10-15 22:02</span></div><div class='ev-d'>index.html commit 19dfde6、quant.html commit ad78b22，pinned blob 全文 diff 零差异，Pages 部署完成</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
