@@ -35,7 +35,7 @@ details{margin-top:8px;border:1px solid #eef1f5;border-radius:8px;padding:8px 10
 summary{cursor:pointer;font-size:13px;font-weight:600;color:#4f8cff;outline:none}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-18 13:54（北京时间）· 每20分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-18 14:34（北京时间）· 每20分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -61,7 +61,11 @@ summary{cursor:pointer;font-size:13px;font-weight:600;color:#4f8cff;outline:none
 <div class="card attn"><div class="card-t">需要你介入 <span class="badge">1</span></div><ul class="needs"><li><span class='dot warn'></span>给 23:00 日报等定时任务开启常开审批（App → 头像 → Upcoming → 任务详情 → 权限设为允许）<span class='muted'> · 10-09 23:28</span></li></ul>
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
-<div class="card"><div class="ev"><span class="ev-tag" style="background:#f5a623">交易</span>
+<div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>quant-dashboard-refresh 14:14 轮次：quant.html 已发布，index.html 留待下轮</b><span class="muted">10-18 14:28</span></div><div class='ev-d'>quant.html 经粘贴链路发布（commit 07f9ddc），pinned blob 全文 diff 仅尾换行差异，Pages 部署成功。index.html 未发布：上传链路文件挂载 4 次 target_blocked；粘贴前自查发现转录文本与源文件有出入，已叫停，留待下轮重试上传。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>quant-dashboard-refresh 看板发布成功</b><span class="muted">10-18 13:59</span></div><div class='ev-d'>index.html d438126 + quant.html 39df114 双提交，pinned blob 校验通过（index仅尾换行差异，quant逐字节一致），Pages 部署两轮均绿</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#f5a623">交易</span>
         <div class="ev-body"><div class="ev-h"><b>LLM联赛 13:30轮：M阵营4队调仓、S阵营5队成交</b><span class="muted">10-18 13:29</span></div><div class='ev-d'>M阵营(Muse决策)：M4卖TIAUSDT实现-626.10、买SANDUSDT；M5买METUSDT；M6买SANDUSDT；M9买PYTHUSDT+METUSDT；M1/M2/M3/M7/M8/M10全部HOLD，无熔断。S阵营(DeepSeek API)：S1买SAND/HBAR/ASTER；S2卖TIA(-222.29)/APT(-299.74)、买HBAR/ASTER；S4卖TIA(-626.10)、买AMP；S6卖APT/INJ/TIA/WLD/ZRO(合计实现约-1688)、买SAND/HBAR/ASTER/AMP；S10卖KAIA(-203.44)、买STRK；S3/S5/S7/S8/S9满仓无动作。API 10/10成功，无熔断。两阵营独立决策均看多SAND/HBAR/ASTER、同步清仓TIA。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>整点检查：learnings.md 新增 13:12 三轮记录</b><span class="muted">10-18 13:19</span></div><div class='ev-d'>量化研究学习笔记新增三轮：①学习（GitHub 新项目轮换：hftbacktest tick 级回测引擎/队列位置+延迟建模，映射我方 bar 级回测 PF 系统性高估候选，先排队预注册再对比实验）；②复盘（6 笔新成交，I 队 spot_grid 首笔盈利 +64.10，S10 仍最差 8 笔 0 胜 −2115.23，主账户仍全现金）；③优化（无可落地项，src 未动）。未向 GitHub 推送，无用户消息。</div></div></div>
@@ -296,10 +300,6 @@ summary{cursor:pointer;font-size:13px;font-weight:600;color:#4f8cff;outline:none
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>复盘检查：5连亏+盈利回吐异常</b><span class="muted">10-16 05:17</span></div><div class='ev-d'>震荡市（BTC-1.79%，2涨58跌），持仓0。近5笔连亏-669 CNY，近7天胜率26.7%低于健康区间；NEARUSDT momrot单笔-18.5%为左尾暴露（硬止损帽门禁已证伪，不调参数）；ONDOUSDT dual_mom mfe+10.33%回吐至-7.7%，+1R保本移动未触发原因待查。实盘照常跑，无改动。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#9aa0aa">系统</span>
-        <div class="ev-body"><div class="ev-h"><b>quant-review-check：复位后 9 个趋势策略被 regime=range 一刀切冻结 8.7h、零开仓；10-13 反事实已证伪该暂停对 dual_ma/dualma_j 有害，建议分策略差异化但须走门禁</b><span class="muted">10-16 05:04</span></div><div class='ev-d'>市场环境震荡（BTC 24h -1.79%，2涨/58跌），持仓0，账本¥1,000,000整。10-15 20:17 复位后 922 个决策全部 hold/skip：832 个为 regime=range 趋势策略暂停（9 策略）、90 个为 meanrevert 暂停新开仓（回测待优化）。最新复盘为复位前旧样本（10-15 00:07 前），最近10笔8亏2盈、五连亏（ONDO/dual_mom -108.1、NEAR/momrot -209.62、PUMP/dual_mom -75.01、ZEC/momrot -122.0、CRCL/dualma_j -154.46），按 n&lt;30 回测先验不构成策略失效证据。三类授权项：keltner 已淘汰无动作；RLCUSDT 止盈无回测证据不落地；震荡市趋势策略——实盘仍在执行 10-13 反事实研究证伪的一刀切暂停（dual_ma/dualma_j 暂停在样本外少赚 2091/2066 CNY，turtle/mtf_trend 方向为负），研究结论建议分策略差异化（donchian 可暂停、其余恢复，donchian+过滤器A 已排队走门禁）。本轮不直接改代码，调整方向已记入门禁候选复盘；无推送。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>虚拟盘交易循环 05:02</b><span class="muted">10-16 05:02</span></div><div class='ev-d'>市场状态 range（ADX=19.2，趋势策略暂停），无成交；净值 1000000.00，持仓 0</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>整点检查：学习笔记已更新（docs/learnings.md）</b><span class="muted">10-16 04:19</span></div><div class='ev-d'>过去1小时内 ~/workspace/quant-crypto/ 唯一实质变更：docs/learnings.md，半小时学习任务追加 03:43、04:12 两轮记录（学习/复盘/优化）。03:43 新增门禁候选 G-crashtrade/G-thompson/G-macro/G-volshift；04:12 新增 G-dsr/G-varlimit/G-pesbar，G-rhalt-gradient/G-regime5 获外部印证。复盘：重置后实盘仍 0 笔，range 体制下 8 策略全 hold，账本 1000000.0 分毫不差。src/ 一行未动，无 CHANGELOG 记录；无门禁进程在跑，最新裁决仍为 BQ FAIL→parked。仅本地记事件，未发布。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>quant-review-check：复位后 9 个趋势策略被 regime=range 一刀切冻结 8.7h、零开仓；10-13 反事实已证伪该暂停对 dual_ma/dualma_j 有害，建议分策略差异化但须走门禁</b><span class="muted">10-16 05:04</span></div><div class='ev-d'>市场环境震荡（BTC 24h -1.79%，2涨/58跌），持仓0，账本¥1,000,000整。10-15 20:17 复位后 922 个决策全部 hold/skip：832 个为 regime=range 趋势策略暂停（9 策略）、90 个为 meanrevert 暂停新开仓（回测待优化）。最新复盘为复位前旧样本（10-15 00:07 前），最近10笔8亏2盈、五连亏（ONDO/dual_mom -108.1、NEAR/momrot -209.62、PUMP/dual_mom -75.01、ZEC/momrot -122.0、CRCL/dualma_j -154.46），按 n&lt;30 回测先验不构成策略失效证据。三类授权项：keltner 已淘汰无动作；RLCUSDT 止盈无回测证据不落地；震荡市趋势策略——实盘仍在执行 10-13 反事实研究证伪的一刀切暂停（dual_ma/dualma_j 暂停在样本外少赚 2091/2066 CNY，turtle/mtf_trend 方向为负），研究结论建议分策略差异化（donchian 可暂停、其余恢复，donchian+过滤器A 已排队走门禁）。本轮不直接改代码，调整方向已记入门禁候选复盘；无推送。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
