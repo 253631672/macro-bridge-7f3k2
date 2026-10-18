@@ -35,7 +35,7 @@ details{margin-top:8px;border:1px solid #eef1f5;border-radius:8px;padding:8px 10
 summary{cursor:pointer;font-size:13px;font-weight:600;color:#4f8cff;outline:none}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-18 18:14（北京时间）· 每20分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-18 18:34（北京时间）· 每20分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -62,6 +62,12 @@ summary{cursor:pointer;font-size:13px;font-weight:600;color:#4f8cff;outline:none
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
 <div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>复盘检查：D队9仓位超限(10-17竞态遗留)、S4十一连亏PF=0</b><span class="muted">10-18 18:31</span></div><div class='ev-d'>18:29轮次：市场震荡，主账户空仓符合预期。D队持仓9个超5上限（10-17 runner窗口保存竞态遗留），权益-4.67%全场最低，建议减至≤5或等自然平仓。S4十一笔平仓全亏PF=0，熔断口径为平仓≥20笔故尚未触发，今晨仍合规开新仓，列入重点观察。S6 AMPUSDT复盘标记买入逻辑可疑。G/H/J 45小时零成交暂列观察。无KILL记录，regime暂停维持。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#9aa0aa">系统</span>
+        <div class="ev-body"><div class="ev-h"><b>微信中继恢复：systemd 单元丢失后重建，服务重启正常</b><span class="muted">10-18 18:16</span></div><div class='ev-d'>18:14 轮次检查发现心跳停滞；unit 文件随 VM 重建丢失，已从 workspace 存档恢复并重启，心跳恢复正常。收件箱无新消息。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>quant-review-check 18:14 轮次：D队9仓位超限残留+S4/S6连续亏损预警</b><span class="muted">10-18 18:16</span></div><div class='ev-d'>四层分析：BTC 24h -0.15%，涨7/跌53，震荡市；主账户0持仓（一刀切暂停挡住入场，符合10-17门禁结论）。D队9仓位超MAX_POSITIONS=5（10-17 12:51Z代码保存竞态遗留，至今未处理，权益95324/-4.68%）；风控246行len(pos)&gt;=5拦新开仓，D队只出不进、自愈中，无需改代码。S4队11笔平仓全亏（胜率0%/PF0/-3172，权益97750）、S6队8笔全亏（-2495，权益97564全场最低）、I队网格10笔胜率10%/-1830、F队5笔全亏/-1773；均未到20笔熔断线，继续观察。71条重置后复盘，钩子正常。无[KILL]触发。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>复盘检查：S4/S6 连续亏损，多队在震荡市失血</b><span class="muted">10-18 18:00</span></div><div class='ev-d'>15:00轮检查：S4队11笔平仓胜率0%（-3172.3）、S6队8笔胜率0%（-2494.9），均未触发KILL熔断（20笔门槛）；I/F/S10/S2/S1/E同样低迷——动量/轮动策略在震荡市系统性亏损。D队9在途仓超上限（10-17已知竞态）、浮亏-4.68%为A–J最低。建议均需回测门禁后落地：连亏软熔断预注册、战队regime暂停立项。主账户0仓符合震荡暂停规则，无动作。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>复盘检查：S4/S6 连亏 + D 队遗留超限持仓</b><span class="muted">10-18 17:30</span></div><div class='ev-d'>市场震荡（7涨53跌）。DeepSeek 联赛 S4（11卖全亏，-3172.28）、S6（8卖全亏，-2494.88）、S2（6卖全亏）、F 规则队（5卖全亏，-1772.86）均未达 20 笔熔断门槛，观察等待自动熔断。D 队 9 笔 BUY（10-17 竞态事故遗留，6 币种超 5 仓位上限）未平，浮亏 -4.7%（权益 95323.58）。AMPUSDT 复盘提示 S6 买入逻辑待查。建议方向均需走回测证据链+门禁后才落地。</div></div></div>
@@ -294,12 +300,6 @@ summary{cursor:pointer;font-size:13px;font-weight:600;color:#4f8cff;outline:none
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>每日VPN节点推送 2026-10-16</b><span class="muted">10-16 09:23</span></div><div class='ev-d'>筛选44个美/加节点（⭐AI优先8、🟢高存活14），已发布至GitHub（commit b92d66e），pinned blob校验通过。GitHub Pages部署队列有一卡住16小时的僵死run，UI无法取消，已照常提交，Pages生效可能延迟。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>09:12 学习轮：新增 5 个风控候选门禁</b><span class="muted">10-16 09:20</span></div><div class='ev-d'>风控方法主题（kryhr 仓位管理技能 + BTC 尾部风险分析）：新增候选 G-draw95（95分位重采样回撤风控限）、G-voltarget（波动率目标 sizing）、G-kellyfrac（Kelly折扣敞口上限）、G-heat（组合相关性热度限）、G-ES（熔断后 Expected Shortfall 诊断+重启条件）；去风险触发器预先自动化=我方回撤风控梯子外部印证，策略生命周期 sizing=我方暂停/恢复机制外部印证（不新增）。复盘：重置后仍 0 笔成交、账本 1,000,000.0 分毫不差、regime=range 下 8 策略全 hold、数据流心跳正常；本轮无 src/ 改动、不记 CHANGELOG。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>免费VPN每日推送：筛选44节点，发布跳过（Pages部署被僵死队列卡住）</b><span class="muted">10-16 09:11</span></div><div class='ev-d'>filter.py 筛选出 44 个 US/CA 节点（⭐AI优先8、🟢高存活14）；发布前检查发现 pages build and deployment 有一个 queued 僵死 run（2026-10-15T16:58:40Z，已卡8小时+），3次重试仍在+第3轮锁被并发发布任务占用，按规则跳过本次发布，文件本地保留（staging md5 36f5d49c50589b0971417b178371e8e7）；推送消息已附一次性 Oracle 自建VPS手册提示，7a 已从任务定义移除。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#f5a623">交易</span>
-        <div class="ev-body"><div class="ev-h"><b>P组纸账本 BUY LINKUSDT @12.4682</b><span class="muted">10-16 08:54</span></div><div class='ev-d'>策略 funding_reversal，数量 235.89；信号=双所费率均跌破60期5%分位、OI 24h +1.7%；止损 11.8584；当前持仓 1，权益 ¥58,817.65，未触发熔断。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>复盘检查：动量策略连续亏损</b><span class="muted">10-16 08:45</span></div><div class='ev-d'>震荡市（BTC 24h +0.69%，涨44家/跌16家），持仓0无异动。trade_reviews 最近10笔8亏2盈，连续5笔亏损全部在动量策略（dual_mom/momrot）：ONDOUSDT -108.10、NEARUSDT -209.62、PUMPUSDT -75.01、ZECUSDT -122.00、CRCLBUSDT -154.46。模式=震荡市入场被whipsaw，与10-14终报主要矛盾在入场质量一致。建议交learn轮立预注册、走回测门禁研究动量策略震荡入场过滤；不一刀切暂停趋势策略（10-13反事实研究已证伪）。实盘照常跑，无需用户介入。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>09:12 学习轮：新增 5 个风控候选门禁</b><span class="muted">10-16 09:20</span></div><div class='ev-d'>风控方法主题（kryhr 仓位管理技能 + BTC 尾部风险分析）：新增候选 G-draw95（95分位重采样回撤风控限）、G-voltarget（波动率目标 sizing）、G-kellyfrac（Kelly折扣敞口上限）、G-heat（组合相关性热度限）、G-ES（熔断后 Expected Shortfall 诊断+重启条件）；去风险触发器预先自动化=我方回撤风控梯子外部印证，策略生命周期 sizing=我方暂停/恢复机制外部印证（不新增）。复盘：重置后仍 0 笔成交、账本 1,000,000.0 分毫不差、regime=range 下 8 策略全 hold、数据流心跳正常；本轮无 src/ 改动、不记 CHANGELOG。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
