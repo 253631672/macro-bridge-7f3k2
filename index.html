@@ -35,7 +35,7 @@ details{margin-top:8px;border:1px solid #eef1f5;border-radius:8px;padding:8px 10
 summary{cursor:pointer;font-size:13px;font-weight:600;color:#4f8cff;outline:none}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-18 08:54（北京时间）· 每20分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-18 09:14（北京时间）· 每20分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -62,6 +62,10 @@ summary{cursor:pointer;font-size:13px;font-weight:600;color:#4f8cff;outline:none
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
 <div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+        <div class="ev-body"><div class="ev-h"><b>美国节点订阅每日刷新（2026-10-18）</b><span class="muted">10-18 09:11</span></div><div class='ev-d'>筛选 65 个美国/加拿大节点：⭐AI优先 10 个、🟢高存活 26 个。订阅地址 https://253631672.github.io/macro-bridge-7f3k2/vpn-us.txt 已更新（commit e5847e01，pinned blob 与基线 md5 一致）。云端仅做归属地筛选，无法 100% 保证 AI 可用。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#f5a623">交易</span>
+        <div class="ev-body"><div class="ev-h"><b>09:02 交易循环（无成交）</b><span class="muted">10-18 09:02</span></div><div class='ev-d'>市场状态 range(ADX=18.1 震荡市)，趋势策略暂停；momrot Top3=STRKUSDT/OGNUSDT/RLCUSDT；equity=1000000.00 cash=1000000.00 持仓=0</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>整点检查：docs/learnings.md 新增 08:12 学习轮内容</b><span class="muted">10-18 08:19</span></div><div class='ev-d'>过去1小时内 ~/workspace/quant-crypto/ 仅 docs/learnings.md 有实质变更（hourly-learn 两轮笔记：08:12 学习 IBS 恐惧买入/共形预测过滤/协整对冲思路+复盘零新增成交，F 队仍最差 −1663.07；src/ 一行未动，07:12 后零新增成交）。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>quant-review-check：D队9仓位超限（已知竞态，自愈中）</b><span class="muted">10-18 07:50</span></div><div class='ev-d'>四层环境：震荡（BTC -0.77%，涨13/跌47），主账户空仓。D队持有9行/6币种超每队≤5上限、资金占用约90%，根因=10-17 12:51-12:53Z保存代码时间窗竞态（AGENTS已记录，非代码bug）；当前len(pos)&gt;=5拦新开仓、止损退出照常，属只出不进自愈中，单币种敞口均≤20%未破限。I/S4/S10/F分别8/6/5/4连亏但权益回撤均在-2.5%内、样本&lt;20笔，熔断未激活，按门禁铁律不做策略调整。G/H/J/S3尚未成交待机正常。无[KILL]熔断。</div></div></div>
@@ -296,10 +300,6 @@ summary{cursor:pointer;font-size:13px;font-weight:600;color:#4f8cff;outline:none
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>学习轮开始</b><span class="muted">10-15 23:13</span></div><div class='ev-d'>quant-hourly-learn 轮次开始</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#22b573">日报</span>
-        <div class="ev-body"><div class="ev-h"><b>虚拟盘日报 2026-10-15</b><span class="muted">10-15 22:56</span></div><div class='ev-d'>资金重置首日：净值100万 CNY（+0.00%）、今日0交易、持仓0个、距峰值回撤0.00%，风控正常</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#22b573">日报</span>
-        <div class="ev-body"><div class="ev-h"><b>日报已生成 2026-10-15</b><span class="muted">10-15 22:56</span></div><div class='ev-d'>净值 1,000,000.00（+0.00%）今日 0 笔交易，明细见目标资料库</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#9aa0aa">系统</span>
-        <div class="ev-body"><div class="ev-h"><b>【资金重置修复】daily_report.py 日报本金基准已改为 100 万</b><span class="muted">10-15 22:20</span></div><div class='ev-d'>21:28 修：日报收益基准从 backtest 的 5 万改为 config live.initial_equity（100万），避免今晚 23:00 日报显示虚假 +1900%。trader.py 21:29 同步修：虚拟账户初始化按 live.initial_equity 执行。两文件语法校验通过。重置核验：live_trades=0、账本 1000000.0 分毫不差；22:12 学习轮新增 7 个设计输入（G-entryconf 优先级最高），系统在 range regime 下按设计暂停开仓。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>虚拟盘日报 2026-10-15</b><span class="muted">10-15 22:56</span></div><div class='ev-d'>资金重置首日：净值100万 CNY（+0.00%）、今日0交易、持仓0个、距峰值回撤0.00%，风控正常</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
