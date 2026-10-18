@@ -35,7 +35,7 @@ details{margin-top:8px;border:1px solid #eef1f5;border-radius:8px;padding:8px 10
 summary{cursor:pointer;font-size:13px;font-weight:600;color:#4f8cff;outline:none}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-18 16:54（北京时间）· 每20分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-18 17:14（北京时间）· 每20分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -62,6 +62,8 @@ summary{cursor:pointer;font-size:13px;font-weight:600;color:#4f8cff;outline:none
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
 <div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>review-check：D队持仓超限+复盘旗标</b><span class="muted">10-18 17:00</span></div><div class='ev-d'>16:59复盘检查：①D队（动量轮动）9持仓行/6独立币种（momrot3+dual_mom6），突破每队≤5仓位上限（10-17保存竞态遗留），权益95323（-4.7%十队最低），现金仅9937；②I队PUMPUSDT网格止损-374.49（-3.7%），复盘标注需检查买入逻辑；③F队通道突破累计-1772.86、A队ZROUSDT-412.32、C队SANDUSDT-694.03；④无队达20笔熔断阈值，无[KILL]熔断；⑤主账户震荡市0持仓正常。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>review-check：发现全队仓位币种单位 bug（CNY/USDT 混用，约7.25倍超配）</b><span class="muted">10-18 16:46</span></div><div class='ev-d'>检查结论：① team_traders.py 按 notional=equity×10% 直接以 USDT 计价下单，无汇率换算，但 team_accounts 口径为 CNY、每队¥100,000 → 每槽名义 0,000≈¥72,500（应为¥10,000），全队约7.25倍超配；D队9槽名义≈0k≈¥65万（本金¥10万，6.5倍毛敞口），OGN双槽0k≈1.5倍本金，风控2的25%单币种上限因同bug形同虚设；team_equity 把CNY现金与USDT持仓1:1相加，权益数字为混合单位。影响10-17重整后全部A–J及S/M联赛队。② D队权益95323（-4.7%，A–J最低），9槽位为10-17代码保存竞态遗留（现代码只拦新开仓，会自然收缩）。③ S6/S10三笔复盘-1.9%~-3.0%为正常止损，what_wrong系自动模板文本。④ 主账户持仓0，震荡市+一刀切暂停维持（门禁FAIL结论不变）。⑤ runner各队成交时间正常，无[KILL]。建议：引入USDT→CNY汇率换算或改口径为USDT（需确认），属bugfix，走验证后落地，本轮未改代码。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>quant-review-check 复盘检查</b><span class="muted">10-18 16:16</span></div><div class='ev-d'>2026-10-18 16:14 CST 轮：市场震荡(BTC 24h -0.15%，7涨53跌)，主账户空仓正常；D队10-17事故残留持仓9行/6币种、浮亏约5400(STRK -14.2%)、超5仓上限，挂钩子止损仍在建议观察自然处理；DeepSeek阵营S4/S10各9连亏(-2650/-2318)、S6六连亏(-2092)、S2六连亏(-1375)、规则队F五连亏(-1772)，卖出端胜率0-11%远低于健康区间但未达20笔熔断；复盘钩子what_wrong为固定模板&#x27;需检查买入逻辑是否失效&#x27;未带regime/信号字段，建议增强复盘字段为下轮门禁选题；无KILL触发，live_trader心跳正常。</div></div></div>
@@ -298,8 +300,6 @@ summary{cursor:pointer;font-size:13px;font-weight:600;color:#4f8cff;outline:none
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>quant-review-check 08:14：实盘 regime 一刀切暂停与 10-13 反事实证据不一致，建议 gate 差异化处理</b><span class="muted">10-16 08:16</span></div><div class='ev-d'>市场震荡（BTC+0.69%，44涨16跌），持仓0，权益100万。近1小时96笔决策全部 regime=range 趋势策略暂停（trader.py:249-253 blanket gating），当前回撤0%，纯 regime 驱动。10-13 研究已证伪一刀切（dual_ma/dualm_a_j 的 range 入场样本外正期望，暂停少赚 2091/2066）；唯一候选 donchian+过滤器A 已排队 gate。建议：改为分策略差异化暂停，走回测+门禁后落地；本次不碰代码，无须立即干预。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>08:12 每小时学习复盘：GitHub 新项目方法印证 + 系统正常（n=0）</b><span class="muted">10-16 08:15</span></div><div class='ev-d'>学习主题=estebansp23/crypto_systematic_research（MIT）：kill-list 文档资产印证我方 parked 机制；敏感性网格&#x27;27/27 样本外正期望组合数&#x27;度量记作门禁可选第 10 项候选 G-gridcount；P1/P2 效应不对称探测器与我方 bootstrap ΔPF 框架同源；波动压缩策略集体 FAIL 对 G-scalexit（分段退出）给出预注册须逐段 OOS 分解的警示；BTC 单场所费率套利 3.13%≈放贷一半、手续费吃掉零售规模收益，G-fundarb 加费用扣除约束。复盘：live_trades=0（重置后无成交）、positions=0、现金 100 万分毫不差、8 策略全 hold（regime=range）、心跳 ingest/live_trader 均正常。无门禁进程、无新裁决（bq FAIL→parked 仍为最新）。src/ 一行未动，未记 CHANGELOG。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>quant-hourly-learn 07:42 完成</b><span class="muted">10-16 07:45</span></div><div class='ev-d'>学习主题=市场分析：10月中旬宏观压制下BTC盘整（8K-4K，F&amp;G 53中性），三方独立印证我方regime=range→8趋势策略暂停；新增G-etfflow候选（ETF流市场性格输入），G-fundsent/G-altsindex加注；恐慌贪婪53.0与外部一致、BTC 2,199.78行情健康。复盘：重置后0笔，无样本。优化：无新证据，src一行未动，不记CHANGELOG。</div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>08:12 每小时学习复盘：GitHub 新项目方法印证 + 系统正常（n=0）</b><span class="muted">10-16 08:15</span></div><div class='ev-d'>学习主题=estebansp23/crypto_systematic_research（MIT）：kill-list 文档资产印证我方 parked 机制；敏感性网格&#x27;27/27 样本外正期望组合数&#x27;度量记作门禁可选第 10 项候选 G-gridcount；P1/P2 效应不对称探测器与我方 bootstrap ΔPF 框架同源；波动压缩策略集体 FAIL 对 G-scalexit（分段退出）给出预注册须逐段 OOS 分解的警示；BTC 单场所费率套利 3.13%≈放贷一半、手续费吃掉零售规模收益，G-fundarb 加费用扣除约束。复盘：live_trades=0（重置后无成交）、positions=0、现金 100 万分毫不差、8 策略全 hold（regime=range）、心跳 ingest/live_trader 均正常。无门禁进程、无新裁决（bq FAIL→parked 仍为最新）。src/ 一行未动，未记 CHANGELOG。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
