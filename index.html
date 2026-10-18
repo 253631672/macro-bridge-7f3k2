@@ -35,7 +35,7 @@ details{margin-top:8px;border:1px solid #eef1f5;border-radius:8px;padding:8px 10
 summary{cursor:pointer;font-size:13px;font-weight:600;color:#4f8cff;outline:none}
 </style></head><body>
 <div class="top"><h1><span class="live"></span>Macro 工作看板</h1>
-<div class="upd">最后更新：2026-10-18 11:14（北京时间）· 每20分钟自动刷新</div></div>
+<div class="upd">最后更新：2026-10-18 11:34（北京时间）· 每20分钟自动刷新</div></div>
 <div class="wrap">
 <div class="card cur"><div class="card-t">正在进行</div>
         <div class="cur-task idle">当前空闲，在按定时计划自主运行</div></div>
@@ -61,7 +61,11 @@ summary{cursor:pointer;font-size:13px;font-weight:600;color:#4f8cff;outline:none
 <div class="card attn"><div class="card-t">需要你介入 <span class="badge">1</span></div><ul class="needs"><li><span class='dot warn'></span>给 23:00 日报等定时任务开启常开审批（App → 头像 → Upcoming → 任务详情 → 权限设为允许）<span class='muted'> · 10-09 23:28</span></li></ul>
         <div class="muted">连上 VPN 后在 Muse 里找我处理即可</div></div>
 <div class="sec-t">动态时间线</div>
-<div class="card"><div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
+<div class="card"><div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>整点同步：docs/learnings.md 新增 11:12 学习与复盘记录</b><span class="muted">10-18 11:20</span></div><div class='ev-d'>10:42/11:12 两轮复盘：自 09:42 起零新成交（team_trades 180 笔、positions 88 不变），最差 S10（DeepSeek LLM 队，8 笔 0 胜，高频轮动缺乏持有纪律），唯一盈利 M5 +448.27；主账户仍全现金 ¥1,000,000。11:12 学习轮（主题：GitHub新项目）：Freqtrade FreqAI（ML 信号过滤器+后台重训练）、5800+ 策略开源仓+AI Agent 工具箱、自适应网格（I 队候选）、星数≠实战（TradingAgents/ai-hedge-fund/Qlib 纸盘、唯 Freqtrade/NautilusTrader 真实盘）外部证据+1；src/ 一行未动，无实盘参数改动。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
+        <div class="ev-body"><div class="ev-h"><b>复盘检查：D队超限为10-17已知竞态事故遗留，无需干预</b><span class="muted">10-18 11:17</span></div><div class='ev-d'>D队权益95323.58(-4.68%)，持9行/6币种超5仓位上限（OGN/ONDO/STRK双开仓），系10-17 12:51-12:53Z runner窗口内保存代码导致旧版本加载开9槽位，AGENTS已记录，逻辑当前正确；重置后D队无卖出，各币种敞口约10%均&lt;25%，判断静默观察待策略自然出场，不手动平仓。S10止损卖出3笔合计-1086并轮换3新仓（5仓合规），属正常止损执行。市场震荡，主账户空仓。无[KILL]熔断。</div></div></div>
+<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>完成：quant-hourly-learn：学习轮+复盘+优化</b><span class="muted">10-18 11:14</span></div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
         <div class="ev-body"><div class="ev-h"><b>联赛风险对比模块上线（纯可观测性）</b><span class="muted">10-18 10:20</span></div><div class='ev-d'>新增 src/live/league_risk_metrics.py：DeepSeek阵营/S10…S10、Muse阵营M1…M10、规则队A…J三联赛累计收益/最大回撤/夏普对比；快照&lt;20不计算夏普并明确标注样本不足。daily_report.py接入该模块，兑现10-17用户批准的「日报加入两边阵营夏普与最大回撤对比」。仅读team_equity快照，不改任何交易逻辑。</div></div></div>
@@ -296,10 +300,6 @@ summary{cursor:pointer;font-size:13px;font-weight:600;color:#4f8cff;outline:none
 <div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
         <div class="ev-body"><div class="ev-h"><b>整点同步：learnings.md 新增 3 轮学习记录（无实盘成交/无代码改动）</b><span class="muted">10-16 02:20</span></div><div class='ev-d'>01:13/01:52/02:12 三轮学习：资金费率快照刷新解耦（数据基建、记CHANGELOG）、风控方法主题（G-halfkelly/G-volclust/G-montecarlo 新增，G-atrsize 获印证）、市场体制识别主题（G-btcgate/G-regperf/G-trendage 新增）、GitHub 新项目学习（G-lookaud/G-entrybreak 新增，G-flatbet 记为疑问门待实盘 n≥30 检验）。复盘：重置后 live_trades 仍 0 笔，8 个策略因 range regime 全部 skip/hold，账本分毫不差（1000000.0）。无门禁进程在跑，无新裁决（最新仍 BQ FAIL→parked）。src/ 一行未动。</div></div></div>
 <div class="ev"><span class="ev-tag" style="background:#9aa0aa">系统</span>
-        <div class="ev-body"><div class="ev-h"><b>quant整点同步：01:13轮三处变更</b><span class="muted">10-16 01:20</span></div><div class='ev-d'>docs/learnings.md 新增01:13学习/复盘/优化三节（风控方法轮换：波动率仓位/G-atrsize外部印证、新增G-halfkelly/G-volclust/G-montecarlo/G-rhalt-gradient；复盘live_trades仍0笔、账本1000000分毫不差；优化轮无改动）。CHANGELOG新增2026-10-16 00:44 funding_rates快照刷新解耦（数据基建：FNG 20h门与funding 6h门拆开，修复27.5h未刷新耦合bug，端到端验证通过）。src/data/ingest.py 尾部一块改动，策略/参数/风控零触碰。门禁仍无进程，最新裁决BQ FAIL→parked。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#b07fe8">备注</span>
-        <div class="ev-body"><div class="ev-h"><b>quant 学习轮次 00:12：7 个新设计输入（统计套利/费率套利等），实盘无变化</b><span class="muted">10-16 00:19</span></div><div class='ev-d'>docs/learnings.md 新增 2026-10-16 00:12 三段：学习（新策略思路：统计套利 pairs、资金费率套利、ATR 体制过滤器、成本意识）新增 G-pairspread/G-fundarb/G-spreadwiden/G-zipexit/G-atrregime/G-costlimit/G-momtrail，均为预注册前材料；复盘：live_trades 仍 0 笔、账本 1000000 分毫不差、8 策略 range 下全停；优化：无新证据、src/ 一行未动、门禁仍 BQ FAIL→parked。G-fundarb 与已有 funding 数据源咬合，优先级候选靠前。</div></div></div>
-<div class="ev"><span class="ev-tag" style="background:#4f8cff">任务</span>
-        <div class="ev-body"><div class="ev-h"><b>完成：quant-live-trader 23:42 轮次：虚拟盘交易循环运行中</b><span class="muted">10-15 23:43</span></div></div></div></div>
+        <div class="ev-body"><div class="ev-h"><b>quant整点同步：01:13轮三处变更</b><span class="muted">10-16 01:20</span></div><div class='ev-d'>docs/learnings.md 新增01:13学习/复盘/优化三节（风控方法轮换：波动率仓位/G-atrsize外部印证、新增G-halfkelly/G-volclust/G-montecarlo/G-rhalt-gradient；复盘live_trades仍0笔、账本1000000分毫不差；优化轮无改动）。CHANGELOG新增2026-10-16 00:44 funding_rates快照刷新解耦（数据基建：FNG 20h门与funding 6h门拆开，修复27.5h未刷新耦合bug，端到端验证通过）。src/data/ingest.py 尾部一块改动，策略/参数/风控零触碰。门禁仍无进程，最新裁决BQ FAIL→parked。</div></div></div></div>
 <div class="foot">这是 Macro 的自主工作看板<br>你离线时我做的事都会记在这里 · 有需要你介入的事项会出现在上方<br>虚拟盘数据仅供策略验证，不构成投资建议</div>
 </div></body></html>
