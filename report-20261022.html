@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>量化虚拟盘日报 2026-10-22</title>
+<style>
+body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;margin:0;padding:16px;background:#f7f7f8;color:#1a1a1a;line-height:1.6}
+.card{background:#fff;border-radius:12px;padding:16px 18px;margin-bottom:14px;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+h1{font-size:20px;margin:0 0 4px}
+h2{font-size:16px;margin:0 0 8px;color:#333}
+.sub{color:#888;font-size:13px;margin-bottom:14px}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{padding:6px 4px;text-align:left;border-bottom:1px solid #eee}
+.num{text-align:right;font-variant-numeric:tabular-nums}
+.neg{color:#c0392b}.pos{color:#1e8449}
+ul{margin:4px 0;padding-left:18px}
+.note{font-size:13px;color:#666}
+</style>
+</head>
+<body>
+<h1>📊 量化虚拟盘日报 2026-10-22</h1>
+<div class="sub">2026-10-22 22:05 北京时间 · 口径：只看三阵营收益盈亏，不看主账户、不看合计</div>
+
+<div class="card">
+<h2>三阵营收益盈亏（风险调整口径）</h2>
+<table>
+<tr><th>阵营</th><th class="num">当前净值</th><th class="num">累计盈亏</th><th class="num">当日盈亏</th><th class="num">最大回撤</th><th class="num">夏普</th></tr>
+<tr><td>DeepSeek 阵营 (S1–S10)</td><td class="num">992,285</td><td class="num neg">−7,715 (−0.77%)</td><td class="num neg">−22,305 (−2.20%)</td><td class="num">−3.14%</td><td class="num">样本不足</td></tr>
+<tr><td>Muse 阵营 (M1–M10)</td><td class="num">995,213</td><td class="num neg">−4,787 (−0.48%)</td><td class="num neg">−10,661 (−1.06%)</td><td class="num">−1.53%</td><td class="num">样本不足</td></tr>
+<tr><td>规则队 (A–J)</td><td class="num">846,345</td><td class="num neg">−153,655 (−15.37%)</td><td class="num neg">−10,003 (−1.17%)</td><td class="num">−15.47%</td><td class="num neg">−21.08</td></tr>
+</table>
+<p class="note">口径说明：① DeepSeek / Muse 阵营为 10-20 重置后新账本（15/14 个快照，10-20 13:12 → 10-22 10:48 UTC）；规则队累计自 10-17 起算（35 个快照），含 D 队事故遗留仓等旧账。② 夏普需 ≥20 个快照才计算——当前样本太小（仅 15 个快照），排名只是手续费和运气的噪音，不能据此判断模型强弱；待运行数周后再看风险调整后收益。</p>
+</div>
+
+<div class="card">
+<h2>今日大动作</h2>
+<ul>
+<li><b>今日无重大动作</b>：无清仓、无重置、无新熔断触发。</li>
+<li>今日联赛共成交 117 笔（57 买 / 60 卖），已实现盈亏 <span class="neg">−4,789.06 CNY</span>；最大单笔亏损为 C 队的 AMPUSDT（<span class="neg">−1,270.35</span>）。</li>
+<li>当前持仓：DeepSeek 阵营 50 个 / Muse 阵营 25 个 / 规则队 19 个。</li>
+<li>LLM 联赛运行第 3 天（15 个快照）。</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>风控</h2>
+<ul>
+<li>联赛级熔断/止损今日无新触发；规则队累计 −15.37%，继续回落（今日 −1.17%）</li>
+<li>✅ 正常</li>
+</ul>
+</div>
+
+<p class="note">虚拟盘，仅供策略验证，不构成投资建议。</p>
+</body>
+</html>
