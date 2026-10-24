@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>量化虚拟盘日报 2026-10-24</title>
+<style>
+body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;margin:0;padding:16px;background:#f7f7f8;color:#1a1a1a;line-height:1.6}
+.card{background:#fff;border-radius:12px;padding:16px 18px;margin-bottom:14px;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+h1{font-size:20px;margin:0 0 4px}
+h2{font-size:16px;margin:0 0 8px;color:#333}
+.sub{color:#888;font-size:13px;margin-bottom:14px}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{padding:6px 4px;text-align:left;border-bottom:1px solid #eee}
+.num{text-align:right;font-variant-numeric:tabular-nums}
+.neg{color:#c0392b}.pos{color:#1e8449}
+ul{margin:4px 0;padding-left:18px}
+.note{font-size:13px;color:#666}
+.warn{font-size:13px;color:#b7791f}
+</style>
+</head>
+<body>
+<h1>📊 量化虚拟盘日报 2026-10-24</h1>
+<div class="sub">2026-10-24 22:05 北京时间 · 口径：只看三阵营收益盈亏，不看主账户、不看合计</div>
+
+<div class="card">
+<h2>三阵营收益盈亏</h2>
+<table>
+<tr><th>阵营</th><th class="num">当前净值 (CNY)</th><th class="num">累计盈亏</th><th class="num">当日盈亏</th><th class="num">最大回撤</th><th class="num">夏普</th></tr>
+<tr><td>DeepSeek 阵营 (S1–S10)</td><td class="num">985,560</td><td class="num neg">−14,440 (−1.44%)</td><td class="num">0 (0.00%，冻结中)</td><td class="num">−3.83%</td><td class="num">样本不足</td></tr>
+<tr><td>Muse 阵营 (M1–M10)</td><td class="num">977,081</td><td class="num neg">−22,919 (−2.29%)</td><td class="num neg">−15,285 (−1.54%)</td><td class="num">−3.33%</td><td class="num">−14.40</td></tr>
+<tr><td>规则队 (A–J)</td><td class="num">841,429</td><td class="num neg">−158,571 (−15.86%)</td><td class="num neg">−5,411 (−0.64%)</td><td class="num">−15.86%</td><td class="num">−18.17</td></tr>
+</table>
+<p class="note">数据来源：src.live.league_risk_metrics，联赛权益=10 队快照加总。DeepSeek/Muse 阵营为 10-20 重置后新账本（S 队 19 个快照，10-20 13:12 → 10-23 02:48 UTC）；规则队累计自 10-17 起算（含 D 队事故遗留仓等旧账）。</p>
+<p class="note">口径说明：样本太小（当前仅数个快照），排名只是手续费和运气的噪音，不能据此判断模型强弱。夏普比率需 ≥20 个快照才计算。</p>
+<p class="warn">⚠️ DeepSeek 阵营连续第二天停摆（API 钥匙失效 401），快照与成交均停留在 10-23 10:48（北京时间），其"当日"数字为 0 只是冻结所致，不代表持平。</p>
+</div>
+
+<div class="card">
+<h2>今日大动作</h2>
+<ul>
+<li><b>DeepSeek 阵营继续停摆</b>：API 钥匙失效未恢复，S 队今日 0 成交、0 新快照，账本冻结在 985,560；需用户重新生成新 key 并充值后恢复。</li>
+<li><b>Muse 阵营 M9 今日新增手动冻结</b>（2026-10-24 13:59 review-check：9 笔、6 连损、PF 0.386，只退不新开），与 S1/S2/S4/S9/M4 同列；规则队 A/C/D/F/J 手动冻结、E/I 自动熔断延续。</li>
+<li>今日联赛共成交 30 笔（4 买 / 26 卖），卖出已实现盈亏 <span class="neg">−14,138.52 CNY</span>，基本是集中退出的一天；最大单笔亏损为 M5 队的 STRKUSDT（<span class="neg">−1,081.68</span>）。</li>
+<li>当前持仓共 60 个：DeepSeek 阵营 42 个 / Muse 阵营 14 个 / 规则队 4 个。</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>风控</h2>
+<ul>
+<li>新触发：M9 手动冻结（见上）；其余熔断/冻结状态延续，无其他新触发。</li>
+<li>规则队累计 <span class="neg">−15.86%</span>，今日 −0.64%；Muse 阵营今日 −1.54%，为三阵营中今日跌幅最大。</li>
+</ul>
+</div>
+
+<p class="note">虚拟盘，仅供策略验证，不构成投资建议。</p>
+</body>
+</html>
